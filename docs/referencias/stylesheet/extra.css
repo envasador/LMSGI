@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+:root{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.md-header--shadow{
+    box-shadow: 0;
+}
+[data-md-color-scheme="daw-style"] {
+    --md-primary-fg-color:        #e93456;
+    --md-primary-fg-color--light: #e93456;
+    --md-primary-fg-color--dark:  #e93456;
+    --md-typeset-a-color: #e93456;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-typeset-a-color: #FFE4E9;
+}
+
+a{
+    color: #e93456;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+body > header > nav.md-header__inner.md-grid{
+    position: sticky;
+}
+
+body > header > nav.md-header__inner.md-grid > a{
+    position: absolute;
+    top: -2px;
+    left: -69px;
+}
+
+body > header > nav.md-header__inner.md-grid > a > img{
+    width: 60px;
+    height: 60px;
+}
+
+[dir=ltr] .md-header__title {
+    margin-left: 0.6rem;
+    margin-right: .4rem;
+}
+.md-tabs{
+    height: 30px;
+}
+.md-tabs__link{
+    margin-top: 0;
+}
