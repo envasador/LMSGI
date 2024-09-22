@@ -1,4 +1,4 @@
-# Diseño de Interfaces Web
+# Lenguajes de Marcas
 
 <p>
   <a href="LICENSE">
@@ -6,7 +6,7 @@
     </a>
 </p>
 
-Material didáctico del módulo Diseño de Interfaces Web del CFGS Desarrollo de aplicaciones web del IES Rafael Alberti.
+Material didáctico del módulo Lenguajes de Marcas Web del CFGS Desarrollo de aplicaciones web del IES Rafael Alberti.
 
 <p align="center">
   <img src="logos/Portada-LMSGI.png" alt="Cover Diseño de Interfaces Web">
