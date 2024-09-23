@@ -1,3 +1,5 @@
+
+/* General */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 :root{
     font-family: "Source Sans 3", sans-serif;
@@ -25,6 +27,38 @@ a:hover{
     text-decoration: underline;
 }
 
+/* Home */
+
+ nav.home-menu{
+     width: 100%;
+
+     ul {
+         width: 100%;
+         list-style: none;
+         display: flex;
+         justify-content: space-between;
+     }
+     li{
+         width: 33%;
+         text-align: center;
+     }
+     a{
+         width: 100%;
+         display: inline-block;
+         padding: 2rem;
+         font-size: 2rem;
+         background:#564256;
+         color: white;
+     }
+     a:hover{
+         text-decoration: none;
+         background:white;
+         color: #564256;
+         transition: all ease 0.5s;
+     }
+ }
+
+/* Referencias */
 body > header > nav.md-header__inner.md-grid{
     position: sticky;
 }

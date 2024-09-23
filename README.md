@@ -1,34 +1,4 @@
 # Lenguajes de Marcas
-<style>
-    nav.home-menu{
-        width: 100%;
-
-        ul {
-            width: 100%;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-        }
-        li{
-            width: 33%;
-            text-align: center;
-        }
-        a{
-            width: 100%;
-            display: inline-block;
-            padding: 2rem;
-            font-size: 2rem;
-            background:#564256;
-            color: white;
-        }
-        a:hover{
-            text-decoration: none;
-            background:white;
-            color: #564256;
-            transition: all ease 0.5s;
-        }
-    }
-</style>
 <section>
 <p>
   <a href="LICENSE">
