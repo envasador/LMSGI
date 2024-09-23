@@ -447,6 +447,3 @@ Los lenguajes de marcas han jugado un papel fundamental en la evolución del des
 
 A medida que las tecnologías y las necesidades han cambiado, también lo han hecho estos lenguajes. Hoy en día, es esencial comprender las características, ventajas y limitaciones de cada uno para elegir el más adecuado según el contexto del proyecto. Esta comprensión no solo facilita la creación de contenido bien estructurado y presentado, sino que también optimiza la interoperabilidad y el intercambio de datos entre diferentes sistemas y plataformas.
 
----
-
-Este documento proporciona una visión completa y detallada de los principales lenguajes de marcas, su clasificación, historia, usos actuales y comparaciones, lo que te permitirá impartir una clase rica y bien fundamentada sobre el tema a tus estudiantes de Formación Profesional.
