@@ -17,13 +17,8 @@ Una vez dominadas las bases del lenguaje, nos centraremos en dos de las bibliote
 
 El módulo se organiza en las siguientes unidades, que se actualizarán a medida que avance el curso. Cada unidad incluye enlaces de referencia y recursos adicionales para facilitar tu aprendizaje:
 
-* [Unidad 1: Bienvenido/a a la agencia de publicidad](ud1.md)
-* [Unidad 2: Planificación y Prototipado de una interfaz web](ud2.md)
-* [Unidad 3: Testing de Usabilidad](ud3.md)
-* [Unidad 4: Desarrollando la interfaz web](ud4.md)
-* [Unidad 5: Testing en producción](ud5.md)
-* [Unidad 6: Diseño 2D, audio y video para videojuegos](ud6.md)
-* [Unidad 7: Elementos interactivos](ud7.md)
+* [Unidad 1: Introducción a los lenguajes de marcas](ud1.md)
+
 
 ## Referencias web generales
 
