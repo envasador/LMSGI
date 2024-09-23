@@ -6,26 +6,30 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
+
 .md-header--shadow{
     box-shadow: 0;
 }
+
+a{
+    color: #564256;
+}
+a:hover{
+    text-decoration: underline;
+}
+
 [data-md-color-scheme="daw-style"] {
-    --md-primary-fg-color:        #e93456;
-    --md-primary-fg-color--light: #e93456;
-    --md-primary-fg-color--dark:  #e93456;
-    --md-typeset-a-color: #e93456;
+    --md-primary-fg-color:        #564256;
+    --md-primary-fg-color--light: #564256;
+    --md-primary-fg-color--dark:  #564256;
+    --md-typeset-a-color: #564256;
 }
 
 [data-md-color-scheme="slate"] {
     --md-typeset-a-color: #FFE4E9;
 }
 
-a{
-    color: #e93456;
-}
-a:hover{
-    text-decoration: underline;
-}
+
 
 /* Home */
 
