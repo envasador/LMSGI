@@ -15,6 +15,28 @@ hide:
 
 Este curso está diseñado para que adquieras las habilidades necesarias en el manejo de lenguajes de marcas y sistemas de gestión de información, los cuales son fundamentales en el desarrollo de aplicaciones web modernas. A lo largo del módulo, aprenderás cómo estructurar, transmitir y presentar información utilizando tecnologías clave como **HTML, CSS, JSON**, y **JavaScript**.
 
+## Tabla de contenido
+
+* [Unidad 1: Introducción a los lenguajes de marcas](ud1.md)
+
+
+## Referencias web generales
+
+El desarrollo de software está en constante evolución, actualmente podemos observar como una avalancha de nuevas tendencias tecnológicas y metodologías se va abriendo paso. Este es el motivo principal por el que la mayor parte de los apuntes proporcionados no son más que referencias web actuales a los temas que vamos a tratar.
+
+
+* [HTML5 by Manz](https://lenguajehtml.com/html/)
+* [SVG by Manz](https://lenguajehtml.com/svg/)
+* [CSS by Manz](https://lenguajecss.com/css/)
+* [Javascript by Manz](https://lenguajejs.com/javascript/)
+* [DOM by Manz](https://lenguajejs.com/dom/)
+* [FreeCodeCamp](https://www.freecodecamp.org/)
+* [developer.mozilla.org](https://developer.mozilla.org/es/docs/Web/JavaScript)
+* [The Modern JavaScript Tutorial](https://javascript.info/)
+* [lenguajejs.com](https://lenguajejs.com/javascript/)
+* [Javascript Cheatsheet](/assets/javascript-cheatsheet.pdf)
+* [Javascript notes By Majo Ledesma](/assets/js-notesByMajoLedesma.pdf)
+
 ## ¿Qué vas a aprender?
 
 ### 1. **Lenguajes de Marcas**
@@ -46,22 +68,4 @@ El manejo adecuado de estos lenguajes es esencial para el desarrollo web profesi
 
 Al finalizar este curso, estarás preparado para desarrollar aplicaciones web modernas que gestionen y presenten información de forma eficaz, aplicando las mejores prácticas de desarrollo y diseño web.
 
-* [Unidad 1: Introducción a los lenguajes de marcas](ud1.md)
 
-
-## Referencias web generales
-
-El desarrollo de software está en constante evolución, actualmente podemos observar como una avalancha de nuevas tendencias tecnológicas y metodologías se va abriendo paso. Este es el motivo principal por el que la mayor parte de los apuntes proporcionados no son más que referencias web actuales a los temas que vamos a tratar.
-
-* [FreeCodeCamp](https://www.freecodecamp.org/)
-* [developer.mozilla.org](https://developer.mozilla.org/es/docs/Web/JavaScript)
-* [The Modern JavaScript Tutorial](https://javascript.info/)
-* [lenguajejs.com](https://lenguajejs.com/javascript/)
-* [Javascript Cheatsheet](/assets/javascript-cheatsheet.pdf)
-* [Javascript notes By Majo Ledesma](/assets/js-notesByMajoLedesma.pdf)
-* [Netlify Sites Deployment](https://docs.netlify.com/site-deploys/create-deploys/)
-* [React.js Documentation](https://es.react.dev/)
-* [Vue.js Documentation](https://vuejs.org/guide/introduction.html)
-* [Node.js Documentation](https://nodejs.org/es/docs)
-* [Express.js Documentation](https://expressjs.com/es/)
-* [MongoDB Documentation](https://www.mongodb.com/docs/)
