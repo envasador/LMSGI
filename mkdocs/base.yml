@@ -33,7 +33,7 @@ plugins:
   - search:
       lang: es
   - with-pdf:
-      author: Equipo educativo de 2º DAW del IES Rafael Alberti
+      author: Equipo educativo de 1º DAW del IES Rafael Alberti
       copyright: CC BY-SA 4.0
       #
       cover: true
@@ -74,4 +74,4 @@ plugins:
 nav:
   - Home: index.md
 
-copyright: Contenido generado por el equipo educativo de 2º DAW del IES Rafael Alberti
+copyright: Contenido generado por el equipo educativo de 1º DAW del IES Rafael Alberti
