@@ -1,4 +1,5 @@
 # Lenguajes de Marcas
+
 <section>
 <p>
   <a href="LICENSE">
@@ -12,22 +13,14 @@ Material didáctico del módulo Lenguajes de Marcas Web del CFGS Desarrollo de a
   <img src="logos/Portada-LMSGI.png" alt="Cover Diseño de Interfaces Web">
 </p>
 </section>
-<nav class="home-menu">
-    <ul>
-        <li>
-            <a href="https://envasador.github.io/LMGSI/slides/#" target="_blank">
-                Presentaciones
-            </a>
-        </li>
-        <li>
-            <a href="https://envasador.github.io/LMGSI/docs/referencias" target="_blank">
-                Contenido
-            </a>
-        </li>
-        <li>
-            <a href="https://envasador.github.io/LMGSI/#" target="_blank">
-                Proyectos
-            </a>
-        </li>
-    </ul>
-</nav>
+
+## Diapositivas
+
+- [Presentación del módulo](https://envasador.github.io/LMSGI/slides/#)
+
+## Referencias
+
+- [Referencias del curso](https://envasador.github.io/LMSGI/docs/referencias)
+
+## Proyectos
+- [Proyectos del curso](https://envasador.github.io/LMSGI/docs/#)
