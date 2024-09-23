@@ -148,15 +148,13 @@ This is a paragraph in LaTeX.
 
 ## 4. Cuadro resumen comparativo
 
-| Lenguaje  | Propósito                         | Basado en  | Ámbito de uso                | Sintaxis          | Ejemplo                         | Ventajas                                            | Desventajas                                   |
-|-----------|-----------------------------------|------------|------------------------------|-------------------|----------------------------------|----------------------------------------------------|-----------------------------------------------|
-| GML       | Estructurar documentos            | IBM        | Documentación técnica         | Básico            | `:title.General Markup`           | Simple, pionero de los lenguajes de marcas          | Limitado en flexibilidad y uso moderno        |
-| SGML      | Definir otros lenguajes de marcas | GML        | Documentación compleja        | Complejo          | `<document><title>SGML`           | Extremadamente flexible                             | Complejo y difícil de implementar             |
-| HTML      | Estructurar páginas web           | SGML       | Web                           | Etiquetas predef. | `<html><body><h1>`                | Soporte universal en navegadores                   | Necesita CSS y JavaScript para ser funcional  |
+| Lenguaje  | Propósito                         | Basado en  | Ámbito de uso                | Sintaxis          | Ejemplo                         | Ventajas                                            | Desventajas                                        |
+|-----------|-----------------------------------|------------|------------------------------|-------------------|----------------------------------|----------------------------------------------------|----------------------------------------------------|
+| GML       | Estructurar documentos            | IBM        | Documentación técnica         | Básico            | `:title.General Markup`           | Simple, pionero de los lenguajes de marcas          | Limitado en flexibilidad y uso moderno             |
+| SGML      | Definir otros lenguajes de marcas | GML        | Documentación compleja        | Complejo          | `<document><title>SGML`           | Extremadamente flexible                             | Complejo y difícil de implementar                  |
+| HTML      | Estructurar páginas web           | SGML       | Web                           | Etiquetas predef. | `<html><body><h1>`                | Soporte universal en navegadores                   | Necesita CSS y JavaScript para ser funcional       |
 | XML       | Estructurar e intercambiar datos  | SGML       | Almacenamiento, intercambio   | Flexible          | `<book><title>XML Guide</title>` | Extensible, universal para datos                    | Verboso y difícil de manejar en documentos grandes |
-| Markdown  | Escritura de texto con formato    | Independ.  | Documentación, blogs          | Ligero            | `# Title`                        | Simple, legible, fácil de convertir a HTML          | Limitado para documentos
-
-complejos            |
-| LaTeX     | Composición de documentos         | TEX        | Publicaciones científicas     | Rígido            | `\section{Introduction}`         | Excelente para matemáticas y publicaciones formales | Curva de aprendizaje pronunciada              |
+| Markdown  | Escritura de texto con formato    | Independ.  | Documentación, blogs          | Ligero            | `# Title`                        | Simple, legible, fácil de convertir a HTML          | Limitado para documentos complejos                 |
+| LaTeX     | Composición de documentos         | TEX        | Publicaciones científicas     | Rígido            | `\section{Introduction}`         | Excelente para matemáticas y publicaciones formales | Curva de aprendizaje pronunciada                   |
 | JSON      | Intercambio de datos              | Independ.  | Aplicaciones web, APIs        | Clave-valor       | `{ "title": "JSON" }`             | Ligero, fácil de interpretar                        | No apto para datos complejos con muchas relaciones |
 ```
