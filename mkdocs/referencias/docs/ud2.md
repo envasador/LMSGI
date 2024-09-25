@@ -3,9 +3,6 @@ hide:
   - navigation
 ---
 
-Claro, aquí tienes el tema completo en formato Markdown:
-
-```markdown
 # **Tema: Introducción a HTML5**
 
 ## **1. Historia de HTML y evolución hacia HTML5**
@@ -47,37 +44,37 @@ Claro, aquí tienes el tema completo en formato Markdown:
 ## **3. Etiquetas básicas en HTML5**
 
 ### **3.1. Etiquetas de encabezado y párrafo**
-- **`<h1>` a `<h6>`**: Para definir títulos y subtítulos en el documento.
+  - **`<h1>` a `<h6>`**: Para definir títulos y subtítulos en el documento.
     - `<h1>` es el nivel más importante y `<h6>` el menos importante.
-- **`<p>`**: Para definir párrafos de texto.
+  - **`<p>`**: Para definir párrafos de texto.
 
 ### **3.2. Etiquetas de contenido en bloque y en línea**
-- **Contenido en bloque**:
+  - **Contenido en bloque**:
     - `<div>`: Un contenedor genérico para contenido en bloque.
     - `<section>`: Agrupa contenido temático relacionado.
     - `<article>`: Para contenido independiente que podría ser reutilizado, como una publicación de blog.
     - `<header>`, `<footer>`, `<nav>`: Partes estructurales de una página web.
-- **Contenido en línea**:
+  - **Contenido en línea**:
     - `<span>`: Un contenedor genérico para contenido en línea.
     - `<a href="#">`: Enlaces que permiten la navegación entre páginas.
     - **Etiquetas de estilo en línea**: `<strong>`, `<em>`, `<mark>`, `<code>` para marcar texto con importancia, énfasis, resaltado o código fuente.
 
 ### **3.3. Listas**
-- **Listas ordenadas** (`<ol>`) y no ordenadas (`<ul>`) con elementos de lista (`<li>`).
+  - **Listas ordenadas** (`<ol>`) y no ordenadas (`<ul>`) con elementos de lista (`<li>`).
 
 ### **3.4. Imágenes y multimedia**
-- **`<img src="ruta" alt="descripción">`**: Inserta una imagen.
-- **`<video>` y `<audio>`**: Etiquetas para incorporar multimedia nativa, sin necesidad de plugins.
-    - Ejemplo de video:
-  ```html
-  <video controls>
-      <source src="video.mp4" type="video/mp4">
-      Tu navegador no soporta la etiqueta video.
-  </video>
-  ```
+  -  **`<img src="ruta" alt="descripción">`**: Inserta una imagen.
+  - **`<video>` y `<audio>`**: Etiquetas para incorporar multimedia nativa, sin necesidad de plugins.
+      - Ejemplo de video:
+    ```html
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta video.
+    </video>
+    ```
 
 ### **3.5. Formularios**
-- El uso de formularios es esencial para la interacción del usuario.
+  - El uso de formularios es esencial para la interacción del usuario.
     - **`<form>`**: Contenedor del formulario.
     - **`<input type="text">`, `<input type="email">`, `<input type="submit">`**: Campos de entrada de datos.
     - **`<label>`**: Para etiquetar los campos de entrada.
@@ -93,12 +90,12 @@ Claro, aquí tienes el tema completo en formato Markdown:
 ### **3.6. Tablas en HTML5**
 Las tablas permiten organizar datos en filas y columnas. Aunque no se recomienda para la maquetación de páginas, siguen siendo útiles para mostrar datos tabulares.
 
-- **`<table>`**: Elemento contenedor de la tabla.
-- **`<thead>`**: Agrupa el encabezado de la tabla.
-- **`<tbody>`**: Agrupa el cuerpo de la tabla.
-- **`<tr>`**: Define una fila en la tabla.
-- **`<th>`**: Define una celda de encabezado (por defecto en negrita y centrada).
-- **`<td>`**: Define una celda de datos en la tabla.
+  - **`<table>`**: Elemento contenedor de la tabla.
+  - **`<thead>`**: Agrupa el encabezado de la tabla.
+  - **`<tbody>`**: Agrupa el cuerpo de la tabla.
+  - **`<tr>`**: Define una fila en la tabla.
+  - **`<th>`**: Define una celda de encabezado (por defecto en negrita y centrada).
+  - **`<td>`**: Define una celda de datos en la tabla.
 
 Ejemplo básico de tabla:
 
@@ -183,22 +180,22 @@ Ejemplo con **`colspan`** y **`rowspan`**:
   ```
 
 ## **4. HTML5 Semántico: Un enfoque hacia la accesibilidad y SEO**
-- La introducción de etiquetas semánticas en HTML5 mejora la accesibilidad para lectores de pantalla y optimiza el SEO.
+  - La introducción de etiquetas semánticas en HTML5 mejora la accesibilidad para lectores de pantalla y optimiza el SEO.
     - **`<article>`, `<section>`, `<aside>`, `<header>`, `<footer>`, `<nav>`**: Ayudan a estructurar mejor el contenido, proporcionando información clara sobre su función.
-- **Beneficios de las etiquetas semánticas**:
-    - Mejoran la comprensión del contenido por parte de los motores de búsqueda.
-    - Facilitan la lectura del código por otros desarrolladores.
-    - Mejoran la accesibilidad para usuarios con discapacidades.
+  - **Beneficios de las etiquetas semánticas**:
+      - Mejoran la comprensión del contenido por parte de los motores de búsqueda.
+      - Facilitan la lectura del código por otros desarrolladores.
+      - Mejoran la accesibilidad para usuarios con discapacidades.
 
 ## **Recursos complementarios**
-- [Documentación oficial de HTML5 (MDN Web Docs)](https://developer.mozilla.org/es/docs/Web/HTML)
+  - [Documentación oficial de HTML5 (MDN Web Docs)](https://developer.mozilla.org/es/docs/Web/HTML)
+  - [W3C HTML5 Specification](https://www.w3.org/TR/html5/)
+  - [HTML5 by Manz](https://lenguajehtml.com/html/)
 
-
-- [W3C HTML5 Specification](https://www.w3.org/TR/html5/)
-- Ejemplos y ejercicios prácticos: Crear una página HTML básica que incluya un formulario de contacto, un artículo con imágenes y videos, y una lista de tareas.
+Ejemplos y ejercicios prácticos: Crear una página HTML básica que incluya un formulario de contacto, un artículo con imágenes y videos, y una lista de tareas.
 
 ## Material de refuerzo y ampliación
 
 Se recomienda la realización de los siguientes cursos de la [Learn HTML by Building a Cat Photo App](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/step-1)  de freeCodeCamp.
 
-* [HTML5 by Manz](https://lenguajehtml.com/html/)
+
