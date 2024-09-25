@@ -11,9 +11,6 @@
     box-shadow: 0;
 }
 
-a{
-    color: #564256;
-}
 a:hover{
     text-decoration: underline;
 }
@@ -22,7 +19,6 @@ a:hover{
     --md-primary-fg-color:        #564256;
     --md-primary-fg-color--light: #564256;
     --md-primary-fg-color--dark:  #564256;
-
 }
 
 [data-md-color-scheme="slate"] {
