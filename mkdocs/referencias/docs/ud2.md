@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# **Tema: Introducción a HTML5**
+# **Introducción a HTML5**
 
 ## **1. Historia de HTML y evolución hacia HTML5**
    - **Origen de HTML (1990-1991)**: HTML (HyperText Markup Language) fue creado por Tim Berners-Lee, el padre de la World Wide Web. La primera versión fue muy básica, con un conjunto limitado de etiquetas que permitían estructurar contenido sencillo.
