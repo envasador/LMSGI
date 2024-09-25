@@ -18,6 +18,7 @@ Este curso está diseñado para que adquieras las habilidades necesarias en el m
 ## Tabla de contenido
 
 * [Unidad 1: Introducción a los lenguajes de marcas](ud1.md)
+* [Unidad 2: HTML5](ud2.md)
 
 
 ## Referencias web generales
