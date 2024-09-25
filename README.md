@@ -14,13 +14,9 @@ Material didáctico del módulo Lenguajes de Marcas Web del CFGS Desarrollo de a
 </p>
 </section>
 
-## Diapositivas
-
-- [Presentación del módulo](https://envasador.github.io/LMSGI/slides/#)
-
 ## Referencias
 
 - [Referencias del curso](https://envasador.github.io/LMSGI/docs/referencias)
 
 ## Proyectos
-- [Proyectos del curso](https://envasador.github.io/LMSGI/docs/#)
+- [Proyectos del curso (en breve disponible)](#)
