@@ -26,20 +26,20 @@ hide:
      - `<title>`: Define el título que se muestra en la pestaña del navegador.
      - `<body>`: Contiene el contenido visible para el usuario (texto, imágenes, videos, etc.).
 
-   ```html
-   <!DOCTYPE html>
-   <html lang="es">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Mi primer documento HTML5</title>
-   </head>
-   <body>
-       <h1>¡Hola, Mundo!</h1>
-       <p>Este es un documento básico en HTML5.</p>
-   </body>
-   </html>
-   ```
+```html 
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi primer documento HTML5</title>
+    </head>
+    <body>
+        <h1>¡Hola, Mundo!</h1>
+        <p>Este es un documento básico en HTML5.</p>
+    </body>
+    </html>
+```
 
 ## **3. Etiquetas básicas en HTML5**
 
