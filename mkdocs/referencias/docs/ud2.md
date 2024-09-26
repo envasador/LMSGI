@@ -26,7 +26,7 @@ hide:
      - `<title>`: Define el título que se muestra en la pestaña del navegador.
      - `<body>`: Contiene el contenido visible para el usuario (texto, imágenes, videos, etc.).
 
-```html 
+```html
 <!DOCTYPE html>
     <html lang="es">
     <head>
