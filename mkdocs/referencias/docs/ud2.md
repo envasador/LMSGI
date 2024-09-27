@@ -66,26 +66,25 @@ hide:
   -  **`<img src="ruta" alt="descripción">`**: Inserta una imagen.
   - **`<video>` y `<audio>`**: Etiquetas para incorporar multimedia nativa, sin necesidad de plugins.
       - Ejemplo de video:
-    ```html
+```html
     <video controls>
         <source src="video.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta video.
     </video>
-    ```
+```
 
 ### **3.5. Formularios**
   - El uso de formularios es esencial para la interacción del usuario.
     - **`<form>`**: Contenedor del formulario.
     - **`<input type="text">`, `<input type="email">`, `<input type="submit">`**: Campos de entrada de datos.
     - **`<label>`**: Para etiquetar los campos de entrada.
-
-  ```html
+```html
   <form action="/submit" method="POST">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre">
       <input type="submit" value="Enviar">
   </form>
-  ```
+```
 
 ### **3.6. Tablas en HTML5**
 Las tablas permiten organizar datos en filas y columnas. Aunque no se recomienda para la maquetación de páginas, siguen siendo útiles para mostrar datos tabulares.
@@ -98,9 +97,8 @@ Las tablas permiten organizar datos en filas y columnas. Aunque no se recomienda
   - **`<td>`**: Define una celda de datos en la tabla.
 
 Ejemplo básico de tabla:
-
-   ```html
-   <table border="1">
+```html
+   <table>
        <thead>
            <tr>
                <th>Nombre</th>
@@ -121,7 +119,7 @@ Ejemplo básico de tabla:
            </tr>
        </tbody>
    </table>
-   ```
+```
 
 - **Atributos importantes**:
     - **`border`**: Define el grosor del borde de la tabla. (En HTML5 se recomienda usar CSS para manejar estilos).
@@ -129,8 +127,7 @@ Ejemplo básico de tabla:
     - **`rowspan`**: Hace que una celda se extienda por varias filas.
 
 Ejemplo con **`colspan`** y **`rowspan`**:
-
-   ```html
+```html
    <table border="1">
        <thead>
            <tr>
@@ -155,29 +152,7 @@ Ejemplo con **`colspan`** y **`rowspan`**:
            </tr>
        </tbody>
    </table>
-   ```
-
-- **Accesibilidad en tablas**:
-    - Utiliza los atributos **`scope="col"`** o **`scope="row"`** en las celdas de encabezado (`<th>`) para mejorar la accesibilidad y ayudar a los lectores de pantalla a interpretar mejor la tabla.
-    - Ejemplo:
-  ```html
-  <table border="1">
-      <thead>
-          <tr>
-              <th scope="col">Nombre</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Ciudad</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Juan</td>
-              <td>25</td>
-              <td>Madrid</td>
-          </tr>
-      </tbody>
-  </table>
-  ```
+```
 
 ## **4. HTML5 Semántico: Un enfoque hacia la accesibilidad y SEO**
   - La introducción de etiquetas semánticas en HTML5 mejora la accesibilidad para lectores de pantalla y optimiza el SEO.

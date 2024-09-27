@@ -3,102 +3,93 @@ hide:
   - navigation
 ---
 
-# Proyecto 1: Prototipado y Diseño de una Interfaz Web con Figma
+Gracias por la aclaración. Vamos a ajustar el proyecto y la rúbrica para evaluar todos los criterios de evaluación (19 en total) y utilizando Balsamiq para los wireframes.
 
-<center>
-![](assets/proyecto1.webp)
-</center>
+---
 
-## Objetivo general
+### **Título del Proyecto:**
+**“Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
 
-El objetivo es planificar, prototipar y diseñar una interfaz web accesible, aplicando principios de comunicación visual, seleccionando tipografías y colores adecuados, y utilizando tecnologías actuales para crear una plantilla de diseño reutilizable.
+### **Agrupamiento:**
+Individual
 
-## Resultados de aprendizaje y Criterios de evaluación
+### **Descripción del Proyecto:**
+El proyecto consiste en el desarrollo de una aplicación web completa utilizando HTML5 y CSS3, donde el alumnado deberá aplicar conocimientos avanzados de lenguajes de marcas para la creación de documentos web. Se enfocará en una estructura de varias páginas con diseño responsive, siguiendo estándares actuales. Además, se realizará un wireframe previo utilizando Balsamiq para planificar la estructura y el contenido de la aplicación.
 
-### RA1 Planifica la creación de una interfaz web valorando y aplicando especificaciones de diseño.
+### **Objetivo:**
+- Analizar y aplicar las características de diferentes lenguajes de marcas en el desarrollo de una aplicación web.
+- Identificar y utilizar etiquetas y atributos HTML5 de manera efectiva.
+- Aplicar hojas de estilo CSS3 para mejorar la presentación y usabilidad de la aplicación.
+- Validar y optimizar los documentos HTML y CSS creados, asegurando la conformidad con los estándares web.
+- Fomentar la autonomía y capacidad de gestión del alumnado en la realización del proyecto.
 
-**Criterios de evaluación:**
-- Se ha reconocido la importancia de la comunicación visual y sus principios básicos.
-- Se han analizado y seleccionado los colores y tipografías adecuados para su visualización en pantalla.
-- Se han analizado alternativas para la presentación de la información en documentos web.
-- Se ha valorado la importancia de definir y aplicar la guía de estilo en el desarrollo de una aplicación web.
-- Se han utilizado y valorado distintas tecnologías para el diseño de documentos web.
-- Se han creado y utilizado plantillas de diseño.
+### **Trabajo a Realizar:**
 
+1. **Fase de Planificación y Diseño:**
+    - **Análisis de Requisitos y Wireframe:**
+        - Realizar un wireframe utilizando Balsamiq que incluya al menos 3 pantallas principales de la aplicación: página de inicio, sección de información y sección de contacto.
+        - Elaborar un documento de especificaciones donde se detallen los lenguajes de marcas a utilizar, su ámbito de aplicación, y la estructura planificada de la aplicación web.
 
-## ¿Qué tengo que hacer en este proyecto?
+2. **Fase de Desarrollo:**
+    - **Estructura del Proyecto:**
+        - Crear la estructura de directorios de la aplicación: `/index.html`, `/css/estilos.css`, `/img/`, `/js/` (si es necesario).
+        - Implementar la estructura HTML5 para las diferentes secciones y páginas de la aplicación (mínimo 4 páginas interconectadas).
+    - **Estilo y Diseño:**
+        - Aplicar CSS3 para definir estilos coherentes entre las páginas: tipografía, colores, disposición, etc.
+        - Implementar un diseño responsive utilizando técnicas como flexbox o grid.
+    - **Interactividad y Usabilidad:**
+        - Añadir elementos de interactividad básica utilizando solo HTML5 y CSS (ej.: menús desplegables, transiciones).
 
-### Proyecto Aplicación Web
+3. **Fase de Validación y Optimización:**
+    - **Validación:**
+        - Validar el código HTML y CSS utilizando herramientas como el W3C Validator.
+    - **Optimización:**
+        - Optimizar los archivos CSS eliminando código redundante y aplicando buenas prácticas de rendimiento.
+        - Comprimir imágenes y recursos multimedia para mejorar la velocidad de carga de la aplicación.
 
-Este proyecto es el inicio y la base para aplicar un proyecto de desarrollo web conjunto con cliente. Puedes elegir desarrollar cualquier tipo de aplicación web, siempre que cumpla con ciertos criterios técnicos y de diseño. Ten en cuenta que necesitará ciertas funcionalidades más complejas que se usarán y evaluarán a futuro en el módulo de DWEC. La creatividad y la innovación son claves aquí, así que te animamos a pensar en una aplicación que no solo demuestre tus habilidades técnicas, sino que también refleje tus intereses personales o profesionales.
+4. **Fase de Documentación y Presentación:**
+    - **Documentación del Proyecto:**
+        - Crear un documento final que incluya:
+            - Descripción del proyecto.
+            - Especificaciones técnicas.
+            - Explicación de las decisiones de diseño y desarrollo.
+            - Capturas de pantalla del wireframe y del producto final.
+    - **Presentación:**
+        - Preparar una breve presentación de la aplicación (5-10 minutos) donde se explique el proceso de desarrollo, los retos enfrentados y las soluciones aplicadas.
 
+### **Recursos:**
+- [Documentación de HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
+- [Documentación de CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [Guía de Flexbox y Grid](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Balsamiq (para wireframes)](https://balsamiq.com/)
+- [Validador de HTML y CSS de W3C](https://validator.w3.org/)
+- [Herramientas de edición de código (VSCode, Sublime Text, etc.)](https://code.visualstudio.com/)
 
-## Libertad Creativa
+### **Evaluación y Calificación:**
 
-La esencia de este proyecto es la libertad creativa. Puedes elegir el tipo de aplicación web que quieras desarrollar, siempre y cuando utilices **Vue.js** como framework principal. Para comenzar, aquí tienes algunas ideas de proyectos:
+**Rúbrica de Evaluación:**
 
-- **Ecommerce platform:** Desarrolla un sitio de comercio electrónico con carrito de compras, búsqueda de productos y sistema de valoraciones.
-- **Plataforma Educativa:** Crea una plataforma para cursos en línea, con lecciones, quizzes y seguimiento del progreso.
-- **Gestor de Tareas:** Un sistema para organizar tareas y proyectos personales o de equipo, con funcionalidades de añadir, editar, eliminar y clasificar tareas.
-- **Red Social Temática:** Una red social enfocada en un tema específico (ej: libros, viajes, gastronomía), con perfiles de usuario, publicaciones y sistema de amigos o seguidores.
-- **Blog Personalizado:** Un blog donde los usuarios pueden escribir, publicar y compartir artículos, con la posibilidad de comentar y dar 'me gusta' a las publicaciones.
-- **Portal de Noticias:** Un sitio web de noticias con categorías, comentarios y un sistema para clasificar noticias por popularidad o actualidad.
-- **Aplicación de Reservas:** Un sistema para reservar servicios o eventos, como citas en salones de belleza, reservas en restaurantes o inscripciones a eventos.
+| Criterio de Evaluación | Nivel 1 (0-2) | Nivel 2 (3-4) | Nivel 3 (5-6) | Nivel 4 (7-8) | Nivel 5 (9-10) |
+|------------------------|---------------|---------------|---------------|---------------|----------------|
+| **CE1.a**: Identificación de características generales de lenguajes de marcas. | No identifica características. | Identifica algunas características básicas. | Identifica la mayoría de las características de forma precisa. | Identifica todas las características con detalle. | Explica con ejemplos prácticos las características de los lenguajes. |
+| **CE1.b**: Ventajas que proporcionan en el tratamiento de la información. | No reconoce ventajas. | Reconoce ventajas básicas. | Explica correctamente las principales ventajas. | Explica y justifica con ejemplos ventajas avanzadas. | Relaciona ventajas con contextos de aplicación concretos. |
+| **CE1.c**: Clasificación de los lenguajes de marcas e identificación de los más relevantes. | No clasifica ni identifica. | Clasificación básica y parcial. | Clasificación completa y coherente. | Clasificación detallada con comparativas entre lenguajes. | Propone mejoras y nuevas clasificaciones. |
+| **CE1.d**: Diferenciación de ámbitos de aplicación. | No identifica ámbitos. | Identifica algunos ámbitos básicos. | Diferencia adecuadamente la mayoría de los ámbitos. | Diferencia todos los ámbitos y sus aplicaciones concretas. | Propone aplicaciones innovadoras para cada ámbito. |
+| **CE1.e**: Necesidad y ámbitos específicos de aplicación de un lenguaje de propósito general. | No aplica correctamente. | Aplica en contextos limitados. | Aplica de forma adecuada en varios contextos. | Aplica y adapta a necesidades específicas. | Propone mejoras y alternativas en aplicaciones complejas. |
+| **CE1.f**: Análisis de las características propias de diferentes lenguajes de marcas. | No analiza características. | Análisis parcial de algunas características. | Análisis correcto de la mayoría de los lenguajes. | Análisis detallado y comparativo. | Análisis crítico y propositivo sobre el uso del lenguaje. |
+| **CE1.g**: Identificación de la estructura de un documento y sus reglas sintácticas. | No identifica la estructura. | Identifica estructura básica con errores. | Identifica correctamente la estructura de la mayoría de documentos. | Identifica y explica la estructura de todos los documentos. | Propone y justifica mejoras en la estructura. |
+| **CE1.h**: Creación de documentos bien formados y su influencia en el procesamiento. | No crea documentos bien formados. | Crea documentos con errores básicos. | Crea documentos bien formados con mínimos errores. | Crea documentos óptimos y bien formados. | Propone mejoras estructurales y de procesamiento. |
+| **CE1.i**: Ventajas que aportan los espacios de nombres. | No reconoce ventajas. | Reconoce ventajas básicas. | Explica correctamente las principales ventajas. | Explica ventajas con ejemplos prácticos. | Relaciona las ventajas con contextos avanzados. |
+| **CE2.a**: Clasificación de lenguajes relacionados con la web y sus versiones y estándares. | No clasifica ni identifica. | Clasificación básica y parcial. | Clasificación completa y coherente. | Clasificación detallada con comparativas entre versiones y estándares. | Propone mejoras y nuevas clasificaciones. |
+| **CE2.b**: Análisis de la estructura de un documento HTML y sus secciones. | No analiza estructura. | Análisis parcial de algunas secciones. | Análisis correcto de la mayoría de las secciones. | Análisis detallado de la estructura completa. | Propone mejoras y justifica decisiones de diseño. |
+| **CE2.c**: Reconocimiento de la funcionalidad de etiquetas y atributos HTML. | No reconoce funcionalidad. | Reconoce funcionalidad básica de algunas etiquetas. | Reconoce funcionalidad de la mayoría de las etiquetas. | Reconoce y utiliza adecuadamente todas las etiquetas y atributos. | Propone alternativas optimizadas para etiquetas y atributos. |
+| **CE2.d**: Diferencias entre versiones de HTML. | No reconoce diferencias. | Reconoce algunas diferencias básicas. | Reconoce correctamente la mayoría de las diferencias. | Explica detalladamente las diferencias entre versiones. | Propone mejoras y justifica la evolución de las versiones. |
+| **CE2.e**: Uso de herramientas de creación de documentos web. | No usa herramientas adecuadas. | Uso limitado de herramientas básicas. | Uso correcto de herramientas recomendadas. | Uso avanzado de herramientas de desarrollo. | Usa y enseña a otros a utilizar herramientas complejas y optimizadas. |
+| **CE2.f**: Ventajas de la utilización de hojas de estilo. | No reconoce ventajas. | Reconoce ventajas básicas. | Explica correctamente las principales ventajas. | Explica ventajas con ejemplos prácticos. | Propone mejoras en el uso de hojas de estilo y diseño. |
+| **CE2.g**: Aplicación de hojas de estilo. | No aplica hojas de estilo. | Aplica hojas de estilo con errores. | Aplica correctamente hojas de estilo básicas. | Aplica hojas de estilo con diseño responsive y coherente. | Aplica estilos complejos optimizando rendimiento y diseño. |
+| **CE2.h**: Validación de documentos HTML y CSS. | No realiza validación. | Validación con errores no corregidos.| Validación correcta de documentos. | Validación completa con optimización. | Propone mejoras y justifica la validación en entornos productivos. |
+| **CE2.i**: Tecnologías de sindicación de contenidos. | No identifica tecnologías. | Identificación parcial y con errores. | Identificación correcta de las tecnologías principales. | Identificación y aplicación de tecnologías de sindicación. | Propone mejoras y alternativas innovadoras en sindicación. |
+| **CE2.j**: Ámbitos de aplicación de la sindicación de contenidos. | No identifica ámbitos. | Identificación parcial y con errores. | Identificación correcta de la mayoría de los ámbitos. | Identificación detallada con ejemplos prácticos. | Propone mejoras y aplicaciones innovadoras en diferentes ámbitos. |
+| **Autonomía del alumnado en el desarrollo del proyecto.** | No trabaja de forma autónoma. | Necesita ayuda constante. | Trabaja de forma autónoma con apoyo puntual. | Trabaja de forma autónoma gestionando problemas. | Lidera el proyecto y propone mejoras creativas y técnicas. |
 
-
-## Guía de actividades
-
-### 1. Análisis de los principios de comunicación visual  
-**Descripción:** Los estudiantes investigan y aplican principios básicos del diseño de interfaces web.  
-**Producto:** Moodboard en Figma que refleje el uso de estos principios, visualizando ejemplos concretos aplicables al proyecto.
-
-### 2. Selección de colores y tipografías  
-**Descripción:** Selección de una paleta de colores accesibles y tipografías legibles para pantallas, cumpliendo con los requisitos de contraste y accesibilidad.  
-**Producto:** Biblioteca de estilos en Figma que incluya colores, tipografías y componentes básicos del diseño.
-
-### 3. Wireframes de baja fidelidad  
-**Descripción:** Creación de wireframes en Figma para explorar opciones de estructura y layout, analizando alternativas de presentación de la información.  
-**Producto:** Serie de wireframes que representen la estructura básica de la aplicación, priorizando la experiencia de usuario.
-
-### 4. Definición de la guía de estilo  
-**Descripción:** Elaboración de una guía de estilo en Figma con pautas sobre colores, tipografía, iconos, botones y espaciado.  
-**Producto:** Guía de estilo detallada en Figma que servirá como referencia para la maquetación y desarrollo.
-
-### 5. Prototipado de alta fidelidad en Figma  
-**Descripción:** Construcción del prototipo interactivo en Figma que integre los wireframes, la guía de estilo y componentes reutilizables.  
-**Producto:** Prototipo navegable de alta fidelidad en Figma para pruebas de usabilidad. Añadir a vuestro equipo en Figma: acarmar112@g.educaand.es.
-
-
-## Requisitos del Proyecto
-
-El proyecto debe cumplir los siguientes criterios fundamentales:
-
-1. **Integración con API:** La aplicación debe interactuar con al menos una API externa (RESTful, GraphQL, etc.).
-2. **Autenticación y Autorización:** Integrar un sistema de autenticación y gestión de sesiones.
-3. **Responsive Design:** La aplicación debe ser accesible en diferentes dispositivos.
-4. **Calidad del Código:** Código limpio, bien organizado, siguiendo buenas prácticas.
-5. **Documentación y Despliegue:** Documentación adecuada y despliegue en plataformas como Netlify, Vercel o GitHub Pages.
-
-## Entrega final
-
-### Debéis entregar:
-- Los archivos del proyecto completo en GitHub.
-- El proyecto en Figma.
-- Un documento con la información recogida del proyecto y el informe de accesibilidad.
-
-**Revisión:** Se realizará una presentación del proyecto.
-
-
-## Calificación
-
-### RA1
-
-| **CE**  | 10 excelente | 8 notable | 6 bien | 4 necesita mejorar | 2 insuficiente | 0 no asiste |
-|---------|--------------|-----------|--------|--------------------|----------------|-------------|
-| a) Se ha reconocido la importancia de la comunicación visual y sus principios básicos (0,5%) | Se ha reconocido de forma excelente | Se han reconocido de forma correcta | Se han definido con ayuda | Se han reconocido con errores | Se han reconocido con bastantes errores | No asiste o no evaluable |
-| b) Se han analizado y seleccionado los colores y tipografías adecuados para su visualización en pantalla (2%) | Se han analizado y seleccionado de forma excelente, justificando dicha selección | Se han analizado y seleccionado de forma correcta | Se han analizado con algún error | Se han analizado con errores | Se han analizado con grandes errores | No asiste o no evaluable |
-| c) Se han analizado alternativas para la presentación de la información en documentos web (1%) | Se han analizado sin errores, justificando su aplicación con lenguaje técnico | Se han analizado sin errores, con una justificación adecuada | Se han analizado con algún error | Se ha documentado de forma escueta | Se han analizado con grandes errores | No asiste o no evaluable |
-| d) Se ha valorado la importancia de definir y aplicar la guía de estilo (1%) | Se ha valorado de forma clara y con lenguaje técnico | Se ha valorado de forma correcta | Se ha valorado de forma correcta pero incompleta | Se ha valorado de manera superficial | No se ha valorado | No asiste o no evaluable |
-| e) Se han utilizado tecnologías para el diseño de documentos Web (2%) | Se han utilizado tecnologías avanzadas de forma excelente | Se han utilizado de forma correcta | Se han utilizado con algún error | Se han utilizado con errores | Se han utilizado con grandes errores | No asiste o no evaluable |
-| f) Se han utilizado marcos, tablas y capas para presentar la información de manera ordenada (2%) | Se han utilizado elementos HTML5 de forma autónoma y justificada | Se han utilizado de forma correcta y sin justificar | Se han utilizado con pequeños errores | Se han utilizado con varios errores | Se han utilizado de manera incorrecta | No asiste o no evaluable |
-| g) Se han creado y utilizado plantillas de diseño (11%) | Se han creado plantillas de forma excelente y ajustada a las instrucciones | Se han creado de forma correcta y ajustada | Se han creado con pequeños errores | Se han creado con errores importantes | Se han creado con grandes fallos | No asiste o no evaluable |
+---
