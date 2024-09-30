@@ -731,15 +731,15 @@
 <ul>
 <li><strong><code>&lt;img src="ruta" alt="descripción"&gt;</code></strong>: Inserta una imagen.</li>
 <li><strong><code>&lt;video&gt;</code> y <code>&lt;audio&gt;</code></strong>: Etiquetas para incorporar multimedia nativa, sin necesidad de plugins.<ul>
-<li>Ejemplo de video:
-<code>html
-&lt;video controls&gt;
-    &lt;source src="video.mp4" type="video/mp4"&gt;
-    Tu navegador no soporta la etiqueta video.
-&lt;/video&gt;</code></li>
+<li>Ejemplo de video:</li>
 </ul>
 </li>
 </ul>
+<pre><code class="language-html">    &lt;video controls&gt;
+        &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        Tu navegador no soporta la etiqueta video.
+    &lt;/video&gt;
+</code></pre>
 <h3 id="35-formularios"><strong>3.5. Formularios</strong></h3>
 <ul>
 <li>El uso de formularios es esencial para la interacción del usuario.<ul>
@@ -749,14 +749,12 @@
 </ul>
 </li>
 </ul>
-<p>```html
-<br />
-<form action="/submit" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre">
-      <input type="submit" value="Enviar">
-  </form></p>
-<p>```</p>
+<pre><code class="language-html">  &lt;form action=&quot;/submit&quot; method=&quot;POST&quot;&gt;
+      &lt;label for=&quot;nombre&quot;&gt;Nombre:&lt;/label&gt;
+      &lt;input type=&quot;text&quot; id=&quot;nombre&quot; name=&quot;nombre&quot;&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+  &lt;/form&gt;
+</code></pre>
 <h3 id="36-tablas-en-html5"><strong>3.6. Tablas en HTML5</strong></h3>
 <p>Las tablas permiten organizar datos en filas y columnas. Aunque no se recomienda para la maquetación de páginas, siguen siendo útiles para mostrar datos tabulares.</p>
 <ul>
@@ -768,30 +766,28 @@
 <li><strong><code>&lt;td&gt;</code></strong>: Define una celda de datos en la tabla.</li>
 </ul>
 <p>Ejemplo básico de tabla:</p>
-<p>```html
- <br />
-<table border="1">
-       <thead>
-           <tr>
-               <th>Nombre</th>
-               <th>Edad</th>
-               <th>Ciudad</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr>
-               <td>Juan</td>
-               <td>25</td>
-               <td>Madrid</td>
-           </tr>
-           <tr>
-               <td>Ana</td>
-               <td>30</td>
-               <td>Barcelona</td>
-           </tr>
-       </tbody>
-   </table></p>
-<p>```</p>
+<pre><code class="language-html">   &lt;table&gt;
+       &lt;thead&gt;
+           &lt;tr&gt;
+               &lt;th&gt;Nombre&lt;/th&gt;
+               &lt;th&gt;Edad&lt;/th&gt;
+               &lt;th&gt;Ciudad&lt;/th&gt;
+           &lt;/tr&gt;
+       &lt;/thead&gt;
+       &lt;tbody&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Juan&lt;/td&gt;
+               &lt;td&gt;25&lt;/td&gt;
+               &lt;td&gt;Madrid&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Ana&lt;/td&gt;
+               &lt;td&gt;30&lt;/td&gt;
+               &lt;td&gt;Barcelona&lt;/td&gt;
+           &lt;/tr&gt;
+       &lt;/tbody&gt;
+   &lt;/table&gt;
+</code></pre>
 <ul>
 <li><strong>Atributos importantes</strong>:<ul>
 <li><strong><code>border</code></strong>: Define el grosor del borde de la tabla. (En HTML5 se recomienda usar CSS para manejar estilos).</li>
@@ -801,59 +797,31 @@
 </li>
 </ul>
 <p>Ejemplo con <strong><code>colspan</code></strong> y <strong><code>rowspan</code></strong>:</p>
-<p>```html
- <br />
-<table border="1">
-       <thead>
-           <tr>
-               <th>Producto</th>
-               <th>Precio</th>
-               <th>Cantidad</th>
-           </tr>
-       </thead>
-       <tbody>
-           <tr>
-               <td>Manzanas</td>
-               <td>1.00€</td>
-               <td rowspan="2">10</td>
-           </tr>
-           <tr>
-               <td>Peras</td>
-               <td>1.50€</td>
-           </tr>
-           <tr>
-               <td colspan="2">Total</td>
-               <td>20€</td>
-           </tr>
-       </tbody>
-   </table></p>
-<p>```</p>
-<ul>
-<li><strong>Accesibilidad en tablas</strong>:<ul>
-<li>Utiliza los atributos <strong><code>scope="col"</code></strong> o <strong><code>scope="row"</code></strong> en las celdas de encabezado (<code>&lt;th&gt;</code>) para mejorar la accesibilidad y ayudar a los lectores de pantalla a interpretar mejor la tabla.</li>
-<li>Ejemplo:
-  ```html
-<br />
-<table border="1">
-      <thead>
-          <tr>
-              <th scope="col">Nombre</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Ciudad</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Juan</td>
-              <td>25</td>
-              <td>Madrid</td>
-          </tr>
-      </tbody>
-  </table></li>
-</ul>
-</li>
-</ul>
-<p>```</p>
+<pre><code class="language-html">   &lt;table border=&quot;1&quot;&gt;
+       &lt;thead&gt;
+           &lt;tr&gt;
+               &lt;th&gt;Producto&lt;/th&gt;
+               &lt;th&gt;Precio&lt;/th&gt;
+               &lt;th&gt;Cantidad&lt;/th&gt;
+           &lt;/tr&gt;
+       &lt;/thead&gt;
+       &lt;tbody&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Manzanas&lt;/td&gt;
+               &lt;td&gt;1.00€&lt;/td&gt;
+               &lt;td rowspan=&quot;2&quot;&gt;10&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td&gt;Peras&lt;/td&gt;
+               &lt;td&gt;1.50€&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td colspan=&quot;2&quot;&gt;Total&lt;/td&gt;
+               &lt;td&gt;20€&lt;/td&gt;
+           &lt;/tr&gt;
+       &lt;/tbody&gt;
+   &lt;/table&gt;
+</code></pre>
 <h2 id="4-html5-semantico-un-enfoque-hacia-la-accesibilidad-y-seo"><strong>4. HTML5 Semántico: Un enfoque hacia la accesibilidad y SEO</strong></h2>
 <ul>
 <li>La introducción de etiquetas semánticas en HTML5 mejora la accesibilidad para lectores de pantalla y optimiza el SEO.<ul>
