@@ -2,21 +2,21 @@ site_name: Docs
 theme:
   name: material
   language: es
-  logo: assets/sello-safael-slberti-imago-blanco.svg
-  favicon: assets/sello-safael-slberti-imago-blanco.svg
+  logo: assets/sello-rafael-alberti-imago-blanco.svg
+  favicon: assets/sello-rafael-alberti-imago-blanco.svg
   palette:
-    - media: "(prefers-color-scheme: light)" 
+    - media: "(prefers-color-scheme: light)"
       scheme: daw-style
       primary: grey
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)" 
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tracking
