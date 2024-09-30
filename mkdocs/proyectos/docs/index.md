@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Diseño de Interfaces Web.
+# Lenguajes de Marcas.
 ![](assets/referencias.jpg)
 
 
