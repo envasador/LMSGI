@@ -25,71 +25,132 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
 
 ### **Trabajo a Realizar:**
 
-1. **Fase de Planificación y Diseño:**
-    - **Análisis de Requisitos y Wireframe:**
-        - Realizar un wireframe utilizando Balsamiq que incluya al menos 3 pantallas principales de la aplicación: página de inicio, sección de información y sección de contacto.
-        - Elaborar un documento de especificaciones donde se detallen los lenguajes de marcas a utilizar, su ámbito de aplicación, y la estructura planificada de la aplicación web.
+Claro, aquí te detallo cada fase del proyecto con acciones más específicas:
 
-2. **Fase de Desarrollo:**
-    - **Estructura del Proyecto:**
-        - Crear la estructura de directorios de la aplicación: `/index.html`, `/css/estilos.css`, `/img/`, `/js/` (si es necesario).
-        - Implementar la estructura HTML5 para las diferentes secciones y páginas de la aplicación (mínimo 4 páginas interconectadas).
-    - **Estilo y Diseño:**
-        - Aplicar CSS3 para definir estilos coherentes entre las páginas: tipografía, colores, disposición, etc.
-        - Implementar un diseño responsive utilizando técnicas como flexbox o grid.
-    - **Interactividad y Usabilidad:**
-        - Añadir elementos de interactividad básica utilizando solo HTML5 y CSS (ej.: menús desplegables, transiciones).
+---
 
-3. **Fase de Validación y Optimización:**
-    - **Validación:**
-        - Validar el código HTML y CSS utilizando herramientas como el W3C Validator.
-    - **Optimización:**
-        - Optimizar los archivos CSS eliminando código redundante y aplicando buenas prácticas de rendimiento.
-        - Comprimir imágenes y recursos multimedia para mejorar la velocidad de carga de la aplicación.
+### **Trabajo a Realizar:**
 
-4. **Fase de Documentación y Presentación:**
-    - **Documentación del Proyecto:**
-        - Crear un documento final que incluya:
-            - Descripción del proyecto.
-            - Especificaciones técnicas.
-            - Explicación de las decisiones de diseño y desarrollo.
-            - Capturas de pantalla del wireframe y del producto final.
-    - **Presentación:**
-        - Preparar una breve presentación de la aplicación (5-10 minutos) donde se explique el proceso de desarrollo, los retos enfrentados y las soluciones aplicadas.
+#### **Fase 1: Planificación y Diseño**
+1. **Análisis de Requisitos:**
+   - **Revisión del enunciado y objetivos del proyecto.**
+   - **Identificación de necesidades:** Investigar el propósito de la aplicación web y sus usuarios potenciales.
+   - **Establecimiento de funcionalidades:** Crear una lista de funcionalidades clave (ej.: navegación, formulario de contacto, sección de información, etc.).
+   - **Definición de estructura de contenido:** Crear un esquema básico de la estructura de la aplicación, como el mapa del sitio.
+
+2. **Creación del Wireframe en Balsamiq:**
+   - **Dibujo de la estructura básica de cada página:** Incluir la disposición de elementos como encabezado, pie de página, navegación, y secciones de contenido.
+   - **Especificación de contenido:** Definir qué tipo de contenido irá en cada sección (texto, imágenes, botones, etc.).
+   - **Incorporación de interacción:** Marcar elementos interactivos (menús desplegables, botones, enlaces).
+   - **Revisión y mejora del wireframe:** Revisar con el docente o compañeros y realizar ajustes basados en el feedback recibido.
+
+3. **Documentación de la Fase de Diseño:**
+   - **Creación de un documento de especificaciones:** Incluir el objetivo del proyecto, descripción del usuario objetivo, lista de funcionalidades, y estructura del sitio.
+   - **Incluir capturas del wireframe en el documento:** Acompañar cada sección con una breve descripción.
+
+#### **Fase 2: Desarrollo**
+
+1. **Configuración del Entorno de Desarrollo:**
+   - **Estructuración del proyecto:** Crear la estructura de carpetas (ej.: `/css`, `/img`, `/js`) y archivos necesarios (`index.html`, `estilos.css`).
+   - **Configuración del editor de código:** Asegurar que el entorno de trabajo con WebStorm, o bien si utilizas VSCode que esté preparado con extensiones útiles como Prettier, Emmet, o Live Server.
+
+2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
+   - **Creación de la página de inicio:**
+      - Estructurar la página.
+      - Añadir elementos como el menú de navegación, secciones de contenido, y enlaces a otras páginas.
+   - **Desarrollo de páginas secundarias:**
+      - Página de información: Incluir secciones como “Acerca de”, servicios, etc.
+      - Página de contacto: Formulario de contacto con campos como nombre, email, y mensaje.
+      - Página adicional: Puede ser una galería, blog, o cualquier otra funcionalidad elegida.
+      - Etcétera. 
+   - **Enlazado entre páginas:** Asegurar que todas las páginas estén correctamente enlazadas a través del menú de navegación y enlaces contextuales.
+
+3. **Aplicación de Hojas de Estilo (CSS):**
+   - **Organización correcta de los estilos**, para mejorar las buenas prácticas y mantenibilidad del proyecto a futur.
+   - **Estilización básica:**
+      - Definir estilos globales para tipografía, colores, y espaciados.
+      - Estilo de la cabecera y pie de página: Definir diseño y disposición.
+  - **Aplicación de diseño responsive:**
+     - Utilizar una estructura semántica correcta para la disposición de elementos.
+     - Definir puntos de ruptura para adaptarse a diferentes tamaños de pantalla.
+  - **Diseño de componentes específicos:**
+     - Estilo del formulario de contacto.
+     - Tarjetas de presentación para servicios o productos.
+     - Galería de imágenes con efectos de hover.
+
+4. **Interactividad y Usabilidad:**
+   - **Creación de menús desplegables:** Si el wireframe lo especifica, implementar menús en el header.
+   - **Efectos y transiciones en CSS:** Añadir transiciones suaves para efectos de hover, animaciones de aparición de elementos, etc.
+   - **Formularios accesibles:** Asegurarse de que todos los campos tengan el formato adecuado.
+
+5. **Optimización y Validación:**
+   - **Validación de documentos HTML y CSS:**
+      - Usar herramientas como [W3C HTML Validator](https://validator.w3.org/) para HTML y [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) para CSS.
+      - Corregir todos los errores y advertencias.
+   - **Optimización de rendimiento:**
+      - Minimizar el archivo CSS.
+      - Comprimir imágenes sin pérdida de calidad.
+   - **Pruebas de usabilidad:**
+      - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
+
+#### **Fase 3: Documentación y Presentación**
+1. **Documentación Final del Proyecto:**
+   - **Descripción detallada de la aplicación:** Explicar el propósito, funcionalidades implementadas y estructura del proyecto.
+   - **Justificación de decisiones de diseño y desarrollo:** Explicar las razones detrás de la elección de etiquetas, estructuras, y estilos.
+   - **Explicación de problemas y soluciones:** Incluir los retos enfrentados y cómo se resolvieron.
+   - **Capturas de pantalla del wireframe y de la aplicación final:** Incluir imágenes de cada pantalla y secciones importantes.
+
+2. **Preparación de la Presentación:**
+   - **Preparar una breve presentación (5-10 minutos):**
+      - Introducción del proyecto y objetivo.
+      - Explicación del proceso de desarrollo.
+      - Mostrar capturas de pantalla o navegar por la aplicación en directo.
+      - Explicar problemas y soluciones encontradas.
+      - Responder preguntas.
+
+---
 
 ### **Recursos:**
 - [Documentación de HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
 - [Documentación de CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-- [Guía de Flexbox y Grid](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Balsamiq (para wireframes)](https://balsamiq.com/)
 - [Validador de HTML y CSS de W3C](https://validator.w3.org/)
-- [Herramientas de edición de código (VSCode, Sublime Text, etc.)](https://code.visualstudio.com/)
 
 ### **Evaluación y Calificación:**
 
 **Rúbrica de Evaluación:**
 
-| Criterio de Evaluación | Nivel 1 (0-2) | Nivel 2 (3-4) | Nivel 3 (5-6) | Nivel 4 (7-8) | Nivel 5 (9-10) |
-|------------------------|---------------|---------------|---------------|---------------|----------------|
-| **CE1.a**: Identificación de características generales de lenguajes de marcas. | No identifica características. | Identifica algunas características básicas. | Identifica la mayoría de las características de forma precisa. | Identifica todas las características con detalle. | Explica con ejemplos prácticos las características de los lenguajes. |
-| **CE1.b**: Ventajas que proporcionan en el tratamiento de la información. | No reconoce ventajas. | Reconoce ventajas básicas. | Explica correctamente las principales ventajas. | Explica y justifica con ejemplos ventajas avanzadas. | Relaciona ventajas con contextos de aplicación concretos. |
-| **CE1.c**: Clasificación de los lenguajes de marcas e identificación de los más relevantes. | No clasifica ni identifica. | Clasificación básica y parcial. | Clasificación completa y coherente. | Clasificación detallada con comparativas entre lenguajes. | Propone mejoras y nuevas clasificaciones. |
-| **CE1.d**: Diferenciación de ámbitos de aplicación. | No identifica ámbitos. | Identifica algunos ámbitos básicos. | Diferencia adecuadamente la mayoría de los ámbitos. | Diferencia todos los ámbitos y sus aplicaciones concretas. | Propone aplicaciones innovadoras para cada ámbito. |
-| **CE1.e**: Necesidad y ámbitos específicos de aplicación de un lenguaje de propósito general. | No aplica correctamente. | Aplica en contextos limitados. | Aplica de forma adecuada en varios contextos. | Aplica y adapta a necesidades específicas. | Propone mejoras y alternativas en aplicaciones complejas. |
-| **CE1.f**: Análisis de las características propias de diferentes lenguajes de marcas. | No analiza características. | Análisis parcial de algunas características. | Análisis correcto de la mayoría de los lenguajes. | Análisis detallado y comparativo. | Análisis crítico y propositivo sobre el uso del lenguaje. |
-| **CE1.g**: Identificación de la estructura de un documento y sus reglas sintácticas. | No identifica la estructura. | Identifica estructura básica con errores. | Identifica correctamente la estructura de la mayoría de documentos. | Identifica y explica la estructura de todos los documentos. | Propone y justifica mejoras en la estructura. |
-| **CE1.h**: Creación de documentos bien formados y su influencia en el procesamiento. | No crea documentos bien formados. | Crea documentos con errores básicos. | Crea documentos bien formados con mínimos errores. | Crea documentos óptimos y bien formados. | Propone mejoras estructurales y de procesamiento. |
-| **CE1.i**: Ventajas que aportan los espacios de nombres. | No reconoce ventajas. | Reconoce ventajas básicas. | Explica correctamente las principales ventajas. | Explica ventajas con ejemplos prácticos. | Relaciona las ventajas con contextos avanzados. |
-| **CE2.a**: Clasificación de lenguajes relacionados con la web y sus versiones y estándares. | No clasifica ni identifica. | Clasificación básica y parcial. | Clasificación completa y coherente. | Clasificación detallada con comparativas entre versiones y estándares. | Propone mejoras y nuevas clasificaciones. |
-| **CE2.b**: Análisis de la estructura de un documento HTML y sus secciones. | No analiza estructura. | Análisis parcial de algunas secciones. | Análisis correcto de la mayoría de las secciones. | Análisis detallado de la estructura completa. | Propone mejoras y justifica decisiones de diseño. |
-| **CE2.c**: Reconocimiento de la funcionalidad de etiquetas y atributos HTML. | No reconoce funcionalidad. | Reconoce funcionalidad básica de algunas etiquetas. | Reconoce funcionalidad de la mayoría de las etiquetas. | Reconoce y utiliza adecuadamente todas las etiquetas y atributos. | Propone alternativas optimizadas para etiquetas y atributos. |
-| **CE2.d**: Diferencias entre versiones de HTML. | No reconoce diferencias. | Reconoce algunas diferencias básicas. | Reconoce correctamente la mayoría de las diferencias. | Explica detalladamente las diferencias entre versiones. | Propone mejoras y justifica la evolución de las versiones. |
-| **CE2.e**: Uso de herramientas de creación de documentos web. | No usa herramientas adecuadas. | Uso limitado de herramientas básicas. | Uso correcto de herramientas recomendadas. | Uso avanzado de herramientas de desarrollo. | Usa y enseña a otros a utilizar herramientas complejas y optimizadas. |
-| **CE2.f**: Ventajas de la utilización de hojas de estilo. | No reconoce ventajas. | Reconoce ventajas básicas. | Explica correctamente las principales ventajas. | Explica ventajas con ejemplos prácticos. | Propone mejoras en el uso de hojas de estilo y diseño. |
-| **CE2.g**: Aplicación de hojas de estilo. | No aplica hojas de estilo. | Aplica hojas de estilo con errores. | Aplica correctamente hojas de estilo básicas. | Aplica hojas de estilo con diseño responsive y coherente. | Aplica estilos complejos optimizando rendimiento y diseño. |
-| **CE2.h**: Validación de documentos HTML y CSS. | No realiza validación. | Validación con errores no corregidos.| Validación correcta de documentos. | Validación completa con optimización. | Propone mejoras y justifica la validación en entornos productivos. |
-| **CE2.i**: Tecnologías de sindicación de contenidos. | No identifica tecnologías. | Identificación parcial y con errores. | Identificación correcta de las tecnologías principales. | Identificación y aplicación de tecnologías de sindicación. | Propone mejoras y alternativas innovadoras en sindicación. |
-| **CE2.j**: Ámbitos de aplicación de la sindicación de contenidos. | No identifica ámbitos. | Identificación parcial y con errores. | Identificación correcta de la mayoría de los ámbitos. | Identificación detallada con ejemplos prácticos. | Propone mejoras y aplicaciones innovadoras en diferentes ámbitos. |
-| **Autonomía del alumnado en el desarrollo del proyecto.** | No trabaja de forma autónoma. | Necesita ayuda constante. | Trabaja de forma autónoma con apoyo puntual. | Trabaja de forma autónoma gestionando problemas. | Lidera el proyecto y propone mejoras creativas y técnicas. |
+---
+### **Rúbrica de Evaluación Detallada:**
+
+| **Criterio de Evaluación** | **Nivel 1 (Insuficiente)** | **Nivel 2 (Suficiente)** | **Nivel 3 (Bien)** | **Nivel 4 (Notable)** | **Nivel 5 (Sobresaliente)**                                                                                                                                                                            |
+|---|---|---|---|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **1a) Se han identificado las características generales de los lenguajes de marcas.** | No se identifican correctamente las características. Muestra dependencia total del profesor. | Identifica algunas características generales de los lenguajes de marcas, pero con errores. Necesita ayuda para aclarar conceptos. | Identifica las características generales de manera adecuada, pero necesita apoyo ocasional. | Identifica correctamente las características generales con escasa supervisión. Demuestra capacidad de análisis. | Identifica de forma precisa y detallada todas las características generales, trabajando de manera completamente autónoma, y las comunica de forma clara y eficaz durante la presentación del proyecto. |
+| **1b) Se han reconocido las ventajas que proporcionan en el tratamiento de la información.** | No reconoce ventajas o lo hace de manera incorrecta. | Reconoce algunas ventajas, pero con errores de interpretación. | Reconoce las ventajas del tratamiento de la información de forma correcta, aunque de manera básica. | Reconoce las ventajas con claridad y sin errores, aportando ejemplos válidos. | Reconoce y explica las ventajas de forma profunda y autónoma, proponiendo aplicaciones prácticas, y comunica las ventajas de forma concisa en la presentación del proyecto.                            |
+| **1c) Se han clasificado los lenguajes de marcas e identificado los más relevantes.** | No clasifica los lenguajes o lo hace incorrectamente. | Clasifica algunos lenguajes de marcas, pero con errores significativos. | Clasifica los lenguajes de marcas correctamente, pero de manera incompleta. | Clasifica e identifica lenguajes de forma completa y con corrección. | Clasificación exhaustiva, identificando lenguajes de relevancia actual y futura. Trabaja de manera autónoma e investigativa, explicando claramente sus elecciones en la presentación.                  |
+| **1d) Se han diferenciado sus ámbitos de aplicación.** | No se identifican los ámbitos de aplicación o están mal definidos. | Diferencia algunos ámbitos de aplicación, pero con errores. | Diferencia correctamente los principales ámbitos, pero sin detalles. | Diferencia correctamente los ámbitos de aplicación, aportando detalles y ejemplos. | Diferencia todos los ámbitos de aplicación, mostrando un análisis crítico y una investigación adicional, y comunica con claridad sus conclusiones durante la presentación.                             |
+| **1e) Se han reconocido la necesidad y los ámbitos específicos de aplicación de un lenguaje de marcas de propósito general.** | No reconoce la necesidad o los ámbitos específicos. | Reconoce de forma básica los ámbitos específicos, pero con errores. | Reconoce adecuadamente la necesidad y ámbitos específicos, pero sin profundidad. | Reconoce de forma clara los ámbitos y necesidades de los lenguajes de propósito general, mostrando buen juicio. | Reconoce, analiza y propone aplicaciones específicas de lenguajes de propósito general, trabajando de manera autónoma y explicando de manera efectiva su análisis en la presentación.                  |
+| **1f) Se han analizado las características propias de diferentes lenguajes de marcas.** | No se analizan características o son incorrectas. | Se analizan características de forma parcial y con errores. | Analiza características de manera adecuada, pero sin profundizar en las diferencias entre lenguajes. | Análisis detallado y sin errores. Aporta ejemplos relevantes. | Análisis profundo y crítico de las características de varios lenguajes, proponiendo alternativas, y explicando claramente los resultados en la fase de presentación.                                   |
+| **1g) Se ha identificado la estructura de un documento y sus reglas sintácticas.** | No se identifican correctamente las estructuras o reglas sintácticas. | Identifica de forma básica la estructura, pero con errores en las reglas sintácticas. | Identifica la estructura y reglas sintácticas de manera correcta, pero sin precisión en algunos casos. | Identifica de forma precisa la estructura y las reglas sintácticas de documentos, con escasa supervisión. | Identifica y analiza detalladamente las estructuras y reglas sintácticas, trabajando de manera autónoma y presentando el análisis de forma organizada.                                                 |
+| **1h) Se ha contrastado la necesidad de crear documentos bien formados y la influencia en su procesamiento.** | No se contrastan las ventajas de documentos bien formados o se hace incorrectamente. | Se contrastan algunas ventajas, pero con errores o sin claridad. | Se contrastan correctamente las ventajas de documentos bien formados, pero de manera básica. | Contrasta de forma detallada y correcta, mostrando la influencia en el procesamiento de los documentos. | Análisis profundo sobre la importancia de documentos bien formados, explicando claramente los efectos en el procesamiento durante la presentación.                                                     |
+| **1i) Se han identificado las ventajas que aportan los espacios de nombres.** | No se identifican las ventajas de los espacios de nombres. | Se identifican ventajas de forma básica y con errores. | Se identifican las ventajas de los espacios de nombres de manera correcta, pero incompleta. | Identifica correctamente todas las ventajas, aportando ejemplos de uso adecuado. | Identifica de manera autónoma y crítica las ventajas, proponiendo nuevas formas de aplicar espacios de nombres en el desarrollo web y comunicándolas claramente.                                       |
+| **2a) Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones y estándares.** | No identifica los lenguajes de marcas o lo hace de forma incorrecta. | Identifica algunos lenguajes de manera incompleta y con errores. | Identificación adecuada, pero sin profundización en las versiones y estándares. | Clasificación correcta y detallada de lenguajes y versiones web. | Clasificación y análisis detallado, proponiendo el uso de lenguajes más adecuados para distintos contextos y presentando las conclusiones de manera efectiva.                                          |
+| **2b) Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.** | No se analiza la estructura de un documento HTML correctamente. | Análisis incompleto o con errores en la identificación de secciones. | Análisis adecuado, pero básico, de la estructura HTML y sus secciones. | Análisis detallado y sin errores de la estructura y secciones de un documento HTML. | Análisis exhaustivo de la estructura, identificando posibles mejoras y comunicando las observaciones con claridad en la presentación.                                                                  |
+| **2c) Se ha reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.** | No se reconocen correctamente las etiquetas y atributos de HTML. | Reconocimiento básico y con errores de las etiquetas y atributos. | Reconocimiento adecuado, pero sin profundización en el uso avanzado de etiquetas. | Reconocimiento correcto y detallado de las principales etiquetas y atributos de HTML. | Uso avanzado y creativo de las etiquetas y atributos, explicando sus ventajas y aplicaciones con claridad en la presentación del proyecto.                                                             |
+| **2d) Se han establecido las semejanzas y diferencias entre las diferentes versiones de HTML.** | No se identifican semejanzas ni diferencias o se hace de manera incorrecta. | Se identifican algunas diferencias y semejanzas, pero con errores. | Comparación adecuada entre versiones, pero de manera superficial. | Comparación detallada y sin errores entre versiones de HTML. | Comparación exhaustiva, mostrando un entendimiento profundo de la evolución del lenguaje y presentando las conclusiones de manera organizada.                                                          |
+| **2e) Se han utilizado herramientas en la creación de documentos web.** | No se utilizan herramientas o se utilizan de forma incorrecta. | Uso básico de herramientas, pero con errores significativos. | Uso adecuado de herramientas, pero sin optimización. | Uso eficiente de herramientas para la creación de documentos web. | Uso avanzado de herramientas y tecnologías, demostrando capacidad de autoaprendizaje y explicando su proceso de selección de herramientas en la fase de presentación.                                  |
+| **2f) Se han identificado las ventajas que aporta la utilización de hojas de estilo.** | No se identifican las ventajas o se hace incorrectamente. | Identificación básica de las ventajas, pero con errores. | Identificación adecuada, pero superficial de las ventajas de las hojas de estilo. | Identificación clara y detallada de las ventajas. | Identificación profunda de las ventajas, explicando y comunicando de forma eficaz las decisiones tomadas en cuanto a la aplicación de hojas de estilo.                                                 |
+| **2g) Se han aplicado hojas de estilo.** | No se aplican hojas de estilo correctamente. | Aplicación básica de hojas de estilo, con errores. | Aplicación adecuada, pero con un diseño básico. | Aplicación eficiente de hojas de estilo, con un diseño responsive y adaptativo. | Aplicación avanzada de hojas de estilo, con optimización para diferentes dispositivos y un diseño innovador, justificando de forma clara las decisiones de diseño durante la presentación.             |
+| **2h) Se han validado documentos HTML y CSS.** | No se validan los documentos o contienen múltiples errores. | Intento de validación con muchos errores que no son corregidos. | Validación correcta en la mayor parte del código HTML y CSS. | Validación completa y corrección de errores en todos los documentos. | Validación exhaustiva, con propuestas de optimización del código y explicación clara del proceso de validación y mejoras en la presentación.                                                           |
+| **2i) Se han identificado las tecnologías en que se basa la sindicación de contenidos.** | No se identifican las tecnologías o se hace de forma incorrecta. | Identificación básica y con errores de las tecnologías. | Identificación adecuada, pero sin profundización en las tecnologías de sindicación. | Identificación clara y correcta de las tecnologías de sindicación de contenidos. | Identificación exhaustiva, explicando las posibles aplicaciones y usos innovadores de la sindicación de contenidos en la presentación del proyecto.                                                    |
+| **2j) Se han reconocido los ámbitos de aplicación de la sindicación de contenidos.** | No se reconocen los ámbitos de aplicación. | Reconocimiento básico y con errores. | Reconocimiento adecuado de los ámbitos de aplicación, pero sin análisis profundo. | Reconocimiento detallado de los ámbitos de aplicación, con ejemplos claros. | Reconocimiento exhaustivo de los ámbitos de aplicación, proponiendo nuevas posibilidades y comunicándolas de forma clara en la presentación del proyecto.                                              |
+
+---
+### Incorporación de Competencias Profesionales y Autonomía:
+En cada nivel de la rúbrica se hace referencia a:
+- **Autonomía**: Los niveles superiores incluyen la capacidad de trabajar de manera independiente, investigativa y resolutiva.
+- **Competencia h**: Referida en criterios relacionados con la **creación de documentos web** y el **desarrollo de componentes multimedia**, especialmente en las fases de aplicación de HTML y CSS.
+- **Competencia p**: Valorada en el uso de **nuevas herramientas** y la **adaptación tecnológica**, especialmente en la utilización de herramientas para la creación y validación de documentos web.
+- **Competencia w**: Se incluye en la **responsabilidad en la entrega del trabajo** y la capacidad de cumplir con las normas profesionales y éticas durante el desarrollo del proyecto.
 
 ---
