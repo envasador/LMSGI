@@ -4,11 +4,9 @@ hide:
 ---
 
 # Diseño de Interfaces Web.
+![](assets/referencias.jpg)
 
-<center>
-![](assets/proyectos.jpg)
-</center>
 
 En esta página encontrarás las descripciones de los diferentes proyectos de evaluación.
 
-Proyecto 1.
+* [Desarrollo de una aplicación web completa con HTML5 y CSS3](proyecto1.md)

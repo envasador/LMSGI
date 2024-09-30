@@ -4,11 +4,7 @@ hide:
 ---
 
 # Lenguajes de Marcas
-
-
-<center>
 ![](assets/referencias.jpg)
-</center>
 
 
 # ¡Bienvenidos al módulo de **Lenguajes de Marcas y Sistemas de Gestión de la Información** del ciclo de **Desarrollo de Aplicaciones Web**!

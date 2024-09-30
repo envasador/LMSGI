@@ -25,12 +25,6 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
 
 ### **Trabajo a Realizar:**
 
-Claro, aquí te detallo cada fase del proyecto con acciones más específicas:
-
----
-
-### **Trabajo a Realizar:**
-
 #### **Fase 1: Planificación y Diseño**
 1. **Análisis de Requisitos:**
    - **Revisión del enunciado y objetivos del proyecto.**

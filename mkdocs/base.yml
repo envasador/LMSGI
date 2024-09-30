@@ -70,8 +70,5 @@ plugins:
       #show_anchors: true
     #verbose: true
 
-# Page tree
-nav:
-  - Home: index.md
 
 copyright: Contenido generado por el equipo educativo de 1º DAW del IES Rafael Alberti
