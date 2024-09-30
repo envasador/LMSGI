@@ -1,5 +1,5 @@
 INHERIT: ../base.yml
-site_name: Diseño de Interfaces Web - Proyectos
+site_name: Lenguajes de Marcas - Proyectos
 site_dir: ../../docs/proyectos
   
 
@@ -23,7 +23,7 @@ plugins:
   - search:
       lang: es
   - with-pdf:
-      author: Equipo educativo de 2ºDAW del IES Rafael Alberti
+      author: Equipo educativo de 1ºDAW del IES Rafael Alberti
       copyright: CC BY-SA 4.0
       #
       cover: true
