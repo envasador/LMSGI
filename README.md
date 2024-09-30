@@ -9,7 +9,7 @@
 
 Material didáctico del módulo Lenguajes de Marcas Web del CFGS Desarrollo de aplicaciones web del IES Rafael Alberti.
 
-<p align="center">
+<p>
   <img src="logos/Portada-LMSGI.png" alt="Cover Diseño de Interfaces Web">
 </p>
 </section>
@@ -19,4 +19,4 @@ Material didáctico del módulo Lenguajes de Marcas Web del CFGS Desarrollo de a
 - [Referencias del curso](https://envasador.github.io/LMSGI/docs/referencias)
 
 ## Proyectos
-- [Proyectos del curso (en breve disponible)](#)
+- [Proyectos del curso](https://envasador.github.io/LMSGI/docs/poryectos)
