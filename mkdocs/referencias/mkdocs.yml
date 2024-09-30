@@ -11,12 +11,6 @@ nav:
   - Inicio: index.md
   - UT1: ud1.md
   - UT2: ud2.md
-  # - UD3: ud3.md
-  # - UD4: ud4.md
-  # - UD5:
-  #     - ud5.md
-  #     - ud5.1-Empezando-con-React.md
-  #     - ud5.2-Paso-a-paso.md
 
 extra:
   social:
