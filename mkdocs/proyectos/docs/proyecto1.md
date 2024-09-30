@@ -3,13 +3,12 @@ hide:
   - navigation
 ---
 
-### **Título del Proyecto:**
-**“Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
+# **“Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
 
-### **Agrupamiento:**
+## **Agrupamiento:**
 Individual
 
-### **Descripción del Proyecto:**
+## **Descripción del Proyecto:**
 El proyecto consiste en el desarrollo de una aplicación web completa utilizando HTML5 y CSS3, donde el alumnado deberá aplicar conocimientos avanzados de lenguajes de marcas para la creación de documentos web. Se enfocará en una estructura de varias páginas con diseño responsive, siguiendo estándares actuales. Además, se realizará un wireframe previo utilizando Balsamiq para planificar la estructura y el contenido de la aplicación.
 
 ### **Objetivo:**
@@ -19,32 +18,32 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
 - Validar y optimizar los documentos HTML y CSS creados, asegurando la conformidad con los estándares web.
 - Fomentar la autonomía y capacidad de gestión del alumnado en la realización del proyecto.
 
-### **Trabajo a Realizar:**
+## **Trabajo a Realizar:**
 
-#### **Fase 1: Planificación y Diseño**
-##### 1. **Análisis de Requisitos:**
+### **Fase 1: Planificación y Diseño**
+#### 1. **Análisis de Requisitos:**
    - **Revisión del enunciado y objetivos del proyecto.**
    - **Identificación de necesidades:** Investigar el propósito de la aplicación web y sus usuarios potenciales.
    - **Establecimiento de funcionalidades:** Crear una lista de funcionalidades clave (ej.: navegación, formulario de contacto, sección de información, etc.).
    - **Definición de estructura de contenido:** Crear un esquema básico de la estructura de la aplicación, como el mapa del sitio.
 
-##### 2. **Creación del Wireframe en Balsamiq:**
+#### 2. **Creación del Wireframe en Balsamiq:**
    - **Dibujo de la estructura básica de cada página:** Incluir la disposición de elementos como encabezado, pie de página, navegación, y secciones de contenido.
    - **Especificación de contenido:** Definir qué tipo de contenido irá en cada sección (texto, imágenes, botones, etc.).
    - **Incorporación de interacción:** Marcar elementos interactivos (menús desplegables, botones, enlaces).
    - **Revisión y mejora del wireframe:** Revisar con el docente o compañeros y realizar ajustes basados en el feedback recibido.
 
-##### 3. **Documentación de la Fase de Diseño:**
+#### 3. **Documentación de la Fase de Diseño:**
    - **Creación de un documento de especificaciones:** Incluir el objetivo del proyecto, descripción del usuario objetivo, lista de funcionalidades, y estructura del sitio.
    - **Incluir capturas del wireframe en el documento:** Acompañar cada sección con una breve descripción.
 
-#### **Fase 2: Desarrollo**
+### **Fase 2: Desarrollo**
 
-##### 1. **Configuración del Entorno de Desarrollo:**
+#### 1. **Configuración del Entorno de Desarrollo:**
    - **Estructuración del proyecto:** Crear la estructura de carpetas (ej.: `/css`, `/img`, `/js`) y archivos necesarios (`index.html`, `estilos.css`).
    - **Configuración del editor de código:** Asegurar que el entorno de trabajo con WebStorm, o bien si utilizas VSCode que esté preparado con extensiones útiles como Prettier, Emmet, o Live Server.
 
-##### 2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
+#### 2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
    - **Creación de la página de inicio:**
       - Estructurar la página.
       - Añadir elementos como el menú de navegación, secciones de contenido, y enlaces a otras páginas.
@@ -55,7 +54,7 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
       - Etcétera. 
    - **Enlazado entre páginas:** Asegurar que todas las páginas estén correctamente enlazadas a través del menú de navegación y enlaces contextuales.
 
-##### 3. **Aplicación de Hojas de Estilo (CSS):**
+#### 3. **Aplicación de Hojas de Estilo (CSS):**
    - **Organización correcta de los estilos**, para mejorar las buenas prácticas y mantenibilidad del proyecto a futur.
    - **Estilización básica:**
       - Definir estilos globales para tipografía, colores, y espaciados.
@@ -68,12 +67,12 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
      - Tarjetas de presentación para servicios o productos.
      - Galería de imágenes con efectos de hover.
 
-##### 4. **Interactividad y Usabilidad:**
+#### 4. **Interactividad y Usabilidad:**
    - **Creación de menús desplegables:** Si el wireframe lo especifica, implementar menús en el header.
    - **Efectos y transiciones en CSS:** Añadir transiciones suaves para efectos de hover, animaciones de aparición de elementos, etc.
    - **Formularios accesibles:** Asegurarse de que todos los campos tengan el formato adecuado.
 
-##### 5. **Optimización y Validación:**
+#### 5. **Optimización y Validación:**
    - **Validación de documentos HTML y CSS:**
       - Usar herramientas como [W3C HTML Validator](https://validator.w3.org/) para HTML y [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) para CSS.
       - Corregir todos los errores y advertencias.
@@ -83,14 +82,14 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
    - **Pruebas de usabilidad:**
       - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
 
-#### **Fase 3: Documentación y Presentación**
-##### 1. **Documentación Final del Proyecto:**
+### **Fase 3: Documentación y Presentación**
+#### 1. **Documentación Final del Proyecto:**
    - **Descripción detallada de la aplicación:** Explicar el propósito, funcionalidades implementadas y estructura del proyecto.
    - **Justificación de decisiones de diseño y desarrollo:** Explicar las razones detrás de la elección de etiquetas, estructuras, y estilos.
    - **Explicación de problemas y soluciones:** Incluir los retos enfrentados y cómo se resolvieron.
    - **Capturas de pantalla del wireframe y de la aplicación final:** Incluir imágenes de cada pantalla y secciones importantes.
 
-##### 2. **Preparación de la Presentación:**
+#### 2. **Preparación de la Presentación:**
    - **Preparar una breve presentación (5-10 minutos):**
       - Introducción del proyecto y objetivo.
       - Explicación del proceso de desarrollo.
@@ -100,13 +99,13 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
 
 ---
 
-### **Recursos:**
+## **Recursos:**
 - [Documentación de HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
 - [Documentación de CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 - [Balsamiq (para wireframes)](https://balsamiq.com/)
 - [Validador de HTML y CSS de W3C](https://validator.w3.org/)
 
-### **Evaluación y Calificación:**
+## **Evaluación y Calificación:**
 
 **Rúbrica de Evaluación:**
 
@@ -138,9 +137,9 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
 ---
 ### Incorporación de Competencias Profesionales y Autonomía:
 En cada nivel de la rúbrica se hace referencia a:
-- **Autonomía**: Los niveles superiores incluyen la capacidad de trabajar de manera independiente, investigativa y resolutiva.
-- **Competencia h**: Referida en criterios relacionados con la **creación de documentos web** y el **desarrollo de componentes multimedia**, especialmente en las fases de aplicación de HTML y CSS.
-- **Competencia p**: Valorada en el uso de **nuevas herramientas** y la **adaptación tecnológica**, especialmente en la utilización de herramientas para la creación y validación de documentos web.
-- **Competencia w**: Se incluye en la **responsabilidad en la entrega del trabajo** y la capacidad de cumplir con las normas profesionales y éticas durante el desarrollo del proyecto.
+ - **Autonomía**: Los niveles superiores incluyen la capacidad de trabajar de manera independiente, investigativa y resolutiva.
+ - **Competencia h**: Referida en criterios relacionados con la **creación de documentos web** y el **desarrollo de componentes multimedia**, especialmente en las fases de aplicación de HTML y CSS.
+ - **Competencia p**: Valorada en el uso de **nuevas herramientas** y la **adaptación tecnológica**, especialmente en la utilización de herramientas para la creación y validación de documentos web.
+ - **Competencia w**: Se incluye en la **responsabilidad en la entrega del trabajo** y la capacidad de cumplir con las normas profesionales y éticas durante el desarrollo del proyecto.
 
 ---
