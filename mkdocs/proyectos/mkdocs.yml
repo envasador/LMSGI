@@ -7,7 +7,7 @@ site_dir: ../../docs/proyectos
 nav:
   - Inicio: index.md
   - Proyecto 1: proyecto1.md
-  - Proyecto 2: proyecto2.md
+  # - Proyecto 2: proyecto2.md
 
 
 extra:

@@ -3,10 +3,6 @@ hide:
   - navigation
 ---
 
-Gracias por la aclaración. Vamos a ajustar el proyecto y la rúbrica para evaluar todos los criterios de evaluación (19 en total) y utilizando Balsamiq para los wireframes.
-
----
-
 ### **Título del Proyecto:**
 **“Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
 
