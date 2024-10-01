@@ -1,0 +1,908 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Proyecto 2: Desarrollando una aplicación web: De la teoría a la práctica - Lenguajes de Marcas - Proyectos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheet/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proyecto-2-desarrollando-una-aplicacion-web-de-la-teoria-a-la-practica" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Lenguajes de Marcas - Proyectos" class="md-header__button md-logo" aria-label="Lenguajes de Marcas - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lenguajes de Marcas - Proyectos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proyecto 2: Desarrollando una aplicación web: De la teoría a la práctica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto1/" class="md-tabs__link">
+        
+  
+    
+  
+  Proyecto 1
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenguajes de Marcas - Proyectos" class="md-nav__button md-logo" aria-label="Lenguajes de Marcas - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    Lenguajes de Marcas - Proyectos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proyecto 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción del proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descripción del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duracion-estimada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duración estimada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-evaluados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios evaluados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formato-y-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato y entrega
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formato y entrega">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entregables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-hago-la-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo hago la entrega?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluacion-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación del proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluación del proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1a-se-han-caracterizado-y-diferenciado-los-modelos-de-ejecucion-de-codigo-en-el-servidor-y-en-el-cliente-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1b-se-han-identificado-las-capacidades-y-mecanismos-de-ejecucion-de-codigo-de-los-navegadores-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores Web.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1c-se-han-identificado-y-caracterizado-los-principales-lenguajes-relacionados-con-la-programacion-de-clientes-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1d-se-han-reconocido-las-particularidades-de-la-programacion-de-guiones-y-sus-ventajas-y-desventajas-sobre-la-programacion-tradicional" class="md-nav__link">
+    <span class="md-ellipsis">
+      1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1e-se-han-verificado-los-mecanismos-de-integracion-de-los-lenguajes-de-marcas-con-los-lenguajes-de-programacion-de-clientes-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1f-se-han-reconocido-y-evaluado-las-herramientas-de-programacion-sobre-clientes-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      1f) Se han reconocido y evaluado las herramientas de programación sobre clientes web.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-propiedad-intelectual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota: Propiedad intelectual
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="proyecto-2-desarrollando-una-aplicacion-web-de-la-teoria-a-la-practica">Proyecto 2: Desarrollando una aplicación web: De la teoría a la práctica</h1>
+<p><center>
+<img alt="" src="../assets/proyecto1.webp" />
+</center></p>
+<h2 id="descripcion-del-proyecto">Descripción del proyecto</h2>
+<p>En este proyecto, los estudiantes iniciarán la planificación de una aplicación web. Esta fase inicial se centrará en establecer una base sólida para el proyecto final del ciclo. Los estudiantes definirán la idea de su aplicación, investigarán tecnologías y técnicas relevantes, y elaborarán un plan preliminar para el diseño y la estructura de la aplicación. Además, los estudiantes realizarán un análisis de mercado para identificar aplicaciones similares y evaluar cómo la suya puede diferenciarse y aportar valor nuevo. Este trabajo preliminar sentará las bases para el desarrollo y la implementación de la aplicación en fases posteriores.</p>
+<h3 id="objetivo">Objetivo</h3>
+<p>Elaborar una propuesta inicial para la aplicación web que se desarrollará como proyecto final de ciclo. Esta propuesta debe estar respaldada por una investigación técnica que justifique las decisiones tomadas en cuanto a modelos de ejecución cliente/servidor, lenguajes de programación web y el comportamiento de los navegadores, entre otros. Además, los estudiantes deberán realizar un análisis de mercado para entender la competencia existente, planificar la arquitectura y las funcionalidades clave de la aplicación, y preparar un prototipo inicial o wireframe en colaboración con el curso de diseño.</p>
+<h3 id="duracion-estimada">Duración estimada</h3>
+<p>2 semanas.</p>
+<h3 id="criterios-evaluados">Criterios evaluados</h3>
+<ul>
+<li><strong>1a)</strong> Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.</li>
+<li><strong>1b)</strong> Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores web.</li>
+<li><strong>1c)</strong> Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.</li>
+<li><strong>1d)</strong> Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.</li>
+<li><strong>1e)</strong> Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.</li>
+<li><strong>1f)</strong> Se han reconocido y evaluado las herramientas de programación sobre clientes web.</li>
+</ul>
+<h2 id="actividades">Actividades</h2>
+<ol>
+<li>
+<p><strong>Idea de la aplicación</strong>: Describir de manera clara y concisa la idea de la aplicación web y su propósito.</p>
+</li>
+<li>
+<p><strong>Audiencia objetivo</strong>: Definir el público para el que está destinada la aplicación, explicando su relevancia y cómo se beneficiarán de la aplicación.</p>
+</li>
+<li>
+<p><strong>Análisis de mercado</strong>: Investigar y analizar aplicaciones similares en el mercado. Identificar características comunes y oportunidades de diferenciación para la nueva aplicación, destacando qué valor añadido ofrecerá.</p>
+</li>
+<li>
+<p><strong>Funcionalidades clave</strong>: Identificar y listar las funcionalidades principales que ofrecerá la aplicación (ej: sistema de autenticación, gestión de usuarios, etc.).</p>
+</li>
+<li>
+<p><strong>Modelos de ejecución (c.e. 1a)</strong>: Investigar y comparar los modelos de ejecución en cliente y servidor, explicando sus diferencias y ejemplos de uso.</p>
+</li>
+<li>
+<p><strong>Lenguajes de programación web (c.e. 1c, 1d)</strong>: Analizar los lenguajes de programación más utilizados para el desarrollo web en cliente, como JavaScript y TypeScript, explicando sus ventajas y desventajas.</p>
+</li>
+<li>
+<p><strong>Tecnologías a utilizar</strong>: Seleccionar las tecnologías (lenguajes de programación, frameworks, herramientas de desarrollo) que se utilizarán para el desarrollo de la aplicación. Justificar la elección en base a la investigación realizada. Asegurarse de incluir:</p>
+<ul>
+<li>
+<p><strong>Evaluación de los mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web  (c.e. 1e)</strong>: Describir cómo los lenguajes de marcas (como HTML) se integran con los lenguajes de programación (como JavaScript) en la aplicación.</p>
+</li>
+<li>
+<p><strong>Evaluación de herramientas de programación para clientes web  (c.e. 1f)</strong>: Seleccionar herramientas de desarrollo (editores de código, frameworks, bibliotecas) y justificar su elección. Explicar las funciones y ventajas de cada herramienta en el contexto del desarrollo web.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Compatibilidad en navegadores (c.e. 1b)</strong>: Realizar un estudio sobre cómo los diferentes navegadores manejan JavaScript y otros lenguajes utilizados en el desarrollo web, identificando problemas de compatibilidad y soluciones. Incluye un análisis sobre cómo la integración de lenguajes de marcas y lenguajes de programación afecta la compatibilidad y el rendimiento de la aplicación en diferentes navegadores.</p>
+</li>
+</ol>
+<h2 id="formato-y-entrega">Formato y entrega</h2>
+<h3 id="entregables">Entregables</h3>
+<p><strong>1. Documento de propuesta</strong> que incluya:</p>
+<ul>
+<li>La descripción de la idea de la aplicación y su propósito.</li>
+<li>El público objetivo y la relevancia para dicho público.</li>
+<li>Un análisis de mercado y la propuesta de valor diferenciadora.</li>
+<li>Las funcionalidades clave que ofrecerá la aplicación.</li>
+<li>Las tecnologías seleccionadas para el desarrollo, justificando la elección.</li>
+</ul>
+<p><strong>2. Informe técnico</strong> detallado que incluya:</p>
+<ul>
+<li>Un análisis de los modelos de ejecución cliente/servidor, incluyendo ejemplos y comparaciones.</li>
+<li>La evaluación de los lenguajes de programación web seleccionados, destacando sus ventajas y desventajas.</li>
+<li>Un estudio sobre la compatibilidad en navegadores, identificando posibles problemas y soluciones, y cómo estas consideraciones afectan la elección de tecnologías.</li>
+<li>Un análisis de los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.</li>
+<li>La evaluación de herramientas de programación para clientes web, explicando sus funciones y ventajas distintivas.</li>
+<li>Un análisis de mercado que detalle la competencia existente y cómo la propuesta se diferencia y aporta valor nuevo.</li>
+</ul>
+<p><strong>Nota:</strong></p>
+<ul>
+<li>Se valorará positivamente que sea realizado en Markdown y publicado en GitHub.</li>
+</ul>
+<h3 id="como-hago-la-entrega">¿Cómo hago la entrega?</h3>
+<p>La entrega se realizará mediante la tarea habilitada en Moodle Centros llamada Proyecto 1 siguiendo la siguiente pauta:</p>
+<ul>
+<li>
+<p>En el caso de que el alumno/-a opte por la entrega en formato Markdown, se deberá entregar un fichero de texto con los enlaces al repositorio. El archivo de texto se debe nombrar, "Px_ApellidosNombre_DWEC" (donde x es el número del proyecto).</p>
+</li>
+<li>
+<p>En caso contrario, se entregará un archivo .zip que debe contener un archivo en formato PDF por cada una de las partes de la actividad (documento y presentación). El archivo de texto se debe nombrar, "Px_ApellidosNombre_DWEC" (donde x es el número del proyecto).</p>
+</li>
+</ul>
+<p><strong>Algunas aclaraciones:</strong></p>
+<ul>
+<li>Las respuestas sin justificación, que sean una copia de una fuente de información y/o que no contengan las referencias utilizadas, no recibirán puntuación. (véase la nota sobre propiedad intelectual al final del documento)</li>
+<li>Las referencias contenidas en el apartado "bibliografía" solo se valorarán en el caso de que hayan sido utilizadas en la redacción del documento.</li>
+</ul>
+<h2 id="evaluacion-del-proyecto">Evaluación del proyecto</h2>
+<p>Mediante este proyecto se evalúan los siguientes criterios de evaluación:</p>
+<h4 id="1a-se-han-caracterizado-y-diferenciado-los-modelos-de-ejecucion-de-codigo-en-el-servidor-y-en-el-cliente-web">1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente Web.</h4>
+<table>
+<thead>
+<tr>
+<th>Descriptores</th>
+<th>Bien</th>
+<th>Regular</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Caracterización y diferenciación de modelos de ejecución de código (5pt)</strong></td>
+<td>Proporciona una descripción detallada de los modelos de ejecución y destaca sus diferencias clave (5pt)</td>
+<td>Ofrece una descripción adecuada de los modelos, pero puede mejorar la claridad o exhaustividad (2,5pt)</td>
+<td>La descripción de los modelos es insuficiente o confusa (0pt)</td>
+</tr>
+<tr>
+<td><strong>Ejemplos concretos y relevantes para ilustrar los modelos de ejecución (4pt)</strong></td>
+<td>Proporciona ejemplos pertinentes y relevantes para ilustrar los modelos de ejecución, y están bien integrados en la explicación (4pt)</td>
+<td>Los ejemplos son adecuados, pero podrían ser más relevantes o estar mejor relacionados con los modelos (2pt)</td>
+<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
+</tr>
+<tr>
+<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
+<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
+<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
+<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1b-se-han-identificado-las-capacidades-y-mecanismos-de-ejecucion-de-codigo-de-los-navegadores-web">1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores Web.</h4>
+<table>
+<thead>
+<tr>
+<th>Descriptores</th>
+<th>Bien</th>
+<th>Regular</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identificación de las capacidades y mecanismos de ejecución de código en los navegadores Web (3pt)</strong></td>
+<td>Proporciona una descripción exhaustiva y precisa de las capacidades y mecanismos (3pt)</td>
+<td>Ofrece una descripción adecuada, pero puede haber omisiones o imprecisiones menores (1,5pt)</td>
+<td>La descripción es insuficiente o inexacta en varios aspectos (0pt)</td>
+</tr>
+<tr>
+<td><strong>Relevancia de las capacidades y mecanismos en el contexto del desarrollo web moderno (3pt)</strong></td>
+<td>Explica la relevancia de las capacidades y mecanismos en el contexto del desarrollo web moderno, demostrando una comprensión clara de la importancia de estas capacidades y mecanismos (3pt)</td>
+<td>Comprende la relevancia, pero podría profundizar en su explicación (1,5pt)</td>
+<td>No demuestra una comprensión adecuada de la relevancia (0pt)</td>
+</tr>
+<tr>
+<td><strong>Ejemplos utilizados para ilustrar las capacidades y mecanismos identificados (3pt)</strong></td>
+<td>Utiliza ejemplos concretos y relevantes para ilustrar las capacidades y mecanismos identificados, son pertinentes y están bien integrados en la explicación (3pt)</td>
+<td>Los ejemplos son adecuados, pero podrían ser más relevantes o estar mejor relacionados con los temas (1,5pt)</td>
+<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
+</tr>
+<tr>
+<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la caracterización (1pt)</strong></td>
+<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
+<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
+<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1c-se-han-identificado-y-caracterizado-los-principales-lenguajes-relacionados-con-la-programacion-de-clientes-web">1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.</h4>
+<table>
+<thead>
+<tr>
+<th>Descriptores</th>
+<th>Bien</th>
+<th>Regular</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Evaluación de los principales lenguajes de programación utilizados en clientes Web (4pt)</strong></td>
+<td>Ofrece una evaluación detallada y bien fundamentada de los principales lenguajes, como JavaScript y TypeScript, destacando sus características y beneficios (4pt)</td>
+<td>Proporciona una evaluación adecuada, pero puede carecer de profundidad en algunos aspectos (2pt)</td>
+<td>La evaluación es superficial o incompleta (0pt)</td>
+</tr>
+<tr>
+<td><strong>Ventajas y desventajas de los lenguajes seleccionados en el contexto del desarrollo web (3pt)</strong></td>
+<td>Identifica claramente las ventajas y desventajas de los lenguajes seleccionados, demostrando una comprensión profunda de sus implicaciones (3pt)</td>
+<td>Describe las ventajas y desventajas, pero con limitaciones en la profundidad o claridad (1,5pt)</td>
+<td>La identificación de ventajas y desventajas es deficiente o ausente (0pt)</td>
+</tr>
+<tr>
+<td><strong>Justificación de la elección de los lenguajes para el proyecto (2pt)</strong></td>
+<td>Justifica de manera convincente la elección de los lenguajes para el proyecto, basándose en las necesidades del proyecto y las características de los lenguajes (2pt)</td>
+<td>La justificación es adecuada pero puede ser mejorada en algunos aspectos (1pt)</td>
+<td>La justificación es insuficiente o poco convincente (0pt)</td>
+</tr>
+<tr>
+<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la evaluación (1pt)</strong></td>
+<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
+<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
+<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1d-se-han-reconocido-las-particularidades-de-la-programacion-de-guiones-y-sus-ventajas-y-desventajas-sobre-la-programacion-tradicional">1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.</h4>
+<table>
+<thead>
+<tr>
+<th>Descriptores</th>
+<th>Bien</th>
+<th>Regular</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Análisis de las ventajas y desventajas de la programación con lenguajes de script (4pt)</strong></td>
+<td>Realiza un análisis exhaustivo y bien fundamentado, detallando las ventajas y desventajas en el desarrollo de aplicaciones web (4pt)</td>
+<td>El análisis es adecuado pero puede carecer de profundidad en algunos aspectos (2pt)</td>
+<td>El análisis es superficial o incompleto (0pt)</td>
+</tr>
+<tr>
+<td><strong>Comparación entre lenguajes de script y otros enfoques de programación (3pt)</strong></td>
+<td>Compara de manera efectiva lenguajes de script con otros enfoques de programación, proporcionando ejemplos y explicaciones claras (3pt)</td>
+<td>La comparación es adecuada pero podría ser más detallada o clara (1,5pt)</td>
+<td>La comparación es deficiente o ausente (0pt)</td>
+</tr>
+<tr>
+<td><strong>Relevancia de los lenguajes de script en el contexto del desarrollo web moderno (2pt)</strong></td>
+<td>Explica claramente la relevancia de los lenguajes de script en el contexto del desarrollo web moderno (2pt)</td>
+<td>La explicación es adecuada pero podría ser más detallada (1pt)</td>
+<td>La explicación es insuficiente o poco clara (0pt)</td>
+</tr>
+<tr>
+<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar el análisis (1pt)</strong></td>
+<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
+<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
+<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1e-se-han-verificado-los-mecanismos-de-integracion-de-los-lenguajes-de-marcas-con-los-lenguajes-de-programacion-de-clientes-web">1e)  Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.</h4>
+<table>
+<thead>
+<tr>
+<th>Descriptores</th>
+<th>Bien</th>
+<th>Regular</th>
+<th>Insuficiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Evaluación de los mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web (4pt)</strong></td>
+<td>Proporciona una evaluación completa y detallada de los mecanismos de integración, incluyendo ejemplos y explicaciones claras (4pt)</td>
+<td>La evaluación es adecuada pero podría ser más exhaustiva o clara (2pt)</td>
+<td>La evaluación es insuficiente o confusa (0pt)</td>
+</tr>
+<tr>
+<td><strong>Ejemplos prácticos de integración de lenguajes de marcas con lenguajes de programación (3pt)</strong></td>
+<td>Incluye ejemplos prácticos y relevantes que ilustran la integración de lenguajes de marcas con lenguajes de programación de clientes web (3pt)</td>
+<td>Los ejemplos son adecuados pero podrían ser más relevantes o detallados (1,5pt)</td>
+<td>Los ejemplos son inadecuados o están ausentes (0pt)</td>
+</tr>
+<tr>
+<td><strong>Impacto de la integración en el desarrollo y mantenimiento de aplicaciones web (2pt)</strong></td>
+<td>Explica claramente el impacto de la integración en el desarrollo y mantenimiento de aplicaciones web (2pt)</td>
+<td>La explicación es adecuada pero podría ser más detallada (1pt)</td>
+<td>La explicación es insuficiente o poco clara (0pt)</td>
+</tr>
+<tr>
+<td><strong>Referencias relevantes a fuentes académicas o profesionales para respaldar la evaluación (1pt)</strong></td>
+<td>Incluye múltiples referencias apropiadas y las cita correctamente (1pt)</td>
+<td>Incluye referencias, pero la calidad o cantidad podría mejorarse (0,5pt)</td>
+<td>Carece de referencias o las referencias son inadecuadas o incorrectas (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="1f-se-han-reconocido-y-evaluado-las-herramientas-de-programacion-sobre-clientes-web">1f) Se han reconocido y evaluado las herramientas de programación sobre clientes web.</h4>
+<table>
+<thead>
+<tr>
+<th>Descriptores</th>
+<th>Bien (5pt)</th>
+<th>Regular (2,5pt)</th>
+<th>Insuficiente (0pt)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Evaluación exhaustiva de herramientas (5pt)</strong></td>
+<td>Proporciona una evaluación completa y detallada de varias herramientas (ej. editores de código, frameworks como React, Angular, bibliotecas como jQuery), explicando sus características, ventajas y desventajas en el desarrollo web (5pt)</td>
+<td>Menciona alguna herramienta, pero el análisis es superficial o carece de profundidad en cuanto a sus ventajas/desventajas (2,5pt)</td>
+<td>No menciona o analiza herramientas relevantes para el desarrollo web (0pt)</td>
+</tr>
+<tr>
+<td><strong>Comparación detallada (3pt)</strong></td>
+<td>Compara eficazmente varias herramientas, demostrando una comprensión clara de cuándo y por qué usar cada una, con ejemplos prácticos y bien integrados (3pt)</td>
+<td>Comparación adecuada pero limitada, o ejemplos no del todo claros (1,5pt)</td>
+<td>Falta una comparación clara o ejemplos, o no se justifica el uso de herramientas (0pt)</td>
+</tr>
+<tr>
+<td><strong>Impacto en el desarrollo (1pt)</strong></td>
+<td>Explica claramente cómo la elección de herramientas afecta al desarrollo y mantenimiento de aplicaciones web, con ejemplos relevantes (1pt)</td>
+<td>Menciona el impacto, pero de forma poco detallada o clara (0,5pt)</td>
+<td>No considera el impacto en el desarrollo o mantenimiento (0pt)</td>
+</tr>
+<tr>
+<td><strong>Referencias relevantes (1pt)</strong></td>
+<td>Incluye referencias apropiadas y las cita correctamente para respaldar la evaluación (1pt)</td>
+<td>Incluye pocas referencias o no están bien citadas (0,5pt)</td>
+<td>No se incluyen referencias o son inadecuadas (0pt)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nota-propiedad-intelectual">Nota: Propiedad intelectual</h2>
+<blockquote>
+<blockquote>
+<p>A menudo es inevitable, al escribir un documento, hacer uso de recursos creados por terceras personas. Es por tanto comprensible hacerlo en el marco de una práctica de nuestros estudios, siempre que esto se documente claramente y no suponga plagio en la práctica.</p>
+<p>Por lo tanto, al presentar una práctica que haga uso de recursos ajenos, se deberá referenciar claramente estos recursos, especificando el nombre de cada recurso, su autor, el lugar donde se obtuvo y el su estatus legal: si la obra está protegida por copyright o se acoge a alguna otra licencia de uso (Creative Commons, licencia GNU, GPL ...). El estudiante deberá asegurarse de que la licencia que sea no impide específicamente su uso en el marco de la práctica. En caso de no encontrar la información correspondiente deberá asumir que la obra está protegida por copyright.</p>
+</blockquote>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo de 1º DAW del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Rafael Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>

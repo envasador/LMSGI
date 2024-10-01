@@ -1,0 +1,966 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../ud2/">
+      
+      
+      <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>UT1 - Lenguajes de Marcas - Apuntes y referencias</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheet/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-a-los-lenguajes-de-marcas" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Lenguajes de Marcas - Apuntes y referencias" class="md-header__button md-logo" aria-label="Lenguajes de Marcas - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lenguajes de Marcas - Apuntes y referencias
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UT1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  UT1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud2/" class="md-tabs__link">
+        
+  
+    
+  
+  UT2
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenguajes de Marcas - Apuntes y referencias" class="md-nav__button md-logo" aria-label="Lenguajes de Marcas - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    Lenguajes de Marcas - Apuntes y referencias
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UT1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UT1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-un-lenguaje-de-marcas-y-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ¿Qué es un lenguaje de marcas y para qué sirve?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ¿Qué es un lenguaje de marcas y para qué sirve?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de aplicaciones:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-breve-historia-de-los-lenguajes-de-marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Breve historia de los lenguajes de marcas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tipos-de-lenguajes-de-marcas-con-ejemplos-y-ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tipos de lenguajes de marcas con ejemplos y ampliación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tipos de lenguajes de marcas con ejemplos y ampliación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-gml-generalized-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. GML (Generalized Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-sgml-standard-generalized-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. SGML (Standard Generalized Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-html-hypertext-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. HTML (HyperText Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-xml-extensible-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. XML (eXtensible Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-latex" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. LaTeX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-json-javascript-object-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. JSON (JavaScript Object Notation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cuadro-resumen-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cuadro resumen comparativo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UT2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-que-es-un-lenguaje-de-marcas-y-para-que-sirve" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ¿Qué es un lenguaje de marcas y para qué sirve?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. ¿Qué es un lenguaje de marcas y para qué sirve?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos de aplicaciones:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-breve-historia-de-los-lenguajes-de-marcas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Breve historia de los lenguajes de marcas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tipos-de-lenguajes-de-marcas-con-ejemplos-y-ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Tipos de lenguajes de marcas con ejemplos y ampliación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tipos de lenguajes de marcas con ejemplos y ampliación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-gml-generalized-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. GML (Generalized Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-sgml-standard-generalized-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. SGML (Standard Generalized Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-html-hypertext-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. HTML (HyperText Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-xml-extensible-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. XML (eXtensible Markup Language)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Markdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-latex" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6. LaTeX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-json-javascript-object-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7. JSON (JavaScript Object Notation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cuadro-resumen-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Cuadro resumen comparativo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introduccion-a-los-lenguajes-de-marcas"><strong>Introducción a los Lenguajes de Marcas</strong></h1>
+<h2 id="1-que-es-un-lenguaje-de-marcas-y-para-que-sirve">1. ¿Qué es un lenguaje de marcas y para qué sirve?</h2>
+<p>Los <strong>lenguajes de marcas</strong> son sistemas que utilizan etiquetas (<strong>marcas</strong>) para estructurar, organizar o describir contenido dentro de un documento. Estas marcas no son visibles en la salida final, sino que proporcionan instrucciones sobre cómo presentar o procesar la información. Su propósito es permitir la separación del contenido de su estructura o presentación, facilitando la manipulación y el intercambio de datos entre diferentes sistemas.</p>
+<h3 id="ejemplos-de-aplicaciones"><strong>Ejemplos de aplicaciones</strong>:</h3>
+<ul>
+<li><strong>HTML</strong> (HyperText Markup Language) estructura páginas web.</li>
+<li><strong>XML</strong> (eXtensible Markup Language) intercambia y almacena datos entre sistemas.</li>
+<li><strong>Markdown</strong> simplifica la escritura de texto estructurado para generar documentos o páginas web.</li>
+</ul>
+<h2 id="2-breve-historia-de-los-lenguajes-de-marcas">2. Breve historia de los lenguajes de marcas</h2>
+<p>La evolución de los lenguajes de marcas comenzó con el <strong>GML</strong> (Generalized Markup Language) creado en los años 60 por IBM. Este lenguaje fue precursor de muchos otros:</p>
+<ul>
+<li><strong>GML (Generalized Markup Language)</strong>: Creado por IBM en los años 60, permitía a los usuarios etiquetar el contenido de un documento para diferentes propósitos.</li>
+<li><strong>SGML (Standard Generalized Markup Language)</strong>: Aprobado como estándar en 1986, fue una evolución del GML y estableció las bases de muchos lenguajes posteriores.</li>
+<li><strong>HTML (HyperText Markup Language)</strong>: Basado en SGML, fue desarrollado en los 90 para estructurar documentos web. Marcó el auge de la Web.</li>
+<li><strong>XML (eXtensible Markup Language)</strong>: Introducido en 1998, ofrece un formato más simple y flexible que SGML y se utiliza ampliamente para el intercambio de datos entre sistemas.</li>
+<li>Otros lenguajes, como <strong>Markdown</strong>, <strong>LaTeX</strong> y <strong>JSON</strong>, surgieron para resolver problemas específicos en cuanto a la presentación o manipulación de información.</li>
+</ul>
+<h2 id="3-tipos-de-lenguajes-de-marcas-con-ejemplos-y-ampliacion">3. Tipos de lenguajes de marcas con ejemplos y ampliación</h2>
+<h3 id="31-gml-generalized-markup-language"><strong>3.1. GML (Generalized Markup Language)</strong></h3>
+<p><strong>GML</strong> fue desarrollado por IBM en la década de los 60. Se considera uno de los primeros lenguajes de marcas y sentó las bases de lo que más tarde se convertiría en SGML. Su principal objetivo era permitir a los autores etiquetar documentos para su procesamiento y presentación, pero fue reemplazado por lenguajes más avanzados debido a su simplicidad.</p>
+<ul>
+<li><strong>Uso típico</strong>: Documentación técnica en sistemas antiguos.</li>
+<li><strong>Ventaja</strong>: Marcó el inicio de los lenguajes de marcas.</li>
+<li><strong>Desventaja</strong>: Limitado en términos de flexibilidad y capacidad para definir estructuras complejas.</li>
+</ul>
+<pre><code class="language-text">:title.General Markup Language
+:author.John Doe
+:section.Starting GML
+This is a paragraph in GML.
+</code></pre>
+<h3 id="32-sgml-standard-generalized-markup-language"><strong>3.2. SGML (Standard Generalized Markup Language)</strong></h3>
+<p><strong>SGML</strong> fue desarrollado en los años 80 como una evolución de GML, con el propósito de ser un meta-lenguaje, es decir, un lenguaje para definir otros lenguajes de marcas. SGML es muy flexible, pero también bastante complejo, lo que llevó a la creación de lenguajes más específicos y sencillos como HTML y XML.</p>
+<ul>
+<li><strong>Uso típico</strong>: Documentación técnica y sistemas de publicación.</li>
+<li><strong>Ventaja</strong>: Extremadamente flexible, permite definir cualquier tipo de documento.</li>
+<li><strong>Desventaja</strong>: Complejo de implementar, y poco adecuado para entornos web.</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE example SYSTEM &quot;example.dtd&quot;&gt;
+&lt;document&gt;
+  &lt;title&gt;This is SGML&lt;/title&gt;
+  &lt;body&gt;
+    &lt;p&gt;SGML example content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/document&gt;
+</code></pre>
+<h3 id="33-html-hypertext-markup-language"><strong>3.3. HTML (HyperText Markup Language)</strong></h3>
+<p><strong>HTML</strong> es el estándar para crear páginas web. Se desarrolló en los años 90 y está basado en SGML, aunque simplificado para facilitar su uso en la Web. A lo largo de los años, HTML ha evolucionado, con HTML5 siendo la versión más reciente, que incluye soporte para multimedia, gráficos y aplicaciones interactivas.</p>
+<ul>
+<li><strong>Uso típico</strong>: Estructuración de contenido web.</li>
+<li><strong>Ventaja</strong>: Amplio soporte en navegadores, fácil de aprender.</li>
+<li><strong>Desventaja</strong>: Limitado para el manejo de datos complejos; dependiente de CSS y JavaScript para la presentación y funcionalidad avanzada.</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph in HTML.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="34-xml-extensible-markup-language"><strong>3.4. XML (eXtensible Markup Language)</strong></h3>
+<p><strong>XML</strong> es una versión simplificada de SGML, diseñada para ser tanto legible por humanos como por máquinas. Su propósito principal es estructurar datos para intercambiarlos entre sistemas heterogéneos, sin atarse a la presentación visual. XML no tiene etiquetas predefinidas, lo que permite a los usuarios definir sus propias estructuras.</p>
+<ul>
+<li><strong>Uso típico</strong>: Intercambio y almacenamiento de datos en aplicaciones web y empresariales.</li>
+<li><strong>Ventaja</strong>: Flexible y extensible; puede ser interpretado por muchos sistemas.</li>
+<li><strong>Desventaja</strong>: La sintaxis es verbosa y puede ser difícil de manejar en documentos muy grandes.</li>
+</ul>
+<pre><code class="language-xml">&lt;book&gt;
+  &lt;title&gt;XML Developer's Guide&lt;/title&gt;
+  &lt;author&gt;Jane Doe&lt;/author&gt;
+  &lt;price&gt;44.95&lt;/price&gt;
+&lt;/book&gt;
+</code></pre>
+<h3 id="35-markdown"><strong>3.5. Markdown</strong></h3>
+<p><strong>Markdown</strong> es un lenguaje de marcas ligero creado para ser fácil de leer y escribir. Está diseñado para ser convertido rápidamente a HTML u otros formatos, lo que lo hace ideal para la redacción de textos simples con formato. Es comúnmente usado en documentación de software, blogs y foros.</p>
+<ul>
+<li><strong>Uso típico</strong>: Blogs, documentación técnica, generación de HTML simple.</li>
+<li><strong>Ventaja</strong>: Sencillo y rápido de escribir, alta legibilidad.</li>
+<li><strong>Desventaja</strong>: No es adecuado para documentos complejos o con muchos estilos avanzados.</li>
+</ul>
+<pre><code class="language-markdown"># This is a title
+This is a paragraph with **bold** and *italic* text.
+</code></pre>
+<h3 id="36-latex"><strong>3.6. LaTeX</strong></h3>
+<p><strong>LaTeX</strong> es un sistema de composición tipográfica utilizado principalmente en entornos académicos y científicos. Es ideal para crear documentos con fórmulas matemáticas complejas, bibliografías y tablas de contenido automatizadas. Aunque tiene una curva de aprendizaje más pronunciada, ofrece un control fino sobre la presentación de los documentos.</p>
+<ul>
+<li><strong>Uso típico</strong>: Publicaciones académicas, libros, informes científicos.</li>
+<li><strong>Ventaja</strong>: Excelente para documentos científicos y matemáticos.</li>
+<li><strong>Desventaja</strong>: Curva de aprendizaje pronunciada; requiere compilación.</li>
+</ul>
+<pre><code class="language-latex">\documentclass{article}
+\title{LaTeX Example}
+\author{John Doe}
+\begin{document}
+\maketitle
+\section{Introduction}
+This is a paragraph in LaTeX.
+\end{document}
+</code></pre>
+<h3 id="37-json-javascript-object-notation"><strong>3.7. JSON (JavaScript Object Notation)</strong></h3>
+<p><strong>JSON</strong> es un formato ligero para el intercambio de datos entre servidores y aplicaciones web. Su estructura es sencilla, basada en pares de clave-valor, y está ampliamente utilizado en APIs y aplicaciones web debido a su compatibilidad con JavaScript.</p>
+<ul>
+<li><strong>Uso típico</strong>: Intercambio de datos entre servidores y aplicaciones web.</li>
+<li><strong>Ventaja</strong>: Ligero, fácil de interpretar por máquinas y legible para humanos.</li>
+<li><strong>Desventaja</strong>: No es adecuado para documentos muy complejos o con relaciones jerárquicas profundas.</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;JSON Example&quot;,
+  &quot;author&quot;: &quot;John Doe&quot;,
+  &quot;published&quot;: true
+}
+</code></pre>
+<hr />
+<h2 id="4-cuadro-resumen-comparativo">4. Cuadro resumen comparativo</h2>
+<table>
+<thead>
+<tr>
+<th>Lenguaje</th>
+<th>Propósito</th>
+<th>Basado en</th>
+<th>Ámbito de uso</th>
+<th>Sintaxis</th>
+<th>Ejemplo</th>
+<th>Ventajas</th>
+<th>Desventajas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GML</td>
+<td>Estructurar documentos</td>
+<td>IBM</td>
+<td>Documentación técnica</td>
+<td>Básico</td>
+<td><code>:title.General Markup</code></td>
+<td>Simple, pionero de los lenguajes de marcas</td>
+<td>Limitado en flexibilidad y uso moderno</td>
+</tr>
+<tr>
+<td>SGML</td>
+<td>Definir otros lenguajes de marcas</td>
+<td>GML</td>
+<td>Documentación compleja</td>
+<td>Complejo</td>
+<td><code>&lt;document&gt;&lt;title&gt;SGML</code></td>
+<td>Extremadamente flexible</td>
+<td>Complejo y difícil de implementar</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>Estructurar páginas web</td>
+<td>SGML</td>
+<td>Web</td>
+<td>Etiquetas predef.</td>
+<td><code>&lt;html&gt;&lt;body&gt;&lt;h1&gt;</code></td>
+<td>Soporte universal en navegadores</td>
+<td>Necesita CSS y JavaScript para ser funcional</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>Estructurar e intercambiar datos</td>
+<td>SGML</td>
+<td>Almacenamiento, intercambio</td>
+<td>Flexible</td>
+<td><code>&lt;book&gt;&lt;title&gt;XML Guide&lt;/title&gt;</code></td>
+<td>Extensible, universal para datos</td>
+<td>Verboso y difícil de manejar en documentos grandes</td>
+</tr>
+<tr>
+<td>Markdown</td>
+<td>Escritura de texto con formato</td>
+<td>Independ.</td>
+<td>Documentación, blogs</td>
+<td>Ligero</td>
+<td><code># Title</code></td>
+<td>Simple, legible, fácil de convertir a HTML</td>
+<td>Limitado para documentos complejos</td>
+</tr>
+<tr>
+<td>LaTeX</td>
+<td>Composición de documentos</td>
+<td>TEX</td>
+<td>Publicaciones científicas</td>
+<td>Rígido</td>
+<td><code>\section{Introduction}</code></td>
+<td>Excelente para matemáticas y publicaciones formales</td>
+<td>Curva de aprendizaje pronunciada</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>Intercambio de datos</td>
+<td>Independ.</td>
+<td>Aplicaciones web, APIs</td>
+<td>Clave-valor</td>
+<td><code>{ "title": "JSON" }</code></td>
+<td>Ligero, fácil de interpretar</td>
+<td>No apto para datos complejos con muchas relaciones</td>
+</tr>
+<tr>
+<td>```</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo de 1º DAW del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/IESAlbertiCadiz" target="_blank" rel="noopener" title="IES Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  </body>
+</html>
