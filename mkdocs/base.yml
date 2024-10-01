@@ -26,23 +26,12 @@ theme:
     - navigation.expand
     - navigation.top
     - header.autohide
-extra_css:
-  - stylesheet/extra.css
-plugins:
-# Configuración de ejemplo, no se aplicará mientras que no se elimine este plugin de los .yml de cada proyecto
-  - search:
-      lang: es
-  - with-pdf:
-      author: Equipo educativo de 1º DAW del IES Rafael Alberti
-      copyright: CC BY-SA 4.0
-      #
-      cover: true
-      #back_cover: true
-      cover_title: TITLE TEXT
-      cover_subtitle: SUBTITLE TEXT
-      #custom_template_path: TEMPLATES PATH
-      #
-      toc_title: Tabla de contenidos
-      #heading_shift: false
 
-copyright: Contenido generado por el equipo educativo de 1º DAW del IES Rafael Alberti
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - footnotes
+
