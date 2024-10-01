@@ -6,7 +6,6 @@ hide:
 # Lenguajes de Marcas
 ![](assets/referencias.jpg)
 
-
 # ¡Bienvenidos al módulo de **Lenguajes de Marcas y Sistemas de Gestión de la Información** del ciclo de **Desarrollo de Aplicaciones Web**!
 
 Este curso está diseñado para que adquieras las habilidades necesarias en el manejo de lenguajes de marcas y sistemas de gestión de información, los cuales son fundamentales en el desarrollo de aplicaciones web modernas. A lo largo del módulo, aprenderás cómo estructurar, transmitir y presentar información utilizando tecnologías clave como **HTML, CSS, JSON**, y **JavaScript**.
