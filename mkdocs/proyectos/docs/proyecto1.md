@@ -144,7 +144,7 @@ Que los estudiantes presenten su trabajo, explicando sus decisiones de diseño y
     - Mostrad cómo se ha validado el código HTML y CSS, y cómo se ha optimizado la accesibilidad de la aplicación web.
     - **Producto**: Evidencia de la validación y mejoras aplicadas, explicadas durante la presentación.
 
-3. **Responder preguntas**
+3. **Responder preguntas del docente**
 
 #### Evaluación:
 La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar la validación y accesibilidad del proyecto (p, w) además de analizar esas competencias dentro de la rúbrica del proyecto.
