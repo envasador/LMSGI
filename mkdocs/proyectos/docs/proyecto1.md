@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# **“Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
+# **Proyecto: “Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
 
 ## **Agrupamiento:**
 Individual
