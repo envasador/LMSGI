@@ -28,7 +28,7 @@ theme:
     - header.autohide
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheet/extra.css
 
 markdown_extensions:
   - attr_list
