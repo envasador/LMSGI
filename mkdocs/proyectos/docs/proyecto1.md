@@ -40,7 +40,7 @@ Planificar la estructura y diseño de su aplicación web antes de empezar a desa
 #### Evaluación:
 Los estudiantes serán evaluados en función de su capacidad para planificar y justificar su estructura, incluyendo el análisis de las etiquetas y lenguajes de marcas más relevantes para el proyecto (CE 1a, 1c, 1d, 1f, 2a).
 
-### **Fase 2: Diseño y Desarrollo del Frontend (HTML y CSS)**
+### **Fase 2: Diseño y Desarrollo del Frontend (HTML y CSS).**
 
 **Objetivo:**
 Desarrollar la estructura HTML de la aplicación web y aplicar hojas de estilo CSS para crear un diseño visual atractivo y funcional.
