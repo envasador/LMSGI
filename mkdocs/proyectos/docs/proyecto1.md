@@ -26,7 +26,7 @@ Planificar la estructura y diseño de su aplicación web antes de empezar a desa
 
 #### Actividades:
 1. **Análisis de requisitos y objetivos del proyecto:**
-    - Los estudiantes deben analizar el enunciado del proyecto y definir los requisitos funcionales y no funcionales.
+    - Debéis analizar el enunciado del proyecto y definir los requisitos funcionales y no funcionales. Además, elegid las tecnologías utilizadas de forma justificada, proporcionando las ventajas que proporcionan en todos los aspectos tanto en el ámbito de aplicación, como por su sintaxis.
     - **Producto**: Un documento que recoja los objetivos de la aplicación web, qué información va a contener y qué funcionalidades básicas debe ofrecer.
 
 2. **Creación de un wireframe en Balsamiq:**
@@ -132,23 +132,22 @@ Que los estudiantes añadan elementos multimedia a su aplicación web, asegurand
 Se evaluará la integración de componentes multimedia y su optimización, así como la capacidad del estudiante para implementar tecnologías de sindicación si es relevante para el proyecto (CE 2i, h).
 
 ### **Fase 5: Presentación del Proyecto**
-
 **Objetivo:**
 Que los estudiantes presenten su trabajo, explicando sus decisiones de diseño y desarrollo, y demostrando que han seguido las buenas prácticas de validación y accesibilidad.
 
 #### Actividades:
 1. **Presentación del proyecto:**
-    - Los estudiantes deben preparar una presentación oral de su proyecto, explicando las decisiones de diseño (wireframe, estructura HTML, CSS) y las soluciones técnicas implementadas.
+    - Debéis preparar una presentación oral de su proyecto, explicando las decisiones de diseño (wireframe, estructura HTML, CSS) y las soluciones técnicas implementadas.
     - **Producto**: Una presentación clara y bien estructurada que resuma el trabajo realizado y justifique las decisiones tomadas.
 
 2. **Demostración de la validación y mejoras en accesibilidad:**
-    - Mostrar cómo se ha validado el código HTML y CSS, y cómo se ha optimizado la accesibilidad de la aplicación web.
+    - Mostrad cómo se ha validado el código HTML y CSS, y cómo se ha optimizado la accesibilidad de la aplicación web.
     - **Producto**: Evidencia de la validación y mejoras aplicadas, explicadas durante la presentación.
 
 3. **Responder preguntas**
 
 #### Evaluación:
-La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar la validación y accesibilidad del proyecto (CE p, w).
+La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar la validación y accesibilidad del proyecto (p, w) además de analizar esas competencias dentro de la rúbrica del proyecto.
 
 
 ---
