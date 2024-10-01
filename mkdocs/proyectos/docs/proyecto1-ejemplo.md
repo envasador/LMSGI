@@ -19,146 +19,97 @@ El proyecto consiste en el desarrollo de una aplicación web completa utilizando
 - Fomentar la autonomía y capacidad de gestión del alumnado en la realización del proyecto.
 
 ## **Trabajo a Realizar:**
-### **Fase 1: Planificación del Proyecto (Wireframe y Estructura HTML)**
 
-**Objetivo:**
-Planificar la estructura y diseño de su aplicación web antes de empezar a desarrollarla. Realizar un esquema detallado del contenido y diseño a implementar utilizando **Balsamiq** para el wireframe.
+### **Fase 1: Planificación y Diseño**
+#### 1. **Análisis de Requisitos:**
+   - **Revisión del enunciado y objetivos del proyecto.**
+   - **Identificación de necesidades:** Investigar el propósito de la aplicación web y sus usuarios potenciales.
+   - **Establecimiento de funcionalidades:** Crear una lista de funcionalidades clave (ej.: navegación, formulario de contacto, sección de información, etc.).
+   - **Definición de estructura de contenido:** Crear un esquema básico de la estructura de la aplicación, como el mapa del sitio.
 
-#### Actividades:
-1. **Análisis de requisitos y objetivos del proyecto:**
-    - Los estudiantes deben analizar el enunciado del proyecto y definir los requisitos funcionales y no funcionales.
-    - **Producto**: Un documento que recoja los objetivos de la aplicación web, qué información va a contener y qué funcionalidades básicas debe ofrecer.
+#### 2. **Creación del Wireframe en Balsamiq:**
+   - **Dibujo de la estructura básica de cada página:** Incluir la disposición de elementos como encabezado, pie de página, navegación, y secciones de contenido.
+   - **Especificación de contenido:** Definir qué tipo de contenido irá en cada sección (texto, imágenes, botones, etc.).
+   - **Incorporación de interacción:** Marcar elementos interactivos (menús desplegables, botones, enlaces).
+   - **Revisión y mejora del wireframe:** Revisar con el docente o compañeros y realizar ajustes basados en el feedback recibido.
 
-2. **Creación de un wireframe en Balsamiq:**
-    - El wireframe debe reflejar la estructura básica de la página web, mostrando la organización visual de los elementos principales (encabezado, menús de navegación, área de contenido principal, pie de página, etc.).
-    - **Producto**: Un wireframe en Balsamiq que incluya los componentes principales de la página web.
+#### 3. **Documentación de la Fase de Diseño:**
+   - **Creación de un documento de especificaciones:** Incluir el objetivo del proyecto, descripción del usuario objetivo, lista de funcionalidades, y estructura del sitio.
+   - **Incluir capturas del wireframe en el documento:** Acompañar cada sección con una breve descripción.
 
-3. **Estructura HTML planificada:**
-    - Los estudiantes deben planificar cómo estructurarán su código HTML, identificando qué etiquetas y atributos usarán en cada sección.
-    - **Producto**: Un esquema detallado de la estructura HTMLy una justificación del uso de etiquetas semánticas.
+### **Fase 2: Desarrollo**
 
-#### Evaluación:
-Los estudiantes serán evaluados en función de su capacidad para planificar y justificar su estructura, incluyendo el análisis de las etiquetas y lenguajes de marcas más relevantes para el proyecto (CE 1a, 1c, 1d, 1f, 2a).
+#### 1. **Configuración del Entorno de Desarrollo:**
+   - **Estructuración del proyecto:** Crear la estructura de carpetas (ej.: `/css`, `/img`, `/js`) y archivos necesarios (`index.html`, `estilos.css`).
+   - **Configuración del editor de código:** Asegurar que el entorno de trabajo con WebStorm, o bien si utilizas VSCode que esté preparado con extensiones útiles como Prettier, Emmet, o Live Server.
 
-### **Fase 2: Diseño y Desarrollo del Frontend (HTML y CSS)**
-
-**Objetivo:**
-Desarrollar la estructura HTML de la aplicación web y aplicar hojas de estilo CSS para crear un diseño visual atractivo y funcional.
-
-#### Actividades:
-1. **Configuración del Entorno de Desarrollo:**
-- **Estructuración del proyecto:** Crear la estructura de carpetas (ej.: `/css`, `/img`, `/js`) y archivos necesarios (`index.html`, `estilos.css`).
-- **Configuración del editor de código:** Asegurar que el entorno de trabajo con WebStorm, o bien si utilizas VSCode que esté preparado con extensiones útiles como Prettier, Emmet, o Live Server.
-
-2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
-    - Implementar la estructura HTML basada en el wireframe creado en la fase anterior. Se deben utilizar etiquetas semánticas y estructurales adecuadas.
-    - **Creación de la página de inicio:**
+#### 2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
+   - **Creación de la página de inicio:**
       - Estructurar la página.
       - Añadir elementos como el menú de navegación, secciones de contenido, y enlaces a otras páginas.
-    - **Desarrollo de páginas secundarias:**
+   - **Desarrollo de páginas secundarias:**
       - Página de información: Incluir secciones como “Acerca de”, servicios, etc.
       - Página de contacto: Formulario de contacto con campos como nombre, email, y mensaje.
       - Página adicional: Puede ser una galería, blog, o cualquier otra funcionalidad elegida.
-      - Etcétera.
-    - **Enlazado entre páginas:** Asegurar que todas las páginas estén correctamente enlazadas a través del menú de navegación y enlaces contextuales.
-    - **Producto**: Código HTML de la web que cumpla con las especificaciones planificadas.
+      - Etcétera. 
+   - **Enlazado entre páginas:** Asegurar que todas las páginas estén correctamente enlazadas a través del menú de navegación y enlaces contextuales.
 
-2. **Aplicación de hojas de estilo CSS:**
-    - **Organización correcta de los estilos**, para mejorar las buenas prácticas y mantenibilidad del proyecto a futuro.
-    - **Estilización:**
-        - Definir estilos globales para tipografía, colores, y espaciados.
-        - Estilo de la cabecera y pie de página: Definir diseño y disposición. 
-        - Utilizar CSS para aplicar estilos a la estructura HTML, creando una interfaz visual acorde al proyecto.
-        - **Efectos y transiciones en CSS:** Añadir transiciones suaves para efectos de hover, animaciones de aparición de elementos, etc.
-    - **Aplicación de diseño responsive:**
-      - Utilizar una estructura semántica correcta para la disposición de elementos.
-      - Definir puntos de ruptura para adaptarse a diferentes tamaños de pantalla.
-    - **Diseño de componentes específicos:**
-      - Estilo del formulario de contacto.
-      - Tarjetas de presentación para servicios o productos.
-      - Galería de imágenes con efectos de hover.
-      - Tablas de contenidos.
-      - Creación de menús desplegables.
-   - **Producto**: Archivo(s) CSS que definan el estilo de la aplicación web.
+#### 3. **Aplicación de Hojas de Estilo (CSS):**
+   - **Organización correcta de los estilos**, para mejorar las buenas prácticas y mantenibilidad del proyecto a futur.
+   - **Estilización básica:**
+      - Definir estilos globales para tipografía, colores, y espaciados.
+      - Estilo de la cabecera y pie de página: Definir diseño y disposición.
+  - **Aplicación de diseño responsive:**
+     - Utilizar una estructura semántica correcta para la disposición de elementos.
+     - Definir puntos de ruptura para adaptarse a diferentes tamaños de pantalla.
+  - **Diseño de componentes específicos:**
+     - Estilo del formulario de contacto.
+     - Tarjetas de presentación para servicios o productos.
+     - Galería de imágenes con efectos de hover.
 
-3. **Implementación de diseño responsive:**
-    - El diseño debe ser adaptable a diferentes dispositivos (móvil, tablet, escritorio), utilizando técnicas de diseño responsive como media queries.
-    - **Producto**: Una página web responsiva que se adapte bien a múltiples tamaños de pantalla.
+#### 4. **Interactividad y Usabilidad:**
+   - **Creación de menús desplegables:** Si el wireframe lo especifica, implementar menús en el header.
+   - **Efectos y transiciones en CSS:** Añadir transiciones suaves para efectos de hover, animaciones de aparición de elementos, etc.
+   - **Formularios accesibles:** Asegurarse de que todos los campos tengan el formato adecuado.
 
-#### Evaluación:
-Se evaluará la estructura HTML y el diseño CSS aplicado, la utilización de etiquetas semánticas y la capacidad del estudiante para implementar un diseño responsivo que siga buenas prácticas (CE 2b, 2c, 2d, 2f, 2g).
-
-### **Fase 3: Implementación y Validación del Código**
-
-**Objetivo:**
-Revisad y validar su código HTML y CSS, asegurándose de que cumple con los estándares de calidad y accesibilidad web.
-
-#### Actividades:
-1. **Validación del código HTML:**
-    - Utilizar herramientas como el **validador HTML de W3C** para comprobar que el código HTML está bien formado y sigue las reglas sintácticas correctas.
-    - **Producto**: Informes de validación que muestren el estado del código HTML y los errores corregidos.
-
-2. **Validación del código CSS:**
-    - Validar el archivo CSS con herramientas específicas **validador CSS de W3C** para asegurar que no contiene errores y que sigue las mejores prácticas de estilos.
-    - **Producto**: Informes de validación de CSS y correcciones aplicadas.
-
-3. **Optimización y comprobación de accesibilidad, usabilidad:**
+#### 5. **Optimización y Validación:**
+   - **Validación de documentos HTML y CSS:**
+      - Usar herramientas como [W3C HTML Validator](https://validator.w3.org/) para HTML y [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) para CSS.
+      - Corregir todos los errores y advertencias.
    - **Optimización de rendimiento:**
-     - Minimizar el archivo CSS.
-     - Comprimir imágenes sin pérdida de calidad.
+      - Minimizar el archivo CSS.
+      - Comprimir imágenes sin pérdida de calidad.
    - **Pruebas de usabilidad:**
-     - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
-     - Utilizar herramientas como **Lighthouse** o **Wave** para revisar la accesibilidad de la web y realizar mejoras según las recomendaciones obtenidas.
-   - **Producto**: Informe de accesibilidad y mejoras aplicadas al proyecto.
+      - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
 
-#### Evaluación:
-La capacidad del estudiante para crear documentos HTML y CSS bien formados será evaluada, así como su competencia para corregir errores y mejorar la accesibilidad (CE 1h, 1g, 2h).
+### **Fase 3: Documentación y Presentación**
+#### 1. **Documentación Final del Proyecto:**
+   - **Descripción detallada de la aplicación:** Explicar el propósito, funcionalidades implementadas y estructura del proyecto.
+   - **Justificación de decisiones de diseño y desarrollo:** Explicar las razones detrás de la elección de etiquetas, estructuras, y estilos.
+   - **Explicación de problemas y soluciones:** Incluir los retos enfrentados y cómo se resolvieron.
+   - **Capturas de pantalla del wireframe y de la aplicación final:** Incluir imágenes de cada pantalla y secciones importantes.
 
-### **Fase 4: Implementación de Contenidos Multimedia y Sindicación**
-
-**Objetivo:**
-Que los estudiantes añadan elementos multimedia a su aplicación web, asegurando que estos elementos estén bien optimizados y sean accesibles.
-
-#### Actividades:
-1. **Inserción de imágenes y vídeos:**
-    - Añadir imágenes y vídeos al contenido de la página web, asegurándose de que están bien optimizados para la web (tamaño, formato) y que cumplen con las buenas prácticas de accesibilidad (uso de `alt` en imágenes, subtítulos en vídeos).
-    - **Producto**: Página web con contenidos multimedia bien integrados y accesibles.
-
-2. **Sindicación de contenidos (opcional):**
-    - Si el proyecto lo permite, implementar un sistema básico de sindicación de contenidos usando **RSS** o **Atom**.
-    - **Producto**: Un feed RSS o Atom funcional que permita la sindicación del contenido.
-
-#### Evaluación:
-Se evaluará la integración de componentes multimedia y su optimización, así como la capacidad del estudiante para implementar tecnologías de sindicación si es relevante para el proyecto (CE 2i, h).
-
-### **Fase 5: Presentación del Proyecto**
-
-**Objetivo:**
-Que los estudiantes presenten su trabajo, explicando sus decisiones de diseño y desarrollo, y demostrando que han seguido las buenas prácticas de validación y accesibilidad.
-
-#### Actividades:
-1. **Presentación del proyecto:**
-    - Los estudiantes deben preparar una presentación oral de su proyecto, explicando las decisiones de diseño (wireframe, estructura HTML, CSS) y las soluciones técnicas implementadas.
-    - **Producto**: Una presentación clara y bien estructurada que resuma el trabajo realizado y justifique las decisiones tomadas.
-
-2. **Demostración de la validación y mejoras en accesibilidad:**
-    - Mostrar cómo se ha validado el código HTML y CSS, y cómo se ha optimizado la accesibilidad de la aplicación web.
-    - **Producto**: Evidencia de la validación y mejoras aplicadas, explicadas durante la presentación.
-
-3. **Responder preguntas**
-
-#### Evaluación:
-La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar la validación y accesibilidad del proyecto (CE p, w).
-
+#### 2. **Preparación de la Presentación:**
+   - **Preparar una breve presentación (5-10 minutos):**
+      - Introducción del proyecto y objetivo.
+      - Explicación del proceso de desarrollo.
+      - Mostrar capturas de pantalla o navegar por la aplicación en directo.
+      - Explicar problemas y soluciones encontradas.
+      - Responder preguntas.
 
 ---
+
 ## **Recursos:**
 - [Documentación de HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
 - [Documentación de CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 - [Balsamiq (para wireframes)](https://balsamiq.com/)
 - [Validador de HTML y CSS de W3C](https://validator.w3.org/)
 
-## **Evaluación y Calificación del proyecto:**
+## **Evaluación y Calificación:**
+
+**Rúbrica de Evaluación:**
+
+---
 ### **Rúbrica de Evaluación Detallada:**
 
 | **Criterio de Evaluación** | **Nivel 1 (Insuficiente)** | **Nivel 2 (Suficiente)** | **Nivel 3 (Bien)** | **Nivel 4 (Notable)** | **Nivel 5 (Sobresaliente)**                                                                                                                                                                            |
