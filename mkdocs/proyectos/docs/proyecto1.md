@@ -53,13 +53,13 @@ Desarrollar la estructura HTML de la aplicación web y aplicar hojas de estilo C
 2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
     - Implementar la estructura HTML basada en el wireframe creado en la fase anterior. Se deben utilizar etiquetas semánticas y estructurales adecuadas.
     - **Creación de la página de inicio:**
-       - Estructurar la página.
-       - Añadir elementos como el menú de navegación, secciones de contenido, y enlaces a otras páginas.
+        - Estructurar la página.
+        - Añadir elementos como el menú de navegación, secciones de contenido, y enlaces a otras páginas.
     - **Desarrollo de páginas secundarias:**
-       - Página de información: Incluir secciones como “Acerca de”, servicios, etc.
-       - Página de contacto: Formulario de contacto con campos como nombre, email, y mensaje.
-       - Página adicional: Puede ser una galería, blog, o cualquier otra funcionalidad elegida.
-       - Etcétera.
+        - Página de información: Incluir secciones como “Acerca de”, servicios, etc.
+        - Página de contacto: Formulario de contacto con campos como nombre, email, y mensaje.
+        - Página adicional: Puede ser una galería, blog, o cualquier otra funcionalidad elegida.
+        - Etcétera.
     - **Enlazado entre páginas:** Asegurar que todas las páginas estén correctamente enlazadas a través del menú de navegación y enlaces contextuales.
     - **Producto**: Código HTML de la web que cumpla con las especificaciones planificadas.
 
