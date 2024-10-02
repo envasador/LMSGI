@@ -28,8 +28,8 @@ plugins:
       #
       cover: true
       #back_cover: true
-      cover_title: Glosario de Digitalización
-      cover_subtitle: Grado Superior en Desarrollo de Aplicaciones Multiplataforma
+      cover_title: Contenidos de Lenguajes de Marcas
+      cover_subtitle: Grado Superior en Desarrollo de Aplicaciones Web
       #custom_template_path: TEMPLATES PATH
       #
       toc_title: Tabla de contenidos

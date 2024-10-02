@@ -26,7 +26,7 @@ Planificar la estructura y diseño de su aplicación web antes de empezar a desa
 
 #### Actividades:
 1. **Análisis de requisitos y objetivos del proyecto:**
-    - Debéis analizar el enunciado del proyecto y definir los requisitos funcionales y no funcionales. Además, elegid las tecnologías utilizadas de forma justificada, proporcionando las ventajas que proporcionan en todos los aspectos tanto en el ámbito de aplicación, como por su sintaxis.
+    - Debéis analizar el enunciado del proyecto y definir los requisitos funcionales y no funcionales. Además, elegid las tecnologías utilizadas de forma justificada, documentando las ventajas que proporcionan en todos los aspectos tanto en el ámbito de aplicación, como por su sintaxis.
     - **Producto**: Un documento que recoja los objetivos de la aplicación web, qué información va a contener y qué funcionalidades básicas debe ofrecer.
 
 2. **Creación de un wireframe en Balsamiq:**
@@ -38,7 +38,7 @@ Planificar la estructura y diseño de su aplicación web antes de empezar a desa
     - **Producto**: Un esquema detallado de la estructura HTMLy una justificación del uso de etiquetas semánticas.
 
 #### Evaluación:
-Los estudiantes serán evaluados en función de su capacidad para planificar y justificar su estructura, incluyendo el análisis de las etiquetas y lenguajes de marcas más relevantes para el proyecto (CE 1a, 1c, 1d, 1f, 2a).
+Seréis evaluados y evaluadas en función de la capacidad para planificar y justificar su estructura, incluyendo el análisis de las etiquetas y lenguajes de marcas más relevantes para el proyecto (CE 1a, 1c, 1d, 1f, 2a).
 
 ### **Fase 2: Diseño y Desarrollo del Frontend (HTML y CSS).**
 
@@ -71,14 +71,14 @@ Desarrollar la estructura HTML de la aplicación web y aplicar hojas de estilo C
         - Utilizar CSS para aplicar estilos a la estructura HTML, creando una interfaz visual acorde al proyecto.
         - **Efectos y transiciones en CSS:** Añadir transiciones suaves para efectos de hover, animaciones de aparición de elementos, etc.
     - **Aplicación de diseño responsive:**
-      - Utilizar una estructura semántica correcta para la disposición de elementos.
-      - Definir puntos de ruptura para adaptarse a diferentes tamaños de pantalla.
+        - Utilizar una estructura semántica correcta para la disposición de elementos.
+        - Definir puntos de ruptura para adaptarse a diferentes tamaños de pantalla.
     - **Diseño de componentes específicos:**
-      - Estilo del formulario de contacto.
-      - Tarjetas de presentación para servicios o productos.
-      - Galería de imágenes con efectos de hover.
-      - Tablas de contenidos.
-      - Creación de menús desplegables.
+        - Estilo del formulario de contacto.
+        - Tarjetas de presentación para servicios o productos.
+        - Galería de imágenes con efectos de hover.
+        - Tablas de contenidos.
+        - Creación de menús desplegables.
    - **Producto**: Archivo(s) CSS que definan el estilo de la aplicación web.
 
 3. **Implementación de diseño responsive:**
