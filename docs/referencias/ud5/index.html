@@ -12,11 +12,11 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>UD5 - React.js - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>UD4 - DOM manipulation and events - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ud5-reactjs" class="md-skip">
+        <a href="#ud4-dom-manipulation-and-events" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD5 - React.js
+              UD4 - DOM manipulation and events
             
           </span>
         </div>
@@ -257,7 +257,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -346,6 +348,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -365,54 +369,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#como-funciona-react" class="md-nav__link">
+  <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Cómo funciona React
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#react-y-el-backend" class="md-nav__link">
-    <span class="md-ellipsis">
-      React y el Backend
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#react-y-web-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      React y Web Components
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#react-y-el-shadow-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      React y el Shadow DOM
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#react-y-los-estados" class="md-nav__link">
-    <span class="md-ellipsis">
-      React y los Estados
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-de-react" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy de React
+      Material de refuerzo y ampliación
     </span>
   </a>
   
@@ -433,89 +392,98 @@
                   
 
 
-<h1 id="ud5-reactjs">UD5 - React.js</h1>
+<h1 id="ud4-dom-manipulation-and-events">UD4 - DOM manipulation and events</h1>
 <p><center>
-<img alt="" src="../assets/ud5/ud5-REACT.png" />
+<img alt="" src="../assets/ud4/ud4-eventos.webp" />
 </center></p>
-<p>React es sin duda una de las tecnologías web más revolucionarias de la actualidad, fue lanzado por primera vez en 2013 por Facebook y es actualmente mantenido por ellos mismo y la comunidad de código abierto, la cual se extiende alrededor del mundo.</p>
-<p>React, a diferencia de muchas tecnologías del desarrollo web, es una librería lo que lo hace mucho más fácil de implementar en muchos desarrollos, ya que se encarga <strong>exclusivamente de la interfaz gráfica</strong> del usuario y consume los datos a través de API que por lo general son REST.</p>
-<p>El nombre de React proviene de su capacidad de crear <strong>interfaces de usuario reactivas</strong>, la cual es la capacidad de una aplicación para actualizar toda la interfaz gráfica en cadena, como si se tratara de una fórmula en Excel, donde al cambiar el valor de una celda automáticamente actualiza todas las celdas que depende del valor actualizado y esto se repite con las celdas que a la vez dependía de
-estas últimas.</p>
-<h2 id="como-funciona-react">Cómo funciona React</h2>
-<p>React nos permite crear la interfaz UI mediante una sintaxis propia llamada Javascript XML (JSX) el cual es una mezcla entre XML y HTML que permite la construcción de elementos HTML de una forma muy simple y rápida.</p>
-<p>Las aplicaciones desarrolladas mediante <strong>JSX no pueden ser interpretadas por el navegador</strong>, por lo que es requerido que todo el código sea convertido a Javascript nativo mediante un proceso llamado <strong>transpilación</strong>, el cual es parecido a la compilación, pero en este proceso no se lleva a cabo una compilación como tal, sino que el código es convertido de JSX a Javascript.</p>
-<p>Este proceso es llevado a cabo mediante herramientas como Webpack el cual es el más ampliamente utilizado.</p>
-<p><center>
-<img alt="" src="../assets/ud5/webpack.png" />
-</center></p>
-<p>Como vemos en la imagen, Webpack es en realidad un empaquetador, el cual organiza, compacta y mediante plugins como Babel realiza la transpilación, arrojando como resultado una serie de archivos compactos y listos para ser utilizados.</p>
-<h2 id="react-y-el-backend">React y el Backend</h2>
-<p>React solo sirve para la creación de interfaz gráfica, por lo que <strong>el desarrollo del backend queda fuera de React</strong> y es precisamente eso lo que lo hace una librería super portable, ya que la podemos integrar con cualquier API ya desarrollada.</p>
-<p>Cómo React no es capaz de resolver la parte del backend es necesario desarrollar el API de datos mediante otras tecnologías como NodeJS, el cual es por lo general el servidor más utilizado para el
-desarrollo con React.</p>
-<p>El API es consumido mediante AJAX a medida que la aplicación lo demanda.</p>
-<p><center>
-<img alt="" src="../assets/ud5/back.png" />
-</center></p>
-<h2 id="react-y-web-components">React y Web Components</h2>
-<p>React utiliza un concepto llamado Web Componentes, el cual es la creación de tus propias etiquetas de HTML para representar tus componentes. Te imaginas crear un login en tu página utilizando una etiqueta como esta &lt;login&gt;, pues esta forma de trabajar es la que propone React, donde todo lo que desarrollemos sean componentes que puedan ser reutilizables cuantas veces queramos, incluso podrán ser empaquetadas como librerías para que las utilices en diferentes desarrollos. Esto lo puedes ver como si cada componente fuera una pequeña caja, y lo único que tenemos que hacer es colocar las cajas donde la necesitemos.</p>
-<p><center>
-<img alt="" src="../assets/ud5/components.png" />
-</center></p>
-<p>Como podemos ver en la imagen, cada parte de la aplicación puede ser un componente (etiqueta) el cual solo se tiene que agregar a la página para crear interfaces gráficas mucho más rápido. Ahora veamos cómo quedaría esta misma página, pero en código con React:</p>
-<pre><code>import React from 'react'
-import NavBar from './NavBar'
-import Login from './Login'
-import Footer from './Footer'
-class LoginApp extends React.Component{
-  render(){
-    return(
-    &lt;div&gt;
-        &lt;NavBar/&gt;
-        &lt;Login/&gt;
-        &lt;Footer/&gt;
-    &lt;/div&gt;
-    )
-  }
-}
-</code></pre>
-<p>Observemos que estamos utilizando las etiquetas como NavBar y Login,  las cuales no son propias de HTML.</p>
-<h2 id="react-y-el-shadow-dom">React y el Shadow DOM</h2>
-<p>Como se ha comentado anteriormente, React se ejecuta del lado de cliente, por lo que es esta misma la encargada de actualizar el DOM a medida que el usuario interactúa con la UI, sin embargo, el proceso de actualización del DOM es un trabajo muy costoso para el navegador, por lo que actualizar el DOM cada vez que el usuario realiza una acción, no es una opción, es por esto que React provee un DOM propio llamado Shadow DOM el cual es una versión del DOM sobre la cual React trabaja para
-realizar los cambios, y una vez que calcula todos los cambios que hay que realizar es solo entonces cuando actualiza el DOM del navegador. </p>
-<p>Este proceso es en realidad muy complejo y React se encarga por completo de su gestión, por lo que como programadores no hace falta preocuparnos por estos detalles en la mayoría de las veces.</p>
-<p><center>
-<img alt="" src="../assets/ud5/dom.png" />
-</center></p>
-<p>Cuando se realiza un cambio en el Shadow DOM, este se sincroniza con el DOM original y es necesario realizar un proceso llamado reconciliación, el cual es el encargado de aplicar los cambios del Shadow DOM al DOM real.</p>
-<p><center>
-<img alt="" src="../assets/ud5/dom-2.png" />
-</center></p>
-<h2 id="react-y-los-estados">React y los Estados</h2>
-<p>Una de las principales características de React es que los componentes pueden mantener estados. Los estados le indican los datos que el componente muestra, e incluso el formato en se muestran.</p>
-<p>Por ejemplo, podemos tener un formulario, el cual tenga los estados de solo lectura y edición, en el primero, solo mostraremos los datos en texto plano, como un &lt;p&gt; o un &lt;span&gt; mientras que cuando el formulario está en estado de edición, podemos representar el formulario con &lt;imput type=”text” /&gt;</p>
-<p>Cuando un componente por alguna razón modifica su estado, entra en lo que se le conoce como Dirty o Sucio, y esto le indica a React que debe de haber un proceso de reconciliación para actualizar los datos en la UI.
-Como ya hablamos en hace un momento, React utiliza programación Reactiva para actualizar los componentes, de tal forma, que cuando un componente es actualizado, todos los componentes hijos del árbol DOM serán evaluados para determinar si deben de ser también actualizados.</p>
-<p><center>
-<img alt="" src="../assets/ud5/dom-3.png" />
-</center></p>
-<p>En la imagen podemos apreciar en rojo, los componentes que fueron actualizados por el usuario, por lo que React deberá iniciar el proceso dereconciliación para estos componentes, pero adicional, si
-este componente tiene componentes hijos, React deberá determinar si los hijos necesitan ser también actualizados en cascada, a éste proceso es a lo que se le conoce como programación Reactiva.</p>
-<h2 id="deploy-de-react">Deploy de React</h2>
-<p>Finalmente, React tiene una forma muy particular de ser cargado por el navegador, pues cuando el usuario entra a la página, está solo tiene un elemento, sobre el cual react montará toda la aplicación.</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;/bundle.js&quot;&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>Adicional del elemento root, se carga un JavaScript llamado <strong>bundle.js el cual es en realidad TODA LA APLICACIÓN en un solo archivo</strong>, el cual es generado por Webpack tras ejecutar el proceso de transpilación.
-Cuando el bundle.js se carga por completo, reemplaza el componente root por la aplicación
-desarrollada en React.</p>
+<p>Como referencia de para esta unidad se ha tomado el material de "<a href="https://javascript.info/">The Modern JavaScript Tutorial</a>". En concreto los siguientes apartados del mismo:</p>
+<p><a href="https://javascript.info/document">Document</a></p>
+<ul>
+<li>Browser environment, specs</li>
+<li>DOM tree</li>
+<li>Walking the DOM</li>
+<li>Searching: getElement<em>, querySelector</em></li>
+<li>Node properties: type, tag and contents</li>
+<li>Attributes and properties</li>
+<li>Modifying the document</li>
+<li>Styles and classes</li>
+<li>Element size and scrolling</li>
+<li>Window sizes and scrolling</li>
+<li>Coordinates</li>
+</ul>
+<p><a href="https://javascript.info/events">Introduction to Events</a></p>
+<ul>
+<li>Introduction to browser events</li>
+<li>Bubbling and capturing</li>
+<li>Event delegation</li>
+<li>Browser default actions</li>
+<li>Dispatching custom events</li>
+</ul>
+<p><a href="https://javascript.info/event-details">UI Events</a></p>
+<ul>
+<li>Mouse events</li>
+<li>Moving the mouse: mouseover/out, mouseenter/leave</li>
+<li>Drag'n'Drop with mouse events</li>
+<li>Pointer events</li>
+<li>Keyboard: keydown and keyup</li>
+<li>Scrolling</li>
+</ul>
+<p><a href="https://javascript.info/forms-controls">Forms, controls</a></p>
+<ul>
+<li>Form properties and methods</li>
+<li>Focusing: focus/blur</li>
+<li>Events: change, input, cut, copy, paste</li>
+<li>Forms: event and method submit</li>
+</ul>
+<p><a href="https://javascript.info/regular-expressions">Regular expressions</a></p>
+<p><a href="https://javascript.info/loading">Document and resource loading</a></p>
+<ul>
+<li>Page: DOMContentLoaded, load, beforeunload, unload, beforeunload, unload</li>
+<li>Scripts: async, defer</li>
+<li>Resource loading: onload and onerror</li>
+</ul>
+<p><a href="https://javascript.info/data-storage">Storing data in the browser</a></p>
+<ul>
+<li>Cookies, document.cookie</li>
+<li>LocalStorage, sessionStorage</li>
+<li>IndexedDB</li>
+</ul>
+<p><a href="https://javascript.info/error-handling">Error handling</a></p>
+<ul>
+<li>Error handling, "try...catch"</li>
+<li>Custom errors, extending Error</li>
+</ul>
+<p><a href="https://javascript.info/async">Promises</a></p>
+<ul>
+<li>Introduction: callbacks</li>
+<li>Promise</li>
+<li>Promises chaining</li>
+<li>Error handling with promises</li>
+<li>Promise API</li>
+<li>Promisification</li>
+<li>Async/await</li>
+</ul>
+<p><a href="https://javascript.info/network">Network requests</a></p>
+<ul>
+<li>Fetch</li>
+<li>FormData</li>
+<li>Fetch: Download progress</li>
+<li>Fetch: Abort</li>
+<li>Fetch: Cross-Origin Requests</li>
+<li>Fetch API</li>
+<li>URL objects</li>
+<li>XMLHttpRequest</li>
+</ul>
+<h2 id="material-de-refuerzo-y-ampliacion">Material de refuerzo y ampliación</h2>
+<p>Se recomienda la realización de los siguientes cursos de la <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">certificación algoritmos de javascript y estructuras de datos</a> de freeCodeCamp.</p>
+<ul>
+<li>Learn Form Validation by Building a Calorie Counter</li>
+<li>Learn Regular Expressions by Building a Spam Filter</li>
+<li>Review DOM Manipulation by Building a Rock, Paper, Scissors Game</li>
+<li>Learn localStorage by Building a Todo App</li>
+<li>Learn Fetch and Promises by Building an fCC Authors Page,</li>
+<li>Learn Asynchronous Programming by Building an fCC Forum Leaderboard</li>
+</ul>
 
 
 
@@ -523,8 +491,13 @@ desarrollada en React.</p>
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
