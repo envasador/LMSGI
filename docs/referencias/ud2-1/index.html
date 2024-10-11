@@ -16,7 +16,7 @@
     
     
       
-        <title>4.1 Guía completa de HTML5. - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>Unidad de Trabajo 2 Guía completa de HTML5. - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#41-guia-completa-de-html5" class="md-skip">
+        <a href="#unidad-de-trabajo-2-guia-completa-de-html5" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.1 Guía completa de HTML5.
+              Unidad de Trabajo 2 Guía completa de HTML5.
             
           </span>
         </div>
@@ -938,7 +938,7 @@
                   
 
 
-<h1 id="41-guia-completa-de-html5">4.1 <strong>Guía completa de HTML5</strong>.</h1>
+<h1 id="unidad-de-trabajo-2-guia-completa-de-html5">Unidad de Trabajo 2 <strong>Guía completa de HTML5</strong>.</h1>
 <p>Esta guía integra los conceptos esenciales de HTML5, incluyendo su sintaxis, atributos, etiquetas semánticas, multimedia, formularios, tablas, y etiquetas modernas. Está organizada de manera lógica para facilitar el aprendizaje progresivo del lenguaje.</p>
 <h2 id="1-introduccion-a-html5">1. Introducción a HTML5</h2>
 <p><strong>HTML5</strong> es la quinta y más reciente versión del lenguaje de marcado HTML (HyperText Markup Language), utilizado para estructurar y presentar contenido en la web. Fue desarrollado para mejorar las capacidades de HTML4 y XHTML, ofreciendo nuevas características que facilitan la creación de aplicaciones web más ricas, interactivas y semánticas.</p>
@@ -1014,74 +1014,76 @@
 <ul>
 <li><strong>Descripción:</strong> Identificador único para el elemento.</li>
 <li><strong>Uso:</strong> Permite la referencia del elemento mediante CSS o JavaScript.</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<div id="miDiv">Contenido</div></li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<p><code>html
+&lt;div id="miDiv"&gt;Contenido&lt;/div&gt;</code></p>
+</li>
 </ul>
-<p>```</p>
 <h4 id="2-class"><strong>2. <code>class</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Define una o varias clases para el elemento.</li>
 <li><strong>Uso:</strong> Facilita la aplicación de estilos CSS o la selección en JavaScript.</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<p class="texto-importante">Texto destacado</p></li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<p><code>html
+&lt;p class="texto-importante"&gt;Texto destacado&lt;/p&gt;</code></p>
+</li>
 </ul>
-<p>```</p>
 <h4 id="3-style"><strong>3. <code>style</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Aplica estilos CSS en línea al elemento.</li>
 <li><strong>Uso:</strong> Útil para estilos rápidos o específicos.</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<h1 style="color: blue;">Título Azul</h1></li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<p><code>html
+&lt;h1 style="color: blue;"&gt;Título Azul&lt;/h1&gt;</code></p>
+</li>
 </ul>
-<p>```</p>
 <h4 id="4-title"><strong>4. <code>title</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Proporciona información adicional que aparece como tooltip al pasar el cursor.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
-  &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></li>
+<li>
+<p><strong>Ejemplo:</strong></p>
+<p><code>html
+  &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></p>
+</li>
 </ul>
 <h4 id="5-data-"><strong>5. <code>data-*</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Permite almacenar datos personalizados privados para la página o aplicación.</li>
 <li><strong>Uso:</strong> Accesibles mediante JavaScript.</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<div data-user-id="12345">Usuario</div></li>
+<li><strong>Ejemplo:</strong></li>
 </ul>
+<p>```html
+<br />
+<div data-user-id="12345">Usuario</div></p>
 <p>```</p>
 <h4 id="6-hidden"><strong>6. <code>hidden</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Indica que el elemento no es relevante y debe ocultarse.</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<p hidden>Este párrafo está oculto.</p></li>
+<li><strong>Ejemplo:</strong></li>
 </ul>
+<p>```html
+<br />
+<p hidden>Este párrafo está oculto.</p></p>
 <p>```</p>
 <h4 id="7-lang"><strong>7. <code>lang</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Especifica el idioma del elemento.</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<p lang="es">Este texto está en español.</p></li>
+<li><strong>Ejemplo:</strong></li>
 </ul>
+<p>```html
+<br />
+<p lang="es">Este texto está en español.</p></p>
 <p>```</p>
 <h4 id="8-tabindex"><strong>8. <code>tabindex</code></strong></h4>
 <ul>
 <li><strong>Descripción:</strong> Controla el orden de tabulación de los elementos interactivos.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
-  &lt;button tabindex="1"&gt;Primer Botón&lt;/button&gt;</code></li>
+<li><strong>Ejemplo:</strong></li>
 </ul>
+<p><code>html
+  &lt;button tabindex="1"&gt;Primer Botón&lt;/button&gt;</code></p>
 <h3 id="42-atributos-especificos-de-etiquetas-comunes">4.2. Atributos Específicos de Etiquetas Comunes</h3>
 <h4 id="1-a-enlace"><strong>1. <code>&lt;a&gt;</code> (Enlace)</strong></h4>
 <ul>
@@ -1149,8 +1151,9 @@
 <p><strong><code>&lt;header&gt;</code></strong></p>
 <ul>
 <li><strong>Descripción:</strong> Define el encabezado de una página o sección.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<p><code>html
   &lt;header&gt;
       &lt;h1&gt;Bienvenido a Mi Sitio Web&lt;/h1&gt;
       &lt;nav&gt;
@@ -1160,8 +1163,7 @@
               &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
           &lt;/ul&gt;
       &lt;/nav&gt;
-  &lt;/header&gt;</code></li>
-</ul>
+  &lt;/header&gt;</code></p>
 </li>
 <li>
 <p><strong><code>&lt;nav&gt;</code></strong></p>
@@ -1174,27 +1176,27 @@
 <p><strong><code>&lt;main&gt;</code></strong></p>
 <ul>
 <li><strong>Descripción:</strong> Representa el contenido principal del documento.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<p><code>html
   &lt;main&gt;
       &lt;article&gt;
           &lt;h2&gt;Título del Artículo&lt;/h2&gt;
           &lt;p&gt;Contenido del artículo...&lt;/p&gt;
       &lt;/article&gt;
-  &lt;/main&gt;</code></li>
-</ul>
+  &lt;/main&gt;</code></p>
 </li>
 <li>
 <p><strong><code>&lt;section&gt;</code></strong></p>
 <ul>
 <li><strong>Descripción:</strong> Define una sección genérica del documento.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<p><code>html
   &lt;section&gt;
       &lt;h2&gt;Sección de Servicios&lt;/h2&gt;
       &lt;p&gt;Descripción de los servicios ofrecidos...&lt;/p&gt;
-  &lt;/section&gt;</code></li>
-</ul>
+  &lt;/section&gt;</code></p>
 </li>
 <li>
 <p><strong><code>&lt;article&gt;</code></strong></p>
@@ -1207,24 +1209,24 @@
 <p><strong><code>&lt;aside&gt;</code></strong></p>
 <ul>
 <li><strong>Descripción:</strong> Define contenido complementario, como barras laterales o widgets.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<p><code>html
   &lt;aside&gt;
       &lt;h3&gt;Información Adicional&lt;/h3&gt;
       &lt;p&gt;Contenido adicional relacionado...&lt;/p&gt;
-  &lt;/aside&gt;</code></li>
-</ul>
+  &lt;/aside&gt;</code></p>
 </li>
 <li>
 <p><strong><code>&lt;footer&gt;</code></strong></p>
 <ul>
 <li><strong>Descripción:</strong> Define el pie de página de una sección o documento.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<p><code>html
   &lt;footer&gt;
       &lt;p&gt;&amp;copy; 2024 Mi Sitio Web. Todos los derechos reservados.&lt;/p&gt;
-  &lt;/footer&gt;</code></li>
-</ul>
+  &lt;/footer&gt;</code></p>
 </li>
 </ol>
 <hr />
@@ -1264,30 +1266,28 @@
 <h3 id="63-etiqueta-canvas">6.3. Etiqueta <code>&lt;canvas&gt;</code></h3>
 <ul>
 <li><strong>Descripción:</strong> Permite dibujar gráficos mediante scripting (JavaScript).</li>
-<li><strong>Ejemplo:</strong>
-  ```html
-<br />
-<canvas id="miCanvas" width="200" height="100" style="border:1px solid #000000;">
-      Tu navegador no soporta el elemento canvas.
-  </canvas>
-</li>
+<li><strong>Ejemplo:</strong></li>
 </ul>
-<script>
+<pre><code class="language-html">  &lt;canvas id=&quot;miCanvas&quot; width=&quot;200&quot; height=&quot;100&quot; style=&quot;border:1px solid #000000;&quot;&gt;
+      Tu navegador no soporta el elemento canvas.
+  &lt;/canvas&gt;
+
+  &lt;script&gt;
       var canvas = document.getElementById('miCanvas');
       var contexto = canvas.getContext('2d');
       contexto.fillStyle = '#FF0000';
       contexto.fillRect(20, 20, 150, 75);
-  </script>
-<p>```</p>
+  &lt;/script&gt;
+</code></pre>
 <h3 id="64-etiqueta-svg">6.4. Etiqueta <code>&lt;svg&gt;</code></h3>
 <ul>
 <li><strong>Descripción:</strong> Permite integrar gráficos vectoriales escalables directamente en HTML.</li>
-<li><strong>Ejemplo:</strong>
-  <code>html
+<li><strong>Ejemplo:</strong></li>
+</ul>
+<p><code>html
   &lt;svg width="100" height="100"&gt;
       &lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" /&gt;
-  &lt;/svg&gt;</code></li>
-</ul>
+  &lt;/svg&gt;</code></p>
 <p><strong>Descripción del Ejemplo:</strong></p>
 <ul>
 <li>Dibuja un círculo con centro en (50,50), radio 40, borde verde y relleno amarillo.</li>
