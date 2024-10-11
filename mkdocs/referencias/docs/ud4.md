@@ -3,99 +3,59 @@ hide:
   - navigation
 ---
 
-# UD4 - DOM manipulation and events
+# UD3 - User-Defined Structures
 
 <center>
-![](assets/ud4/ud4-eventos.webp)
+![](assets/ud3/ud3-estructuras.webp)
 </center>
 
 Como referencia de para esta unidad se ha tomado el material de "[The Modern JavaScript Tutorial](https://javascript.info/)". En concreto los siguientes apartados del mismo:
 
-[Document](https://javascript.info/document)
+[JavaScript Fundamentals](https://javascript.info/first-steps)
 
-* Browser environment, specs
-* DOM tree
-* Walking the DOM
-* Searching: getElement*, querySelector*
-* Node properties: type, tag and contents
-* Attributes and properties
-* Modifying the document
-* Styles and classes
-* Element size and scrolling
-* Window sizes and scrolling
-* Coordinates
+* Functions
+* Function expressions
+* Arrow functions, the basics
+* JavaScript specials
 
-[Introduction to Events](https://javascript.info/events)
+[Data types](https://javascript.info/data-types)
 
-* Introduction to browser events
-* Bubbling and capturing
-* Event delegation
-* Browser default actions
-* Dispatching custom events
+* Methods of primitives
+* Numbers
+* Strings
+* Arrays
+* Array methods
+* Iterables
+* Map and Set
+* Object.keys, values, entries
+* Destructuring assignment
+* Date and time
+* JSON methods, toJSON
 
-[UI Events](https://javascript.info/event-details)
+[Objects: the basics](https://javascript.info/object-basics)
 
-* Mouse events
-* Moving the mouse: mouseover/out, mouseenter/leave
-* Drag'n'Drop with mouse events
-* Pointer events
-* Keyboard: keydown and keyup
-* Scrolling
+* Objects
+* Object references and copying
+* Object methods, "this"
+* Constructor, operator "new"
 
-[Forms, controls](https://javascript.info/forms-controls)
+[Object properties configuration](https://javascript.info/object-properties)
 
-* Form properties and methods
-* Focusing: focus/blur
-* Events: change, input, cut, copy, paste
-* Forms: event and method submit
+* Property getters and setters
 
-[Regular expressions](https://javascript.info/regular-expressions)
+[Classes](https://javascript.info/classes)
 
-[Document and resource loading](https://javascript.info/loading)
+* Class basic syntax
+* Class inheritance
+* Static properties and methods
+* Private and protected properties and methods
 
-* Page: DOMContentLoaded, load, beforeunload, unload, beforeunload, unload
-* Scripts: async, defer
-* Resource loading: onload and onerror
-
-[Storing data in the browser](https://javascript.info/data-storage)
-
-* Cookies, document.cookie
-* LocalStorage, sessionStorage
-* IndexedDB
-
-[Error handling](https://javascript.info/error-handling)
-
-* Error handling, "try...catch"
-* Custom errors, extending Error
-
-[Promises](https://javascript.info/async)
-
-* Introduction: callbacks
-* Promise
-* Promises chaining
-* Error handling with promises
-* Promise API
-* Promisification
-* Async/await
-
-[Network requests](https://javascript.info/network)
-
-* Fetch
-* FormData
-* Fetch: Download progress
-* Fetch: Abort
-* Fetch: Cross-Origin Requests
-* Fetch API
-* URL objects
-* XMLHttpRequest
 
 ## Material de refuerzo y ampliación
 
 Se recomienda la realización de los siguientes cursos de la [certificación algoritmos de javascript y estructuras de datos](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de freeCodeCamp.
 
-* Learn Form Validation by Building a Calorie Counter
-* Learn Regular Expressions by Building a Spam Filter
-* Review DOM Manipulation by Building a Rock, Paper, Scissors Game
-* Learn localStorage by Building a Todo App
-* Learn Fetch and Promises by Building an fCC Authors Page,
-* Learn Asynchronous Programming by Building an fCC Forum Leaderboard
+* Learn Basic String and Array Methods by Building a Music Player
+* Learn the Date Object by Building a Date Formatter
+* Learn Advanced Array Methods by Building a Statistics Calculator
+* Learn Basic OOP by Building a Shopping Cart
