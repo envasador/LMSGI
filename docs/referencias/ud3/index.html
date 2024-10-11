@@ -12,11 +12,11 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>UD3 - User-Defined Structures - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>3 Guía completa de CSS3. - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ud3-user-defined-structures" class="md-skip">
+        <a href="#3-guia-completa-de-css3" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD3 - User-Defined Structures
+              3 Guía completa de CSS3.
             
           </span>
         </div>
@@ -369,11 +369,566 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
+  <a href="#indice" class="md-nav__link">
     <span class="md-ellipsis">
-      Material de refuerzo y ampliación
+      Índice
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-css3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a CSS3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción a CSS3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#por-que-usar-css3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué usar CSS3?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-basica-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura Básica de CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura Básica de CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis Básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selectores-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selectores CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selectores-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-clase-y-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de Clase y ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-atributo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de Atributo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores-de-pseudo-clases-y-pseudo-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selectores de Pseudo-clases y Pseudo-elementos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelo-de-caja-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de Caja (Box Model)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de Caja (Box Model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-del-box-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes del Box Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualización
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades-de-texto-y-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades de Texto y Fuente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propiedades de Texto y Fuente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipografía
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades de Texto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colores-y-fondos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colores y Fondos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Colores y Fondos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fondos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fondos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-de-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño de Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diseño de Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flexbox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flexbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenedor-flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenedor Flex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-flex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos Flex
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grid-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grid Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contenedor-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenedor Grid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elementos Grid
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transiciones-y-animaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transiciones y Animaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transiciones y Animaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transiciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transiciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transiciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Animaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsividad-y-media-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsividad y Media Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsividad y Media Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Básico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diseno-responsive-con-flexbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diseño Responsive con Flexbox
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuevas-caracteristicas-de-css3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nuevas Características de CSS3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nuevas Características de CSS3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-regla-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Regla @scope
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La Regla @scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis Básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-actual-de-la-regla-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estado Actual de la Regla @scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-propuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo (Propuesta)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#otras-nuevas-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otras Nuevas Características
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas-en-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buenas Prácticas en CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conclusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-reactjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para React.js:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para Vue.js:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-la-regla-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobre la Regla @scope:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendaciones Generales:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -392,58 +947,619 @@
                   
 
 
-<h1 id="ud3-user-defined-structures">UD3 - User-Defined Structures</h1>
-<p><center>
-<img alt="" src="../assets/ud3/ud3-estructuras.webp" />
-</center></p>
-<p>Como referencia de para esta unidad se ha tomado el material de "<a href="https://javascript.info/">The Modern JavaScript Tutorial</a>". En concreto los siguientes apartados del mismo:</p>
-<p><a href="https://javascript.info/first-steps">JavaScript Fundamentals</a></p>
-<ul>
-<li>Functions</li>
-<li>Function expressions</li>
-<li>Arrow functions, the basics</li>
-<li>JavaScript specials</li>
+<h1 id="3-guia-completa-de-css3">3 <strong>Guía completa de CSS3</strong>.</h1>
+<hr />
+<h2 id="indice">Índice</h2>
+<ol>
+<li><a href="#introducción-a-css3">Introducción a CSS3</a></li>
+<li><a href="#estructura-básica-de-css">Estructura Básica de CSS</a></li>
+<li><a href="#selectores-css">Selectores CSS</a><ul>
+<li><a href="#selectores-básicos">Selectores Básicos</a></li>
+<li><a href="#selectores-de-clase-y-id">Selectores de Clase y ID</a></li>
+<li><a href="#selectores-de-atributo">Selectores de Atributo</a></li>
+<li><a href="#selectores-de-pseudo-clases-y-pseudo-elementos">Selectores de Pseudo-clases y Pseudo-elementos</a></li>
 </ul>
-<p><a href="https://javascript.info/data-types">Data types</a></p>
-<ul>
-<li>Methods of primitives</li>
-<li>Numbers</li>
-<li>Strings</li>
-<li>Arrays</li>
-<li>Array methods</li>
-<li>Iterables</li>
-<li>Map and Set</li>
-<li>Object.keys, values, entries</li>
-<li>Destructuring assignment</li>
-<li>Date and time</li>
-<li>JSON methods, toJSON</li>
+</li>
+<li><a href="#modelo-de-caja-box-model">Modelo de Caja (Box Model)</a></li>
+<li><a href="#propiedades-de-texto-y-fuente">Propiedades de Texto y Fuente</a></li>
+<li><a href="#colores-y-fondos">Colores y Fondos</a></li>
+<li><a href="#diseño-de-layout">Diseño de Layout</a><ul>
+<li><a href="#flexbox">Flexbox</a></li>
+<li><a href="#grid-layout">Grid Layout</a></li>
 </ul>
-<p><a href="https://javascript.info/object-basics">Objects: the basics</a></p>
+</li>
+<li><a href="#transiciones-y-animaciones">Transiciones y Animaciones</a></li>
+<li><a href="#responsividad-y-media-queries">Responsividad y Media Queries</a></li>
+<li><a href="#buenas-prácticas-en-css">Buenas Prácticas en CSS</a></li>
+<li><a href="#conclusión">Conclusión</a></li>
+</ol>
+<hr />
+<h2 id="introduccion-a-css3">Introducción a CSS3</h2>
+<p><strong>CSS3</strong> (Cascading Style Sheets Level 3) es la última versión de CSS, utilizada para describir la presentación de documentos HTML y XML. CSS3 introduce nuevas características y mejoras que facilitan la creación de diseños web más atractivos y funcionales.</p>
+<h3 id="por-que-usar-css3">¿Por qué usar CSS3?</h3>
 <ul>
-<li>Objects</li>
-<li>Object references and copying</li>
-<li>Object methods, "this"</li>
-<li>Constructor, operator "new"</li>
+<li><strong>Modularidad:</strong> CSS3 se divide en módulos, lo que facilita su uso y comprensión.</li>
+<li><strong>Nuevas propiedades:</strong> Permite efectos visuales avanzados como sombras, transiciones y animaciones.</li>
+<li><strong>Responsive Design:</strong> Facilita la creación de sitios web que se adaptan a diferentes tamaños de pantalla.</li>
+<li><strong>Mejoras en el diseño:</strong> Nuevas herramientas como Flexbox y Grid Layout para layouts más complejos y flexibles.</li>
 </ul>
-<p><a href="https://javascript.info/object-properties">Object properties configuration</a></p>
+<hr />
+<h2 id="estructura-basica-de-css">Estructura Básica de CSS</h2>
+<p>Un archivo CSS está compuesto por reglas que definen cómo se deben mostrar los elementos HTML.</p>
+<h3 id="sintaxis-basica">Sintaxis Básica</h3>
+<pre><code class="language-css">selector {
+    propiedad: valor;
+}
+</code></pre>
+<h3 id="ejemplo">Ejemplo</h3>
+<pre><code class="language-css">body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333333;
+    text-align: center;
+}
+</code></pre>
+<hr />
+<h2 id="selectores-css">Selectores CSS</h2>
+<p>Los <strong>selectores</strong> son patrones utilizados para seleccionar los elementos HTML que deseas estilizar.</p>
+<h3 id="selectores-basicos">Selectores Básicos</h3>
 <ul>
-<li>Property getters and setters</li>
+<li>
+<p><strong>Selector de Tipo:</strong> Selecciona todos los elementos de un tipo específico.</p>
+<p><code>css
+p {
+    color: blue;
+}</code></p>
+</li>
+<li>
+<p><strong>Selector Universal:</strong> Selecciona todos los elementos.</p>
+<p><code>css
+* {
+    margin: 0;
+    padding: 0;
+}</code></p>
+</li>
 </ul>
-<p><a href="https://javascript.info/classes">Classes</a></p>
+<h3 id="selectores-de-clase-y-id">Selectores de Clase y ID</h3>
 <ul>
-<li>Class basic syntax</li>
-<li>Class inheritance</li>
-<li>Static properties and methods</li>
-<li>Private and protected properties and methods</li>
+<li>
+<p><strong>Clase:</strong> Selecciona elementos con una clase específica.</p>
+<p><code>css
+.mi-clase {
+    background-color: yellow;
+}</code></p>
+</li>
+<li>
+<p><strong>ID:</strong> Selecciona un elemento con un ID específico (debe ser único).</p>
+<p><code>css
+**#**mi-id {
+    border: 1px solid black;
+}</code></p>
+</li>
 </ul>
-<h2 id="material-de-refuerzo-y-ampliacion">Material de refuerzo y ampliación</h2>
-<p>Se recomienda la realización de los siguientes cursos de la <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">certificación algoritmos de javascript y estructuras de datos</a> de freeCodeCamp.</p>
+<h3 id="selectores-de-atributo">Selectores de Atributo</h3>
+<p>Seleccionan elementos basados en atributos o valores de atributos.</p>
+<pre><code class="language-css">input[type=&quot;text&quot;] {
+    width: 200px;
+    padding: 5px;
+}
+</code></pre>
+<h3 id="selectores-de-pseudo-clases-y-pseudo-elementos">Selectores de Pseudo-clases y Pseudo-elementos</h3>
 <ul>
-<li>Learn Basic String and Array Methods by Building a Music Player</li>
-<li>Learn the Date Object by Building a Date Formatter</li>
-<li>Learn Advanced Array Methods by Building a Statistics Calculator</li>
-<li>Learn Basic OOP by Building a Shopping Cart</li>
+<li>
+<p><strong>Pseudo-clases:</strong> Seleccionan elementos en un estado específico.</p>
+<p><code>css
+a:hover {
+    color: red;
+}</code></p>
+</li>
+<li>
+<p><strong>Pseudo-elementos:</strong> Seleccionan una parte específica de un elemento.</p>
+<p><code>css
+p::first-line {
+    font-weight: bold;
+}</code></p>
+<hr />
+</li>
 </ul>
+<h2 id="modelo-de-caja-box-model">Modelo de Caja (Box Model)</h2>
+<p>El <strong>Box Model</strong> de CSS describe cómo se calculan las dimensiones y el espacio alrededor de los elementos.</p>
+<h3 id="componentes-del-box-model">Componentes del Box Model</h3>
+<ol>
+<li><strong>Contenido:</strong> Área donde se muestra el contenido (texto, imágenes, etc.).</li>
+<li><strong>Padding (Relleno):</strong> Espacio entre el contenido y el borde.</li>
+<li><strong>Border (Borde):</strong> Línea que rodea el padding y el contenido.</li>
+<li><strong>Margin (Margen):</strong> Espacio fuera del borde.</li>
+</ol>
+<h3 id="ejemplo_1">Ejemplo</h3>
+<pre><code class="language-css">div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #333;
+    margin: 15px;
+}
+</code></pre>
+<h3 id="visualizacion">Visualización</h3>
+<pre><code>+-----------------------------+
+|          Margin             |
+|  +-----------------------+  |
+|  |        Border         |  |
+|  |  +-----------------+  |  |
+|  |  |     Padding     |  |  |
+|  |  |  +-----------+  |  |  |
+|  |  |  |  Content  |  |  |  |
+|  |  |  +-----------+  |  |  |
+|  |  +-----------------+  |  |
+|  +-----------------------+  |
++-----------------------------+
+</code></pre>
+<hr />
+<h2 id="propiedades-de-texto-y-fuente">Propiedades de Texto y Fuente</h2>
+<p>CSS3 ofrece una amplia gama de propiedades para estilizar el texto.</p>
+<h3 id="tipografia">Tipografía</h3>
+<ul>
+<li>
+<p><strong>font-family:</strong> Define la familia de fuentes.</p>
+<p><code>css
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}</code></p>
+</li>
+<li>
+<p><strong>font-size:</strong> Tamaño de la fuente.</p>
+<p><code>css
+h1 {
+    font-size: 2em;
+}</code></p>
+</li>
+<li>
+<p><strong>font-weight:</strong> Grosor de la fuente.</p>
+<p><code>css
+p {
+    font-weight: bold;
+}</code></p>
+</li>
+<li>
+<p><strong>font-style:</strong> Estilo de la fuente (normal, italic, oblique).</p>
+<p><code>css
+em {
+    font-style: italic;
+}</code></p>
+</li>
+</ul>
+<h3 id="propiedades-de-texto">Propiedades de Texto</h3>
+<ul>
+<li>
+<p><strong>color:</strong> Color del texto.</p>
+<p><code>css
+span {
+    color: #ff5733;
+}</code></p>
+</li>
+<li>
+<p><strong>text-align:</strong> Alineación del texto.</p>
+<p><code>css
+.centrado {
+    text-align: center;
+}</code></p>
+</li>
+<li>
+<p><strong>text-decoration:</strong> Decoraciones del texto (subrayado, tachado, etc.).</p>
+<p><code>css
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}</code></p>
+</li>
+<li>
+<p><strong>line-height:</strong> Altura de la línea.</p>
+<p><code>css
+p {
+    line-height: 1.6;
+}</code></p>
+</li>
+</ul>
+<hr />
+<h2 id="colores-y-fondos">Colores y Fondos</h2>
+<h3 id="colores">Colores</h3>
+<p>Puedes definir colores usando nombres, códigos hexadecimales, RGB, RGBA, HSL y HSLA.</p>
+<pre><code class="language-css">h2 {
+    color: #3498db; /* Hexadecimal */
+}
+
+p {
+    color: rgb(52, 152, 219); /* RGB */
+}
+
+div {
+    background-color: rgba(52, 152, 219, 0.5); /* RGBA */
+}
+</code></pre>
+<h3 id="fondos">Fondos</h3>
+<ul>
+<li><strong>background-color:</strong> Color de fondo.</li>
+<li><strong>background-image:</strong> Imagen de fondo.</li>
+<li><strong>background-repeat:</strong> Repetición de la imagen.</li>
+<li><strong>background-size:</strong> Tamaño de la imagen de fondo.</li>
+<li><strong>background-position:</strong> Posición de la imagen de fondo.</li>
+</ul>
+<pre><code class="language-css">body {
+    background-color: #ecf0f1;
+    background-image: url('fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+</code></pre>
+<hr />
+<h2 id="diseno-de-layout">Diseño de Layout</h2>
+<h3 id="flexbox">Flexbox</h3>
+<p><strong>Flexbox</strong> es un modelo de diseño unidimensional que facilita la alineación y distribución de elementos dentro de un contenedor.</p>
+<h4 id="contenedor-flex">Contenedor Flex</h4>
+<pre><code class="language-css">.container {
+    display: flex;
+    flex-direction: row; /* column, row-reverse, column-reverse */
+    justify-content: space-between; /* flex-start, flex-end, center, space-around, space-evenly */
+    align-items: center; /* stretch, flex-start, flex-end, center, baseline */
+}
+</code></pre>
+<h4 id="elementos-flex">Elementos Flex</h4>
+<pre><code class="language-css">.item {
+    flex: 1; /* grow, shrink, basis */
+    margin: 10px;
+}
+</code></pre>
+<h4 id="ejemplo-completo">Ejemplo Completo</h4>
+<pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Elemento 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Elemento 2&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Elemento 3&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background-color: #f8f9fa;
+}
+
+.item {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+</code></pre>
+<h3 id="grid-layout">Grid Layout</h3>
+<p><strong>Grid Layout</strong> es un sistema de diseño bidimensional que permite crear estructuras complejas con filas y columnas.</p>
+<h4 id="contenedor-grid">Contenedor Grid</h4>
+<pre><code class="language-css">.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-gap: 10px; /* Espacio entre filas y columnas */
+}
+</code></pre>
+<h4 id="elementos-grid">Elementos Grid</h4>
+<pre><code class="language-css">.grid-item {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</code></pre>
+<h4 id="ejemplo-completo_1">Ejemplo Completo</h4>
+<pre><code class="language-html">&lt;div class=&quot;grid-container&quot;&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;1&lt;/div&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;2&lt;/div&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;3&lt;/div&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;4&lt;/div&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;5&lt;/div&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #28a745;
+    color: white;
+    padding: 30px 0;
+    font-size: 30px;
+    text-align: center;
+}
+</code></pre>
+<hr />
+<h2 id="transiciones-y-animaciones">Transiciones y Animaciones</h2>
+<h3 id="transiciones">Transiciones</h3>
+<p>Las <strong>transiciones</strong> permiten cambiar las propiedades CSS de un elemento de manera suave durante un período de tiempo.</p>
+<h4 id="sintaxis">Sintaxis</h4>
+<pre><code class="language-css">.selector {
+    transition: propiedad duración timing-función retraso;
+}
+</code></pre>
+<h4 id="ejemplo_2">Ejemplo</h4>
+<pre><code class="language-css">button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+</code></pre>
+<h3 id="animaciones">Animaciones</h3>
+<p>Las <strong>animaciones</strong> permiten definir una serie de estilos que cambian a lo largo del tiempo.</p>
+<h4 id="sintaxis_1">Sintaxis</h4>
+<pre><code class="language-css">@keyframes nombre-animación {
+    desde { /* estilos iniciales */ }
+    hasta { /* estilos finales */ }
+}
+
+.selector {
+    animation: nombre-animación duración timing-función retraso iteraciones dirección relleno;
+}
+</code></pre>
+<h4 id="ejemplo_3">Ejemplo</h4>
+<pre><code class="language-css">@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icono {
+    display: inline-block;
+    animation: girar 2s linear infinite;
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;icono&quot;&gt;🔄&lt;/div&gt;
+</code></pre>
+<hr />
+<h2 id="responsividad-y-media-queries">Responsividad y Media Queries</h2>
+<p>Las <strong>Media Queries</strong> permiten aplicar estilos CSS específicos según las características del dispositivo, como el ancho de la pantalla.</p>
+<h3 id="ejemplo-basico">Ejemplo Básico</h3>
+<pre><code class="language-css">/* Estilos por defecto */
+body {
+    font-size: 16px;
+}
+
+/* Para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Para pantallas con un ancho máximo de 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+</code></pre>
+<h3 id="diseno-responsive-con-flexbox">Diseño Responsive con Flexbox</h3>
+<pre><code class="language-css">.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 300px; /* grow, shrink, basis */
+    margin: 10px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+</code></pre>
+<hr />
+<h2 id="nuevas-caracteristicas-de-css3">Nuevas Características de CSS3</h2>
+<h3 id="la-regla-scope">La Regla <code>@scope</code></h3>
+<p>La regla <code>@scope</code> es una <strong>propuesta avanzada</strong> en CSS que permite definir un ámbito específico dentro del cual se aplican ciertas reglas de estilo. Esto facilita el encapsulamiento de estilos, evitando conflictos globales y mejorando la mantenibilidad del código CSS.</p>
+<h4 id="sintaxis-basica_1">Sintaxis Básica</h4>
+<pre><code class="language-css">@scope .mi-contenedor {
+    /* Reglas CSS aquí solo aplicarán dentro de .mi-contenedor */
+    h1 {
+        color: blue;
+    }
+
+    .boton {
+        background-color: green;
+    }
+}
+</code></pre>
+<h4 id="estado-actual-de-la-regla-scope">Estado Actual de la Regla <code>@scope</code></h4>
+<p>Hasta la fecha de mi conocimiento (octubre de 2023), la regla <code>@scope</code> aún está en etapa de propuesta y <strong>no es soportada de manera nativa</strong> por la mayoría de los navegadores. Por lo tanto, su uso directo en proyectos web estándar <strong>no es factible</strong>. Sin embargo, entender su funcionamiento es beneficioso para futuros desarrollos y para aprovechar otras técnicas de encapsulamiento de estilos disponibles en frameworks modernos como React y Vue.</p>
+<h4 id="ejemplo-propuesta">Ejemplo (Propuesta)</h4>
+<pre><code class="language-css">@scope .mi-contenedor {
+    h1 {
+        color: blue;
+    }
+
+    .boton {
+        background-color: green;
+    }
+}
+</code></pre>
+<p>En este ejemplo, las reglas dentro de <code>@scope .mi-contenedor</code> solo se aplicarán a los elementos que estén dentro del contenedor con la clase <code>mi-contenedor</code>.</p>
+<h3 id="otras-nuevas-caracteristicas">Otras Nuevas Características</h3>
+<p>Además de la regla <code>@scope</code>, CSS3 ha introducido múltiples nuevas características que mejoran la capacidad de diseño y estilización de las páginas web:</p>
+<ul>
+<li>
+<p><strong>Variables CSS (<code>--variable</code>):</strong> Permiten definir variables reutilizables para colores, tamaños, etc.</p>
+<p>```css
+:root {
+    --color-primario: #3498db;
+    --padding-base: 10px;
+}</p>
+<p>.boton {
+    background-color: var(--color-primario);
+    padding: var(--padding-base);
+}
+```</p>
+</li>
+<li>
+<p><strong>Propiedades de Sombra (<code>box-shadow</code>, <code>text-shadow</code>):</strong> Para agregar sombras a elementos y textos.</p>
+<p>```css
+.caja {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}</p>
+<p>h1 {
+    text-shadow: 2px 2px #ff0000;
+}
+```</p>
+</li>
+<li>
+<p><strong>Transformaciones 2D y 3D (<code>transform</code>):</strong> Para rotaciones, escalados, traslaciones y más.</p>
+<p><code>css
+.elemento {
+    transform: rotate(45deg) scale(1.2);
+}</code></p>
+</li>
+<li>
+<p><strong>Filtros CSS (<code>filter</code>):</strong> Para aplicar efectos visuales como desenfoques y cambios de color.</p>
+<p><code>css
+img {
+    filter: grayscale(50%);
+}</code></p>
+</li>
+<li>
+<p><strong>Clipping y Masking (<code>clip-path</code>, <code>mask</code>):</strong> Para crear formas complejas y máscaras en elementos.</p>
+<p><code>css
+.caja {
+    clip-path: circle(50%);
+}</code></p>
+</li>
+</ul>
+<hr />
+<h2 id="buenas-practicas-en-css">Buenas Prácticas en CSS</h2>
+<ol>
+<li>
+<p><strong>Organización del Código:</strong></p>
+<ul>
+<li>Utiliza comentarios para separar secciones.</li>
+<li>Agrupa selectores relacionados.</li>
+<li>Sigue una estructura lógica (por ejemplo, de lo general a lo específico).</li>
+</ul>
+</li>
+<li>
+<p><strong>Nomenclatura Consistente:</strong></p>
+<ul>
+<li>Sigue convenciones como <strong>BEM</strong> (Block Element Modifier) para nombrar clases.</li>
+</ul>
+<p>```css
+/<em> BEM Example </em>/
+.tarjeta {
+    /<em> Block </em>/
+}</p>
+<p>.tarjeta__titulo {
+    /<em> Element </em>/
+}</p>
+<p>.tarjeta__titulo--destacado {
+    /<em> Modifier </em>/
+}
+```</p>
+</li>
+<li>
+<p><strong>Evita el Uso Excesivo de <code>!important</code>:</strong></p>
+<ul>
+<li>Solo úsalo cuando sea absolutamente necesario para sobreescribir estilos específicos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimización de Selectores:</strong></p>
+<ul>
+<li>Utiliza selectores específicos para mejorar el rendimiento.</li>
+<li>Evita selectores demasiado generales que puedan afectar a muchos elementos innecesariamente.</li>
+</ul>
+</li>
+<li>
+<p><strong>Uso de Variables CSS:</strong></p>
+<ul>
+<li>Define variables para colores, tamaños y otros valores repetitivos.</li>
+</ul>
+<p>```css
+:root {
+    --color-primario: #3498db;
+    --padding-base: 10px;
+}</p>
+<p>.boton {
+    background-color: var(--color-primario);
+    padding: var(--padding-base);
+}
+```</p>
+</li>
+<li>
+<p><strong>Compatibilidad entre Navegadores:</strong></p>
+<ul>
+<li>Utiliza prefijos de proveedores cuando sea necesario para asegurar la compatibilidad.</li>
+</ul>
+<p><code>css
+.caja {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}</code></p>
+</li>
+<li>
+<p><strong>Minimización y Compresión:</strong></p>
+<ul>
+<li>Minimiza los archivos CSS para reducir el tamaño y mejorar la carga.</li>
+<li>Utiliza herramientas de compresión como <strong>CSSNano</strong> o <strong>UglifyCSS</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Evita el CSS Innecesario:</strong></p>
+<ul>
+<li>Remueve estilos no utilizados para mantener el código limpio y eficiente.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<h3 id="para-reactjs">Para React.js:</h3>
+<ul>
+<li><strong>CSS Modules</strong> y <strong>Styled-Components</strong> son las opciones más recomendadas.<ul>
+<li><strong>CSS Modules</strong> son ideales para mantener CSS separado y modular.</li>
+<li><strong>Styled-Components</strong> son excelentes para estilos dinámicos y encapsulados directamente en los componentes.</li>
+</ul>
+</li>
+</ul>
+<h3 id="para-vuejs">Para Vue.js:</h3>
+<ul>
+<li><strong>Estilos Escopados (<code>scoped</code>)</strong> son la opción predeterminada y más sencilla para encapsular estilos dentro de componentes individuales.</li>
+<li><strong>CSS Modules</strong> son recomendables para proyectos que requieren una mayor modularidad y reutilización de estilos.</li>
+</ul>
+<h3 id="sobre-la-regla-scope">Sobre la Regla <code>@scope</code>:</h3>
+<p>Aunque la regla <code>@scope</code> de CSS3 ofrece una forma prometedora de encapsular estilos directamente en CSS, <strong>su falta de soporte amplio</strong> en navegadores la hace <strong>impráctica</strong> para su uso inmediato en proyectos de React y Vue. En su lugar, aprovechar las herramientas y métodos proporcionados por estos frameworks garantiza un encapsulamiento efectivo y mantenible de los estilos.</p>
+<h3 id="recomendaciones-generales">Recomendaciones Generales:</h3>
+<ul>
+<li>Mantén una <strong>nomenclatura consistente</strong> para clases y selectores.</li>
+<li><strong>Organiza</strong> los estilos de manera lógica y modular.</li>
+<li><strong>Sigue las mejores prácticas</strong> para asegurar la escalabilidad y mantenibilidad de tu código CSS.</li>
+<li><strong>Utiliza herramientas de preprocesamiento</strong> como <strong>Sass</strong> o <strong>Less</strong> si tu proyecto lo requiere.</li>
+<li><strong>Optimiza el rendimiento</strong> minimizando y compresionando los archivos CSS.</li>
+</ul>
+<hr />
 
 
 
