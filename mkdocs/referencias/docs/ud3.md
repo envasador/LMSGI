@@ -7,28 +7,6 @@ hide:
 
 ---
 
-## Índice
-
-1. [Introducción a CSS3](#introducción-a-css3)
-2. [Estructura Básica de CSS](#estructura-básica-de-css)
-3. [Selectores CSS](#selectores-css)
-    - [Selectores Básicos](#selectores-básicos)
-    - [Selectores de Clase y ID](#selectores-de-clase-y-id)
-    - [Selectores de Atributo](#selectores-de-atributo)
-    - [Selectores de Pseudo-clases y Pseudo-elementos](#selectores-de-pseudo-clases-y-pseudo-elementos)
-4. [Modelo de Caja (Box Model)](#modelo-de-caja-box-model)
-5. [Propiedades de Texto y Fuente](#propiedades-de-texto-y-fuente)
-6. [Colores y Fondos](#colores-y-fondos)
-7. [Diseño de Layout](#diseño-de-layout)
-    - [Flexbox](#flexbox)
-    - [Grid Layout](#grid-layout)
-8. [Transiciones y Animaciones](#transiciones-y-animaciones)
-9. [Responsividad y Media Queries](#responsividad-y-media-queries)
-11. [Buenas Prácticas en CSS](#buenas-prácticas-en-css)
-14. [Conclusión](#conclusión)
-
----
-
 ## Introducción a CSS3
 
 **CSS3** (Cascading Style Sheets Level 3) es la última versión de CSS, utilizada para describir la presentación de documentos HTML y XML. CSS3 introduce nuevas características y mejoras que facilitan la creación de diseños web más atractivos y funcionales.

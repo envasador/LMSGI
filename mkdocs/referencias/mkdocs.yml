@@ -5,8 +5,9 @@ site_dir: ../../docs/referencias
 # Page tree
 nav:
   - Inicio: index.md
-  - UT1: ud1.md
-  - UT2: ud2.md
+  - Introducción: ud1.md
+  - HTML5: ud2.md
+  - CSS3: ud3.md
 
 extra:
   social:
