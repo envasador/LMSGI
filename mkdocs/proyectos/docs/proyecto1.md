@@ -85,8 +85,13 @@ Desarrollar la estructura HTML de la aplicación web y aplicar hojas de estilo C
     - El diseño debe ser adaptable a diferentes dispositivos (móvil, tablet, escritorio), utilizando técnicas de diseño responsive como media queries.
     - **Producto**: Una página web responsiva que se adapte bien a múltiples tamaños de pantalla.
 
+4. **Inserción de imágenes y vídeos:**
+   - Añadir imágenes y vídeos al contenido de la página web, asegurándose de que están bien optimizados para la web (tamaño, formato) y que cumplen con las buenas prácticas de accesibilidad (uso de `alt` en imágenes, subtítulos en vídeos).
+   - **Producto**: Página web con contenidos multimedia bien integrados y accesibles.
+
+
 #### Evaluación:
-Se evaluará la estructura HTML y el diseño CSS aplicado, la utilización de etiquetas semánticas y la capacidad del estudiante para implementar un diseño responsivo que siga buenas prácticas (CE 2b, 2c, 2d, 2f, 2g).
+Se evaluará la estructura HTML y el diseño CSS aplicado, la utilización de etiquetas semánticas y la capacidad del estudiante para implementar un diseño responsivo que siga buenas prácticas (CE 2b, 2c, 2d, 2e, 2f, 2g).
 
 ### **Fase 3: Implementación y Validación del Código**
 
@@ -103,35 +108,19 @@ Revisad y validar su código HTML y CSS, asegurándose de que cumple con los est
     - **Producto**: Informes de validación de CSS y correcciones aplicadas.
 
 3. **Optimización y comprobación de accesibilidad, usabilidad:**
-   - **Optimización de rendimiento:**
-     - Minimizar el archivo CSS.
-     - Comprimir imágenes sin pérdida de calidad.
-   - **Pruebas de usabilidad:**
-     - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
-     - Utilizar herramientas como **Lighthouse** o **Wave** para revisar la accesibilidad de la web y realizar mejoras según las recomendaciones obtenidas.
+    - **Optimización de rendimiento:**
+       - Minimizar el archivo CSS.
+       - Comprimir imágenes sin pérdida de calidad.
+    - **Pruebas de usabilidad:**
+       - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
+       - Utilizar herramientas como **Lighthouse** o **Wave** para revisar la accesibilidad de la web y realizar mejoras según las recomendaciones obtenidas.
    - **Producto**: Informe de accesibilidad y mejoras aplicadas al proyecto.
 
 #### Evaluación:
 La capacidad del estudiante para crear documentos HTML y CSS bien formados será evaluada, así como su competencia para corregir errores y mejorar la accesibilidad (CE 1h, 1g, 2h).
 
-### **Fase 4: Implementación de Contenidos Multimedia y Sindicación**
 
-**Objetivo:**
-Que los estudiantes añadan elementos multimedia a su aplicación web, asegurando que estos elementos estén bien optimizados y sean accesibles.
-
-#### Actividades:
-1. **Inserción de imágenes y vídeos:**
-    - Añadir imágenes y vídeos al contenido de la página web, asegurándose de que están bien optimizados para la web (tamaño, formato) y que cumplen con las buenas prácticas de accesibilidad (uso de `alt` en imágenes, subtítulos en vídeos).
-    - **Producto**: Página web con contenidos multimedia bien integrados y accesibles.
-
-2. **Sindicación de contenidos (opcional):**
-    - Si el proyecto lo permite, implementar un sistema básico de sindicación de contenidos usando **RSS** o **Atom**.
-    - **Producto**: Un feed RSS o Atom funcional que permita la sindicación del contenido.
-
-#### Evaluación:
-Se evaluará la integración de componentes multimedia y su optimización, así como la capacidad del estudiante para implementar tecnologías de sindicación si es relevante para el proyecto (CE 2i, h).
-
-### **Fase 5: Presentación del Proyecto**
+### **Fase 4: Presentación del Proyecto**
 **Objetivo:**
 Que los estudiantes presenten su trabajo, explicando sus decisiones de diseño y desarrollo, y demostrando que han seguido las buenas prácticas de validación y accesibilidad.
 
@@ -163,14 +152,11 @@ La presentación evaluará la capacidad del estudiante para comunicar claramente
 | **Criterio de Evaluación** | **Nivel 1 (Insuficiente)** | **Nivel 2 (Suficiente)** | **Nivel 3 (Bien)** | **Nivel 4 (Notable)** | **Nivel 5 (Sobresaliente)**                                                                                                                                                                            |
 |---|---|---|---|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1a) Se han identificado las características generales de los lenguajes de marcas.** | No se identifican correctamente las características. Muestra dependencia total del profesor. | Identifica algunas características generales de los lenguajes de marcas, pero con errores. Necesita ayuda para aclarar conceptos. | Identifica las características generales de manera adecuada, pero necesita apoyo ocasional. | Identifica correctamente las características generales con escasa supervisión. Demuestra capacidad de análisis. | Identifica de forma precisa y detallada todas las características generales, trabajando de manera completamente autónoma, y las comunica de forma clara y eficaz durante la presentación del proyecto. |
-| **1b) Se han reconocido las ventajas que proporcionan en el tratamiento de la información.** | No reconoce ventajas o lo hace de manera incorrecta. | Reconoce algunas ventajas, pero con errores de interpretación. | Reconoce las ventajas del tratamiento de la información de forma correcta, aunque de manera básica. | Reconoce las ventajas con claridad y sin errores, aportando ejemplos válidos. | Reconoce y explica las ventajas de forma profunda y autónoma, proponiendo aplicaciones prácticas, y comunica las ventajas de forma concisa en la presentación del proyecto.                            |
 | **1c) Se han clasificado los lenguajes de marcas e identificado los más relevantes.** | No clasifica los lenguajes o lo hace incorrectamente. | Clasifica algunos lenguajes de marcas, pero con errores significativos. | Clasifica los lenguajes de marcas correctamente, pero de manera incompleta. | Clasifica e identifica lenguajes de forma completa y con corrección. | Clasificación exhaustiva, identificando lenguajes de relevancia actual y futura. Trabaja de manera autónoma e investigativa, explicando claramente sus elecciones en la presentación.                  |
 | **1d) Se han diferenciado sus ámbitos de aplicación.** | No se identifican los ámbitos de aplicación o están mal definidos. | Diferencia algunos ámbitos de aplicación, pero con errores. | Diferencia correctamente los principales ámbitos, pero sin detalles. | Diferencia correctamente los ámbitos de aplicación, aportando detalles y ejemplos. | Diferencia todos los ámbitos de aplicación, mostrando un análisis crítico y una investigación adicional, y comunica con claridad sus conclusiones durante la presentación.                             |
-| **1e) Se han reconocido la necesidad y los ámbitos específicos de aplicación de un lenguaje de marcas de propósito general.** | No reconoce la necesidad o los ámbitos específicos. | Reconoce de forma básica los ámbitos específicos, pero con errores. | Reconoce adecuadamente la necesidad y ámbitos específicos, pero sin profundidad. | Reconoce de forma clara los ámbitos y necesidades de los lenguajes de propósito general, mostrando buen juicio. | Reconoce, analiza y propone aplicaciones específicas de lenguajes de propósito general, trabajando de manera autónoma y explicando de manera efectiva su análisis en la presentación.                  |
 | **1f) Se han analizado las características propias de diferentes lenguajes de marcas.** | No se analizan características o son incorrectas. | Se analizan características de forma parcial y con errores. | Analiza características de manera adecuada, pero sin profundizar en las diferencias entre lenguajes. | Análisis detallado y sin errores. Aporta ejemplos relevantes. | Análisis profundo y crítico de las características de varios lenguajes, proponiendo alternativas, y explicando claramente los resultados en la fase de presentación.                                   |
 | **1g) Se ha identificado la estructura de un documento y sus reglas sintácticas.** | No se identifican correctamente las estructuras o reglas sintácticas. | Identifica de forma básica la estructura, pero con errores en las reglas sintácticas. | Identifica la estructura y reglas sintácticas de manera correcta, pero sin precisión en algunos casos. | Identifica de forma precisa la estructura y las reglas sintácticas de documentos, con escasa supervisión. | Identifica y analiza detalladamente las estructuras y reglas sintácticas, trabajando de manera autónoma y presentando el análisis de forma organizada.                                                 |
 | **1h) Se ha contrastado la necesidad de crear documentos bien formados y la influencia en su procesamiento.** | No se contrastan las ventajas de documentos bien formados o se hace incorrectamente. | Se contrastan algunas ventajas, pero con errores o sin claridad. | Se contrastan correctamente las ventajas de documentos bien formados, pero de manera básica. | Contrasta de forma detallada y correcta, mostrando la influencia en el procesamiento de los documentos. | Análisis profundo sobre la importancia de documentos bien formados, explicando claramente los efectos en el procesamiento durante la presentación.                                                     |
-| **1i) Se han identificado las ventajas que aportan los espacios de nombres.** | No se identifican las ventajas de los espacios de nombres. | Se identifican ventajas de forma básica y con errores. | Se identifican las ventajas de los espacios de nombres de manera correcta, pero incompleta. | Identifica correctamente todas las ventajas, aportando ejemplos de uso adecuado. | Identifica de manera autónoma y crítica las ventajas, proponiendo nuevas formas de aplicar espacios de nombres en el desarrollo web y comunicándolas claramente.                                       |
 | **2a) Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones y estándares.** | No identifica los lenguajes de marcas o lo hace de forma incorrecta. | Identifica algunos lenguajes de manera incompleta y con errores. | Identificación adecuada, pero sin profundización en las versiones y estándares. | Clasificación correcta y detallada de lenguajes y versiones web. | Clasificación y análisis detallado, proponiendo el uso de lenguajes más adecuados para distintos contextos y presentando las conclusiones de manera efectiva.                                          |
 | **2b) Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.** | No se analiza la estructura de un documento HTML correctamente. | Análisis incompleto o con errores en la identificación de secciones. | Análisis adecuado, pero básico, de la estructura HTML y sus secciones. | Análisis detallado y sin errores de la estructura y secciones de un documento HTML. | Análisis exhaustivo de la estructura, identificando posibles mejoras y comunicando las observaciones con claridad en la presentación.                                                                  |
 | **2c) Se ha reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.** | No se reconocen correctamente las etiquetas y atributos de HTML. | Reconocimiento básico y con errores de las etiquetas y atributos. | Reconocimiento adecuado, pero sin profundización en el uso avanzado de etiquetas. | Reconocimiento correcto y detallado de las principales etiquetas y atributos de HTML. | Uso avanzado y creativo de las etiquetas y atributos, explicando sus ventajas y aplicaciones con claridad en la presentación del proyecto.                                                             |
@@ -179,8 +165,6 @@ La presentación evaluará la capacidad del estudiante para comunicar claramente
 | **2f) Se han identificado las ventajas que aporta la utilización de hojas de estilo.** | No se identifican las ventajas o se hace incorrectamente. | Identificación básica de las ventajas, pero con errores. | Identificación adecuada, pero superficial de las ventajas de las hojas de estilo. | Identificación clara y detallada de las ventajas. | Identificación profunda de las ventajas, explicando y comunicando de forma eficaz las decisiones tomadas en cuanto a la aplicación de hojas de estilo.                                                 |
 | **2g) Se han aplicado hojas de estilo.** | No se aplican hojas de estilo correctamente. | Aplicación básica de hojas de estilo, con errores. | Aplicación adecuada, pero con un diseño básico. | Aplicación eficiente de hojas de estilo, con un diseño responsive y adaptativo. | Aplicación avanzada de hojas de estilo, con optimización para diferentes dispositivos y un diseño innovador, justificando de forma clara las decisiones de diseño durante la presentación.             |
 | **2h) Se han validado documentos HTML y CSS.** | No se validan los documentos o contienen múltiples errores. | Intento de validación con muchos errores que no son corregidos. | Validación correcta en la mayor parte del código HTML y CSS. | Validación completa y corrección de errores en todos los documentos. | Validación exhaustiva, con propuestas de optimización del código y explicación clara del proceso de validación y mejoras en la presentación.                                                           |
-| **2i) Se han identificado las tecnologías en que se basa la sindicación de contenidos.** | No se identifican las tecnologías o se hace de forma incorrecta. | Identificación básica y con errores de las tecnologías. | Identificación adecuada, pero sin profundización en las tecnologías de sindicación. | Identificación clara y correcta de las tecnologías de sindicación de contenidos. | Identificación exhaustiva, explicando las posibles aplicaciones y usos innovadores de la sindicación de contenidos en la presentación del proyecto.                                                    |
-| **2j) Se han reconocido los ámbitos de aplicación de la sindicación de contenidos.** | No se reconocen los ámbitos de aplicación. | Reconocimiento básico y con errores. | Reconocimiento adecuado de los ámbitos de aplicación, pero sin análisis profundo. | Reconocimiento detallado de los ámbitos de aplicación, con ejemplos claros. | Reconocimiento exhaustivo de los ámbitos de aplicación, proponiendo nuevas posibilidades y comunicándolas de forma clara en la presentación del proyecto.                                              |
 
 ---
 ### Incorporación de Competencias Profesionales y Autonomía:

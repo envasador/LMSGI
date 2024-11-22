@@ -669,6 +669,6 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
     - Utiliza herramientas de compresión como **CSSNano** o **UglifyCSS**.
 
 8. **Evita el CSS Innecesario:**
-    - Remueve estilos no utilizados para mantener el código limpio y eficiente.
+    - Borra los estilos no utilizados para mantener el código limpio y eficiente.
 ---
 
