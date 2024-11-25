@@ -514,7 +514,7 @@ Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes 
 
 1. **Define las variables para el tema claro y oscuro**: Utiliza el selector `:root` para establecer las variables CSS globales que definirán los colores para ambos temas.
 
-   ```css
+```css
    :root {
      /* Tema claro */
      --background-color: #ffffff;
@@ -528,14 +528,14 @@ Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes 
      --text-color: #E0E0E0;
      --accent-color: #BB86FC;
    }
-   ```
+```
 
 ## Aplicación de Variables en el CSS
 
 
 2. **Utiliza las variables en tus estilos CSS**: Aplica las variables en los elementos de tu página para que los estilos cambien dinámicamente según el tema seleccionado.
 
-   ```css
+```css
    body {
      background-color: var(--background-color);
      color: var(--text-color);
@@ -544,13 +544,13 @@ Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes 
    a, button {
      color: var(--accent-color);
    }
-   ```
+```
 
 ## Cambio de Tema con JavaScript
 
 3. **Implementa el cambio de tema con JavaScript**: Puedes alternar entre temas añadiendo o removiendo un atributo `data-theme` al elemento `body`.
 
-   ```javascript
+```javascript
    const toggleButton = document.getElementById("toggle-button");
 
    toggleButton.addEventListener("click", function() {
@@ -559,19 +559,19 @@ Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes 
      const newTheme = currentTheme === "dark" ? "light" : "dark";
      body.setAttribute("data-theme", newTheme);
    });
-   ```
+```
 
 4. **HTML para el botón de cambio de tema**:
 
-   ```html
+```html
    <button id="toggle-button">Cambiar Tema</button>
-   ```
+```
 
 ## Uso de Media Queries para Preferencias del Usuario
 
 5. **Detecta la preferencia del sistema operativo**: Utiliza la media query `prefers-color-scheme` para aplicar automáticamente el tema según la preferencia del usuario.
 
-   ```javascript
+```javascript
    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
    if (prefersDarkScheme.matches) {
@@ -579,10 +579,7 @@ Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes 
    } else {
      document.body.setAttribute("data-theme", "light");
    }
-   ```
-
-
-
+```
 ---
 
 ## Nuevas Características de CSS3
