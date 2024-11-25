@@ -1948,63 +1948,63 @@ body {
 <ol>
 <li><strong>Define las variables para el tema claro y oscuro</strong>: Utiliza el selector <code>:root</code> para establecer las variables CSS globales que definirán los colores para ambos temas.</li>
 </ol>
-<p>```css
-   :root {
-     /<em> Tema claro </em>/
+<pre><code class="language-css">   :root {
+     /* Tema claro */
      --background-color: #ffffff;
      --text-color: #000000;
      --accent-color: #007BFF;
-   }</p>
-<p>[data-theme="dark"] {
-     /<em> Tema oscuro </em>/
+   }
+
+   [data-theme=&quot;dark&quot;] {
+     /* Tema oscuro */
      --background-color: #121212;
      --text-color: #E0E0E0;
      --accent-color: #BB86FC;
    }
-   ```</p>
+</code></pre>
 <h2 id="aplicacion-de-variables-en-el-css">Aplicación de Variables en el CSS</h2>
 <ol>
 <li><strong>Utiliza las variables en tus estilos CSS</strong>: Aplica las variables en los elementos de tu página para que los estilos cambien dinámicamente según el tema seleccionado.</li>
 </ol>
-<p>```css
-   body {
+<pre><code class="language-css">   body {
      background-color: var(--background-color);
      color: var(--text-color);
-   }</p>
-<p>a, button {
+   }
+
+   a, button {
      color: var(--accent-color);
    }
-   ```</p>
+</code></pre>
 <h2 id="cambio-de-tema-con-javascript">Cambio de Tema con JavaScript</h2>
 <ol>
 <li><strong>Implementa el cambio de tema con JavaScript</strong>: Puedes alternar entre temas añadiendo o removiendo un atributo <code>data-theme</code> al elemento <code>body</code>.</li>
 </ol>
-<p>```javascript
-   const toggleButton = document.getElementById("toggle-button");</p>
-<p>toggleButton.addEventListener("click", function() {
+<pre><code class="language-javascript">   const toggleButton = document.getElementById(&quot;toggle-button&quot;);
+
+   toggleButton.addEventListener(&quot;click&quot;, function() {
      const body = document.body;
-     const currentTheme = body.getAttribute("data-theme");
-     const newTheme = currentTheme === "dark" ? "light" : "dark";
-     body.setAttribute("data-theme", newTheme);
+     const currentTheme = body.getAttribute(&quot;data-theme&quot;);
+     const newTheme = currentTheme === &quot;dark&quot; ? &quot;light&quot; : &quot;dark&quot;;
+     body.setAttribute(&quot;data-theme&quot;, newTheme);
    });
-   ```</p>
+</code></pre>
 <ol>
 <li><strong>HTML para el botón de cambio de tema</strong>:</li>
 </ol>
-<p><code>html
-   &lt;button id="toggle-button"&gt;Cambiar Tema&lt;/button&gt;</code></p>
+<pre><code class="language-html">   &lt;button id=&quot;toggle-button&quot;&gt;Cambiar Tema&lt;/button&gt;
+</code></pre>
 <h2 id="uso-de-media-queries-para-preferencias-del-usuario">Uso de Media Queries para Preferencias del Usuario</h2>
 <ol>
 <li><strong>Detecta la preferencia del sistema operativo</strong>: Utiliza la media query <code>prefers-color-scheme</code> para aplicar automáticamente el tema según la preferencia del usuario.</li>
 </ol>
-<p>```javascript
-   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");</p>
-<p>if (prefersDarkScheme.matches) {
-     document.body.setAttribute("data-theme", "dark");
+<pre><code class="language-javascript">   const prefersDarkScheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;);
+
+   if (prefersDarkScheme.matches) {
+     document.body.setAttribute(&quot;data-theme&quot;, &quot;dark&quot;);
    } else {
-     document.body.setAttribute("data-theme", "light");
+     document.body.setAttribute(&quot;data-theme&quot;, &quot;light&quot;);
    }
-   ```</p>
+</code></pre>
 <hr />
 <h2 id="nuevas-caracteristicas-de-css3">Nuevas Características de CSS3</h2>
 <h3 id="la-regla-scope">La Regla <code>@scope</code></h3>
