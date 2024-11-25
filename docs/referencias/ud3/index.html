@@ -843,6 +843,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#definicion-de-variables-css-y-dark-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de Variables CSS y Dark Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicacion-de-variables-en-el-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación de Variables en el CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cambio-de-tema-con-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de Tema con JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-media-queries-para-preferencias-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de Media Queries para Preferencias del Usuario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nuevas-caracteristicas-de-css3" class="md-nav__link">
     <span class="md-ellipsis">
       Nuevas Características de CSS3
@@ -1383,6 +1419,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#definicion-de-variables-css-y-dark-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de Variables CSS y Dark Mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aplicacion-de-variables-en-el-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicación de Variables en el CSS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cambio-de-tema-con-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de Tema con JavaScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-media-queries-para-preferencias-del-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de Media Queries para Preferencias del Usuario
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nuevas-caracteristicas-de-css3" class="md-nav__link">
     <span class="md-ellipsis">
       Nuevas Características de CSS3
@@ -1871,6 +1943,68 @@ body {
     }
 }
 </code></pre>
+<h2 id="definicion-de-variables-css-y-dark-mode">Definición de Variables CSS y Dark Mode</h2>
+<p>Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes seguir estos pasos:</p>
+<ol>
+<li><strong>Define las variables para el tema claro y oscuro</strong>: Utiliza el selector <code>:root</code> para establecer las variables CSS globales que definirán los colores para ambos temas.</li>
+</ol>
+<p>```css
+   :root {
+     /<em> Tema claro </em>/
+     --background-color: #ffffff;
+     --text-color: #000000;
+     --accent-color: #007BFF;
+   }</p>
+<p>[data-theme="dark"] {
+     /<em> Tema oscuro </em>/
+     --background-color: #121212;
+     --text-color: #E0E0E0;
+     --accent-color: #BB86FC;
+   }
+   ```</p>
+<h2 id="aplicacion-de-variables-en-el-css">Aplicación de Variables en el CSS</h2>
+<ol>
+<li><strong>Utiliza las variables en tus estilos CSS</strong>: Aplica las variables en los elementos de tu página para que los estilos cambien dinámicamente según el tema seleccionado.</li>
+</ol>
+<p>```css
+   body {
+     background-color: var(--background-color);
+     color: var(--text-color);
+   }</p>
+<p>a, button {
+     color: var(--accent-color);
+   }
+   ```</p>
+<h2 id="cambio-de-tema-con-javascript">Cambio de Tema con JavaScript</h2>
+<ol>
+<li><strong>Implementa el cambio de tema con JavaScript</strong>: Puedes alternar entre temas añadiendo o removiendo un atributo <code>data-theme</code> al elemento <code>body</code>.</li>
+</ol>
+<p>```javascript
+   const toggleButton = document.getElementById("toggle-button");</p>
+<p>toggleButton.addEventListener("click", function() {
+     const body = document.body;
+     const currentTheme = body.getAttribute("data-theme");
+     const newTheme = currentTheme === "dark" ? "light" : "dark";
+     body.setAttribute("data-theme", newTheme);
+   });
+   ```</p>
+<ol>
+<li><strong>HTML para el botón de cambio de tema</strong>:</li>
+</ol>
+<p><code>html
+   &lt;button id="toggle-button"&gt;Cambiar Tema&lt;/button&gt;</code></p>
+<h2 id="uso-de-media-queries-para-preferencias-del-usuario">Uso de Media Queries para Preferencias del Usuario</h2>
+<ol>
+<li><strong>Detecta la preferencia del sistema operativo</strong>: Utiliza la media query <code>prefers-color-scheme</code> para aplicar automáticamente el tema según la preferencia del usuario.</li>
+</ol>
+<p>```javascript
+   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");</p>
+<p>if (prefersDarkScheme.matches) {
+     document.body.setAttribute("data-theme", "dark");
+   } else {
+     document.body.setAttribute("data-theme", "light");
+   }
+   ```</p>
 <hr />
 <h2 id="nuevas-caracteristicas-de-css3">Nuevas Características de CSS3</h2>
 <h3 id="la-regla-scope">La Regla <code>@scope</code></h3>
@@ -1904,52 +2038,50 @@ body {
 <h3 id="otras-nuevas-caracteristicas">Otras Nuevas Características</h3>
 <p>Además de la regla <code>@scope</code>, CSS3 ha introducido múltiples nuevas características que mejoran la capacidad de diseño y estilización de las páginas web:</p>
 <ul>
-<li>
-<p><strong>Variables CSS (<code>--variable</code>):</strong> Permiten definir variables reutilizables para colores, tamaños, etc.</p>
-<p>```css
-:root {
-    --color-primario: #3498db;
-    --padding-base: 10px;
-}</p>
-<p>.boton {
-    background-color: var(--color-primario);
-    padding: var(--padding-base);
-}
-```</p>
-</li>
-<li>
-<p><strong>Propiedades de Sombra (<code>box-shadow</code>, <code>text-shadow</code>):</strong> Para agregar sombras a elementos y textos.</p>
-<p>```css
-.caja {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}</p>
-<p>h1 {
-    text-shadow: 2px 2px #ff0000;
-}
-```</p>
-</li>
-<li>
-<p><strong>Transformaciones 2D y 3D (<code>transform</code>):</strong> Para rotaciones, escalados, traslaciones y más.</p>
-<p><code>css
-.elemento {
-    transform: rotate(45deg) scale(1.2);
-}</code></p>
-</li>
-<li>
-<p><strong>Filtros CSS (<code>filter</code>):</strong> Para aplicar efectos visuales como desenfoques y cambios de color.</p>
-<p><code>css
-img {
-    filter: grayscale(50%);
-}</code></p>
-</li>
-<li>
-<p><strong>Clipping y Masking (<code>clip-path</code>, <code>mask</code>):</strong> Para crear formas complejas y máscaras en elementos.</p>
-<p><code>css
-.caja {
-    clip-path: circle(50%);
-}</code></p>
-</li>
+<li><strong>Variables CSS (<code>--variable</code>):</strong> Permiten definir variables reutilizables para colores, tamaños, etc.</li>
 </ul>
+<pre><code class="language-css">    :root {
+        --color-primario: #3498db;
+        --padding-base: 10px;
+    }
+
+    .boton {
+        background-color: var(--color-primario);
+        padding: var(--padding-base);
+    }
+</code></pre>
+<ul>
+<li><strong>Propiedades de Sombra (<code>box-shadow</code>, <code>text-shadow</code>):</strong> Para agregar sombras a elementos y textos.</li>
+</ul>
+<pre><code class="language-css">    .caja {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-shadow: 2px 2px #ff0000;
+    }
+</code></pre>
+<ul>
+<li><strong>Transformaciones 2D y 3D (<code>transform</code>):</strong> Para rotaciones, escalados, traslaciones y más.</li>
+</ul>
+<pre><code class="language-css">    .elemento {
+        transform: rotate(45deg) scale(1.2);
+    }
+</code></pre>
+<ul>
+<li><strong>Filtros CSS (<code>filter</code>):</strong> Para aplicar efectos visuales como desenfoques y cambios de color.</li>
+</ul>
+<pre><code class="language-css">    img {
+        filter: grayscale(50%);
+    }
+</code></pre>
+<ul>
+<li><strong>Clipping y Masking (<code>clip-path</code>, <code>mask</code>):</strong> Para crear formas complejas y máscaras en elementos.</li>
+</ul>
+<pre><code class="language-css">    .caja {
+        clip-path: circle(50%);
+    }
+</code></pre>
 <hr />
 <h2 id="buenas-practicas-en-css">Buenas Prácticas en CSS</h2>
 <ol>
@@ -1966,19 +2098,22 @@ img {
 <ul>
 <li>Sigue convenciones como <strong>BEM</strong> (Block Element Modifier) para nombrar clases.</li>
 </ul>
-<p>```css
-/<em> BEM Example </em>/
-.tarjeta {
-    /<em> Block </em>/
-}</p>
-<p>.tarjeta__titulo {
-    /<em> Element </em>/
-}</p>
-<p>.tarjeta__titulo--destacado {
-    /<em> Modifier </em>/
-}
-```</p>
 </li>
+</ol>
+<pre><code class="language-css">    /* BEM Example */
+    .tarjeta {
+        /* Block */
+    }
+
+    .tarjeta__titulo {
+        /* Element */
+    }
+
+    .tarjeta__titulo--destacado {
+        /* Modifier */
+    }
+</code></pre>
+<ol>
 <li>
 <p><strong>Evita el Uso Excesivo de <code>!important</code>:</strong></p>
 <ul>
@@ -1997,29 +2132,31 @@ img {
 <ul>
 <li>Define variables para colores, tamaños y otros valores repetitivos.</li>
 </ul>
-<p>```css
-:root {
-    --color-primario: #3498db;
-    --padding-base: 10px;
-}</p>
-<p>.boton {
-    background-color: var(--color-primario);
-    padding: var(--padding-base);
-}
-```</p>
 </li>
-<li>
-<p><strong>Compatibilidad entre Navegadores:</strong></p>
-<ul>
+</ol>
+<pre><code class="language-css">    :root {
+        --color-primario: #3498db;
+        --padding-base: 10px;
+    }
+
+    .boton {
+        background-color: var(--color-primario);
+        padding: var(--padding-base);
+    }
+</code></pre>
+<ol>
+<li><strong>Compatibilidad entre Navegadores:</strong><ul>
 <li>Utiliza prefijos de proveedores cuando sea necesario para asegurar la compatibilidad.</li>
 </ul>
-<p><code>css
-.caja {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-}</code></p>
 </li>
+</ol>
+<pre><code class="language-css">    .caja {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+</code></pre>
+<ol>
 <li>
 <p><strong>Minimización y Compresión:</strong></p>
 <ul>
