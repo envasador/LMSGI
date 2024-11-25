@@ -507,6 +507,82 @@ body {
 }
 ```
 
+
+## Definición de Variables CSS y Dark Mode
+
+Para implementar un modo oscuro (dark mode) utilizando variables en CSS, puedes seguir estos pasos:
+
+1. **Define las variables para el tema claro y oscuro**: Utiliza el selector `:root` para establecer las variables CSS globales que definirán los colores para ambos temas.
+
+   ```css
+   :root {
+     /* Tema claro */
+     --background-color: #ffffff;
+     --text-color: #000000;
+     --accent-color: #007BFF;
+   }
+
+   [data-theme="dark"] {
+     /* Tema oscuro */
+     --background-color: #121212;
+     --text-color: #E0E0E0;
+     --accent-color: #BB86FC;
+   }
+   ```
+
+## Aplicación de Variables en el CSS
+
+
+2. **Utiliza las variables en tus estilos CSS**: Aplica las variables en los elementos de tu página para que los estilos cambien dinámicamente según el tema seleccionado.
+
+   ```css
+   body {
+     background-color: var(--background-color);
+     color: var(--text-color);
+   }
+
+   a, button {
+     color: var(--accent-color);
+   }
+   ```
+
+## Cambio de Tema con JavaScript
+
+3. **Implementa el cambio de tema con JavaScript**: Puedes alternar entre temas añadiendo o removiendo un atributo `data-theme` al elemento `body`.
+
+   ```javascript
+   const toggleButton = document.getElementById("toggle-button");
+
+   toggleButton.addEventListener("click", function() {
+     const body = document.body;
+     const currentTheme = body.getAttribute("data-theme");
+     const newTheme = currentTheme === "dark" ? "light" : "dark";
+     body.setAttribute("data-theme", newTheme);
+   });
+   ```
+
+4. **HTML para el botón de cambio de tema**:
+
+   ```html
+   <button id="toggle-button">Cambiar Tema</button>
+   ```
+
+## Uso de Media Queries para Preferencias del Usuario
+
+5. **Detecta la preferencia del sistema operativo**: Utiliza la media query `prefers-color-scheme` para aplicar automáticamente el tema según la preferencia del usuario.
+
+   ```javascript
+   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+   if (prefersDarkScheme.matches) {
+     document.body.setAttribute("data-theme", "dark");
+   } else {
+     document.body.setAttribute("data-theme", "light");
+   }
+   ```
+
+
+
 ---
 
 ## Nuevas Características de CSS3
@@ -556,7 +632,7 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
 
 - **Variables CSS (`--variable`):** Permiten definir variables reutilizables para colores, tamaños, etc.
 
-    ```css
+```css
     :root {
         --color-primario: #3498db;
         --padding-base: 10px;
@@ -566,11 +642,11 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
         background-color: var(--color-primario);
         padding: var(--padding-base);
     }
-    ```
+```
 
 - **Propiedades de Sombra (`box-shadow`, `text-shadow`):** Para agregar sombras a elementos y textos.
 
-    ```css
+```css
     .caja {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -578,31 +654,31 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
     h1 {
         text-shadow: 2px 2px #ff0000;
     }
-    ```
+```
 
 - **Transformaciones 2D y 3D (`transform`):** Para rotaciones, escalados, traslaciones y más.
 
-    ```css
+```css
     .elemento {
         transform: rotate(45deg) scale(1.2);
     }
-    ```
+```
 
 - **Filtros CSS (`filter`):** Para aplicar efectos visuales como desenfoques y cambios de color.
 
-    ```css
+```css
     img {
         filter: grayscale(50%);
     }
-    ```
+```
 
 - **Clipping y Masking (`clip-path`, `mask`):** Para crear formas complejas y máscaras en elementos.
 
-    ```css
+```css
     .caja {
         clip-path: circle(50%);
     }
-    ```
+```
 
 ---
 
@@ -616,7 +692,7 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
 2. **Nomenclatura Consistente:**
     - Sigue convenciones como **BEM** (Block Element Modifier) para nombrar clases.
 
-    ```css
+```css
     /* BEM Example */
     .tarjeta {
         /* Block */
@@ -629,7 +705,7 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
     .tarjeta__titulo--destacado {
         /* Modifier */
     }
-    ```
+```
 
 3. **Evita el Uso Excesivo de `!important`:**
     - Solo úsalo cuando sea absolutamente necesario para sobreescribir estilos específicos.
@@ -641,7 +717,7 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
 5. **Uso de Variables CSS:**
     - Define variables para colores, tamaños y otros valores repetitivos.
 
-    ```css
+```css
     :root {
         --color-primario: #3498db;
         --padding-base: 10px;
@@ -651,18 +727,18 @@ Además de la regla `@scope`, CSS3 ha introducido múltiples nuevas característ
         background-color: var(--color-primario);
         padding: var(--padding-base);
     }
-    ```
+```
 
 6. **Compatibilidad entre Navegadores:**
     - Utiliza prefijos de proveedores cuando sea necesario para asegurar la compatibilidad.
 
-    ```css
+```css
     .caja {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
     }
-    ```
+```
 
 7. **Minimización y Compresión:**
     - Minimiza los archivos CSS para reducir el tamaño y mejorar la carga.
