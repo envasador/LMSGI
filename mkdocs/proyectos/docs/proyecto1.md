@@ -120,23 +120,32 @@ Revisad y validar su código HTML y CSS, asegurándose de que cumple con los est
 La capacidad del estudiante para crear documentos HTML y CSS bien formados será evaluada, así como su competencia para corregir errores y mejorar la accesibilidad (CE 1h, 1g, 2h).
 
 
-### **Fase 4: Presentación del Proyecto**
+### **Fase 4: Presentación del Proyecto (Videotutorial)**
 **Objetivo:**
-Que los estudiantes presenten su trabajo, explicando sus decisiones de diseño y desarrollo, y demostrando que han seguido las buenas prácticas de validación y accesibilidad.
+Que los estudiantes presenten su trabajo, 
+explicando sus decisiones de diseño y desarrollo, 
+y demostrando que han seguido las buenas prácticas de validación. 
 
-#### Actividades:
+**Puntos a tener en cuenta**
 1. **Presentación del proyecto:**
     - Debéis preparar una presentación oral de su proyecto, explicando las decisiones de diseño (wireframe, estructura HTML, CSS) y las soluciones técnicas implementadas.
     - **Producto**: Una presentación clara y bien estructurada que resuma el trabajo realizado y justifique las decisiones tomadas.
 
-2. **Demostración de la validación y mejoras en accesibilidad:**
-    - Mostrad cómo se ha validado el código HTML y CSS, y cómo se ha optimizado la accesibilidad de la aplicación web.
+2. **Demostración de la validación y mejoras:**
+    - Mostrad cómo se ha validado el código HTML y CSS.
     - **Producto**: Evidencia de la validación y mejoras aplicadas, explicadas durante la presentación.
 
-3. **Responder preguntas del docente**
+**Entrega:**
+Para la entrega del videotutorial, cada estudiante debe realizar una presentación clara y detallada de todo el proceso de desarrollo del proyecto.
+El video debe incluir desde la fase inicial de análisis y planificación hasta la implementación final de la interfaz web. Es fundamental que se expliquen
+las decisiones de diseño tomadas, las herramientas utilizadas, la maquetación con HTML5 y CSS3, así como los aspectos que sean destacables como la arquitectura. 
+El videotutorial debe tener una duración máxima de 7 minutos y seguir un orden lógico que permita entender fácilmente cada paso del proyecto, destacando los problemas encontrados y las soluciones aplicadas. 
+Además, se recomienda incluir una breve conclusión sobre el resultado final y posibles mejoras.
+Muy importante, ten en cuenta los **criterios de evaluación en tu explicación, debe quedar claro cada uno.**
+
 
 #### Evaluación:
-La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar la validación y accesibilidad del proyecto (p, w) además de analizar esas competencias dentro de la rúbrica del proyecto.
+La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar el desarrollo del proyecto (p, w) además de analizar esas competencias dentro de la rúbrica del proyecto.
 
 
 ---
