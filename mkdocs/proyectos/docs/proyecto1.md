@@ -127,6 +127,7 @@ explicando sus decisiones de diseño y desarrollo,
 y demostrando que han seguido las buenas prácticas de validación. 
 
 **Puntos a tener en cuenta**
+
 1. **Presentación del proyecto:**
     - Debéis preparar una presentación oral de su proyecto, explicando las decisiones de diseño (wireframe, estructura HTML, CSS) y las soluciones técnicas implementadas.
     - **Producto**: Una presentación clara y bien estructurada que resuma el trabajo realizado y justifique las decisiones tomadas.
