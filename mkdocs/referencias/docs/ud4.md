@@ -5,7 +5,7 @@ hide:
 
 # **UD4 Tema: Introducción a JavaScript Moderno**
 
-### **Introducción**
+## **Introducción**
 JavaScript es un lenguaje de programación diseñado para añadir interactividad y dinamismo a las páginas web. Se utiliza tanto en el lado del cliente (navegador) como en el lado del servidor (con tecnologías como Node.js). Con el tiempo, JavaScript ha evolucionado significativamente, convirtiéndose en un lenguaje potente y versátil.
 
 #### **Historia y evolución**
@@ -37,7 +37,7 @@ Recomendación: Utiliza siempre `defer` o `async` para optimizar la carga del sc
 
 ---
 
-### **Variables**
+## **Variables**
 Las variables son contenedores para almacenar datos. JavaScript moderno ofrece tres formas principales de declararlas:
 
 - `let`: Para valores que pueden cambiar.
@@ -65,7 +65,7 @@ if (true) {
 
 ---
 
-### **Strings**
+## **Strings**
 Los strings representan texto. Se pueden definir usando comillas simples (`'`), dobles (`"`), o plantillas literales (`` ` ``).
 
 #### **Características importantes:**
@@ -85,7 +85,7 @@ Los strings representan texto. Se pueden definir usando comillas simples (`'`), 
 
 ---
 
-### **Números**
+## **Números**
 JavaScript maneja números de punto flotante por defecto. Puedes realizar operaciones matemáticas básicas y avanzadas usando el objeto `Math`.
 
 #### **Ejemplo:**
@@ -99,7 +99,7 @@ console.log(Math.random()); // Número aleatorio entre 0 y 1
 
 ---
 
-### **Operadores**
+## **Operadores**
 Los operadores permiten realizar cálculos y evaluaciones lógicas.
 
 #### **Ejemplo:**
@@ -114,7 +114,7 @@ Los operadores permiten realizar cálculos y evaluaciones lógicas.
 
 ---
 
-### **Booleans**
+## **Booleans**
 Los valores booleanos pueden ser `true` o `false`. También existen valores "truthy" (considerados verdaderos) y "falsy" (considerados falsos).
 
 #### **Ejemplo:**
@@ -127,7 +127,7 @@ console.log(Boolean(42)); // true
 
 ---
 
-### **Objetos**
+## **Objetos**
 Un objeto es una colección de propiedades clave-valor.
 
 #### **Creación y manipulación:**
@@ -145,7 +145,7 @@ console.log(nombre); // Luis
 
 ---
 
-### **Arrays**
+## **Arrays**
 Los arrays son listas ordenadas de elementos.
 
 #### **Ejemplo:**
@@ -162,7 +162,7 @@ console.log(numeros); // [1, 2, 3, 4]
 
 ---
 
-### **Fechas**
+## **Fechas**
 El objeto `Date` maneja fechas y horas.
 
 #### **Ejemplo:**
@@ -175,7 +175,7 @@ console.log(ahora.getFullYear()); // 2024
 
 ---
 
-### **Estructuras de control**
+## **Estructuras de control**
 Permiten tomar decisiones o repetir acciones.
 
 #### **Ejemplo:**
@@ -191,7 +191,7 @@ if (edad >= 18) {
 
 ---
 
-### **Iteradores**
+## **Iteradores**
 Permiten recorrer arrays u objetos iterables.
 
 #### **Ejemplo:**
@@ -202,7 +202,7 @@ frutas.forEach(fruta => console.log(fruta));
 
 ---
 
-### **Funciones**
+## **Funciones**
 Las funciones encapsulan lógica reutilizable.
 
 #### **Ejemplo:**
@@ -215,7 +215,7 @@ console.log(saludar("Marta"));
 
 ---
 
-### **Métodos de Arrays**
+## **Métodos de Arrays**
 Métodos clave para trabajar con arrays:
 
 #### **Ejemplo:**
@@ -227,7 +227,7 @@ console.log(dobles); // [2, 4, 6, 8]
 
 ---
 
-### **Programación Orientada a Objetos (POO)**
+## **Programación Orientada a Objetos (POO)**
 La POO en JavaScript se basa en clases y objetos.
 
 #### **Ejemplo:**
@@ -253,8 +253,7 @@ console.log(miPerro.saludar()); // Hola, soy Max
 
 ---
 
-
-### **DOM (Document Object Model)**
+## **DOM (Document Object Model)**
 El DOM es una representación estructurada del documento HTML o XML cargado en el navegador. Permite interactuar y manipular elementos, estilos y contenido de la página web.
 
 #### **Selección y acceso a elementos**
@@ -317,7 +316,7 @@ caja.classList.remove("otra-clase");
 
 ---
 
-### **Eventos**
+## **Eventos**
 Los eventos en JavaScript permiten ejecutar código en respuesta a acciones del usuario, como hacer clic en un botón, mover el ratón o cargar la página.
 
 #### **Tipos de eventos comunes**
