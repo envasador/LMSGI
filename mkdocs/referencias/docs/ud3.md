@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# 3 **Guía completa de CSS3**.
+# **3 Guía completa de CSS3**.
 
 ---
 
