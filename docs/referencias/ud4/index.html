@@ -886,7 +886,7 @@
 
 
 <h1 id="ud4-tema-introduccion-a-javascript-moderno"><strong>UD4 Tema: Introducción a JavaScript Moderno</strong></h1>
-<h3 id="introduccion"><strong>Introducción</strong></h3>
+<h2 id="introduccion"><strong>Introducción</strong></h2>
 <p>JavaScript es un lenguaje de programación diseñado para añadir interactividad y dinamismo a las páginas web. Se utiliza tanto en el lado del cliente (navegador) como en el lado del servidor (con tecnologías como Node.js). Con el tiempo, JavaScript ha evolucionado significativamente, convirtiéndose en un lenguaje potente y versátil.</p>
 <h4 id="historia-y-evolucion"><strong>Historia y evolución</strong></h4>
 <ul>
@@ -912,7 +912,7 @@
 </code></pre>
 <p>Recomendación: Utiliza siempre <code>defer</code> o <code>async</code> para optimizar la carga del script.</p>
 <hr />
-<h3 id="variables"><strong>Variables</strong></h3>
+<h2 id="variables"><strong>Variables</strong></h2>
 <p>Las variables son contenedores para almacenar datos. JavaScript moderno ofrece tres formas principales de declararlas:</p>
 <ul>
 <li><code>let</code>: Para valores que pueden cambiar.</li>
@@ -934,7 +934,7 @@ const edad = 30;
 </code></pre>
 <p><strong>Mejor práctica:</strong> Usa siempre <code>const</code> si el valor no cambia y <code>let</code> para valores variables.</p>
 <hr />
-<h3 id="strings"><strong>Strings</strong></h3>
+<h2 id="strings"><strong>Strings</strong></h2>
 <p>Los strings representan texto. Se pueden definir usando comillas simples (<code>'</code>), dobles (<code>"</code>), o plantillas literales (<code>`</code>).</p>
 <h4 id="caracteristicas-importantes"><strong>Características importantes:</strong></h4>
 <ol>
@@ -953,7 +953,7 @@ const edad = 30;
 </ol>
 <p><strong>Mejor práctica:</strong> Usa plantillas literales para concatenar strings y mejorar la legibilidad del código.</p>
 <hr />
-<h3 id="numeros"><strong>Números</strong></h3>
+<h2 id="numeros"><strong>Números</strong></h2>
 <p>JavaScript maneja números de punto flotante por defecto. Puedes realizar operaciones matemáticas básicas y avanzadas usando el objeto <code>Math</code>.</p>
 <h4 id="ejemplo_1"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">console.log(10 + 5); // 15
@@ -962,7 +962,7 @@ console.log(Math.random()); // Número aleatorio entre 0 y 1
 </code></pre>
 <p><strong>Mejor práctica:</strong> Usa bibliotecas como <code>BigInt</code> o <code>Decimal.js</code> para cálculos de alta precisión.</p>
 <hr />
-<h3 id="operadores"><strong>Operadores</strong></h3>
+<h2 id="operadores"><strong>Operadores</strong></h2>
 <p>Los operadores permiten realizar cálculos y evaluaciones lógicas.</p>
 <h4 id="ejemplo_2"><strong>Ejemplo:</strong></h4>
 <ol>
@@ -974,7 +974,7 @@ console.log(Math.random()); // Número aleatorio entre 0 y 1
    console.log(10 &gt; 5 &amp;&amp; 5 &lt; 8); // true</code></li>
 </ol>
 <hr />
-<h3 id="booleans"><strong>Booleans</strong></h3>
+<h2 id="booleans"><strong>Booleans</strong></h2>
 <p>Los valores booleanos pueden ser <code>true</code> o <code>false</code>. También existen valores "truthy" (considerados verdaderos) y "falsy" (considerados falsos).</p>
 <h4 id="ejemplo_3"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">console.log(Boolean(&quot;&quot;)); // false
@@ -982,7 +982,7 @@ console.log(Boolean(42)); // true
 </code></pre>
 <p><strong>Mejor práctica:</strong> Siempre verifica explícitamente las condiciones para evitar errores con valores "truthy" y "falsy".</p>
 <hr />
-<h3 id="objetos"><strong>Objetos</strong></h3>
+<h2 id="objetos"><strong>Objetos</strong></h2>
 <p>Un objeto es una colección de propiedades clave-valor.</p>
 <h4 id="creacion-y-manipulacion"><strong>Creación y manipulación:</strong></h4>
 <pre><code class="language-javascript">const persona = { nombre: &quot;Luis&quot;, edad: 25 };
@@ -994,7 +994,7 @@ persona.edad = 26; // Modificación
 console.log(nombre); // Luis
 </code></pre>
 <hr />
-<h3 id="arrays"><strong>Arrays</strong></h3>
+<h2 id="arrays"><strong>Arrays</strong></h2>
 <p>Los arrays son listas ordenadas de elementos.</p>
 <h4 id="ejemplo_4"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">let numeros = [1, 2, 3];
@@ -1006,7 +1006,7 @@ console.log(numeros); // [1, 2, 3, 4]
 - <code>filter</code>: Para filtrar elementos.
 - <code>reduce</code>: Para calcular un resultado acumulado.</p>
 <hr />
-<h3 id="fechas"><strong>Fechas</strong></h3>
+<h2 id="fechas"><strong>Fechas</strong></h2>
 <p>El objeto <code>Date</code> maneja fechas y horas.</p>
 <h4 id="ejemplo_5"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">const ahora = new Date();
@@ -1014,7 +1014,7 @@ console.log(ahora.getFullYear()); // 2024
 </code></pre>
 <p><strong>Mejor práctica:</strong> Usa bibliotecas como <code>date-fns</code> o <code>moment</code> para trabajar con fechas más complejas.</p>
 <hr />
-<h3 id="estructuras-de-control"><strong>Estructuras de control</strong></h3>
+<h2 id="estructuras-de-control"><strong>Estructuras de control</strong></h2>
 <p>Permiten tomar decisiones o repetir acciones.</p>
 <h4 id="ejemplo_6"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">if (edad &gt;= 18) {
@@ -1025,14 +1025,14 @@ console.log(ahora.getFullYear()); // 2024
 </code></pre>
 <p><strong>Mejor práctica:</strong> Usa <code>switch</code> o un objeto de configuración para manejar múltiples condiciones.</p>
 <hr />
-<h3 id="iteradores"><strong>Iteradores</strong></h3>
+<h2 id="iteradores"><strong>Iteradores</strong></h2>
 <p>Permiten recorrer arrays u objetos iterables.</p>
 <h4 id="ejemplo_7"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">let frutas = [&quot;manzana&quot;, &quot;pera&quot;, &quot;uva&quot;];
 frutas.forEach(fruta =&gt; console.log(fruta));
 </code></pre>
 <hr />
-<h3 id="funciones"><strong>Funciones</strong></h3>
+<h2 id="funciones"><strong>Funciones</strong></h2>
 <p>Las funciones encapsulan lógica reutilizable.</p>
 <h4 id="ejemplo_8"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">const saludar = (nombre) =&gt; `Hola, ${nombre}!`;
@@ -1040,7 +1040,7 @@ console.log(saludar(&quot;Marta&quot;));
 </code></pre>
 <p><strong>Mejor práctica:</strong> Usa funciones puras que no dependan del estado externo.</p>
 <hr />
-<h3 id="metodos-de-arrays"><strong>Métodos de Arrays</strong></h3>
+<h2 id="metodos-de-arrays"><strong>Métodos de Arrays</strong></h2>
 <p>Métodos clave para trabajar con arrays:</p>
 <h4 id="ejemplo_9"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">const numeros = [1, 2, 3, 4];
@@ -1048,7 +1048,7 @@ const dobles = numeros.map(num =&gt; num * 2);
 console.log(dobles); // [2, 4, 6, 8]
 </code></pre>
 <hr />
-<h3 id="programacion-orientada-a-objetos-poo"><strong>Programación Orientada a Objetos (POO)</strong></h3>
+<h2 id="programacion-orientada-a-objetos-poo"><strong>Programación Orientada a Objetos (POO)</strong></h2>
 <p>La POO en JavaScript se basa en clases y objetos.</p>
 <h4 id="ejemplo_10"><strong>Ejemplo:</strong></h4>
 <pre><code class="language-javascript">class Animal {
@@ -1070,7 +1070,7 @@ const miPerro = new Perro(&quot;Max&quot;);
 console.log(miPerro.saludar()); // Hola, soy Max
 </code></pre>
 <hr />
-<h3 id="dom-document-object-model"><strong>DOM (Document Object Model)</strong></h3>
+<h2 id="dom-document-object-model"><strong>DOM (Document Object Model)</strong></h2>
 <p>El DOM es una representación estructurada del documento HTML o XML cargado en el navegador. Permite interactuar y manipular elementos, estilos y contenido de la página web.</p>
 <h4 id="seleccion-y-acceso-a-elementos"><strong>Selección y acceso a elementos</strong></h4>
 <p>Podemos seleccionar elementos en el DOM utilizando métodos como:
@@ -1116,7 +1116,7 @@ caja.style.color = &quot;white&quot;;
 caja.classList.remove(&quot;otra-clase&quot;);
 </code></pre>
 <hr />
-<h3 id="eventos"><strong>Eventos</strong></h3>
+<h2 id="eventos"><strong>Eventos</strong></h2>
 <p>Los eventos en JavaScript permiten ejecutar código en respuesta a acciones del usuario, como hacer clic en un botón, mover el ratón o cargar la página.</p>
 <h4 id="tipos-de-eventos-comunes"><strong>Tipos de eventos comunes</strong></h4>
 <ul>
