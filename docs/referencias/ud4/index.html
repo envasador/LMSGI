@@ -12,11 +12,11 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>UD3 - User-Defined Structures - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>UD4 Tema: Introducción a JavaScript Moderno - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ud3-user-defined-structures" class="md-skip">
+        <a href="#ud4-tema-introduccion-a-javascript-moderno" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD3 - User-Defined Structures
+              UD4 Tema: Introducción a JavaScript Moderno
             
           </span>
         </div>
@@ -406,6 +406,462 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia-y-evolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia y evolución
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-de-los-lenguajes-de-script-de-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características de los lenguajes de script de cliente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracion-en-una-pagina-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración en una página web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-y-hoisting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope y Hoisting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características importantes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Números
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Números">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Booleans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Booleans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-manipulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y manipulación:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fechas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fechas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructuras de control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iteradores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteradores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos de Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-orientada-a-objetos-poo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Orientada a Objetos (POO)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programación Orientada a Objetos (POO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom-document-object-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOM (Document Object Model)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DOM (Document Object Model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seleccion-y-acceso-a-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selección y acceso a elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-modificacion-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y modificación de elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-de-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulación de estilos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eventos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-eventos-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de eventos comunes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejo-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejo de eventos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegacion-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delegación de eventos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
     <span class="md-ellipsis">
       Material de refuerzo y ampliación
@@ -429,50 +885,268 @@
                   
 
 
-<h1 id="ud3-user-defined-structures">UD3 - User-Defined Structures</h1>
-<p><center>
-<img alt="" src="../assets/ud3/ud3-estructuras.webp" />
-</center></p>
-<p>Como referencia de para esta unidad se ha tomado el material de "<a href="https://javascript.info/">The Modern JavaScript Tutorial</a>". En concreto los siguientes apartados del mismo:</p>
-<p><a href="https://javascript.info/first-steps">JavaScript Fundamentals</a></p>
+<h1 id="ud4-tema-introduccion-a-javascript-moderno"><strong>UD4 Tema: Introducción a JavaScript Moderno</strong></h1>
+<h3 id="introduccion"><strong>Introducción</strong></h3>
+<p>JavaScript es un lenguaje de programación diseñado para añadir interactividad y dinamismo a las páginas web. Se utiliza tanto en el lado del cliente (navegador) como en el lado del servidor (con tecnologías como Node.js). Con el tiempo, JavaScript ha evolucionado significativamente, convirtiéndose en un lenguaje potente y versátil.</p>
+<h4 id="historia-y-evolucion"><strong>Historia y evolución</strong></h4>
 <ul>
-<li>Functions</li>
-<li>Function expressions</li>
-<li>Arrow functions, the basics</li>
-<li>JavaScript specials</li>
+<li>1995: Creación de JavaScript por Brendan Eich en Netscape.</li>
+<li>ECMAScript 2015 (ES6): Introducción de características modernas como <code>let</code>, <code>const</code>, clases y funciones flecha.</li>
 </ul>
-<p><a href="https://javascript.info/data-types">Data types</a></p>
+<h4 id="caracteristicas-de-los-lenguajes-de-script-de-cliente"><strong>Características de los lenguajes de script de cliente</strong></h4>
 <ul>
-<li>Methods of primitives</li>
-<li>Numbers</li>
-<li>Strings</li>
-<li>Arrays</li>
-<li>Array methods</li>
-<li>Iterables</li>
-<li>Map and Set</li>
-<li>Object.keys, values, entries</li>
-<li>Destructuring assignment</li>
-<li>Date and time</li>
-<li>JSON methods, toJSON</li>
+<li><strong>Ejecución en el cliente:</strong> El código se ejecuta en el navegador del usuario, reduciendo la carga en el servidor.</li>
+<li><strong>Interactividad:</strong> Permite respuestas dinámicas a las acciones del usuario.</li>
+<li><strong>Integración con HTML y CSS:</strong> JavaScript trabaja junto con estos lenguajes para crear experiencias web ricas.</li>
+<li><strong>Sintaxis flexible:</strong> Soporta múltiples paradigmas como programación orientada a objetos y funcional.</li>
+<li><strong>Estándares:</strong> ECMAScript (ES) establece las reglas y funcionalidades que definen el lenguaje JavaScript.</li>
 </ul>
-<p><a href="https://javascript.info/object-basics">Objects: the basics</a></p>
+<h4 id="integracion-en-una-pagina-web"><strong>Integración en una página web</strong></h4>
+<p>Podemos incluir JavaScript en nuestras páginas HTML de varias maneras:</p>
+<pre><code class="language-html">&lt;script&gt;
+  console.log('Hola desde JavaScript');
+&lt;/script&gt;
+</code></pre>
+<p>O vinculando un archivo externo:</p>
+<pre><code class="language-html">&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<p>Recomendación: Utiliza siempre <code>defer</code> o <code>async</code> para optimizar la carga del script.</p>
+<hr />
+<h3 id="variables"><strong>Variables</strong></h3>
+<p>Las variables son contenedores para almacenar datos. JavaScript moderno ofrece tres formas principales de declararlas:</p>
 <ul>
-<li>Objects</li>
-<li>Object references and copying</li>
-<li>Object methods, "this"</li>
-<li>Constructor, operator "new"</li>
+<li><code>let</code>: Para valores que pueden cambiar.</li>
+<li><code>const</code>: Para valores constantes (que no cambian).</li>
+<li><code>var</code>: Obsoleto; se recomienda evitarlo debido a problemas con el alcance.</li>
 </ul>
-<p><a href="https://javascript.info/object-properties">Object properties configuration</a></p>
+<h4 id="ejemplo"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">let nombre = &quot;Juan&quot;;
+const edad = 30;
+// edad = 31; // Esto causará un error.
+</code></pre>
+<h4 id="scope-y-hoisting"><strong>Scope y Hoisting</strong></h4>
+<p><code>let</code> y <code>const</code> tienen un alcance de bloque, mientras que <code>var</code> ignora los bloques. Esto puede causar errores inesperados si no se usa con cuidado.</p>
+<pre><code class="language-javascript">if (true) {
+  let mensaje = &quot;Hola&quot;;
+  console.log(mensaje); // Hola
+}
+// console.log(mensaje); // Error: no está definido
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa siempre <code>const</code> si el valor no cambia y <code>let</code> para valores variables.</p>
+<hr />
+<h3 id="strings"><strong>Strings</strong></h3>
+<p>Los strings representan texto. Se pueden definir usando comillas simples (<code>'</code>), dobles (<code>"</code>), o plantillas literales (<code>`</code>).</p>
+<h4 id="caracteristicas-importantes"><strong>Características importantes:</strong></h4>
+<ol>
+<li>
+<p><strong>Interpolación:</strong>
+   <code>javascript
+   const nombre = "Ana";
+   console.log(`Hola, ${nombre}!`); // Hola, Ana!</code></p>
+</li>
+<li>
+<p><strong>Métodos útiles:</strong>
+   <code>javascript
+   let texto = " JavaScript moderno ";
+   console.log(texto.trim().toUpperCase()); // "JAVASCRIPT MODERNO"</code></p>
+</li>
+</ol>
+<p><strong>Mejor práctica:</strong> Usa plantillas literales para concatenar strings y mejorar la legibilidad del código.</p>
+<hr />
+<h3 id="numeros"><strong>Números</strong></h3>
+<p>JavaScript maneja números de punto flotante por defecto. Puedes realizar operaciones matemáticas básicas y avanzadas usando el objeto <code>Math</code>.</p>
+<h4 id="ejemplo_1"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">console.log(10 + 5); // 15
+console.log(Math.pow(2, 3)); // 8
+console.log(Math.random()); // Número aleatorio entre 0 y 1
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa bibliotecas como <code>BigInt</code> o <code>Decimal.js</code> para cálculos de alta precisión.</p>
+<hr />
+<h3 id="operadores"><strong>Operadores</strong></h3>
+<p>Los operadores permiten realizar cálculos y evaluaciones lógicas.</p>
+<h4 id="ejemplo_2"><strong>Ejemplo:</strong></h4>
+<ol>
+<li><strong>Aritméticos:</strong>
+   <code>javascript
+   console.log(10 % 3); // 1 (módulo)</code></li>
+<li><strong>Lógicos:</strong>
+   <code>javascript
+   console.log(10 &gt; 5 &amp;&amp; 5 &lt; 8); // true</code></li>
+</ol>
+<hr />
+<h3 id="booleans"><strong>Booleans</strong></h3>
+<p>Los valores booleanos pueden ser <code>true</code> o <code>false</code>. También existen valores "truthy" (considerados verdaderos) y "falsy" (considerados falsos).</p>
+<h4 id="ejemplo_3"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">console.log(Boolean(&quot;&quot;)); // false
+console.log(Boolean(42)); // true
+</code></pre>
+<p><strong>Mejor práctica:</strong> Siempre verifica explícitamente las condiciones para evitar errores con valores "truthy" y "falsy".</p>
+<hr />
+<h3 id="objetos"><strong>Objetos</strong></h3>
+<p>Un objeto es una colección de propiedades clave-valor.</p>
+<h4 id="creacion-y-manipulacion"><strong>Creación y manipulación:</strong></h4>
+<pre><code class="language-javascript">const persona = { nombre: &quot;Luis&quot;, edad: 25 };
+console.log(persona.nombre); // Luis
+persona.edad = 26; // Modificación
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa la desestructuración para trabajar con objetos:</p>
+<pre><code class="language-javascript">const { nombre, edad } = persona;
+console.log(nombre); // Luis
+</code></pre>
+<hr />
+<h3 id="arrays"><strong>Arrays</strong></h3>
+<p>Los arrays son listas ordenadas de elementos.</p>
+<h4 id="ejemplo_4"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">let numeros = [1, 2, 3];
+numeros.push(4);
+console.log(numeros); // [1, 2, 3, 4]
+</code></pre>
+<p><strong>Métodos útiles:</strong>
+- <code>map</code>: Para transformar elementos.
+- <code>filter</code>: Para filtrar elementos.
+- <code>reduce</code>: Para calcular un resultado acumulado.</p>
+<hr />
+<h3 id="fechas"><strong>Fechas</strong></h3>
+<p>El objeto <code>Date</code> maneja fechas y horas.</p>
+<h4 id="ejemplo_5"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">const ahora = new Date();
+console.log(ahora.getFullYear()); // 2024
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa bibliotecas como <code>date-fns</code> o <code>moment</code> para trabajar con fechas más complejas.</p>
+<hr />
+<h3 id="estructuras-de-control"><strong>Estructuras de control</strong></h3>
+<p>Permiten tomar decisiones o repetir acciones.</p>
+<h4 id="ejemplo_6"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">if (edad &gt;= 18) {
+  console.log(&quot;Mayor de edad&quot;);
+} else {
+  console.log(&quot;Menor de edad&quot;);
+}
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa <code>switch</code> o un objeto de configuración para manejar múltiples condiciones.</p>
+<hr />
+<h3 id="iteradores"><strong>Iteradores</strong></h3>
+<p>Permiten recorrer arrays u objetos iterables.</p>
+<h4 id="ejemplo_7"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">let frutas = [&quot;manzana&quot;, &quot;pera&quot;, &quot;uva&quot;];
+frutas.forEach(fruta =&gt; console.log(fruta));
+</code></pre>
+<hr />
+<h3 id="funciones"><strong>Funciones</strong></h3>
+<p>Las funciones encapsulan lógica reutilizable.</p>
+<h4 id="ejemplo_8"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">const saludar = (nombre) =&gt; `Hola, ${nombre}!`;
+console.log(saludar(&quot;Marta&quot;));
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa funciones puras que no dependan del estado externo.</p>
+<hr />
+<h3 id="metodos-de-arrays"><strong>Métodos de Arrays</strong></h3>
+<p>Métodos clave para trabajar con arrays:</p>
+<h4 id="ejemplo_9"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">const numeros = [1, 2, 3, 4];
+const dobles = numeros.map(num =&gt; num * 2);
+console.log(dobles); // [2, 4, 6, 8]
+</code></pre>
+<hr />
+<h3 id="programacion-orientada-a-objetos-poo"><strong>Programación Orientada a Objetos (POO)</strong></h3>
+<p>La POO en JavaScript se basa en clases y objetos.</p>
+<h4 id="ejemplo_10"><strong>Ejemplo:</strong></h4>
+<pre><code class="language-javascript">class Animal {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+  saludar() {
+    return `Hola, soy ${this.nombre}`;
+  }
+}
+
+class Perro extends Animal {
+  ladrar() {
+    return &quot;Guau!&quot;;
+  }
+}
+
+const miPerro = new Perro(&quot;Max&quot;);
+console.log(miPerro.saludar()); // Hola, soy Max
+</code></pre>
+<hr />
+<h3 id="dom-document-object-model"><strong>DOM (Document Object Model)</strong></h3>
+<p>El DOM es una representación estructurada del documento HTML o XML cargado en el navegador. Permite interactuar y manipular elementos, estilos y contenido de la página web.</p>
+<h4 id="seleccion-y-acceso-a-elementos"><strong>Selección y acceso a elementos</strong></h4>
+<p>Podemos seleccionar elementos en el DOM utilizando métodos como:
+- <code>getElementById</code>: Selecciona un elemento por su ID.
+- <code>querySelector</code>: Selecciona el primer elemento que coincide con un selector CSS.
+- <code>querySelectorAll</code>: Selecciona todos los elementos que coinciden con un selector CSS.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">const titulo = document.getElementById(&quot;titulo&quot;);
+const botones = document.querySelectorAll(&quot;button&quot;);
+console.log(titulo.textContent); // Muestra el texto del elemento con ID &quot;titulo&quot;
+</code></pre>
+<h4 id="creacion-y-modificacion-de-elementos"><strong>Creación y modificación de elementos</strong></h4>
+<p>Podemos crear nuevos elementos y añadirlos al DOM, o modificar los existentes.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">// Crear un nuevo párrafo\const nuevoParrafo = document.createElement(&quot;p&quot;);
+nuevoParrafo.textContent = &quot;Este es un párrafo dinámico.&quot;;
+
+// Añadirlo al cuerpo del documento
+document.body.appendChild(nuevoParrafo);
+
+// Modificar un elemento existente
+const titulo = document.querySelector(&quot;h1&quot;);
+titulo.textContent = &quot;Título actualizado&quot;;
+</code></pre>
+<p><strong>Mejor práctica:</strong> Utiliza fragmentos de documento (<code>DocumentFragment</code>) para insertar múltiples elementos de manera eficiente.</p>
+<h4 id="eliminacion-de-elementos"><strong>Eliminación de elementos</strong></h4>
+<p>Podemos eliminar elementos del DOM utilizando métodos como:
+- <code>removeChild</code>: Elimina un elemento hijo de su nodo padre.
+- <code>remove</code>: Elimina un elemento directamente.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">const elemento = document.querySelector(&quot;#elemento-a-eliminar&quot;);
+elemento.remove();
+</code></pre>
+<h4 id="manipulacion-de-estilos"><strong>Manipulación de estilos</strong></h4>
+<p>El DOM permite modificar los estilos CSS de los elementos dinámicamente.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">const caja = document.querySelector(&quot;.caja&quot;);
+caja.style.backgroundColor = &quot;blue&quot;;
+caja.style.color = &quot;white&quot;;
+</code></pre>
+<p><strong>Mejor práctica:</strong> Para múltiples cambios de estilo, utiliza clases CSS:</p>
+<pre><code class="language-javascript">caja.classList.add(&quot;nueva-clase&quot;);
+caja.classList.remove(&quot;otra-clase&quot;);
+</code></pre>
+<hr />
+<h3 id="eventos"><strong>Eventos</strong></h3>
+<p>Los eventos en JavaScript permiten ejecutar código en respuesta a acciones del usuario, como hacer clic en un botón, mover el ratón o cargar la página.</p>
+<h4 id="tipos-de-eventos-comunes"><strong>Tipos de eventos comunes</strong></h4>
 <ul>
-<li>Property getters and setters</li>
+<li><code>click</code>: Se activa cuando un usuario hace clic en un elemento.</li>
+<li><code>mouseover</code>: Se activa cuando el puntero del ratón pasa sobre un elemento.</li>
+<li><code>keyup</code>: Se activa cuando el usuario suelta una tecla.</li>
+<li><code>submit</code>: Se activa al enviar un formulario.</li>
 </ul>
-<p><a href="https://javascript.info/classes">Classes</a></p>
-<ul>
-<li>Class basic syntax</li>
-<li>Class inheritance</li>
-<li>Static properties and methods</li>
-<li>Private and protected properties and methods</li>
-</ul>
+<h4 id="manejo-de-eventos"><strong>Manejo de eventos</strong></h4>
+<p>Podemos asignar eventos a elementos utilizando:
+- <code>addEventListener</code>: Método recomendado, permite agregar múltiples manejadores a un mismo evento.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">const boton = document.querySelector(&quot;#mi-boton&quot;);
+
+boton.addEventListener(&quot;click&quot;, () =&gt; {
+  alert(&quot;¡Botón pulsado!&quot;);
+});
+</code></pre>
+<h4 id="delegacion-de-eventos"><strong>Delegación de eventos</strong></h4>
+<p>Es una técnica que asigna el evento a un contenedor común en lugar de a cada elemento individual. Es útil cuando los elementos se crean dinámicamente.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">const lista = document.querySelector(&quot;ul&quot;);
+
+lista.addEventListener(&quot;click&quot;, (evento) =&gt; {
+  if (evento.target.tagName === &quot;LI&quot;) {
+    console.log(`Elemento clicado: ${evento.target.textContent}`);
+  }
+});
+</code></pre>
+<p><strong>Mejor práctica:</strong> Usa delegación de eventos para mejorar el rendimiento y reducir el número de manejadores de eventos en el DOM.</p>
 <h2 id="material-de-refuerzo-y-ampliacion">Material de refuerzo y ampliación</h2>
 <p>Se recomienda la realización de los siguientes cursos de la <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">certificación algoritmos de javascript y estructuras de datos</a> de freeCodeCamp.</p>
 <ul>
@@ -565,7 +1239,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
