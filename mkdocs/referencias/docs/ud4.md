@@ -125,6 +125,65 @@ console.log(Boolean(42)); // true
 
 **Mejor práctica:** Siempre verifica explícitamente las condiciones para evitar errores con valores "truthy" y "falsy".
 
+
+## Valores Truthy y Falsy
+
+En JavaScript, cada valor tiene una propiedad booleana inherente, que se considera truthy (verdadera) o falsy (falsa) cuando se evalúa en un contexto booleano.
+
+### Valores Falsy
+
+Los siguientes valores son siempre considerados falsy en JavaScript:
+
+- `false`
+- `0` (cero)
+- `-0` (cero negativo)
+- `0n` (BigInt cero)
+- `''`, `""`, ``` (cadenas vacías)
+- `null`
+- `undefined`
+- `NaN`
+- `document.all`[3]
+
+## Valores Truthy
+
+Todos los demás valores son considerados truthy. Algunos ejemplos incluyen:
+
+- Números distintos de cero (positivos y negativos)
+- Cadenas no vacías
+- Objetos y arrays (incluso si están vacíos)
+- Funciones
+- `true`
+- Fechas
+
+### Evaluación en Contextos Booleanos
+
+JavaScript utiliza la coerción de tipos en contextos booleanos[5]. Esto significa que los valores se convierten automáticamente a `true` o `false` cuando se utilizan en operaciones que requieren un booleano, como en las declaraciones `if` o en operadores lógicos.
+
+Por ejemplo:
+
+```
+if (42) {
+    console.log("Este código se ejecutará porque 42 es truthy");
+}
+
+if ("") {
+    console.log("Este código no se ejecutará porque una cadena vacía es falsy");
+}
+```
+
+### Aplicaciones Prácticas
+
+Entender los conceptos de truthy y falsy es crucial para escribir código JavaScript eficiente y evitar errores sutiles. Por ejemplo, se pueden utilizar para asignar valores predeterminados o para realizar comprobaciones condicionales de manera concisa[1].
+
+```
+let username = "";
+let displayName = username || "Invitado";
+console.log(displayName); // Imprimirá "Invitado"
+```
+
+En este caso, si `username` es falsy (una cadena vacía), se asignará "Invitado" a `displayName`.
+
+
 ---
 
 ## **Objetos**
