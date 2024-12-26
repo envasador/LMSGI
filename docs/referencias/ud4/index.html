@@ -577,6 +577,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#valores-truthy-y-falsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Truthy y Falsy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Valores Truthy y Falsy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valores-falsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Falsy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-truthy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Truthy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Valores Truthy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-en-contextos-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación en Contextos Booleanos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Prácticas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#objetos" class="md-nav__link">
     <span class="md-ellipsis">
       Objetos
@@ -981,6 +1038,49 @@ console.log(Math.random()); // Número aleatorio entre 0 y 1
 console.log(Boolean(42)); // true
 </code></pre>
 <p><strong>Mejor práctica:</strong> Siempre verifica explícitamente las condiciones para evitar errores con valores "truthy" y "falsy".</p>
+<h2 id="valores-truthy-y-falsy">Valores Truthy y Falsy</h2>
+<p>En JavaScript, cada valor tiene una propiedad booleana inherente, que se considera truthy (verdadera) o falsy (falsa) cuando se evalúa en un contexto booleano.</p>
+<h3 id="valores-falsy">Valores Falsy</h3>
+<p>Los siguientes valores son siempre considerados falsy en JavaScript:</p>
+<ul>
+<li><code>false</code></li>
+<li><code>0</code> (cero)</li>
+<li><code>-0</code> (cero negativo)</li>
+<li><code>0n</code> (BigInt cero)</li>
+<li><code>''</code>, <code>""</code>, ``` (cadenas vacías)</li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+<li><code>NaN</code></li>
+<li><code>document.all</code>[3]</li>
+</ul>
+<h2 id="valores-truthy">Valores Truthy</h2>
+<p>Todos los demás valores son considerados truthy. Algunos ejemplos incluyen:</p>
+<ul>
+<li>Números distintos de cero (positivos y negativos)</li>
+<li>Cadenas no vacías</li>
+<li>Objetos y arrays (incluso si están vacíos)</li>
+<li>Funciones</li>
+<li><code>true</code></li>
+<li>Fechas</li>
+</ul>
+<h3 id="evaluacion-en-contextos-booleanos">Evaluación en Contextos Booleanos</h3>
+<p>JavaScript utiliza la coerción de tipos en contextos booleanos[5]. Esto significa que los valores se convierten automáticamente a <code>true</code> o <code>false</code> cuando se utilizan en operaciones que requieren un booleano, como en las declaraciones <code>if</code> o en operadores lógicos.</p>
+<p>Por ejemplo:</p>
+<pre><code>if (42) {
+    console.log(&quot;Este código se ejecutará porque 42 es truthy&quot;);
+}
+
+if (&quot;&quot;) {
+    console.log(&quot;Este código no se ejecutará porque una cadena vacía es falsy&quot;);
+}
+</code></pre>
+<h3 id="aplicaciones-practicas">Aplicaciones Prácticas</h3>
+<p>Entender los conceptos de truthy y falsy es crucial para escribir código JavaScript eficiente y evitar errores sutiles. Por ejemplo, se pueden utilizar para asignar valores predeterminados o para realizar comprobaciones condicionales de manera concisa[1].</p>
+<pre><code>let username = &quot;&quot;;
+let displayName = username || &quot;Invitado&quot;;
+console.log(displayName); // Imprimirá &quot;Invitado&quot;
+</code></pre>
+<p>En este caso, si <code>username</code> es falsy (una cadena vacía), se asignará "Invitado" a <code>displayName</code>.</p>
 <hr />
 <h2 id="objetos"><strong>Objetos</strong></h2>
 <p>Un objeto es una colección de propiedades clave-valor.</p>
