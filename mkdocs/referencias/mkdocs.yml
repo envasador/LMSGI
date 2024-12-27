@@ -6,8 +6,9 @@ site_dir: ../../docs/referencias
 nav:
   - Inicio: index.md
   - Introducción: ud1.md
-  - HTML5: ud2.md
+  - HTML5: ud2-3.md
   - CSS3: ud3.md
+  - Javascript: ud4.md
 
 extra:
   social:

@@ -3,9 +3,9 @@ hide:
   - navigation
 ---
 
-# **Proyecto 2: “Desarrollo de una Aplicación Web con Estándares Web”**
+# **Proyecto 2: “Desarrollo con Estándares Web”**
 
-## Fase 1: Maquetación  - 20/01/2025 
+## Fase 1: Maquetación - 20/01/2025 
 
 ### Contexto del Proyecto
 Hemos recibido el encargo de desarrollar una página web que represente la identidad profesional o comercial de un cliente, ya sea en forma de portfolio personal o tienda online. Este proyecto deberá cumplir con los estándares más actuales en maquetación (HTML5 y CSS3) y garantizar accesibilidad, navegabilidad y validación en todos sus elementos.
