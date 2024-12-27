@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../ud3/">
+      
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
@@ -16,7 +18,7 @@
     
     
       
-        <title>UD4 Tema: Introducción a JavaScript Moderno - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>Javascript - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
@@ -105,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UD4 Tema: Introducción a JavaScript Moderno
+              Javascript
             
           </span>
         </div>
@@ -228,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../ud2/" class="md-tabs__link">
+      <a href="../ud2-3/" class="md-tabs__link">
         
   
     
@@ -251,6 +253,25 @@
     
   
   CSS3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Javascript
 
       </a>
     </li>
@@ -344,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ud2/" class="md-nav__link">
+      <a href="../ud2-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,6 +394,588 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#historia-y-evolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historia y evolución
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-de-los-lenguajes-de-script-de-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características de los lenguajes de script de cliente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracion-en-una-pagina-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración en una página web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-y-hoisting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope y Hoisting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características importantes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Números
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Números">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Booleans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Booleans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-truthy-y-falsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Truthy y Falsy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Valores Truthy y Falsy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valores-falsy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Falsy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valores-truthy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valores Truthy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Valores Truthy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-en-contextos-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluación en Contextos Booleanos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Prácticas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-manipulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y manipulación:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fechas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fechas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fechas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructuras-de-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructuras de control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iteradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iteradores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iteradores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de Arrays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos de Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-orientada-a-objetos-poo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Orientada a Objetos (POO)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programación Orientada a Objetos (POO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom-document-object-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOM (Document Object Model)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DOM (Document Object Model)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seleccion-y-acceso-a-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selección y acceso a elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-y-modificacion-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación y modificación de elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de elementos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-de-estilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulación de estilos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eventos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eventos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-eventos-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de eventos comunes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejo-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejo de eventos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delegacion-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delegación de eventos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Material de refuerzo y ampliación
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
