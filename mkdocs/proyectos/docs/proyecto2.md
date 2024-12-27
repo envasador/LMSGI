@@ -51,9 +51,5 @@ Un repositorio en GitHub con una estructura correcta de carpetas del proyecto, q
 - Un archivo `README.md` con la descripción del proyecto, instrucciones para visualizarlo y cualquier detalle relevante.
 
 #### Evaluación (RA2)
-- Uso correcto y justificado de etiquetas y atributos HTML.
-- Aplicación efectiva de hojas de estilo con enfoque en adaptabilidad y accesibilidad.
-- Validación completa y funcional de los documentos.
-- Creatividad y capacidad para traducir los requisitos en un diseño funcional y atractivo.
-
+XXXX
 
