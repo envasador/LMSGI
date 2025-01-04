@@ -88,6 +88,7 @@ Implementar funcionalidades interactivas en la página web utilizando JavaScript
 
 ### Entregable
 Actualizar el repositorio en GitHub con:
+
 - Archivo `script.js` ubicado en una carpeta `js/`, conteniendo todo el código JavaScript.
 - Ejemplos documentados de manipulación del DOM en el archivo `README.md`.
 - Una demo funcional visible a través de GitHub Pages o similar.
