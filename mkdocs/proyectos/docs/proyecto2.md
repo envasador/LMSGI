@@ -140,7 +140,7 @@ Un repositorio en GitHub con una estructura correcta de carpetas del proyecto, q
 
 ---
 
-### **Criterio de evaluación 2.g**
+##### **Criterio de evaluación 2.g**
 **g) Se han aplicado hojas de estilo.**
 
 | **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
@@ -164,3 +164,23 @@ Un repositorio en GitHub con una estructura correcta de carpetas del proyecto, q
 
 ---
 
+##### **Criterio de evaluación 2.h**
+**h) Se han validado documentos HTML y CSS.**
+
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha validado correctamente todos los documentos HTML y CSS utilizando herramientas como el W3C Validator, sin errores. Ha seguido las buenas prácticas para garantizar la correcta estructura y semántica del código. | Los documentos HTML y CSS pasan la validación sin errores, y el código está libre de problemas estructurales. |
+| **8 (Notable)**     | Ha validado los documentos HTML y CSS con pocas advertencias o errores menores. Aunque no hay errores graves, podría haber realizado una validación más exhaustiva o corregir algunos pequeños detalles. | Los documentos HTML y CSS pasan la mayoría de las validaciones, con algunos errores o advertencias menores. |
+| **6 (Aprobado)**    | Ha realizado una validación básica de los documentos HTML y CSS, aunque con algunos errores que afectan a la estructura o semántica. Los documentos son funcionales, pero no cumplen completamente con los estándares de validación. | Validación básica completada con algunos errores o advertencias importantes, pero el código sigue funcionando de forma aceptable. |
+| **4 (Insuficiente)**| Ha realizado un intento de validación, pero los documentos HTML y CSS contienen varios errores que afectan la estructura. La validación no se ha llevado a cabo correctamente o se ha ignorado. | Los documentos HTML y CSS tienen errores significativos que requieren corrección, y no pasan las validaciones básicas. |
+| **2 (Deficiente)**  | No ha validado los documentos HTML y CSS, o no ha corregido los errores que se detectaron. El código está plagado de errores de validación y no sigue los estándares adecuados. | El código no ha sido validado o tiene errores graves que impiden que los documentos HTML y CSS pasen la validación. |
+| **0 (No realizado)**| No ha realizado ninguna validación de los documentos HTML y CSS, o los documentos no son válidos y no cumplen con los requisitos básicos. | No hay evidencia de que se haya realizado ningún tipo de validación. |
+
+### **Buenas prácticas a evaluar**
+
+1. **Uso de W3C Validator:** Validación de los documentos HTML y CSS utilizando las herramientas adecuadas del W3C Validator, sin errores.
+2. **Estructura semántica:** Validación de la estructura semántica de las páginas HTML y corrección de errores relacionados con el uso de etiquetas.
+3. **Optimización del código:** Validación para asegurarse de que el código CSS esté libre de errores de sintaxis y que el archivo sea eficiente.
+4. **Documentación:** Incluir instrucciones de validación en el archivo README.md y una descripción clara de cómo se validó el proyecto.
+
+---
