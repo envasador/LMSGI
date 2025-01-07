@@ -176,7 +176,7 @@ Un repositorio en GitHub con una estructura correcta de carpetas del proyecto, q
 | **2 (Deficiente)**  | No ha validado los documentos HTML y CSS, o no ha corregido los errores que se detectaron. El código está plagado de errores de validación y no sigue los estándares adecuados. | El código no ha sido validado o tiene errores graves que impiden que los documentos HTML y CSS pasen la validación. |
 | **0 (No realizado)**| No ha realizado ninguna validación de los documentos HTML y CSS, o los documentos no son válidos y no cumplen con los requisitos básicos. | No hay evidencia de que se haya realizado ningún tipo de validación. |
 
-### **Buenas prácticas a evaluar**
+###### **Buenas prácticas a evaluar**
 
 1. **Uso de W3C Validator:** Validación de los documentos HTML y CSS utilizando las herramientas adecuadas del W3C Validator, sin errores.
 2. **Estructura semántica:** Validación de la estructura semántica de las páginas HTML y corrección de errores relacionados con el uso de etiquetas.
