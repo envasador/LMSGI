@@ -45,6 +45,7 @@ El equipo deberá diseñar y maquetar un sitio web compuesto por **cuatro págin
 
 #### Entregable
 Un repositorio en GitHub con una estructura correcta de carpetas del proyecto, que incluya:
+
 - Los archivos HTML correspondientes a las páginas desarrolladas ubicados en la carpeta principal del repositorio.
 - Carpeta `css/` con la hoja de estilos `styles.css` aplicada a todo el proyecto.
 - Carpeta `assets/` con los recursos utilizados (imágenes, videos, etc.).
