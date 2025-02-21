@@ -19,7 +19,7 @@ Implementar funcionalidades interactivas en la página web utilizando JavaScript
 - Aplicar sintaxis moderna de JavaScript, incluyendo variables, funciones y métodos.
 
 #### **2. Manipulación del DOM:**
-- Seleccionar y acceder a elementos del documento web utilizando métodos como `querySelector` y `getElementById`.
+- Seleccionar y acceder a elementos del documento web utilizando diferentes métodos.
 - Crear y añadir nuevos elementos dinámicamente al documento.
 - Modificar el contenido y atributos de elementos existentes.
 - Eliminar elementos de la página según criterios específicos.
@@ -29,7 +29,7 @@ Implementar funcionalidades interactivas en la página web utilizando JavaScript
 - Crear un sistema de galería interactiva donde las imágenes puedan añadirse o eliminarse dinámicamente.
 - Diseñar un formulario con validación dinámica que muestre mensajes de error o éxito según la interacción del usuario.
 - Implementar un sistema de filtros que permita mostrar u ocultar elementos de la página (por ejemplo, productos o entradas de blog) según criterios seleccionados por el usuario.
-- Crear una animación o transición que se active mediante eventos, como un menú desplegable o un carrusel de imágenes.
+- Crear una animación o transición que se active mediante eventos.
 
 ### Entregable
 Actualizar el repositorio en GitHub con:
@@ -39,10 +39,9 @@ Actualizar el repositorio en GitHub con:
 - Una demo funcional visible a través de GitHub Pages o similar.
 
 ### Evaluación (RA3)
-- Identificación de las características y sintaxis de JavaScript moderno.
-- Correcta selección, creación, modificación y eliminación de elementos del DOM.
-- Aplicación efectiva de modificaciones dinámicas a los estilos de los elementos.
-- Implementación de interactividad que mejore la experiencia del usuario.
-- Organización y claridad del código JavaScript.
-
-FALTA AÑADIR LA RÚBRICA
+a) Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.
+b) Se ha identificado la sintaxis básica de los lenguajes de script de cliente.
+c) Se han utilizado métodos para la selección y acceso de los diferentes elementos de un documento web.
+d) Se han creado y modificado elementos de documentos web.
+e) Se han eliminado elementos de documentos web.
+f) Se han realizado modificaciones sobre los estilos de un documento web.
