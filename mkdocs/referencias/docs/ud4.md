@@ -413,9 +413,6 @@ lista.addEventListener("click", (evento) => {
 
 **Mejor práctica:** Usa delegación de eventos para mejorar el rendimiento y reducir el número de manejadores de eventos en el DOM.
 
-
-
-
 ## Material de refuerzo y ampliación
 
 Se recomienda la realización de los siguientes cursos de la [certificación algoritmos de javascript y estructuras de datos](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) de freeCodeCamp.

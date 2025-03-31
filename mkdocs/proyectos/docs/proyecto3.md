@@ -29,7 +29,7 @@ Implementar funcionalidades interactivas en la página web utilizando JavaScript
 - Crear un sistema de galería interactiva donde las imágenes puedan añadirse o eliminarse dinámicamente.
 - Diseñar un formulario con validación dinámica que muestre mensajes de error o éxito según la interacción del usuario.
 - Implementar un sistema de filtros que permita mostrar u ocultar elementos de la página (por ejemplo, productos o entradas de blog) según criterios seleccionados por el usuario.
-- Crear una animación o transición que se active mediante eventos.
+- Crear un flujo libre del proyecto. (por ejemplo proceso de incluir productos al carrito de compra.)
 
 ### Entregable
 Actualizar el repositorio en GitHub con:
@@ -38,7 +38,7 @@ Actualizar el repositorio en GitHub con:
 - Ejemplos documentados de manipulación del DOM en el archivo `README.md`.
 - Una demo funcional visible a través de GitHub Pages o similar.
 
-### Evaluación 
+### Evaluación Fase 1 y Fase 2
 #### (RA3) Accede y manipula documentos web utilizando lenguajes de script de cliente.
 #### Criterios de evaluación
 

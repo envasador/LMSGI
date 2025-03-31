@@ -8,7 +8,10 @@ nav:
   - Introducción: ud1.md
   - HTML5: ud2-3.md
   - CSS3: ud3.md
-  - Javascript: ud4.md
+  - Introducción Javascript: ud4.md
+  - Manipulación del DOM y eventos: ud4.md
+  - Definición de esquemas y vocabularios: ud4.md
+
 
 extra:
   social:
