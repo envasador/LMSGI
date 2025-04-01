@@ -12,15 +12,15 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
     
     
       
-        <title>Paso a paso con React - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>UD4 - DOM manipulation and events - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#paso-a-paso-con-react" class="md-skip">
+        <a href="#ud4-dom-manipulation-and-events" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Paso a paso con React
+              UD4 - DOM manipulation and events
             
           </span>
         </div>
@@ -193,9 +193,11 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href=".." class="md-tabs__link">
         
+  
   
     
   
@@ -210,9 +212,11 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../ud1/" class="md-tabs__link">
         
+  
   
     
   
@@ -227,9 +231,11 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../ud2-3/" class="md-tabs__link">
         
+  
   
     
   
@@ -244,9 +250,11 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../ud3/" class="md-tabs__link">
         
+  
   
     
   
@@ -261,13 +269,53 @@
   
   
   
+  
     <li class="md-tabs__item">
       <a href="../ud4/" class="md-tabs__link">
         
   
+  
     
   
-  Javascript
+  Introducción Javascript
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción Javascript
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción Javascript
 
       </a>
     </li>
@@ -291,7 +339,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -322,6 +372,7 @@
       <a href=".." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Inicio
     
@@ -342,6 +393,7 @@
     <li class="md-nav__item">
       <a href="../ud1/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Introducción
@@ -364,6 +416,7 @@
       <a href="../ud2-3/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     HTML5
     
@@ -384,6 +437,7 @@
     <li class="md-nav__item">
       <a href="../ud3/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     CSS3
@@ -406,8 +460,53 @@
       <a href="../ud4/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Javascript
+    Introducción Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción Javascript
     
   </span>
   
@@ -424,6 +523,8 @@
               </div>
             
             
+              
+                
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
@@ -444,9 +545,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#otros-materiales" class="md-nav__link">
+  <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
     <span class="md-ellipsis">
-      Otros materiales
+      Material de refuerzo y ampliación
     </span>
   </a>
   
@@ -465,18 +566,101 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
 
 
 
-<h1 id="paso-a-paso-con-react">Paso a paso con React</h1>
-<p>En la <a href="https://es.react.dev">documentación oficial de React</a> encontraremos toda la información de la librería, y además, algunos tutoriales muy interesantes. Uno de los recursos de obligada visita es su <a href="https://es.react.dev/learn">guía de inicio rápido</a>.</p>
-<h2 id="otros-materiales">Otros materiales</h2>
-<p>A parte de lo anteriormente visto, estaremos usando mas funcionalidades, dejamos por aquí algunos enlaces que estaría bien ir revisando a estas alturas:</p>
+
+<h1 id="ud4-dom-manipulation-and-events">UD4 - DOM manipulation and events</h1>
+<p><center>
+<img alt="" src="../assets/ud4/ud4-eventos.webp" />
+</center></p>
+<p>Como referencia de para esta unidad se ha tomado el material de "<a href="https://javascript.info/">The Modern JavaScript Tutorial</a>". En concreto los siguientes apartados del mismo:</p>
+<p><a href="https://javascript.info/document">Document</a></p>
 <ul>
-<li><a href="https://reactrouter.com/en/main">React Routing Guide</a></li>
-<li><a href="https://es.redux.js.org/">Redux</a></li>
-<li><a href="https://react-redux.js.org/">React Redux</a></li>
-<li><a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es">Redux Dev Tools</a></li>
+<li>Browser environment, specs</li>
+<li>DOM tree</li>
+<li>Walking the DOM</li>
+<li>Searching: getElement<em>, querySelector</em></li>
+<li>Node properties: type, tag and contents</li>
+<li>Attributes and properties</li>
+<li>Modifying the document</li>
+<li>Styles and classes</li>
+<li>Element size and scrolling</li>
+<li>Window sizes and scrolling</li>
+<li>Coordinates</li>
+</ul>
+<p><a href="https://javascript.info/events">Introduction to Events</a></p>
+<ul>
+<li>Introduction to browser events</li>
+<li>Bubbling and capturing</li>
+<li>Event delegation</li>
+<li>Browser default actions</li>
+<li>Dispatching custom events</li>
+</ul>
+<p><a href="https://javascript.info/event-details">UI Events</a></p>
+<ul>
+<li>Mouse events</li>
+<li>Moving the mouse: mouseover/out, mouseenter/leave</li>
+<li>Drag'n'Drop with mouse events</li>
+<li>Pointer events</li>
+<li>Keyboard: keydown and keyup</li>
+<li>Scrolling</li>
+</ul>
+<p><a href="https://javascript.info/forms-controls">Forms, controls</a></p>
+<ul>
+<li>Form properties and methods</li>
+<li>Focusing: focus/blur</li>
+<li>Events: change, input, cut, copy, paste</li>
+<li>Forms: event and method submit</li>
+</ul>
+<p><a href="https://javascript.info/regular-expressions">Regular expressions</a></p>
+<p><a href="https://javascript.info/loading">Document and resource loading</a></p>
+<ul>
+<li>Page: DOMContentLoaded, load, beforeunload, unload, beforeunload, unload</li>
+<li>Scripts: async, defer</li>
+<li>Resource loading: onload and onerror</li>
+</ul>
+<p><a href="https://javascript.info/data-storage">Storing data in the browser</a></p>
+<ul>
+<li>Cookies, document.cookie</li>
+<li>LocalStorage, sessionStorage</li>
+</ul>
+<p><a href="https://javascript.info/error-handling">Error handling</a></p>
+<ul>
+<li>Error handling, "try...catch"</li>
+<li>Custom errors, extending Error</li>
+</ul>
+<p><a href="https://javascript.info/async">Promises</a></p>
+<ul>
+<li>Introduction: callbacks</li>
+<li>Promise</li>
+<li>Promises chaining</li>
+<li>Error handling with promises</li>
+<li>Promise API</li>
+<li>Promisification</li>
+<li>Async/await</li>
+</ul>
+<p><a href="https://javascript.info/network">Network requests</a></p>
+<ul>
+<li>Fetch</li>
+<li>FormData</li>
+<li>Fetch: Download progress</li>
+<li>Fetch: Abort</li>
+<li>Fetch: Cross-Origin Requests</li>
+<li>Fetch API</li>
+<li>URL objects</li>
+<li>XMLHttpRequest</li>
+</ul>
+<h2 id="material-de-refuerzo-y-ampliacion">Material de refuerzo y ampliación</h2>
+<p>Se recomienda la realización de los siguientes cursos de la <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">certificación algoritmos de javascript y estructuras de datos</a> de freeCodeCamp.</p>
+<ul>
+<li>Learn Form Validation by Building a Calorie Counter</li>
+<li>Learn Regular Expressions by Building a Spam Filter</li>
+<li>Review DOM Manipulation by Building a Rock, Paper, Scissors Game</li>
+<li>Learn localStorage by Building a Todo App</li>
+<li>Learn Fetch and Promises by Building an fCC Authors Page,</li>
+<li>Learn Asynchronous Programming by Building an fCC Forum Leaderboard</li>
 </ul>
 
 
@@ -485,8 +669,13 @@
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
@@ -554,10 +743,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
