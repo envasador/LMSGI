@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Tema 5 – Definición de esquemas y vocabularios en lenguajes de marcas
+# UT5 Definición de esquemas y vocabularios en lenguajes de marcas. Introducción
 ## Objetivos de aprendizaje
 
 El objetivo principal de este tema es que el alumnado comprenda y aplique los conceptos de esquemas y vocabularios en el contexto de los lenguajes de marcas, centrándose en su utilidad para describir, validar y asegurar la integridad de los datos estructurados. Se busca que el estudiante no solo conozca las tecnologías, sino que también sepa utilizarlas con sentido práctico.

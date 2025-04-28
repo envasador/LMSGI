@@ -13,7 +13,7 @@ Este curso está diseñado para que adquieras las habilidades necesarias en el m
 ## Tabla de contenido
 
 * [Unidad 1: Introducción a los lenguajes de marcas](ud1.md)
-* [Unidad 2: HTML5](ud2-3.md)
+* [Unidad 2: HTML5](ud2-1.md)
 * [Unidad 3: CSS3](ud3.md)
 * [Unidad 4: Introducción a JavaScript](ud4.md)
   * [Unidad 4.1: Manipulación del DOM y eventos](ud4.md)

@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# **UD4 Tema: Introducción a JavaScript Moderno**
+# **UT4 Introducción a JavaScript Moderno**
 
 ## **Introducción**
 JavaScript es un lenguaje de programación diseñado para añadir interactividad y dinamismo a las páginas web. Se utiliza tanto en el lado del cliente (navegador) como en el lado del servidor (con tecnologías como Node.js). Con el tiempo, JavaScript ha evolucionado significativamente, convirtiéndose en un lenguaje potente y versátil.

@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Unidad de Trabajo 2 **Guía completa de HTML5**.
+# UT2 **Guía completa de HTML5**.
 
 Esta guía integra los conceptos esenciales de HTML5, incluyendo su sintaxis, atributos, etiquetas semánticas, multimedia, formularios, tablas, y etiquetas modernas. Está organizada de manera lógica para facilitar el aprendizaje progresivo del lenguaje.
 
