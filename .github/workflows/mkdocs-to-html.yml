@@ -23,7 +23,7 @@ jobs:
         
   generate_html:
     needs: list-dirs
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
         # Este es el número de trabajos en paralelo que se va a hacer. Más de uno puede provocar conflictos en los commits.
         max-parallel: 1
