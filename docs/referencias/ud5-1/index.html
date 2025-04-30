@@ -1048,23 +1048,29 @@
 <hr />
 <h3 id="511-diseno-y-uso-de-json-schema"><strong>5.1.1 Diseño y Uso de JSON Schema</strong></h3>
 <h4 id="que-es-json-schema">¿Qué es JSON Schema?</h4>
-<p>JSON Schema es una <strong>especificación</strong> que nos permite <strong>describir</strong> y <strong>validar</strong> documentos JSON. Nos ayuda a definir:
-- <strong>Tipos de datos</strong> correctos.
-- <strong>Estructuras</strong> anidadas (objetos, arrays).
-- <strong>Reglas de validación</strong> como valores mínimos, patrones de texto, etc.
-- <strong>Formatos especiales</strong> como emails o fechas.</p>
+<p>JSON Schema es una <strong>especificación</strong> que nos permite <strong>describir</strong> y <strong>validar</strong> documentos JSON. Nos ayuda a definir:</p>
+<ul>
+<li><strong>Tipos de datos</strong> correctos.</li>
+<li><strong>Estructuras</strong> anidadas (objetos, arrays).</li>
+<li><strong>Reglas de validación</strong> como valores mínimos, patrones de texto, etc.</li>
+<li><strong>Formatos especiales</strong> como emails o fechas.</li>
+</ul>
 <h4 id="estandares">Estándares</h4>
-<p>Actualmente, los más utilizados son:
-- <strong>Draft 7</strong>: muy extendido y compatible con la mayor parte de herramientas.
-- <strong>Draft 2019-09</strong>: versión moderna con nuevas mejoras, como vocabularios personalizados.</p>
+<p>Actualmente, los más utilizados son:</p>
+<ul>
+<li><strong>Draft 7</strong>: muy extendido y compatible con la mayor parte de herramientas.</li>
+<li><strong>Draft 2019-09</strong>: versión moderna con nuevas mejoras, como vocabularios personalizados.</li>
+</ul>
 <h4 id="estructura-de-un-json-schema">Estructura de un JSON Schema</h4>
-<p>Un JSON Schema está formado por varios atributos importantes:
-- <strong>$schema</strong>: (obligatorio) indica la versión de JSON Schema utilizada.
-- <strong>type</strong>: especifica el tipo de dato (object, array, string, etc.).
-- <strong>properties</strong>: define las propiedades del objeto, con su nombre y reglas.
-- <strong>required</strong>: lista de propiedades que deben existir obligatoriamente.
-- <strong>items</strong>: define el tipo de elementos que contiene un array.
-- <strong>additionalProperties</strong>: indica si se permiten propiedades no listadas en "properties".</p>
+<p>Un JSON Schema está formado por varios atributos importantes:</p>
+<ul>
+<li><strong>$schema</strong>: (obligatorio) indica la versión de JSON Schema utilizada.</li>
+<li><strong>type</strong>: especifica el tipo de dato (object, array, string, etc.).</li>
+<li><strong>properties</strong>: define las propiedades del objeto, con su nombre y reglas.</li>
+<li><strong>required</strong>: lista de propiedades que deben existir obligatoriamente.</li>
+<li><strong>items</strong>: define el tipo de elementos que contiene un array.</li>
+<li><strong>additionalProperties</strong>: indica si se permiten propiedades no listadas en "properties".</li>
+</ul>
 <h4 id="tipos-de-datos-en-json-schema">Tipos de Datos en JSON Schema</h4>
 <ul>
 <li><strong>string</strong>: cadenas de texto.</li>
@@ -1087,9 +1093,9 @@
 <li><code>{n}</code> indica la cantidad exacta de repeticiones.</li>
 <li><code>.</code> representa cualquier carácter.</li>
 <li><code>*</code> indica cero o más repeticiones.</li>
-<li><code>+</code> indica una o más repeticiones.
-  Por ejemplo, podríamos definir una expresión regular para validar un número de teléfono, un código postal o una matrícula de coche.</li>
+<li><code>+</code> indica una o más repeticiones. </li>
 </ul>
+<p>Por ejemplo, podríamos definir una expresión regular para validar un número de teléfono, un código postal o una matrícula de coche.</p>
 <h5 id="ejemplo-de-pattern">Ejemplo de pattern</h5>
 <pre><code class="language-json">{
   &quot;type&quot;: &quot;string&quot;,
@@ -1146,24 +1152,25 @@
 <hr />
 <h2 id="512-actividad"><strong>5.1.2 Actividad</strong></h2>
 <ol>
-<li>
-<p><strong>Crear un JSON Schema para un usuario</strong>:</p>
-</li>
-<li>
-<p><strong>Validar documentos usando JSON Schema Lint</strong>:</p>
-</li>
+<li><strong>Crear un JSON Schema para un usuario</strong>:</li>
+<li><strong>Validar documentos usando JSON Schema Lint</strong>:</li>
 <li>
 <p><strong>Integrar validación en WebStorm</strong>:</p>
 </li>
-<li>Crear archivos <code>usuario.json</code> y <code>usuario.schema.json</code>.</li>
+<li>
+<p>Crear archivos <code>usuario.json</code> y <code>usuario.schema.json</code>.</p>
+</li>
 <li>Asociarlos en WebStorm.</li>
 <li>Validar automáticamente.</li>
 </ol>
 <h3 id="como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo">Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)</h3>
-<p><strong>Ejemplo utilizando <code>usuario.json</code> y <code>usuario.schema.json</code>:</strong></p>
 <ol>
-<li><strong>Crear los archivos necesarios:</strong></li>
-<li><code>usuario.schema.json</code>: Este archivo contiene el esquema que define cómo debe ser un documento de usuario.</li>
+<li>
+<p><strong>Crear los archivos necesarios:</strong></p>
+</li>
+<li>
+<p><code>usuario.schema.json</code>: Este archivo contiene el esquema que define cómo debe ser un documento de usuario.</p>
+</li>
 <li>
 <p><code>usuario.json</code>: Este archivo será el que validaremos contra el esquema.</p>
 </li>
