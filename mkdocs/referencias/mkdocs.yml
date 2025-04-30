@@ -9,8 +9,11 @@ nav:
   - HTML5: ud2-1.md
   - CSS3: ud3.md
   - Introducción Javascript: ud4.md
-  - Manipulación del DOM y eventos: ud4.md
-  - Definición de esquemas y vocabularios: ud4.md
+  - Manipulación del DOM y eventos: ud4-1.md
+  - Definición de esquemas y vocabularios: ud5.md
+  - JSON Schema y Herramientas de Validación: ud5-1.md
+  - Trabajo con APIs: ud5-2.md
+
 
 
 extra:
