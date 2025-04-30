@@ -734,6 +734,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resultado-esperado-en-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado esperado en consola
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -867,6 +876,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado-esperado-en-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado esperado en consola
+    </span>
+  </a>
   
 </li>
         
@@ -1017,11 +1035,12 @@ Explicación:
 <li>Gestione posibles errores, como que no se encuentre el Pokémon.</li>
 </ol>
 <hr />
-<p>```Javascript</p>
-<p>// 1. Definimos el nombre del Pokémon que queremos consultar
-const nombrePokemon = 'pikachu'; // Cambia este valor para probar otros Pokémon</p>
-<p>// 2. Hacemos la solicitud usando Fetch API
-fetch(<code>https://pokeapi.co/api/v2/pokemon/${nombrePokemon}</code>)
+<pre><code class="language-Javascript">
+// 1. Definimos el nombre del Pokémon que queremos consultar
+const nombrePokemon = 'pikachu'; // Cambia este valor para probar otros Pokémon
+
+// 2. Hacemos la solicitud usando Fetch API
+fetch(`https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`)
 .then(response =&gt; {
 if (!response.ok) {
 throw new Error('Pokémon no encontrado');
@@ -1032,16 +1051,17 @@ return response.json();
 // 3. Mostramos datos relevantes
 console.log('Nombre:', data.name);
 console.log('Altura:', data.height);
-console.log('Peso:', data.weight);</p>
-<pre><code>// 4. Extraemos y mostramos los tipos
-const tipos = data.types.map(tipoInfo =&gt; tipoInfo.type.name);
-console.log('Tipos:', tipos.join(', '));
-</code></pre>
-<p>})
+console.log('Peso:', data.weight);
+
+    // 4. Extraemos y mostramos los tipos
+    const tipos = data.types.map(tipoInfo =&gt; tipoInfo.type.name);
+    console.log('Tipos:', tipos.join(', '));
+})
 .catch(error =&gt; {
 console.error('Error al obtener el Pokémon:', error.message);
-});</p>
-<p>/* Explicación paso a paso
+});
+
+/* Explicación paso a paso
 1.Definimos una variable nombrePokemon con el nombre del Pokémon a buscar.
 2.Realizamos la solicitud fetch() a la API.
 3.Comprobamos que response.ok sea true (si no, lanzamos un error).
@@ -1051,19 +1071,17 @@ console.error('Error al obtener el Pokémon:', error.message);
     •   La altura (data.height).
     •   El peso (data.weight).
     •   Los tipos (data.types) mapeados a un array de nombres.
-6.Capturamos cualquier error en .catch() y mostramos un mensaje adecuado.</p>
-<p>*/</p>
-<pre><code>
-### Resultado esperado en consola
+6.Capturamos cualquier error en .catch() y mostramos un mensaje adecuado.
 
-Buscando pikachu, deberías ver algo como:
-
+*/
 </code></pre>
-<p>Nombre: pikachu
+<h3 id="resultado-esperado-en-consola">Resultado esperado en consola</h3>
+<p>Buscando pikachu, deberías ver algo como:</p>
+<pre><code>  Nombre: pikachu
   Altura: 4
   Peso: 60
   Tipos: electric
-````</p>
+</code></pre>
 <p>Tareas Extra (Opcionales)</p>
 <ul>
 <li>Pedir el nombre del Pokémon al usuario usando prompt().</li>
