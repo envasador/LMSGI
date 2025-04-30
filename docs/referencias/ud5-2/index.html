@@ -893,16 +893,20 @@
 
 <h1 id="ut52-trabajo-con-apis"><strong>UT5.2: Trabajo con APIs</strong></h1>
 <h2 id="objetivos">Objetivos</h2>
-<p>•   Comprender qué es la asincronía y por qué es esencial en el desarrollo web moderno.
-•   Aprender a utilizar Promises para gestionar operaciones que no son instantáneas.
-•   Usar Fetch API para conectar nuestra aplicación web con APIs públicas y trabajar con datos externos.
-•   Conocer herramientas que ayudan a validar, probar y depurar datos JSON y solicitudes HTTP.</p>
+<ul>
+<li>Comprender qué es la asincronía y por qué es esencial en el desarrollo web moderno.</li>
+<li>Aprender a utilizar Promises para gestionar operaciones que no son instantáneas.</li>
+<li>Usar Fetch API para conectar nuestra aplicación web con APIs públicas y trabajar con datos externos.</li>
+<li>Conocer herramientas que ayudan a validar, probar y depurar datos JSON y solicitudes HTTP.</li>
+</ul>
 <h2 id="introduccion">Introducción</h2>
 <p>Hoy en día, muchas aplicaciones web necesitan obtener datos de otros servidores o enviar información sin que la página se quede bloqueada esperando.
 Esto es posible gracias a la asincronía en JavaScript, que permite realizar operaciones “en segundo plano” mientras el programa sigue ejecutándose.</p>
-<p>Las principales herramientas que nos ofrece JavaScript para trabajar de forma asíncrona son:
-•   Promises: para manejar el resultado de operaciones que tardan un tiempo.
-•   Fetch API: para hacer solicitudes HTTP de forma moderna y sencilla.</p>
+<p>Las principales herramientas que nos ofrece JavaScript para trabajar de forma asíncrona son:</p>
+<ul>
+<li>Promises: para manejar el resultado de operaciones que tardan un tiempo. </li>
+<li>Fetch API: para hacer solicitudes HTTP de forma moderna y sencilla.</li>
+</ul>
 <p>Además, para trabajar correctamente con datos JSON (el formato más usado en las APIs), es muy útil validar su estructura usando editores inteligentes (WebStorm), herramientas de prueba (Postman) o validadores en línea.</p>
 <hr />
 <h2 id="521-trabajo-con-apis">5.2.1 Trabajo con APIs</h2>
@@ -913,10 +917,12 @@ Esto mejora la experiencia de usuario y la eficiencia de las aplicaciones.</p>
 Mientras esperamos los datos del tiempo de una API, podemos seguir mostrando una animación de carga.</p>
 <h3 id="promises-en-javascript">Promises en JavaScript</h3>
 <p>Una Promise es como una “promesa” de que una operación terminará más tarde, con éxito o con error.</p>
-<p>Estados de una Promise:
-•   Pending (“pendiente”): la operación aún no ha terminado.
-•   Fulfilled (“cumplida”): la operación ha terminado con éxito.
-•   Rejected (“rechazada”): ha ocurrido un error.</p>
+<p>Estados de una Promise:</p>
+<ul>
+<li>Pending (“pendiente”): la operación aún no ha terminado.</li>
+<li>Fulfilled (“cumplida”): la operación ha terminado con éxito.</li>
+<li>Rejected (“rechazada”): ha ocurrido un error.</li>
+</ul>
 <pre><code class="language-Javascript">let promesa = new Promise((resolve, reject) =&gt; {
     let exito = true;
 
@@ -927,31 +933,33 @@ Mientras esperamos los datos del tiempo de una API, podemos seguir mostrando una
     }
 });
 
-// promesa
+promesa
 .then(mensaje =&gt; console.log(mensaje))  // Si todo va bien, muestra el mensaje de éxito
 .catch(error =&gt; console.error(error));  // Si hay error, muestra el mensaje de error
 
-Explicación paso a paso:
+/* Explicación paso a paso:
 •   Creamos una nueva Promise con dos funciones internas: resolve (éxito) y reject (error).
 •   Simulamos un caso de éxito con let exito = true.
 •   Si exito es true, se ejecuta resolve('Operación exitosa').
 •   Si fuera false, se ejecutaría reject('Ocurrió un error').
 •   Luego, usamos .then() para gestionar el éxito y .catch() para gestionar el error.
-
+*/
 </code></pre>
 <h3 id="fetch-api-en-javascript">Fetch API en JavaScript</h3>
 <p>Fetch API es una función moderna para hacer peticiones HTTP (por ejemplo, pedir datos a un servidor).</p>
 <p>Código básico:</p>
-<p>fetch('URL')
+<pre><code class="language-Javascript">fetch('URL')
 .then(response =&gt; response.json())
 .then(data =&gt; console.log(data))
-.catch(error =&gt; console.error('Error:', error));</p>
-<p>Explicación:
+.catch(error =&gt; console.error('Error:', error));
+
+Explicación:
 1.  fetch('URL') hace la solicitud a la URL indicada.
 2.  .then(response =&gt; response.json()) transforma la respuesta a formato JSON.
 3.  .then(data =&gt; console.log(data)) trabaja con los datos recibidos.
-4.  .catch(error =&gt; console.error('Error:', error)) captura cualquier error.</p>
-<p>⸻</p>
+4.  .catch(error =&gt; console.error('Error:', error)) captura cualquier error.
+
+</code></pre>
 <h3 id="ejemplo-consultar-pokemon-con-fetch-api">Ejemplo: Consultar Pokémon con Fetch API</h3>
 <pre><code class="language-Javascript">fetch('https://pokeapi.co/api/v2/pokemon/ditto')
     .then(response =&gt; response.json())
@@ -990,9 +998,11 @@ Explicación paso a paso:
 <p>⸻</p>
 <h3 id="ejercicio-guiado-consultar-pokemon-con-fetch-api">Ejercicio Guiado: Consultar Pokémon con Fetch API</h3>
 <h4 id="objetivos-del-ejercicio">Objetivos del ejercicio</h4>
-<p>•   Aplicar fetch y Promises para trabajar con APIs públicas.
-•   Extraer información específica de la respuesta JSON.
-•   Gestionar errores correctamente.</p>
+<ul>
+<li>Aplicar fetch y Promises para trabajar con APIs públicas.</li>
+<li>Extraer información específica de la respuesta JSON.</li>
+<li>Gestionar errores correctamente.</li>
+</ul>
 <h4 id="enunciado">Enunciado</h4>
 <p>Crea un pequeño programa en JavaScript que:</p>
 <ol>
@@ -1009,8 +1019,8 @@ Explicación paso a paso:
 <hr />
 <p>```Javascript
 // Código base recomendado</p>
-<p>// 1. Definimos el nombre del Pokémon que queremos consultar</p>
-<p>const nombrePokemon = 'pikachu'; // Cambia este valor para probar otros Pokémon</p>
+<p>// 1. Definimos el nombre del Pokémon que queremos consultar
+const nombrePokemon = 'pikachu'; // Cambia este valor para probar otros Pokémon</p>
 <p>// 2. Hacemos la solicitud usando Fetch API
 fetch(<code>https://pokeapi.co/api/v2/pokemon/${nombrePokemon}</code>)
 .then(response =&gt; {
@@ -1049,16 +1059,18 @@ console.error('Error al obtener el Pokémon:', error.message);
 
 Buscando pikachu, deberías ver algo como:
 
-````JSON
-Nombre: pikachu
-Altura: 4
-Peso: 60
-Tipos: electric
 </code></pre>
-<p>🛠️ Tareas Extra (Opcionales)
-•   💡 Pedir el nombre del Pokémon al usuario usando prompt().
-•   💡 Mostrar también la imagen del Pokémon (data.sprites.front_default) en la página.
-•   💡 Normalizar el nombre (convertirlo a minúsculas usando toLowerCase()).</p>
+<p>Nombre: pikachu
+  Altura: 4
+  Peso: 60
+  Tipos: electric
+````</p>
+<p>Tareas Extra (Opcionales)</p>
+<ul>
+<li>Pedir el nombre del Pokémon al usuario usando prompt().</li>
+<li>Mostrar también la imagen del Pokémon (data.sprites.front_default) en la página.</li>
+<li>Normalizar el nombre (convertirlo a minúsculas usando toLowerCase()).</li>
+</ul>
 
 
 
