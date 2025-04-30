@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ud4/">
+        <link rel="prev" href="../ud5/">
       
       
-        <link rel="next" href="../ud5/">
+        <link rel="next" href="../ud5-2/">
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Manipulación del DOM y eventos - Lenguajes de Marcas - Apuntes y referencias</title>
+        <title>JSON Schema y Herramientas de Validación - Lenguajes de Marcas - Apuntes y referencias</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ut41-dom-manipulation-and-events" class="md-skip">
+        <a href="#51-json-schema-y-herramientas-de-validacion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manipulación del DOM y eventos
+              JSON Schema y Herramientas de Validación
             
           </span>
         </div>
@@ -295,11 +295,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../ud4-1/" class="md-tabs__link">
         
   
   
@@ -335,9 +333,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../ud5-1/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -386,9 +386,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -523,32 +521,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Manipulación del DOM y eventos
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ud4-1/" class="md-nav__link">
         
   
   
@@ -559,35 +535,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Material de refuerzo y ampliación
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -618,10 +565,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ud5-1/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    JSON Schema y Herramientas de Validación
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -632,6 +601,200 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#511-diseno-y-uso-de-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 Diseño y Uso de JSON Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 Diseño y Uso de JSON Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es JSON Schema?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estandares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estándares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de un JSON Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos-en-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Datos en JSON Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validación de Valores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validación de Valores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-complejas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructuras Complejas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras Complejas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-objeto-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de objeto anidado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatos Especiales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatos Especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-formato-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de formato email
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-definicion-de-un-producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Práctico: Definición de un producto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#512-actividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 Actividad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.2 Actividad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -666,8 +829,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -687,11 +848,176 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#material-de-refuerzo-y-ampliacion" class="md-nav__link">
+  <a href="#objetivos" class="md-nav__link">
     <span class="md-ellipsis">
-      Material de refuerzo y ampliación
+      Objetivos
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#511-diseno-y-uso-de-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 Diseño y Uso de JSON Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 Diseño y Uso de JSON Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es JSON Schema?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estandares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estándares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-un-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de un JSON Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-datos-en-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Datos en JSON Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacion-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validación de Valores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validación de Valores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-complejas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructuras Complejas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras Complejas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-objeto-anidado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de objeto anidado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatos Especiales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatos Especiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-formato-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de formato email
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-definicion-de-un-producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Práctico: Definición de un producto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#512-actividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 Actividad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.2 Actividad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -708,73 +1034,189 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
 
 
 
-
-<h1 id="ut41-dom-manipulation-and-events">UT4.1 - DOM manipulation and events</h1>
-<p>Como referencia de para esta unidad se ha tomado el material de "<a href="https://javascript.info/">The Modern JavaScript Tutorial</a>". En concreto los siguientes apartados del mismo:</p>
-<p><a href="https://javascript.info/document">Document</a></p>
+<h1 id="51-json-schema-y-herramientas-de-validacion"><strong>5.1 JSON Schema y Herramientas de Validación</strong></h1>
+<h3 id="objetivos">Objetivos</h3>
 <ul>
-<li>Browser environment, specs</li>
-<li>DOM tree</li>
-<li>Walking the DOM</li>
-<li>Searching: getElement<em>, querySelector</em></li>
-<li>Node properties: type, tag and contents</li>
-<li>Attributes and properties</li>
-<li>Modifying the document</li>
-<li>Styles and classes</li>
-<li>Element size and scrolling</li>
-<li>Window sizes and scrolling</li>
-<li>Coordinates</li>
+<li>Comprender la necesidad de validar documentos JSON.</li>
+<li>Aprender a diseñar y aplicar JSON Schema correctamente.</li>
 </ul>
-<p><a href="https://javascript.info/events">Introduction to Events</a></p>
+<h3 id="introduccion">Introducción</h3>
+<p>Cuando trabajamos con JSON en aplicaciones reales (APIs, bases de datos, configuraciones), necesitamos asegurarnos de que los datos cumplen una estructura y tipos específicos. Para eso existe <strong>JSON Schema</strong>, un estándar abierto que define reglas para validar documentos JSON.</p>
+<hr />
+<h3 id="511-diseno-y-uso-de-json-schema"><strong>5.1.1 Diseño y Uso de JSON Schema</strong></h3>
+<h4 id="que-es-json-schema">¿Qué es JSON Schema?</h4>
+<p>JSON Schema es una <strong>especificación</strong> que nos permite <strong>describir</strong> y <strong>validar</strong> documentos JSON. Nos ayuda a definir:
+- <strong>Tipos de datos</strong> correctos.
+- <strong>Estructuras</strong> anidadas (objetos, arrays).
+- <strong>Reglas de validación</strong> como valores mínimos, patrones de texto, etc.
+- <strong>Formatos especiales</strong> como emails o fechas.</p>
+<h4 id="estandares">Estándares</h4>
+<p>Actualmente, los más utilizados son:
+- <strong>Draft 7</strong>: muy extendido y compatible con la mayor parte de herramientas.
+- <strong>Draft 2019-09</strong>: versión moderna con nuevas mejoras, como vocabularios personalizados.</p>
+<h4 id="estructura-de-un-json-schema">Estructura de un JSON Schema</h4>
+<p>Un JSON Schema está formado por varios atributos importantes:
+- <strong>$schema</strong>: (obligatorio) indica la versión de JSON Schema utilizada.
+- <strong>type</strong>: especifica el tipo de dato (object, array, string, etc.).
+- <strong>properties</strong>: define las propiedades del objeto, con su nombre y reglas.
+- <strong>required</strong>: lista de propiedades que deben existir obligatoriamente.
+- <strong>items</strong>: define el tipo de elementos que contiene un array.
+- <strong>additionalProperties</strong>: indica si se permiten propiedades no listadas en "properties".</p>
+<h4 id="tipos-de-datos-en-json-schema">Tipos de Datos en JSON Schema</h4>
 <ul>
-<li>Introduction to browser events</li>
-<li>Bubbling and capturing</li>
-<li>Event delegation</li>
-<li>Browser default actions</li>
-<li>Dispatching custom events</li>
+<li><strong>string</strong>: cadenas de texto.</li>
+<li><strong>number</strong>: números (pueden tener decimales).</li>
+<li><strong>integer</strong>: números enteros.</li>
+<li><strong>boolean</strong>: valores <code>true</code> o <code>false</code>.</li>
+<li><strong>array</strong>: listas de elementos.</li>
+<li><strong>object</strong>: conjuntos de pares clave-valor.</li>
+<li><strong>null</strong>: valor nulo (sin contenido).</li>
 </ul>
-<p><a href="https://javascript.info/event-details">UI Events</a></p>
+<h4 id="validacion-de-valores">Validación de Valores</h4>
 <ul>
-<li>Mouse events</li>
-<li>Moving the mouse: mouseover/out, mouseenter/leave</li>
-<li>Drag'n'Drop with mouse events</li>
-<li>Pointer events</li>
-<li>Keyboard: keydown and keyup</li>
-<li>Scrolling</li>
+<li><strong>minLength</strong> y <strong>maxLength</strong>: controlan la longitud de las cadenas de texto.</li>
+<li><strong>minimum</strong> y <strong>maximum</strong>: definen valores mínimo y máximo permitidos para números.</li>
+<li><strong>pattern</strong>: permite definir expresiones regulares para validar formatos específicos en strings (por ejemplo, códigos postales). Una <strong>expresión regular</strong> es una secuencia de caracteres que define un patrón de búsqueda. Se utilizan para comprobar si un texto cumple un formato determinado. Una expresión regular utiliza una sintaxis especial donde:</li>
+<li><code>^</code> indica el inicio de una cadena.</li>
+<li><code>$</code> indica el final de una cadena.</li>
+<li><code>[A-Z]</code> representa una letra mayúscula.</li>
+<li><code>[0-9]</code> representa un dígito.</li>
+<li><code>{n}</code> indica la cantidad exacta de repeticiones.</li>
+<li><code>.</code> representa cualquier carácter.</li>
+<li><code>*</code> indica cero o más repeticiones.</li>
+<li><code>+</code> indica una o más repeticiones.
+  Por ejemplo, podríamos definir una expresión regular para validar un número de teléfono, un código postal o una matrícula de coche.</li>
 </ul>
-<p><a href="https://javascript.info/forms-controls">Forms, controls</a></p>
+<h5 id="ejemplo-de-pattern">Ejemplo de pattern</h5>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;string&quot;,
+  &quot;pattern&quot;: &quot;^[A-Z]{3}[0-9]{4}$&quot;
+}
+</code></pre>
+<p>(Valida textos como "ABC1234").</p>
+<h4 id="estructuras-complejas">Estructuras Complejas</h4>
 <ul>
-<li>Form properties and methods</li>
-<li>Focusing: focus/blur</li>
-<li>Events: change, input, cut, copy, paste</li>
-<li>Forms: event and method submit</li>
+<li><strong>Objetos anidados</strong>: una propiedad puede ser un objeto que contenga más propiedades.</li>
+<li><strong>Arrays de objetos</strong>: un array puede contener varios objetos validados según un esquema.</li>
+<li><strong>$ref</strong>: permite referenciar otros schemas, reutilizando definiciones comunes.</li>
 </ul>
-<p><a href="https://javascript.info/regular-expressions">Regular expressions</a></p>
-<p><a href="https://javascript.info/loading">Document and resource loading</a></p>
+<h5 id="ejemplo-de-objeto-anidado">Ejemplo de objeto anidado</h5>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;direccion&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;calle&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;numero&quot;: { &quot;type&quot;: &quot;integer&quot; }
+      },
+      &quot;required&quot;: [&quot;calle&quot;, &quot;numero&quot;]
+    }
+  }
+}
+</code></pre>
+<h4 id="formatos-especiales">Formatos Especiales</h4>
 <ul>
-<li>Page: DOMContentLoaded, load, beforeunload, unload, beforeunload, unload</li>
-<li>Scripts: async, defer</li>
-<li>Resource loading: onload and onerror</li>
+<li><strong>email</strong>: valida que una cadena sea un correo electrónico.</li>
+<li><strong>date-time</strong>: valida fechas y horas en formato ISO.</li>
+<li><strong>uri</strong>: valida direcciones URL.</li>
 </ul>
-<p><a href="https://javascript.info/data-storage">Storing data in the browser</a></p>
-<ul>
-<li>Cookies, document.cookie</li>
-<li>LocalStorage, sessionStorage</li>
-</ul>
-<h2 id="material-de-refuerzo-y-ampliacion">Material de refuerzo y ampliación</h2>
-<p>Se recomienda la realización de los siguientes cursos de la <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/">certificación algoritmos de javascript y estructuras de datos</a> de freeCodeCamp.</p>
-<ul>
-<li>Learn Form Validation by Building a Calorie Counter</li>
-<li>Learn Regular Expressions by Building a Spam Filter</li>
-<li>Review DOM Manipulation by Building a Rock, Paper, Scissors Game</li>
-<li>Learn localStorage by Building a Todo App</li>
-<li>Learn Fetch and Promises by Building an fCC Authors Page,</li>
-<li>Learn Asynchronous Programming by Building an fCC Forum Leaderboard</li>
-</ul>
+<h5 id="ejemplo-de-formato-email">Ejemplo de formato email</h5>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;string&quot;,
+  &quot;format&quot;: &quot;email&quot;
+}
+</code></pre>
+<h3 id="ejemplo-practico-definicion-de-un-producto"><strong>Ejemplo Práctico: Definición de un producto</strong></h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
+  &quot;title&quot;: &quot;Producto&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;nombre&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1 },
+    &quot;precio&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 },
+    &quot;enStock&quot;: { &quot;type&quot;: &quot;boolean&quot; }
+  },
+  &quot;required&quot;: [&quot;nombre&quot;, &quot;precio&quot;]
+}
+</code></pre>
+<hr />
+<h2 id="512-actividad"><strong>5.1.2 Actividad</strong></h2>
+<ol>
+<li>
+<p><strong>Crear un JSON Schema para un usuario</strong>:</p>
+</li>
+<li>
+<p><strong>Validar documentos usando JSON Schema Lint</strong>:</p>
+</li>
+<li>
+<p><strong>Integrar validación en WebStorm</strong>:</p>
+</li>
+<li>Crear archivos <code>usuario.json</code> y <code>usuario.schema.json</code>.</li>
+<li>Asociarlos en WebStorm.</li>
+<li>Validar automáticamente.</li>
+</ol>
+<h3 id="como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo">Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)</h3>
+<p><strong>Ejemplo utilizando <code>usuario.json</code> y <code>usuario.schema.json</code>:</strong></p>
+<ol>
+<li><strong>Crear los archivos necesarios:</strong></li>
+<li><code>usuario.schema.json</code>: Este archivo contiene el esquema que define cómo debe ser un documento de usuario.</li>
+<li>
+<p><code>usuario.json</code>: Este archivo será el que validaremos contra el esquema.</p>
+</li>
+<li>
+<p><strong>Contenido de <code>usuario.schema.json</code>:</strong></p>
+</li>
+</ol>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
+  &quot;title&quot;: &quot;Usuario&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;nombre&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;minLength&quot;: 1
+    },
+    &quot;correo&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;email&quot;
+    },
+    &quot;fechaAlta&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;format&quot;: &quot;date-time&quot;
+    }
+  },
+  &quot;required&quot;: [&quot;nombre&quot;, &quot;correo&quot;, &quot;fechaAlta&quot;]
+}
+</code></pre>
+<ol>
+<li><strong>Contenido de <code>usuario.json</code>:</strong></li>
+</ol>
+<pre><code class="language-json">{
+  &quot;nombre&quot;: &quot;Alejandro Carmona&quot;,
+  &quot;correo&quot;: &quot;acarmar112@g.educaand.es&quot;,
+  &quot;fechaAlta&quot;: &quot;2024-04-28T12:34:56Z&quot;
+}
+</code></pre>
+<ol>
+<li><strong>Asociar el Schema en WebStorm:</strong></li>
+<li>Abre el archivo <code>usuario.json</code> en el editor de WebStorm.</li>
+<li>Haz clic derecho en cualquier parte del archivo.</li>
+<li>Selecciona la opción <strong>Associate Schema...</strong>.</li>
+<li>
+<p>Elige el archivo <code>usuario.schema.json</code> desde el explorador.</p>
+</li>
+<li>
+<p><strong>Resultados:</strong></p>
+</li>
+<li>WebStorm validará automáticamente el archivo <code>usuario.json</code>.</li>
+<li>Si hay errores (por ejemplo, si el correo no tiene formato válido), WebStorm los señalará directamente.</li>
+<li>También ofrecerá autocompletado de propiedades basado en el Schema.</li>
+</ol>
+<hr />
 
 
 
@@ -782,13 +1224,8 @@
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
