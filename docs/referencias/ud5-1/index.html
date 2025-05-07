@@ -1115,33 +1115,18 @@
 </code></pre>
 <hr />
 <h2 id="512-actividad"><strong>5.1.2 Actividad</strong></h2>
-<ol>
-<li><strong>Crear un JSON Schema para un usuario</strong>:</li>
-<li><strong>Validar documentos usando JSON Schema Lint</strong>:</li>
-<li>
-<p><strong>Integrar validación en WebStorm</strong>:</p>
-</li>
-<li>
-<p>Crear archivos <code>usuario.json</code> y <code>usuario.schema.json</code>.</p>
-</li>
-<li>Asociarlos en WebStorm.</li>
-<li>Validar automáticamente.</li>
-</ol>
+<ul>
+<li><strong>Crear un JSON Schema para un usuario</strong></li>
+<li><strong>Validar documentos usando JSON Schema Lint</strong></li>
+<li><strong>Integrar validación en WebStorm</strong></li>
+</ul>
 <h3 id="como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo">Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)</h3>
-<ol>
-<li>
 <p><strong>Crear los archivos necesarios:</strong></p>
-</li>
-<li>
-<p><code>usuario.schema.json</code>: Este archivo contiene el esquema que define cómo debe ser un documento de usuario.</p>
-</li>
-<li>
-<p><code>usuario.json</code>: Este archivo será el que validaremos contra el esquema.</p>
-</li>
-<li>
+<ul>
+<li><code>usuario.schema.json</code>: Este archivo contiene el esquema que define cómo debe ser un documento de usuario.</li>
+<li><code>usuario.json</code>: Este archivo será el que validaremos contra el esquema.</li>
+</ul>
 <p><strong>Contenido de <code>usuario.schema.json</code>:</strong></p>
-</li>
-</ol>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
   &quot;title&quot;: &quot;Usuario&quot;,
@@ -1163,36 +1148,20 @@
   &quot;required&quot;: [&quot;nombre&quot;, &quot;correo&quot;, &quot;fechaAlta&quot;]
 }
 </code></pre>
-<ol>
-<li><strong>Contenido de <code>usuario.json</code>:</strong></li>
-</ol>
+<p><strong>Contenido de <code>usuario.json</code>:</strong></p>
 <pre><code class="language-json">{
   &quot;nombre&quot;: &quot;Alejandro Carmona&quot;,
   &quot;correo&quot;: &quot;acarmar112@g.educaand.es&quot;,
   &quot;fechaAlta&quot;: &quot;2024-04-28T12:34:56Z&quot;
 }
 </code></pre>
-<ol>
-<li>
 <p><strong>Asociar el Schema en WebStorm:</strong></p>
-</li>
-<li>
-<p>Abre el archivo <code>usuario.json</code> en el editor de WebStorm.</p>
-</li>
-<li>Haz clic derecho en cualquier parte del archivo.</li>
-<li>Selecciona la opción <strong>Associate Schema...</strong>.</li>
-<li>
-<p>Elige el archivo <code>usuario.schema.json</code> desde el explorador.</p>
-</li>
-<li>
 <p><strong>Resultados:</strong></p>
-</li>
-<li>
-<p>WebStorm validará automáticamente el archivo <code>usuario.json</code>.</p>
-</li>
+<ul>
+<li>WebStorm validará automáticamente el archivo <code>usuario.json</code>.</li>
 <li>Si hay errores (por ejemplo, si el correo no tiene formato válido), WebStorm los señalará directamente.</li>
 <li>También ofrecerá autocompletado de propiedades basado en el Schema.</li>
-</ol>
+</ul>
 <hr />
 
 
