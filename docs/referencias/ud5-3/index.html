@@ -1,0 +1,1576 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>UT5.3: Transformación de documentos con JavaScript - Lenguajes de Marcas - Apuntes y referencias</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheet/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ut53-transformacion-de-documentos-con-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Lenguajes de Marcas - Apuntes y referencias" class="md-header__button md-logo" aria-label="Lenguajes de Marcas - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lenguajes de Marcas - Apuntes y referencias
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UT5.3: Transformación de documentos con JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud2-1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HTML5
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CSS3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introducción Javascript
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud4-1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Manipulación del DOM y eventos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Definición de esquemas y vocabularios
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud5-1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  JSON Schema y Herramientas de Validación
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ud5-2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trabajo con APIs
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenguajes de Marcas - Apuntes y referencias" class="md-nav__button md-logo" aria-label="Lenguajes de Marcas - Apuntes y referencias" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    Lenguajes de Marcas - Apuntes y referencias
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación del DOM y eventos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definición de esquemas y vocabularios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSON Schema y Herramientas de Validación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trabajo con APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#531-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 Objetivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#532-introduccion-y-contextualizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 Introducción y contextualización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.2 Introducción y contextualización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones reales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#533-tecnologias-de-transformacion-de-documentos-estandares-y-ambitos-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 Tecnologías de transformación de documentos. Estándares y ámbitos de aplicación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.3 Tecnologías de transformación de documentos. Estándares y ámbitos de aplicación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lenguajes-y-entornos-actuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lenguajes y entornos actuales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguajes y entornos actuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas modernas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas-y-modulos-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliotecas y módulos útiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambitos-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ámbitos de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#534-estructura-y-sintaxis-de-los-formatos-de-intercambio" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.4 Estructura y sintaxis de los formatos de intercambio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.4 Estructura y sintaxis de los formatos de intercambio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-formato-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ JSON (formato principal)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml-formato-heredado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟡 XML (formato heredado)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-formato-tabular" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔵 CSV (formato tabular)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-comparativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Resumen comparativo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#535-creacion-y-uso-de-transformaciones-con-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.5 Creación y uso de transformaciones (con JavaScript)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.5 Creación y uso de transformaciones (con JavaScript)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-conversion-de-xml-a-json-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Ejemplo: conversión de XML a JSON en el navegador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-conversion-de-csv-a-json-con-javascript-puro" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Ejemplo: conversión de CSV a JSON con JavaScript puro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-conversion-de-json-a-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Ejemplo: conversión de JSON a CSV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#librerias-utiles-para-transformar-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧰 Librerías útiles para transformar documentos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧰 Librerías útiles para transformar documentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xml2js-conversion-de-xml-a-json-en-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 xml2js – Conversión de XML a JSON en Node.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 xml2js – Conversión de XML a JSON en Node.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Instalación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-de-ejemplo-comentado" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Código de ejemplo comentado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-este-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 ¿Qué hace este código?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#papaparse-lectura-y-escritura-de-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 PapaParse – Lectura y escritura de CSV
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 PapaParse – Lectura y escritura de CSV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incluir-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Incluir en el navegador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-de-ejemplo-comentado_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Código de ejemplo comentado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-hace-este-codigo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 ¿Qué hace este código?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tambien-puedes-generar-csv-desde-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 También puedes generar CSV desde JSON:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-usar-papaparse" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 ¿Por qué usar PapaParse?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#536-actividad-guiada-transformacion-y-visualizacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.6 Actividad guiada: Transformación y visualización de datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.6 Actividad guiada: Transformación y visualización de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enunciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Enunciado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-de-partida-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Datos de partida (XML)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Tareas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivo-html-con-solucion-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      📁 Archivo HTML con solución orientativa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-con-el-resultado-de-aprendizaje-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Relación con el resultado de aprendizaje 5
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ut53-transformacion-de-documentos-con-javascript"><strong>UT5.3: Transformación de documentos con JavaScript</strong></h1>
+<h2 id="531-objetivos">5.3.1 Objetivos</h2>
+<ul>
+<li>Comprender la estructura y sintaxis de los principales formatos de intercambio de datos: JSON, XML y CSV.</li>
+<li>Identificar herramientas y tecnologías actuales utilizadas en la conversión de documentos.</li>
+<li>Utilizar JavaScript para transformar datos entre distintos formatos, tanto en el cliente como en el servidor.</li>
+<li>Aplicar estos conocimientos en una actividad práctica guiada.</li>
+</ul>
+<hr />
+<h2 id="532-introduccion-y-contextualizacion">5.3.2 Introducción y contextualización</h2>
+<p>En el desarrollo de aplicaciones web y servicios digitales, el <strong>intercambio de información entre sistemas heterogéneos</strong> es una necesidad constante. No siempre todos los sistemas usan el mismo formato de datos, por lo que es imprescindible <strong>transformar documentos</strong> de un formato a otro de forma precisa y automatizada.</p>
+<p>Los formatos de datos más utilizados en la actualidad para el intercambio son:</p>
+<ul>
+<li><strong>JSON</strong> (JavaScript Object Notation): ligero, fácil de leer y escribir, y muy usado en APIs web.</li>
+<li><strong>XML</strong> (eXtensible Markup Language): más formal y estructurado, todavía presente en entornos empresariales.</li>
+<li><strong>CSV</strong> (Comma-Separated Values): muy simple, pero útil para intercambiar datos tabulares.</li>
+</ul>
+<p>En esta unidad aprenderás a:</p>
+<ul>
+<li>Comprender la <strong>estructura y sintaxis</strong> de los principales formatos de intercambio.</li>
+<li>Identificar herramientas y tecnologías que permiten la <strong>conversión entre documentos</strong>.</li>
+<li>Utilizar <strong>JavaScript</strong> para transformar datos en distintos formatos, tanto en cliente como en servidor.</li>
+<li>Aplicar estos conocimientos en una <strong>actividad práctica guiada</strong>.</li>
+</ul>
+<p>💡 El objetivo principal será priorizar el uso de JSON como formato estándar actual, sin dejar de entender cómo trabajar con XML y CSV en casos donde sea necesario.</p>
+<h3 id="aplicaciones-reales">Aplicaciones reales</h3>
+<p>Algunos casos comunes donde es necesario transformar documentos con JavaScript:</p>
+<ul>
+<li><strong>Integración de APIs antiguas:</strong> muchas APIs todavía devuelven datos en XML. Para trabajar con ellos en aplicaciones modernas, es necesario transformarlos a JSON.</li>
+<li><strong>Migración de sistemas:</strong> transformar XML en JSON permite modernizar la gestión de datos en nuevas arquitecturas.</li>
+<li><strong>Visualización de datos:</strong> muchas bibliotecas modernas como D3.js o React trabajan solo con JSON.</li>
+<li><strong>Carga dinámica en frontend:</strong> transformar archivos XML a JSON permite cargar configuraciones o datos sin backend.</li>
+<li><strong>Interacción con hojas de cálculo:</strong> para importar o exportar datos en Excel, es habitual convertir entre JSON y CSV.</li>
+</ul>
+<hr />
+<h2 id="533-tecnologias-de-transformacion-de-documentos-estandares-y-ambitos-de-aplicacion">5.3.3 Tecnologías de transformación de documentos. Estándares y ámbitos de aplicación</h2>
+<p>La transformación de documentos es una tarea habitual en el desarrollo web. Por ejemplo, una página puede necesitar mostrar datos que vienen en formato XML, pero su código JavaScript trabaja internamente con JSON. En estos casos, necesitamos herramientas que nos permitan <strong>convertir datos de un formato a otro</strong> de forma automática y fiable.</p>
+<h3 id="lenguajes-y-entornos-actuales">Lenguajes y entornos actuales</h3>
+<h4 id="javascript">JavaScript</h4>
+<ul>
+<li>Es el lenguaje más utilizado para realizar transformaciones de datos en aplicaciones web.</li>
+<li>Funciona tanto en el <strong>navegador</strong> (frontend) como en <strong>Node.js</strong> (backend).</li>
+<li>Incluye funciones nativas como <code>JSON.parse()</code>, <code>JSON.stringify()</code> y objetos como <code>DOMParser</code> para manipular XML.</li>
+</ul>
+<h4 id="herramientas-modernas">Herramientas modernas</h4>
+<ul>
+<li><strong>Visual Studio Code</strong>: editor gratuito y muy popular. Dispone de extensiones para trabajar con JSON, XML y CSV, además de soporte para JavaScript y Node.js.</li>
+<li><strong>WebStorm</strong>: entorno profesional con funcionalidades avanzadas para desarrollo web y depuración.</li>
+<li><strong>Playgrounds online</strong> como JSFiddle, CodePen o RunKit: permiten probar fragmentos de código JavaScript rápidamente sin necesidad de entorno local.</li>
+</ul>
+<h4 id="bibliotecas-y-modulos-utiles">Bibliotecas y módulos útiles</h4>
+<ul>
+<li><code>xml2js</code> (Node.js): convierte fácilmente XML en JSON y viceversa.</li>
+<li><code>PapaParse</code>: librería muy completa para importar/exportar CSV en el navegador o en Node.js.</li>
+<li><code>fast-xml-parser</code>: alternativa eficiente a <code>xml2js</code>, más rápida y ligera.</li>
+</ul>
+<h3 id="ambitos-de-aplicacion">Ámbitos de aplicación</h3>
+<table>
+<thead>
+<tr>
+<th>Ámbito</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicaciones web modernas</td>
+<td>Transforman datos JSON en tiempo real para representar interfaces dinámicas.</td>
+</tr>
+<tr>
+<td>Consumo de APIs</td>
+<td>APIs antiguas pueden devolver XML. Es necesario convertir a JSON para unificar el procesamiento.</td>
+</tr>
+<tr>
+<td>Automatización y scripting</td>
+<td>Node.js permite convertir documentos en procesos automatizados (por ejemplo, CSV a JSON y luego guardado en base de datos).</td>
+</tr>
+<tr>
+<td>Interoperabilidad entre sistemas</td>
+<td>Cuando una app antigua exporta XML, es necesario convertirlo a JSON para integrarlo con apps modernas.</td>
+</tr>
+<tr>
+<td>Exportación e importación de datos</td>
+<td>CSV sigue siendo un formato clave para informes, hojas de cálculo o intercambios simples.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="534-estructura-y-sintaxis-de-los-formatos-de-intercambio">5.3.4 Estructura y sintaxis de los formatos de intercambio</h2>
+<h3 id="json-formato-principal">✅ JSON (formato principal)</h3>
+<pre><code class="language-json">{
+  &quot;nombre&quot;: &quot;Lucía&quot;,
+  &quot;edad&quot;: 19,
+  &quot;asignaturas&quot;: [&quot;LMSGI&quot;, &quot;Programación&quot;]
+}
+</code></pre>
+<ul>
+<li>Basado en pares clave-valor.</li>
+<li>Soporta estructuras anidadas (listas, objetos).</li>
+<li>Nativo en JavaScript.</li>
+</ul>
+<h3 id="xml-formato-heredado">🟡 XML (formato heredado)</h3>
+<pre><code class="language-xml">&lt;alumno&gt;
+  &lt;nombre&gt;Lucía&lt;/nombre&gt;
+  &lt;edad&gt;19&lt;/edad&gt;
+&lt;/alumno&gt;
+</code></pre>
+<ul>
+<li>Basado en etiquetas.</li>
+<li>Permite estructuras jerárquicas complejas.</li>
+<li>Más verboso que JSON.</li>
+</ul>
+<h3 id="csv-formato-tabular">🔵 CSV (formato tabular)</h3>
+<pre><code class="language-csv">nombre,edad
+Lucía,19
+Pedro,20
+</code></pre>
+<ul>
+<li>Formato plano, orientado a filas y columnas.</li>
+<li>No permite estructuras anidadas.</li>
+</ul>
+<h3 id="resumen-comparativo">🧠 Resumen comparativo</h3>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Estructura</th>
+<th>Ventajas principales</th>
+<th>Limitaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSON</td>
+<td>Jerárquica</td>
+<td>Ligero, nativo en JavaScript</td>
+<td>No compatible con hojas de cálculo</td>
+</tr>
+<tr>
+<td>XML</td>
+<td>Jerárquica</td>
+<td>Flexible, válido en sistemas antiguos</td>
+<td>Verboso, más difícil de manipular</td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>Tabular</td>
+<td>Simple, compatible con Excel</td>
+<td>No soporta jerarquías ni listas</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="535-creacion-y-uso-de-transformaciones-con-javascript">5.3.5 Creación y uso de transformaciones (con JavaScript)</h2>
+<h4 id="ejemplo-conversion-de-xml-a-json-en-el-navegador">📄 Ejemplo: conversión de XML a JSON en el navegador</h4>
+<p>Este ejemplo usa <code>DOMParser</code> para analizar texto XML y lo transforma en un objeto JSON recorriendo sus nodos hijos.</p>
+<pre><code class="language-js">// XML de ejemplo como cadena de texto
+const xmlTexto = `
+&lt;persona&gt;
+  &lt;nombre&gt;Lucía&lt;/nombre&gt;
+  &lt;edad&gt;22&lt;/edad&gt;
+&lt;/persona&gt;
+`;
+
+// Creamos un parser que interpreta el texto como XML
+const parser = new DOMParser();
+
+// Convertimos el texto XML en un documento DOM manipulable
+const xmlDoc = parser.parseFromString(xmlTexto, &quot;application/xml&quot;);
+
+// Función para convertir los nodos del XML en un objeto JSON
+function xmlToJson(xml) {
+  const obj = {};
+  for (let node of xml.children) {
+    // Guardamos el nombre del nodo como clave y su contenido como valor
+    obj[node.nodeName] = node.textContent;
+  }
+  return obj;
+}
+
+// Ejecutamos la conversión
+const resultado = xmlToJson(xmlDoc.documentElement);
+
+// Mostramos el resultado
+console.log(resultado);
+</code></pre>
+<hr />
+<h4 id="ejemplo-conversion-de-csv-a-json-con-javascript-puro">📄 Ejemplo: conversión de CSV a JSON con JavaScript puro</h4>
+<p>Esta función analiza un texto CSV con cabecera y lo convierte en una lista de objetos, donde cada fila representa un registro.</p>
+<pre><code class="language-js">// CSV de ejemplo como texto plano
+const csv = `nombre,edad
+Lucía,22
+Pedro,21`;
+
+// Función que convierte el CSV a una lista de objetos JSON
+function csvToJson(csv) {
+  // Separamos el texto en líneas
+  const [cabecera, ...filas] = csv.trim().split(&quot;\n&quot;);
+
+  // Obtenemos las claves a partir de la cabecera
+  const campos = cabecera.split(&quot;,&quot;);
+
+  // Transformamos cada línea en un objeto
+  return filas.map(fila =&gt; {
+    const valores = fila.split(&quot;,&quot;);
+    const obj = {};
+    campos.forEach((campo, i) =&gt; obj[campo] = valores[i]);
+    return obj;
+  });
+}
+
+// Resultado de la transformación
+console.log(csvToJson(csv));
+</code></pre>
+<hr />
+<h4 id="ejemplo-conversion-de-json-a-csv">📄 Ejemplo: conversión de JSON a CSV</h4>
+<p>Esta función toma un array de objetos y genera un texto CSV con cabecera y filas separadas por comas.</p>
+<pre><code class="language-js">// Array de objetos que queremos convertir
+const datos = [
+  { nombre: &quot;Lucía&quot;, edad: 22 },
+  { nombre: &quot;Pedro&quot;, edad: 21 }
+];
+
+// Función que convierte JSON a texto CSV
+function jsonToCsv(datos) {
+  // Extraemos las claves del primer objeto (cabecera)
+  const cabecera = Object.keys(datos[0]).join(&quot;,&quot;);
+
+  // Para cada objeto, sacamos sus valores y los unimos por comas
+  const filas = datos.map(obj =&gt; Object.values(obj).join(&quot;,&quot;));
+
+  // Juntamos la cabecera y las filas en una cadena CSV
+  return [cabecera, ...filas].join(&quot;\n&quot;);
+}
+
+// Mostramos el resultado
+console.log(jsonToCsv(datos));
+</code></pre>
+<hr />
+<h3 id="librerias-utiles-para-transformar-documentos">🧰 Librerías útiles para transformar documentos</h3>
+<p>Además de usar JavaScript puro, en proyectos reales es habitual usar <strong>librerías</strong> que nos ahorran tiempo y código. A continuación, explicamos dos muy utilizadas: <strong><code>xml2js</code></strong> para XML y <strong><code>PapaParse</code></strong> para CSV.</p>
+<hr />
+<h4 id="xml2js-conversion-de-xml-a-json-en-nodejs">📦 <code>xml2js</code> – Conversión de XML a JSON en Node.js</h4>
+<p><code>xml2js</code> es una librería para Node.js que convierte automáticamente XML en objetos JSON. Es muy útil cuando trabajamos con archivos XML en el backend o en scripts.</p>
+<h5 id="instalacion">📌 Instalación</h5>
+<p>Desde consola, escribe:</p>
+<pre><code class="language-bash">npm install xml2js
+</code></pre>
+<h5 id="codigo-de-ejemplo-comentado">📄 Código de ejemplo comentado</h5>
+<pre><code class="language-js">// Cargamos los módulos necesarios
+const fs = require('fs');
+const xml2js = require('xml2js');
+
+// Leemos un archivo XML como texto
+const xml = fs.readFileSync('archivo.xml', 'utf8');
+
+// Usamos xml2js para convertirlo a JSON
+xml2js.parseString(xml, (err, result) =&gt; {
+  if (err) {
+    console.error(&quot;Error al analizar el XML:&quot;, err);
+    return;
+  }
+
+  // Mostramos el objeto resultante
+  console.log(result);
+});
+</code></pre>
+<h5 id="que-hace-este-codigo">🔍 ¿Qué hace este código?</h5>
+<ul>
+<li><code>fs.readFileSync()</code> carga el contenido del archivo.</li>
+<li><code>parseString()</code> analiza el XML y lo convierte automáticamente en JSON.</li>
+<li><code>result</code> es un objeto que puedes usar en tu aplicación, guardarlo, o mostrarlo.</li>
+</ul>
+<blockquote>
+<p>🧠 <strong>Ventaja</strong>: <code>xml2js</code> maneja estructuras complejas, atributos y listas sin necesidad de escribir funciones personalizadas.</p>
+</blockquote>
+<hr />
+<h4 id="papaparse-lectura-y-escritura-de-csv">📦 <code>PapaParse</code> – Lectura y escritura de CSV</h4>
+<p><code>PapaParse</code> es una de las librerías más completas para trabajar con CSV. Puede usarse tanto en el navegador como en Node.js.</p>
+<h5 id="incluir-en-el-navegador">📌 Incluir en el navegador</h5>
+<p>Puedes enlazarla directamente desde un CDN (no necesitas instalar nada):</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h5 id="codigo-de-ejemplo-comentado_1">📄 Código de ejemplo comentado</h5>
+<pre><code class="language-js">// CSV como texto plano
+const csvData = `nombre,edad\nLucía,22\nPedro,21`;
+
+// Usamos PapaParse para convertirlo a JSON
+Papa.parse(csvData, {
+  header: true, // Indica que la primera fila contiene los nombres de las columnas
+  complete: function(results) {
+    // El array de objetos JSON está en results.data
+    console.log(results.data);
+  }
+});
+</code></pre>
+<h5 id="que-hace-este-codigo_1">🔍 ¿Qué hace este código?</h5>
+<ul>
+<li>Analiza automáticamente el CSV.</li>
+<li>Crea un array de objetos con claves y valores.</li>
+<li>Detecta y convierte tipos de datos (números, booleanos, etc.) si es necesario.</li>
+</ul>
+<h5 id="tambien-puedes-generar-csv-desde-json">📌 También puedes generar CSV desde JSON:</h5>
+<pre><code class="language-js">const datos = [
+  { nombre: &quot;Lucía&quot;, edad: 22 },
+  { nombre: &quot;Pedro&quot;, edad: 21 }
+];
+
+// Convertimos JSON a CSV
+const csv = Papa.unparse(datos);
+console.log(csv);
+</code></pre>
+<h5 id="por-que-usar-papaparse">🧠 ¿Por qué usar PapaParse?</h5>
+<ul>
+<li>Evita errores al dividir texto manualmente.</li>
+<li>Funciona con archivos reales (puede leer un archivo <code>.csv</code> arrastrado o subido).</li>
+<li>Compatible con navegadores y Node.js.</li>
+</ul>
+<hr />
+<h2 id="536-actividad-guiada-transformacion-y-visualizacion-de-datos">5.3.6 Actividad guiada: Transformación y visualización de datos</h2>
+<h3 id="enunciado">📝 Enunciado</h3>
+<p>Estás desarrollando una página web para una tienda online. El sistema de inventario es antiguo y exporta los datos en formato <strong>XML</strong>. Tu objetivo es:</p>
+<ul>
+<li>Transformar los datos XML a <strong>JSON</strong> usando <strong>JavaScript</strong>.</li>
+<li>Mostrar los productos en una <strong>tabla HTML</strong>.</li>
+<li>Resaltar en rojo aquellos productos que tengan <strong>poco stock</strong>.</li>
+</ul>
+<h3 id="datos-de-partida-xml">📄 Datos de partida (XML)</h3>
+<pre><code class="language-xml">&lt;productos&gt;
+  &lt;producto&gt;
+    &lt;nombre&gt;Monitor 24&quot;&lt;/nombre&gt;
+    &lt;precio&gt;149.99&lt;/precio&gt;
+    &lt;stock&gt;15&lt;/stock&gt;
+  &lt;/producto&gt;
+  &lt;producto&gt;
+    &lt;nombre&gt;Teclado mecánico&lt;/nombre&gt;
+    &lt;precio&gt;89.50&lt;/precio&gt;
+    &lt;stock&gt;30&lt;/stock&gt;
+  &lt;/producto&gt;
+  &lt;producto&gt;
+    &lt;nombre&gt;Ratón inalámbrico&lt;/nombre&gt;
+    &lt;precio&gt;39.99&lt;/precio&gt;
+    &lt;stock&gt;10&lt;/stock&gt;
+  &lt;/producto&gt;
+&lt;/productos&gt;
+</code></pre>
+<h3 id="tareas">💻 Tareas</h3>
+<ol>
+<li>Introduce el XML como texto en tu archivo HTML.</li>
+<li>Usa <code>DOMParser</code> para convertirlo en un documento DOM.</li>
+<li>Implementa una función <code>xmlToJson()</code> para transformar el XML a JSON.</li>
+<li>Recorre el JSON y genera una tabla HTML con los productos.</li>
+<li>Resalta en rojo los productos con <code>stock &lt; 20</code>.</li>
+</ol>
+<h3 id="archivo-html-con-solucion-orientativa">📁 Archivo HTML con solución orientativa</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Inventario de productos&lt;/title&gt;
+  &lt;style&gt;
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; }
+    .bajo-stock { background-color: #fdd; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Inventario de productos&lt;/h1&gt;
+  &lt;div id=&quot;tabla-contenedor&quot;&gt;&lt;/div&gt;
+
+  &lt;script&gt;
+    const xmlTexto = `
+    &lt;productos&gt;
+      &lt;producto&gt;
+        &lt;nombre&gt;Monitor 24&quot;&lt;/nombre&gt;
+        &lt;precio&gt;149.99&lt;/precio&gt;
+        &lt;stock&gt;15&lt;/stock&gt;
+      &lt;/producto&gt;
+      &lt;producto&gt;
+        &lt;nombre&gt;Teclado mecánico&lt;/nombre&gt;
+        &lt;precio&gt;89.50&lt;/precio&gt;
+        &lt;stock&gt;30&lt;/stock&gt;
+      &lt;/producto&gt;
+      &lt;producto&gt;
+        &lt;nombre&gt;Ratón inalámbrico&lt;/nombre&gt;
+        &lt;precio&gt;39.99&lt;/precio&gt;
+        &lt;stock&gt;10&lt;/stock&gt;
+      &lt;/producto&gt;
+    &lt;/productos&gt;
+    `;
+
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlTexto, &quot;application/xml&quot;);
+
+    function xmlToJson(xml) {
+      const productos = [];
+      const nodos = xml.getElementsByTagName(&quot;producto&quot;);
+
+      for (let producto of nodos) {
+        const nombre = producto.querySelector(&quot;nombre&quot;).textContent;
+        const precio = parseFloat(producto.querySelector(&quot;precio&quot;).textContent);
+        const stock = parseInt(producto.querySelector(&quot;stock&quot;).textContent);
+        productos.push({ nombre, precio, stock });
+      }
+
+      return productos;
+    }
+
+    const inventario = xmlToJson(xmlDoc);
+
+    function mostrarTabla(datos) {
+      let html = `
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Precio&lt;/th&gt;&lt;th&gt;Stock&lt;/th&gt;&lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+      `;
+
+      datos.forEach(producto =&gt; {
+        const clase = producto.stock &lt; 20 ? &quot;bajo-stock&quot; : &quot;&quot;;
+        html += `
+          &lt;tr class=&quot;${clase}&quot;&gt;
+            &lt;td&gt;${producto.nombre}&lt;/td&gt;
+            &lt;td&gt;${producto.precio.toFixed(2)} €&lt;/td&gt;
+            &lt;td&gt;${producto.stock}&lt;/td&gt;
+          &lt;/tr&gt;
+        `;
+      });
+
+      html += &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;;
+      document.getElementById(&quot;tabla-contenedor&quot;).innerHTML = html;
+    }
+
+    mostrarTabla(inventario);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="relacion-con-el-resultado-de-aprendizaje-5">🎯 Relación con el resultado de aprendizaje 5</h3>
+<table>
+<thead>
+<tr>
+<th>Criterio de evaluación</th>
+<th>Cómo se evidencia en la actividad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>a)</strong> Se ha identificado la necesidad de la conversión de documentos para el intercambio de la información.</td>
+<td>Se parte de una situación realista (sistema antiguo XML, web moderna que necesita JSON).</td>
+</tr>
+<tr>
+<td><strong>b)</strong> Se han establecido ámbitos de aplicación.</td>
+<td>Contexto: tienda online que necesita adaptar su inventario para mostrarlo dinámicamente.</td>
+</tr>
+<tr>
+<td><strong>c)</strong> Se han analizado las tecnologías implicadas y su modo de funcionamiento.</td>
+<td>Uso de DOMParser, manipulación DOM, conversión a JSON y renderizado con JS.</td>
+</tr>
+<tr>
+<td><strong>d)</strong> Se ha descrito la sintaxis específica utilizada en la conversión.</td>
+<td>La actividad está basada en XML estructurado y su conversión a objetos JSON.</td>
+</tr>
+<tr>
+<td><strong>e)</strong> Se han creado especificaciones de conversión.</td>
+<td>La función <code>xmlToJson()</code> convierte productos del DOM XML a objetos manipulables.</td>
+</tr>
+<tr>
+<td><strong>f)</strong> Se han identificado y caracterizado herramientas específicas.</td>
+<td>Se emplea JavaScript puro, DOMParser, plantillas HTML y manipulación del DOM.</td>
+</tr>
+<tr>
+<td><strong>g)</strong> Se han realizado conversiones sobre documentos para el intercambio de información.</td>
+<td>Se ejecuta la transformación completa XML → JSON → visualización HTML.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Contenido generado por el equipo educativo del IES Rafael Alberti
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/iesalberticadiz" target="_blank" rel="noopener" title="IES Rafael Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/IES-Rafael-Alberti/digitalizacion-gs" target="_blank" rel="noopener" title="Repositorio del módulo" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
