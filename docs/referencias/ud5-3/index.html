@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -997,57 +997,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#536-actividad-guiada-transformacion-y-visualizacion-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3.6 Actividad guiada: Transformación y visualización de datos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.3.6 Actividad guiada: Transformación y visualización de datos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enunciado" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enunciado
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#datos-de-partida-xml" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Datos de partida (XML)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Tareas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archivo-html-con-solucion-orientativa" class="md-nav__link">
-    <span class="md-ellipsis">
-      📁 Archivo HTML con solución orientativa
-    </span>
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#relacion-con-el-resultado-de-aprendizaje-5" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1415,57 +1364,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#536-actividad-guiada-transformacion-y-visualizacion-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.3.6 Actividad guiada: Transformación y visualización de datos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.3.6 Actividad guiada: Transformación y visualización de datos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enunciado" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enunciado
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#datos-de-partida-xml" class="md-nav__link">
-    <span class="md-ellipsis">
-      📄 Datos de partida (XML)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tareas" class="md-nav__link">
-    <span class="md-ellipsis">
-      💻 Tareas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archivo-html-con-solucion-orientativa" class="md-nav__link">
-    <span class="md-ellipsis">
-      📁 Archivo HTML con solución orientativa
-    </span>
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#relacion-con-el-resultado-de-aprendizaje-5" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1816,126 +1714,6 @@ console.log(csv);
 <li>Compatible con navegadores y Node.js.</li>
 </ul>
 <hr />
-<h2 id="536-actividad-guiada-transformacion-y-visualizacion-de-datos">5.3.6 Actividad guiada: Transformación y visualización de datos</h2>
-<h3 id="enunciado">Enunciado</h3>
-<p>Estás desarrollando una página web para una tienda online. El sistema de inventario es antiguo y exporta los datos en formato <strong>XML</strong>. Tu objetivo es:</p>
-<ul>
-<li>Transformar los datos XML a <strong>JSON</strong> usando <strong>JavaScript</strong>.</li>
-<li>Mostrar los productos en una <strong>tabla HTML</strong>.</li>
-<li>Resaltar en rojo aquellos productos que tengan <strong>poco stock</strong>.</li>
-</ul>
-<h3 id="datos-de-partida-xml">📄 Datos de partida (XML)</h3>
-<pre><code class="language-xml">&lt;productos&gt;
-  &lt;producto&gt;
-    &lt;nombre&gt;Monitor 24&quot;&lt;/nombre&gt;
-    &lt;precio&gt;149.99&lt;/precio&gt;
-    &lt;stock&gt;15&lt;/stock&gt;
-  &lt;/producto&gt;
-  &lt;producto&gt;
-    &lt;nombre&gt;Teclado mecánico&lt;/nombre&gt;
-    &lt;precio&gt;89.50&lt;/precio&gt;
-    &lt;stock&gt;30&lt;/stock&gt;
-  &lt;/producto&gt;
-  &lt;producto&gt;
-    &lt;nombre&gt;Ratón inalámbrico&lt;/nombre&gt;
-    &lt;precio&gt;39.99&lt;/precio&gt;
-    &lt;stock&gt;10&lt;/stock&gt;
-  &lt;/producto&gt;
-&lt;/productos&gt;
-</code></pre>
-<h3 id="tareas">💻 Tareas</h3>
-<ol>
-<li>Introduce el XML como texto en tu archivo HTML.</li>
-<li>Usa <code>DOMParser</code> para convertirlo en un documento DOM.</li>
-<li>Implementa una función <code>xmlToJson()</code> para transformar el XML a JSON.</li>
-<li>Recorre el JSON y genera una tabla HTML con los productos.</li>
-<li>Resalta en rojo los productos con <code>stock &lt; 20</code>.</li>
-</ol>
-<h3 id="archivo-html-con-solucion-orientativa">📁 Archivo HTML con solución orientativa</h3>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;es&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;title&gt;Inventario de productos&lt;/title&gt;
-  &lt;style&gt;
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ccc; padding: 8px; }
-    .bajo-stock { background-color: #fdd; }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Inventario de productos&lt;/h1&gt;
-  &lt;div id=&quot;tabla-contenedor&quot;&gt;&lt;/div&gt;
-
-  &lt;script&gt;
-    const xmlTexto = `
-    &lt;productos&gt;
-      &lt;producto&gt;
-        &lt;nombre&gt;Monitor 24&quot;&lt;/nombre&gt;
-        &lt;precio&gt;149.99&lt;/precio&gt;
-        &lt;stock&gt;15&lt;/stock&gt;
-      &lt;/producto&gt;
-      &lt;producto&gt;
-        &lt;nombre&gt;Teclado mecánico&lt;/nombre&gt;
-        &lt;precio&gt;89.50&lt;/precio&gt;
-        &lt;stock&gt;30&lt;/stock&gt;
-      &lt;/producto&gt;
-      &lt;producto&gt;
-        &lt;nombre&gt;Ratón inalámbrico&lt;/nombre&gt;
-        &lt;precio&gt;39.99&lt;/precio&gt;
-        &lt;stock&gt;10&lt;/stock&gt;
-      &lt;/producto&gt;
-    &lt;/productos&gt;
-    `;
-
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlTexto, &quot;application/xml&quot;);
-
-    function xmlToJson(xml) {
-      const productos = [];
-      const nodos = xml.getElementsByTagName(&quot;producto&quot;);
-
-      for (let producto of nodos) {
-        const nombre = producto.querySelector(&quot;nombre&quot;).textContent;
-        const precio = parseFloat(producto.querySelector(&quot;precio&quot;).textContent);
-        const stock = parseInt(producto.querySelector(&quot;stock&quot;).textContent);
-        productos.push({ nombre, precio, stock });
-      }
-
-      return productos;
-    }
-
-    const inventario = xmlToJson(xmlDoc);
-
-    function mostrarTabla(datos) {
-      let html = `
-        &lt;table&gt;
-          &lt;thead&gt;
-            &lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Precio&lt;/th&gt;&lt;th&gt;Stock&lt;/th&gt;&lt;/tr&gt;
-          &lt;/thead&gt;
-          &lt;tbody&gt;
-      `;
-
-      datos.forEach(producto =&gt; {
-        const clase = producto.stock &lt; 20 ? &quot;bajo-stock&quot; : &quot;&quot;;
-        html += `
-          &lt;tr class=&quot;${clase}&quot;&gt;
-            &lt;td&gt;${producto.nombre}&lt;/td&gt;
-            &lt;td&gt;${producto.precio.toFixed(2)} €&lt;/td&gt;
-            &lt;td&gt;${producto.stock}&lt;/td&gt;
-          &lt;/tr&gt;
-        `;
-      });
-
-      html += &quot;&lt;/tbody&gt;&lt;/table&gt;&quot;;
-      document.getElementById(&quot;tabla-contenedor&quot;).innerHTML = html;
-    }
-
-    mostrarTabla(inventario);
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
 <h3 id="relacion-con-el-resultado-de-aprendizaje-5">Relación con el resultado de aprendizaje 5</h3>
 <table>
 <thead>
