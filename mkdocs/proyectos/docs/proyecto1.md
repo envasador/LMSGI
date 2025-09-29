@@ -3,185 +3,185 @@ hide:
   - navigation
 ---
 
-# **Proyecto: “Desarrollo de una Aplicación Web Completa con HTML5 y CSS3”**
+# **Proyecto 2: “Desarrollo con Estándares Web”**
 
-## **Agrupamiento:**
-Individual
+## Fase 1: Maquetación - 20/01/2025 
 
-## **Descripción del Proyecto:**
-El proyecto consiste en el desarrollo de una aplicación web completa utilizando HTML5 y CSS3, donde el alumnado deberá aplicar conocimientos avanzados de lenguajes de marcas para la creación de documentos web. Se enfocará en una estructura de varias páginas con diseño responsive, siguiendo estándares actuales. Además, se realizará un wireframe previo utilizando Balsamiq para planificar la estructura y el contenido de la aplicación.
+### Contexto del Proyecto
+Hemos recibido el encargo de desarrollar una página web que represente la identidad profesional o comercial de un cliente, ya sea en forma de portfolio personal o tienda online. Este proyecto deberá cumplir con los estándares más actuales en maquetación (HTML5 y CSS3) y garantizar accesibilidad, navegabilidad y validación en todos sus elementos.
 
-### **Objetivo:**
-- Analizar y aplicar las características de diferentes lenguajes de marcas en el desarrollo de una aplicación web.
-- Identificar y utilizar etiquetas y atributos HTML5 de manera efectiva.
-- Aplicar hojas de estilo CSS3 para mejorar la presentación y usabilidad de la aplicación.
-- Validar y optimizar los documentos HTML y CSS creados, asegurando la conformidad con los estándares web.
-- Fomentar la autonomía y capacidad de gestión del alumnado en la realización del proyecto.
+### Objetivo
+El equipo deberá diseñar y maquetar un sitio web compuesto por **cuatro páginas** interconectadas, **cada una con al menos tres secciones** claras que no incluyan únicamente el `header`, `main` o `footer`, aplicando buenas prácticas de accesibilidad y diseño adaptable.
 
-## **Trabajo a Realizar:**
-### **Fase 1: Planificación del Proyecto (Wireframe y Estructura HTML)**
+### Requisitos
 
-**Objetivo:**
-Planificar la estructura y diseño de su aplicación web antes de empezar a desarrollarla. Realizar un esquema detallado del contenido y diseño a implementar utilizando **Balsamiq** para el wireframe.
+#### **1. Estructura HTML5:**
+- Crear un documento con las secciones principales.
+- Usar etiquetas semánticas para organizar el contenido de cada página.
+- Implementar un formulario funcional con al menos seis campos diferentes, asegurando la validación de campos requeridos y tipos de datos adecuados.
+- Las cuatro páginas deben tener estructuras distintas, no solamente elementos seguidos en columna.
 
-#### Actividades:
-1. **Análisis de requisitos y objetivos del proyecto:**
-    - Debéis analizar el enunciado del proyecto y definir los requisitos funcionales y no funcionales. Además, elegid las tecnologías utilizadas de forma justificada, documentando las ventajas que proporcionan en todos los aspectos tanto en el ámbito de aplicación, como por su sintaxis.
-    - **Producto**: Un documento que recoja los objetivos de la aplicación web, qué información va a contener y qué funcionalidades básicas debe ofrecer.
+#### **2. Estilos CSS3:**
+- Usar una única hoja de estilos para toda la web, organizada mediante la metodología BEM para mantener consistencia y claridad.
+- Usar variables CSS para definir colores y tipografías, permitiendo fácil actualización del diseño.
+- Implementar un diseño responsive mediante media queries.
+- Incluir un diseño básico con soporte para Dark Mode.
+- Crear transiciones y animaciones que mejoren la experiencia del usuario, aplicándolas a elementos clave como botones, menús o imágenes.
 
-2. **Creación de un wireframe en Balsamiq:**
-    - El wireframe debe reflejar la estructura básica de la página web, mostrando la organización visual de los elementos principales (encabezado, menús de navegación, área de contenido principal, pie de página, etc.).
-    - **Producto**: Un wireframe en Balsamiq que incluya los componentes principales de la página web.
+#### **3. Contenido Esencial:**
+- Crear un menú de navegación funcional que enlace correctamente las páginas.
+- Incorporar una página con datos relevantes del cliente (pueden ser ficticios).
+- Añadir elementos multimedia que enriquezca la parte visual.
+- La jerarquía de la información debe estar clara.
 
-3. **Estructura HTML planificada:**
-    - Los estudiantes deben planificar cómo estructurarán su código HTML, identificando qué etiquetas y atributos usarán en cada sección.
-    - **Producto**: Un esquema detallado de la estructura HTMLy una justificación del uso de etiquetas semánticas.
+#### **4. Páginas Requeridas:**
+- **Página principal:** Breve introducción y resumen del sitio.
+- **Página de servicios o productos:** Descripción detallada del catálogo o servicios del cliente.
+- **Página de contacto:** Formulario funcional y enlaces a redes sociales.
+- **Página adicional:** De libre elección según el contexto (blog, testimonios, galería, etc.).
 
-#### Evaluación:
-Seréis evaluados y evaluadas en función de la capacidad para planificar y justificar su estructura, incluyendo el análisis de las etiquetas y lenguajes de marcas más relevantes para el proyecto (CE 1a, 1c, 1d, 1f, 2a).
+#### **6. Validación:**
+- Garantizar que tanto el HTML como el CSS pasen las validaciones del [W3C Validator](https://validator.w3.org/).
 
-### **Fase 2: Diseño y Desarrollo del Frontend (HTML y CSS).**
+#### Entregable
+Un repositorio en GitHub con una estructura correcta de carpetas del proyecto, que incluya:
 
-**Objetivo:**
-Desarrollar la estructura HTML de la aplicación web y aplicar hojas de estilo CSS para crear un diseño visual atractivo y funcional.
+- Los archivos HTML correspondientes a las páginas desarrolladas ubicados en la carpeta principal del repositorio.
+- Carpeta `css/` con la hoja de estilos `styles.css` aplicada a todo el proyecto.
+- Carpeta `assets/` con los recursos utilizados (imágenes, videos, etc.).
+- Un archivo `README.md` con la descripción del proyecto, instrucciones para visualizarlo y cualquier detalle relevante.
 
-#### Actividades:
-1. **Configuración del Entorno de Desarrollo:**
-- **Estructuración del proyecto:** Crear la estructura de carpetas (ej.: `/css`, `/img`, `/js`) y archivos necesarios (`index.html`, `estilos.css`).
-- **Configuración del editor de código:** Asegurar que el entorno de trabajo con WebStorm, o bien si utilizas VSCode que esté preparado con extensiones útiles como Prettier, Emmet, o Live Server.
+#### Evaluación (RA2)
 
-2. **Desarrollo de la Estructura HTML (al menos 7 páginas HTML):**
-    - Implementar la estructura HTML basada en el wireframe creado en la fase anterior. Se deben utilizar etiquetas semánticas y estructurales adecuadas.
-    - **Creación de la página de inicio:**
-        - Estructurar la página.
-        - Añadir elementos como el menú de navegación, secciones de contenido, y enlaces a otras páginas.
-    - **Desarrollo de páginas secundarias:**
-        - Página de información: Incluir secciones como “Acerca de”, servicios, etc.
-        - Página de contacto: Formulario de contacto con campos como nombre, email, y mensaje.
-        - Página adicional: Puede ser una galería, blog, o cualquier otra funcionalidad elegida.
-        - Etcétera.
-    - **Enlazado entre páginas:** Asegurar que todas las páginas estén correctamente enlazadas a través del menú de navegación y enlaces contextuales.
-    - **Producto**: Código HTML de la web que cumpla con las especificaciones planificadas.
+##### **Criterio de evaluación 2.b**
+**b) Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.**
 
-2. **Aplicación de hojas de estilo CSS:**
-    - **Organización correcta de los estilos**, para mejorar las buenas prácticas y mantenibilidad del proyecto a futuro.
-    - **Estilización:**
-        - Definir estilos globales para tipografía, colores, y espaciados.
-        - Estilo de la cabecera y pie de página: Definir diseño y disposición. 
-        - Utilizar CSS para aplicar estilos a la estructura HTML, creando una interfaz visual acorde al proyecto.
-        - **Efectos y transiciones en CSS:** Añadir transiciones suaves para efectos de hover, animaciones de aparición de elementos, etc.
-    - **Aplicación de diseño responsive:**
-        - Utilizar una estructura semántica correcta para la disposición de elementos.
-        - Definir puntos de ruptura para adaptarse a diferentes tamaños de pantalla.
-    - **Diseño de componentes específicos:**
-        - Estilo del formulario de contacto.
-        - Tarjetas de presentación para servicios o productos.
-        - Galería de imágenes con efectos de hover.
-        - Tablas de contenidos.
-        - Creación de menús desplegables.
-   - **Producto**: Archivo(s) CSS que definan el estilo de la aplicación web.
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha analizado y estructurado correctamente un documento HTML, identificando de forma clara y detallada las secciones principales (header, main, footer, aside, section, article, etc.) y justificando su uso. Ha aplicado todas las buenas prácticas vistas en clase, incluyendo semántica, indentación y comentarios útiles. | Documento HTML impecable con uso adecuado de etiquetas semánticas y una estructura clara, organizada y justificada. |
+| **8 (Notable)**     | Ha analizado y estructurado correctamente un documento HTML, identificando las secciones principales con un buen uso de etiquetas semánticas. Algunas justificaciones o aspectos de las buenas prácticas podrían mejorarse. | Estructura lógica y funcional, con pequeñas inconsistencias en la aplicación de semántica o en el cumplimiento de las buenas prácticas. |
+| **6 (Aprobado)**    | Ha identificado las secciones principales y las ha estructurado de manera básica, aunque algunas etiquetas están mal empleadas o faltan elementos semánticos importantes. Se han aplicado algunas buenas prácticas, pero no de forma consistente. | Uso básico de semántica y organización, pero con errores que dificultan la claridad o eficacia de la estructura. |
+| **4 (Insuficiente)**| Ha intentado identificar y estructurar las secciones, pero con errores graves en la semántica o con estructuras desorganizadas y poco claras. Las buenas prácticas vistas en clase no se han seguido correctamente. | Estructura confusa o incorrecta, con etiquetas mal utilizadas y sin cumplir con estándares básicos. |
+| **2 (Deficiente)**  | Ha presentado un trabajo con errores críticos en la estructura del documento HTML, sin diferenciar las secciones principales ni emplear semántica. No hay evidencia de buenas prácticas ni de comprensión del contenido. | Documento HTML incompleto o incoherente, con una estructura desorganizada y sin valor práctico. |
+| **0 (No realizado)**| No ha realizado ninguna estructura de documento HTML o el uso es inapropiado y sin relación con el criterio evaluado. Tampoco ha seguido ninguna de las buenas prácticas vistas en clase. | No hay evidencia de comprensión ni de trabajo realizado. |
 
-3. **Implementación de diseño responsive:**
-    - El diseño debe ser adaptable a diferentes dispositivos (móvil, tablet, escritorio), utilizando técnicas de diseño responsive como media queries.
-    - **Producto**: Una página web responsiva que se adapte bien a múltiples tamaños de pantalla.
+###### **Buenas prácticas a evaluar**
 
-4. **Inserción de imágenes y vídeos:**
-   - Añadir imágenes y vídeos al contenido de la página web, asegurándose de que están bien optimizados para la web (tamaño, formato) y que cumplen con las buenas prácticas de accesibilidad (uso de `alt` en imágenes, subtítulos en vídeos).
-   - **Producto**: Página web con contenidos multimedia bien integrados y accesibles.
-
-
-#### Evaluación:
-Se evaluará la estructura HTML y el diseño CSS aplicado, la utilización de etiquetas semánticas y la capacidad del estudiante para implementar un diseño responsivo que siga buenas prácticas (CE 2b, 2c, 2d, 2e, 2f, 2g).
-
-### **Fase 3: Implementación y Validación del Código**
-
-**Objetivo:**
-Revisad y validar su código HTML y CSS, asegurándose de que cumple con los estándares de calidad y accesibilidad web.
-
-#### Actividades:
-1. **Validación del código HTML:**
-    - Utilizar herramientas como el **validador HTML de W3C** para comprobar que el código HTML está bien formado y sigue las reglas sintácticas correctas.
-    - **Producto**: Informes de validación que muestren el estado del código HTML y los errores corregidos.
-
-2. **Validación del código CSS:**
-    - Validar el archivo CSS con herramientas específicas **validador CSS de W3C** para asegurar que no contiene errores y que sigue las mejores prácticas de estilos.
-    - **Producto**: Informes de validación de CSS y correcciones aplicadas.
-
-3. **Optimización y comprobación de accesibilidad, usabilidad:**
-    - **Optimización de rendimiento:**
-       - Minimizar el archivo CSS.
-       - Comprimir imágenes sin pérdida de calidad.
-    - **Pruebas de usabilidad:**
-       - Probar la aplicación en diferentes dispositivos y navegadores (Chrome, Firefox, Edge, dispositivos móviles) para asegurar la consistencia.
-       - Utilizar herramientas como **Lighthouse** o **Wave** para revisar la accesibilidad de la web y realizar mejoras según las recomendaciones obtenidas.
-   - **Producto**: Informe de accesibilidad y mejoras aplicadas al proyecto.
-
-#### Evaluación:
-La capacidad del estudiante para crear documentos HTML y CSS bien formados será evaluada, así como su competencia para corregir errores y mejorar la accesibilidad (CE 1h, 1g, 2h).
-
-
-### **Fase 4: Presentación del Proyecto (Videotutorial)**
-**Objetivo:**
-Que los estudiantes presenten su trabajo, 
-explicando sus decisiones de diseño y desarrollo, 
-y demostrando que han seguido las buenas prácticas de validación. 
-
-**Puntos a tener en cuenta**
-
-1. **Presentación del proyecto:**
-    - Debéis preparar una presentación oral de su proyecto, explicando las decisiones de diseño (wireframe, estructura HTML, CSS) y las soluciones técnicas implementadas.
-    - **Producto**: Una presentación clara y bien estructurada que resuma el trabajo realizado y justifique las decisiones tomadas.
-
-2. **Demostración de la validación y mejoras:**
-    - Mostrad cómo se ha validado el código HTML y CSS.
-    - **Producto**: Evidencia de la validación y mejoras aplicadas, explicadas durante la presentación.
-
-**Entrega:**
-Para la entrega del videotutorial, cada estudiante debe realizar una presentación clara y detallada de todo el proceso de desarrollo del proyecto.
-El video debe incluir desde la fase inicial de análisis y planificación hasta la implementación final de la interfaz web. Es fundamental que se expliquen
-las decisiones de diseño tomadas, las herramientas utilizadas, la maquetación con HTML5 y CSS3, así como los aspectos que sean destacables como la arquitectura. 
-El videotutorial debe tener una duración máxima de 7 minutos y seguir un orden lógico que permita entender fácilmente cada paso del proyecto, destacando los problemas encontrados y las soluciones aplicadas. 
-Además, se recomienda incluir una breve conclusión sobre el resultado final y posibles mejoras.
-Muy importante, ten en cuenta los **criterios de evaluación en tu explicación, debe quedar claro cada uno.**
-
-
-#### Evaluación:
-La presentación evaluará la capacidad del estudiante para comunicar claramente su trabajo y decisiones técnicas (soft skill: comunicación), así como su habilidad para gestionar el desarrollo del proyecto (p, w) además de analizar esas competencias dentro de la rúbrica del proyecto.
-
+1. **Indentación y legibilidad:** Código correctamente indentado para facilitar la lectura.
+2. **Uso de etiquetas semánticas:** Uso adecuado de etiquetas como `<header>`, `<main>`, `<footer>`, `<section>`, `<article>`, entre otras.
+3. **Comentarios:** Uso de comentarios útiles para explicar la estructura del documento.
+4. **Organización lógica:** Estructura jerárquica y lógica que refleje la intención del contenido del documento.
+5. **Validación:** Código que pase las validaciones del W3C sin errores.
 
 ---
-## **Recursos:**
-- [Documentación de HTML5](https://developer.mozilla.org/es/docs/Web/HTML)
-- [Documentación de CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-- [Balsamiq (para wireframes)](https://balsamiq.com/)
-- [Validador de HTML y CSS de W3C](https://validator.w3.org/)
 
-## **Evaluación y Calificación del proyecto:**
-### **Rúbrica de Evaluación Detallada:**
+##### **Criterio de evaluación 2.c**
+**c) Se ha reconocido y aplicado de forma práctica la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.**
 
-| **Criterio de Evaluación** | **Nivel 1 (Insuficiente)** | **Nivel 2 (Suficiente)** | **Nivel 3 (Bien)** | **Nivel 4 (Notable)** | **Nivel 5 (Sobresaliente)**                                                                                                                                                                            |
-|---|---|---|---|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **1a) Se han identificado las características generales de los lenguajes de marcas.** | No se identifican correctamente las características. Muestra dependencia total del profesor. | Identifica algunas características generales de los lenguajes de marcas, pero con errores. Necesita ayuda para aclarar conceptos. | Identifica las características generales de manera adecuada, pero necesita apoyo ocasional. | Identifica correctamente las características generales con escasa supervisión. Demuestra capacidad de análisis. | Identifica de forma precisa y detallada todas las características generales, trabajando de manera completamente autónoma, y las comunica de forma clara y eficaz durante la presentación del proyecto. |
-| **1c) Se han clasificado los lenguajes de marcas e identificado los más relevantes.** | No clasifica los lenguajes o lo hace incorrectamente. | Clasifica algunos lenguajes de marcas, pero con errores significativos. | Clasifica los lenguajes de marcas correctamente, pero de manera incompleta. | Clasifica e identifica lenguajes de forma completa y con corrección. | Clasificación exhaustiva, identificando lenguajes de relevancia actual y futura. Trabaja de manera autónoma e investigativa, explicando claramente sus elecciones en la presentación.                  |
-| **1d) Se han diferenciado sus ámbitos de aplicación.** | No se identifican los ámbitos de aplicación o están mal definidos. | Diferencia algunos ámbitos de aplicación, pero con errores. | Diferencia correctamente los principales ámbitos, pero sin detalles. | Diferencia correctamente los ámbitos de aplicación, aportando detalles y ejemplos. | Diferencia todos los ámbitos de aplicación, mostrando un análisis crítico y una investigación adicional, y comunica con claridad sus conclusiones durante la presentación.                             |
-| **1f) Se han analizado las características propias de diferentes lenguajes de marcas.** | No se analizan características o son incorrectas. | Se analizan características de forma parcial y con errores. | Analiza características de manera adecuada, pero sin profundizar en las diferencias entre lenguajes. | Análisis detallado y sin errores. Aporta ejemplos relevantes. | Análisis profundo y crítico de las características de varios lenguajes, proponiendo alternativas, y explicando claramente los resultados en la fase de presentación.                                   |
-| **1g) Se ha identificado la estructura de un documento y sus reglas sintácticas.** | No se identifican correctamente las estructuras o reglas sintácticas. | Identifica de forma básica la estructura, pero con errores en las reglas sintácticas. | Identifica la estructura y reglas sintácticas de manera correcta, pero sin precisión en algunos casos. | Identifica de forma precisa la estructura y las reglas sintácticas de documentos, con escasa supervisión. | Identifica y analiza detalladamente las estructuras y reglas sintácticas, trabajando de manera autónoma y presentando el análisis de forma organizada.                                                 |
-| **1h) Se ha contrastado la necesidad de crear documentos bien formados y la influencia en su procesamiento.** | No se contrastan las ventajas de documentos bien formados o se hace incorrectamente. | Se contrastan algunas ventajas, pero con errores o sin claridad. | Se contrastan correctamente las ventajas de documentos bien formados, pero de manera básica. | Contrasta de forma detallada y correcta, mostrando la influencia en el procesamiento de los documentos. | Análisis profundo sobre la importancia de documentos bien formados, explicando claramente los efectos en el procesamiento durante la presentación.                                                     |
-| **2a) Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones y estándares.** | No identifica los lenguajes de marcas o lo hace de forma incorrecta. | Identifica algunos lenguajes de manera incompleta y con errores. | Identificación adecuada, pero sin profundización en las versiones y estándares. | Clasificación correcta y detallada de lenguajes y versiones web. | Clasificación y análisis detallado, proponiendo el uso de lenguajes más adecuados para distintos contextos y presentando las conclusiones de manera efectiva.                                          |
-| **2b) Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.** | No se analiza la estructura de un documento HTML correctamente. | Análisis incompleto o con errores en la identificación de secciones. | Análisis adecuado, pero básico, de la estructura HTML y sus secciones. | Análisis detallado y sin errores de la estructura y secciones de un documento HTML. | Análisis exhaustivo de la estructura, identificando posibles mejoras y comunicando las observaciones con claridad en la presentación.                                                                  |
-| **2c) Se ha reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.** | No se reconocen correctamente las etiquetas y atributos de HTML. | Reconocimiento básico y con errores de las etiquetas y atributos. | Reconocimiento adecuado, pero sin profundización en el uso avanzado de etiquetas. | Reconocimiento correcto y detallado de las principales etiquetas y atributos de HTML. | Uso avanzado y creativo de las etiquetas y atributos, explicando sus ventajas y aplicaciones con claridad en la presentación del proyecto.                                                             |
-| **2d) Se han establecido las semejanzas y diferencias entre las diferentes versiones de HTML.** | No se identifican semejanzas ni diferencias o se hace de manera incorrecta. | Se identifican algunas diferencias y semejanzas, pero con errores. | Comparación adecuada entre versiones, pero de manera superficial. | Comparación detallada y sin errores entre versiones de HTML. | Comparación exhaustiva, mostrando un entendimiento profundo de la evolución del lenguaje y presentando las conclusiones de manera organizada.                                                          |
-| **2e) Se han utilizado herramientas en la creación de documentos web.** | No se utilizan herramientas o se utilizan de forma incorrecta. | Uso básico de herramientas, pero con errores significativos. | Uso adecuado de herramientas, pero sin optimización. | Uso eficiente de herramientas para la creación de documentos web. | Uso avanzado de herramientas y tecnologías, demostrando capacidad de autoaprendizaje y explicando su proceso de selección de herramientas en la fase de presentación.                                  |
-| **2f) Se han identificado las ventajas que aporta la utilización de hojas de estilo.** | No se identifican las ventajas o se hace incorrectamente. | Identificación básica de las ventajas, pero con errores. | Identificación adecuada, pero superficial de las ventajas de las hojas de estilo. | Identificación clara y detallada de las ventajas. | Identificación profunda de las ventajas, explicando y comunicando de forma eficaz las decisiones tomadas en cuanto a la aplicación de hojas de estilo.                                                 |
-| **2g) Se han aplicado hojas de estilo.** | No se aplican hojas de estilo correctamente. | Aplicación básica de hojas de estilo, con errores. | Aplicación adecuada, pero con un diseño básico. | Aplicación eficiente de hojas de estilo, con un diseño responsive y adaptativo. | Aplicación avanzada de hojas de estilo, con optimización para diferentes dispositivos y un diseño innovador, justificando de forma clara las decisiones de diseño durante la presentación.             |
-| **2h) Se han validado documentos HTML y CSS.** | No se validan los documentos o contienen múltiples errores. | Intento de validación con muchos errores que no son corregidos. | Validación correcta en la mayor parte del código HTML y CSS. | Validación completa y corrección de errores en todos los documentos. | Validación exhaustiva, con propuestas de optimización del código y explicación clara del proceso de validación y mejoras en la presentación.                                                           |
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha utilizado de manera impecable las principales etiquetas y atributos de HTML en un proyecto práctico, demostrando un entendimiento completo de su funcionalidad. Además, ha seguido todas las buenas prácticas vistas en clase, como la semántica adecuada, la aplicación correcta de atributos globales (id, class, style, etc.), y la implementación de atributos específicos en etiquetas como `<img>`, `<a>`, `<form>`, entre otras. | Código organizado y funcional que demuestra un uso excelente de etiquetas y atributos, aplicando correctamente las buenas prácticas. |
+| **8 (Notable)**     | Ha demostrado un buen entendimiento y uso de las etiquetas y atributos principales en un proyecto práctico, aunque algunos elementos (como ciertos atributos o etiquetas) podrían estar mejor implementados o justificarse más claramente. Las buenas prácticas se han seguido en su mayoría, con pequeños errores. | Uso adecuado de etiquetas y atributos principales, con un cumplimiento mayoritario de las buenas prácticas vistas en clase. |
+| **6 (Aprobado)**    | Ha empleado las etiquetas y atributos principales en un proyecto práctico, pero de forma limitada o con errores en algunos casos. Se observa un conocimiento básico de las buenas prácticas, aunque no siempre se aplican correctamente. | Uso funcional de etiquetas y atributos, pero con errores o carencias en su implementación o justificación. |
+| **4 (Insuficiente)**| Ha realizado un intento de usar etiquetas y atributos, pero con errores graves o sin demostrar un conocimiento claro de su funcionalidad. Las buenas prácticas vistas en clase no se han aplicado correctamente. | Código funcionalmente incorrecto o con un uso inadecuado de etiquetas y atributos, sin aplicar estándares básicos. |
+| **2 (Deficiente)**  | Ha presentado un trabajo que demuestra un conocimiento muy limitado de las etiquetas y atributos principales. El proyecto está incompleto o es incoherente, y no sigue las buenas prácticas vistas en clase. | Uso mínimo o erróneo de etiquetas y atributos, sin una estructura o funcionalidad práctica coherente. |
+| **0 (No realizado)**| No ha realizado ninguna aplicación práctica del uso de etiquetas y atributos de HTML, o el trabajo presentado no tiene relación con el criterio evaluado. | No hay evidencia de comprensión ni de trabajo realizado. |
+
+###### **Buenas prácticas a evaluar**
+
+1. **Uso adecuado de etiquetas clave:** Correcta implementación de etiquetas como `<img>` (con atributos `alt` y `src`), `<a>` (con `href` y `target`), `<form>` (con `action`, `method`, etc.), y otras relevantes.
+2. **Semántica:** Uso de etiquetas semánticas como `<header>`, `<section>`, `<footer>` en lugar de `<div>` genéricos.
+3. **Atributos globales:** Aplicación de atributos globales como `id`, `class`, `title`, o `style` en los contextos adecuados.
+4. **Validación:** Garantizar que el código HTML pase las validaciones del W3C.
+5. **Comentarios y legibilidad:** Añadir comentarios útiles y mantener una estructura clara y organizada del código.
 
 ---
-### Incorporación de Competencias Profesionales y Autonomía:
-En cada nivel de la rúbrica se hace referencia a:
- - **Autonomía**: Los niveles superiores incluyen la capacidad de trabajar de manera independiente, investigativa y resolutiva.
- - **Competencia h**: Referida en criterios relacionados con la **creación de documentos web** y el **desarrollo de componentes multimedia**, especialmente en las fases de aplicación de HTML y CSS.
- - **Competencia p**: Valorada en el uso de **nuevas herramientas** y la **adaptación tecnológica**, especialmente en la utilización de herramientas para la creación y validación de documentos web.
- - **Competencia w**: Se incluye en la **responsabilidad en la entrega del trabajo** y la capacidad de cumplir con las normas profesionales y éticas durante el desarrollo del proyecto.
+
+##### **Criterio de evaluación 2.e**
+**e) Se han utilizado herramientas en la creación de documentos web.**
+
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha utilizado de forma eficiente y profesional herramientas como Visual Studio Code, WebStorm, editores de diseño o validadores de código. Ha demostrado conocimiento avanzado de funciones como extensiones útiles, linters, atajos de teclado y control de versiones con Git y GitHub. Además, ha seguido todas las buenas prácticas vistas en clase. | Uso experto de las herramientas seleccionadas, con aplicación de buenas prácticas y optimización del flujo de trabajo. |
+| **8 (Notable)**     | Ha empleado herramientas como Visual Studio Code, WebStorm y GitHub de manera adecuada, utilizando funciones básicas y algunas avanzadas, aunque podría optimizar más el uso de extensiones o integrar linters. Las buenas prácticas vistas en clase se han aplicado mayoritariamente. | Conocimiento sólido de las herramientas, aunque con un uso menos optimizado de funciones avanzadas o extensiones. |
+| **6 (Aprobado)**    | Ha demostrado un uso funcional de las herramientas básicas para la creación de documentos web, como editores de texto y validadores, pero con un conocimiento limitado de funciones más avanzadas o configuraciones personalizadas. Ha seguido algunas buenas prácticas vistas en clase. | Uso funcional de las herramientas, pero con carencias en el aprovechamiento de su potencial completo. |
+| **4 (Insuficiente)**| Ha utilizado herramientas de creación web, pero de forma limitada o con errores frecuentes que dificultan el desarrollo del proyecto. Las buenas prácticas vistas en clase no se han seguido correctamente. | Uso básico o inconsistente de las herramientas, con errores que afectan al resultado final. |
+| **2 (Deficiente)**  | Ha presentado un trabajo que demuestra un conocimiento muy básico o erróneo del uso de las herramientas. No ha aplicado las buenas prácticas vistas en clase. | Uso mínimo o inapropiado de las herramientas, con resultados incompletos o de baja calidad. |
+| **0 (No realizado)**| No ha utilizado ninguna herramienta o no ha presentado evidencia de haber aplicado las herramientas adecuadamente en la creación de documentos web. | No hay evidencia de uso de herramientas ni de trabajo relacionado con el criterio. |
+
+
+###### **Buenas prácticas a evaluar**
+
+1. **Optimización del editor:** Uso de extensiones, temas, y configuraciones específicas para mejorar la productividad (por ejemplo, Prettier, linters o Emmet).
+2. **Control de versiones:** Aplicación de Git para gestionar versiones del proyecto y uso adecuado de GitHub para compartir el trabajo.
+3. **Validación:** Uso de validadores como el W3C Validator para HTML y CSS.
+4. **Organización de archivos:** Mantener una estructura clara de carpetas y archivos dentro del proyecto.
+5. **Eficiencia en el flujo de trabajo:** Uso de atajos de teclado, terminal integrada, y otros recursos para optimizar la creación de documentos web.
+
+---
+
+##### **Criterio de evaluación 2.f**
+**f) Se han identificado y demostrado de forma práctica las ventajas que aporta la utilización de hojas de estilo.**
+
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha implementado un proyecto web que demuestra de manera clara y completa las ventajas de las hojas de estilo, integrando la metodología BEM, uso de variables para diseño consistente, diseño responsive con media queries, y transiciones y animaciones para mejorar la experiencia del usuario. Además, ha seguido todas las buenas prácticas vistas en clase, incluyendo organización del código, comentarios claros y consistencia en la nomenclatura. | Uso impecable de BEM, variables, animaciones y diseño responsive, acompañado de un código organizado y acorde a las buenas prácticas. |
+| **8 (Notable)**     | Ha desarrollado un proyecto web que utiliza correctamente las hojas de estilo, aplicando BEM, variables CSS y diseño responsive, aunque las transiciones o animaciones podrían estar mejor implementadas o justificadas. Ha seguido la mayoría de las buenas prácticas vistas en clase, con pequeños errores o inconsistencias en la estructura del código. | Buen uso de las ventajas del CSS y una aplicación mayoritaria de buenas prácticas, aunque con detalles a mejorar. |
+| **6 (Aprobado)**    | Ha creado un proyecto que aplica las ventajas básicas de las hojas de estilo, pero de forma limitada o con errores en la metodología BEM, diseño responsive o transiciones y animaciones. Se ha esforzado en aplicar algunas buenas prácticas vistas en clase, pero con inconsistencias o poca claridad en la organización del código. | Uso básico de CSS y cumplimiento parcial de las buenas prácticas, lo que limita la calidad general del trabajo. |
+| **4 (Insuficiente)**| Ha presentado un trabajo con aplicación incorrecta o muy limitada de las hojas de estilo, omitiendo elementos importantes como BEM, variables, transiciones o diseño responsive. Las buenas prácticas vistas en clase no se han aplicado o se han aplicado de forma muy deficiente. | Código desorganizado, sin seguir las normas básicas enseñadas en clase, lo que dificulta su comprensión y mantenimiento. |
+| **2 (Deficiente)**  | Ha presentado un trabajo con errores graves en el uso de las hojas de estilo, sin aplicar ventajas como la separación de contenido y presentación, y con código desorganizado que demuestra falta de comprensión de las buenas prácticas. | No se identifican intentos de aplicar BEM, variables, transiciones o diseño responsive; el trabajo es incompleto o incoherente. |
+| **0 (No realizado)**| No ha realizado ninguna demostración práctica de las ventajas de las hojas de estilo o el uso es inapropiado. Tampoco ha seguido ninguna de las buenas prácticas vistas en clase. | No hay evidencia de conocimientos sobre buenas prácticas ni de uso práctico de CSS. |
+
+
+###### **Buenas prácticas a evaluar**
+1. **Organización del código:** Separación clara entre secciones del CSS y comentarios explicativos cuando sea necesario.
+2. **Uso de herramientas y validación:** Garantizar que el CSS pase las validaciones del W3C y utilizar editores que faciliten el seguimiento de las normas.
+3. **Evitar repeticiones:** Aplicación de principios DRY (Don't Repeat Yourself) en la hoja de estilos.
+4. **Claridad y mantenimiento:** Uso de variables CSS y estructuras que permitan cambios fáciles y rápidos en el diseño.
+
+---
+
+##### **Criterio de evaluación 2.g**
+**g) Se han aplicado hojas de estilo.**
+
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha aplicado hojas de estilo correctamente, utilizando un archivo CSS único, organizado y siguiendo las metodologías vistas en clase (por ejemplo, BEM). Ha hecho un uso avanzado de propiedades CSS, como variables, media queries, transiciones, animaciones, y soporte para Dark Mode. Además, ha optimizado el código para mantener consistencia y legibilidad. | Uso impecable de CSS, con técnicas avanzadas, buenas prácticas, y un diseño visualmente atractivo y funcional. |
+| **8 (Notable)**     | Ha aplicado hojas de estilo correctamente, utilizando un archivo CSS único y organizado. Ha implementado algunas técnicas avanzadas (como media queries o transiciones), aunque con ciertas áreas que podrían mejorarse en optimización o consistencia. Las buenas prácticas vistas en clase se han aplicado mayoritariamente. | Uso sólido de CSS, con algunas carencias menores en la optimización del código o en la consistencia del diseño. |
+| **6 (Aprobado)**    | Ha utilizado hojas de estilo básicas para aplicar estilos, pero con un enfoque limitado o errores en la organización. Se han implementado técnicas de CSS básicas, aunque con un uso inconsistente de metodologías como BEM o buenas prácticas generales. | Aplicación funcional pero básica de CSS, con errores o áreas de mejora en organización o estilo avanzado. |
+| **4 (Insuficiente)**| Ha intentado aplicar hojas de estilo, pero con errores graves en la organización, funcionalidad o consistencia del diseño. No se han seguido las buenas prácticas vistas en clase, como el uso de variables o técnicas modernas. | Código CSS desorganizado o incorrecto que afecta negativamente al diseño y funcionalidad. |
+| **2 (Deficiente)**  | Ha presentado un trabajo que demuestra un conocimiento muy básico de CSS, sin lograr resultados coherentes o funcionales. Las hojas de estilo no cumplen con los estándares mínimos. | Aplicación muy limitada de CSS, sin estructura clara ni resultados funcionales. |
+| **0 (No realizado)**| No ha presentado hojas de estilo o el trabajo presentado no tiene relación con el criterio evaluado. | No hay evidencia de trabajo realizado ni de aplicación de hojas de estilo. |
+
+###### **Buenas prácticas a evaluar**
+
+1. **Metodología BEM:** Organización del CSS utilizando la metodología BEM para facilitar la claridad y la reutilización.
+2. **Uso de variables:** Implementación de variables para definir colores, tipografías y otros aspectos repetitivos del diseño.
+3. **Responsive Design:** Uso de media queries para garantizar la adaptabilidad del diseño a diferentes dispositivos.
+4. **Dark Mode:** Implementación básica de un tema oscuro utilizando CSS variables o clases específicas.
+5. **Transiciones y animaciones:** Uso de propiedades como `transition` y `@keyframes` para mejorar la experiencia del usuario.
+6. **Organización del archivo CSS:** Estructuración del código en secciones claras y comentadas.
+7. **Validación:** Código CSS que pase las validaciones del W3C sin errores.
+
+---
+
+##### **Criterio de evaluación 2.h**
+**h) Se han validado documentos HTML y CSS.**
+
+| **Nivel de Logro** | **Descripción**                                                                                          | **Indicador**                                                                                       |
+|---------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| **10 (Excelente)**  | Ha validado correctamente todos los documentos HTML y CSS utilizando herramientas como el W3C Validator, sin errores. Ha seguido las buenas prácticas para garantizar la correcta estructura y semántica del código. | Los documentos HTML y CSS pasan la validación sin errores, y el código está libre de problemas estructurales. |
+| **8 (Notable)**     | Ha validado los documentos HTML y CSS con pocas advertencias o errores menores. Aunque no hay errores graves, podría haber realizado una validación más exhaustiva o corregir algunos pequeños detalles. | Los documentos HTML y CSS pasan la mayoría de las validaciones, con algunos errores o advertencias menores. |
+| **6 (Aprobado)**    | Ha realizado una validación básica de los documentos HTML y CSS, aunque con algunos errores que afectan a la estructura o semántica. Los documentos son funcionales, pero no cumplen completamente con los estándares de validación. | Validación básica completada con algunos errores o advertencias importantes, pero el código sigue funcionando de forma aceptable. |
+| **4 (Insuficiente)**| Ha realizado un intento de validación, pero los documentos HTML y CSS contienen varios errores que afectan la estructura. La validación no se ha llevado a cabo correctamente o se ha ignorado. | Los documentos HTML y CSS tienen errores significativos que requieren corrección, y no pasan las validaciones básicas. |
+| **2 (Deficiente)**  | No ha validado los documentos HTML y CSS, o no ha corregido los errores que se detectaron. El código está plagado de errores de validación y no sigue los estándares adecuados. | El código no ha sido validado o tiene errores graves que impiden que los documentos HTML y CSS pasen la validación. |
+| **0 (No realizado)**| No ha realizado ninguna validación de los documentos HTML y CSS, o los documentos no son válidos y no cumplen con los requisitos básicos. | No hay evidencia de que se haya realizado ningún tipo de validación. |
+
+###### **Buenas prácticas a evaluar**
+
+1. **Uso de W3C Validator:** Validación de los documentos HTML y CSS utilizando las herramientas adecuadas del W3C Validator, sin errores.
+2. **Estructura semántica:** Validación de la estructura semántica de las páginas HTML y corrección de errores relacionados con el uso de etiquetas.
+3. **Optimización del código:** Validación para asegurarse de que el código CSS esté libre de errores de sintaxis y que el archivo sea eficiente.
+4. **Documentación:** Incluir instrucciones de validación en el archivo README.md y una descripción clara de cómo se validó el proyecto.
 
 ---
