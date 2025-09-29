@@ -1,6 +1,6 @@
 # Proyecto 1: "Desarrollo con Estándares Web"
 
-**Fase 1: Maquetación5**
+**Fase 1: Maquetación**
 
 ## ¿De qué va esto?
 
