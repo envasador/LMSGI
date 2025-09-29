@@ -4,7 +4,7 @@
 
 ## ¿De qué va esto?
 
-Tienes un encargo: desarrollar una página web que represente la identidad profesional o comercial de un cliente. Puede ser cualquier producto que cumpla las directrices que a continuación se detallan.. Lo importante es que cumpla con los estándares actuales de desarrollo web (HTML5 y CSS3) y que sea accesible, navegable y válida.
+Tienes un encargo: desarrollar una página web que represente la identidad profesional o comercial de un cliente. Puede ser cualquier producto que cumpla las directrices que a continuación se detallan. Lo importante es que cumpla con los estándares actuales de desarrollo web (HTML5 y CSS3) y que sea accesible, navegable y válida.
 
 No es un ejercicio académico sin sentido. Es un proyecto real que podrías entregar a un cliente de verdad.
 
