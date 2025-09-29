@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+---
+
+---
 # Proyecto 1: "Desarrollo con Estándares Web"
 
 **Fase 1: Maquetación**
