@@ -1,6 +1,6 @@
 INHERIT: ../base.yml
 site_name: Lenguajes de Marcas - Proyectos
-site_dir: ../../docs/proyectos
+site_dir: ../../docs/proyectos/
   
 
 # Page tree
