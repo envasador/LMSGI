@@ -1,7 +1,6 @@
 # UD2: Introducción a JavaScript y manipulación del DOM
 
 ---
-
 # PARTE 1: FUNDAMENTOS DE JAVASCRIPT
 
 ## 1. ¿Qué es JavaScript?
@@ -19,17 +18,17 @@ JavaScript es un **lenguaje de programación interpretado** que se ejecuta princ
 ### JavaScript en el ecosistema web
 
 ```
-┌────────────────────────────────────────────────────────────┐
-│                    PÁGINA WEB                              │
-├────────────────────────────────────────────────────────────┤
-│  HTML            │  CSS            │  JavaScript           │
-│  (Estructura)    │  (Presentación) │  (Comportamiento)     │
-│                  │                 │                       │
-│  - Contenido     │  - Colores      │  - Interactividad     │
-│  - Semántica     │  - Tipografía   │  - Validación         │
-│  - Jerarquía     │  - Layout       │  - Dinamismo          │
-│  - Accesibilidad │ - Animaciones   │  - Comunicación API   │
-└────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                    PÁGINA WEB                           │
+├─────────────────────────────────────────────────────────┤
+│  HTML          │  CSS           │  JavaScript           │
+│  (Estructura)  │  (Presentación)│  (Comportamiento)     │
+│                │                │                       │
+│  - Contenido   │  - Colores     │  - Interactividad     │
+│  - Semántica   │  - Tipografía  │  - Validación         │
+│  - Jerarquía   │  - Layout      │  - Dinamismo          │
+│  - Accesibilidad│ - Animaciones │  - Comunicación API   │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -59,7 +58,7 @@ No todos los navegadores soportan todas las características de JavaScript al mi
 - **Can I Use**: https://caniuse.com/
 - **Tabla Kangax**: https://kangax.github.io/compat-table/es6/
 
-> Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
+Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
 
 ---
 
@@ -190,7 +189,78 @@ Existen tres formas de incluir JavaScript, ordenadas de **menos a más recomenda
 
 ---
 
-## 5. Variables y constantes
+## 5. Modo estricto: "use strict"
+
+JavaScript es un lenguaje muy permisivo por razones históricas de compatibilidad. Esto significa que permite ciertas prácticas que pueden causar errores difíciles de detectar. El **modo estricto** activa un conjunto de reglas más rigurosas que ayudan a escribir código más seguro y limpio.
+
+### ¿Qué hace "use strict"?
+
+- **Convierte errores silenciosos en excepciones**: Acciones que antes fallaban en silencio ahora lanzan errores.
+- **Prohíbe sintaxis problemática**: Evita el uso de características confusas o peligrosas.
+- **Prepara el código para futuras versiones**: Reserva palabras clave que se usarán en ECMAScript futuro.
+
+### Cómo activarlo
+
+```javascript
+// Al inicio del archivo (afecta a todo el archivo)
+"use strict";
+
+let nombre = "Ana";
+// ... resto del código
+
+// O dentro de una función (afecta solo a esa función)
+function miFuncion() {
+    "use strict";
+    // código en modo estricto
+}
+```
+
+### Errores que detecta "use strict"
+
+```javascript
+"use strict";
+
+// ❌ Error: Variable no declarada
+nombre = "Ana";  // ReferenceError: nombre is not defined
+// ✅ Correcto
+let nombre = "Ana";
+
+// ❌ Error: Eliminar variables o funciones
+let x = 10;
+delete x;  // SyntaxError
+
+// ❌ Error: Parámetros duplicados
+function suma(a, a, b) { }  // SyntaxError
+
+// ❌ Error: Escritura en propiedades de solo lectura
+const obj = {};
+Object.defineProperty(obj, "x", { value: 0, writable: false });
+obj.x = 10;  // TypeError
+
+// ❌ Error: Uso de palabras reservadas para el futuro
+let implements = 1;  // SyntaxError
+let interface = 2;   // SyntaxError
+let private = 3;     // SyntaxError
+
+// ❌ Error: Números octales con sintaxis antigua
+let octal = 010;  // SyntaxError (usar 0o10 en su lugar)
+```
+
+### ¿Cuándo usarlo?
+
+| Situación | ¿Usar "use strict"? |
+|-----------|---------------------|
+| Código nuevo | ✅ Siempre |
+| Proyectos profesionales | ✅ Siempre |
+| Aprendizaje | ✅ Recomendado (detecta errores comunes) |
+| Código legacy antiguo | ⚠️ Con cuidado (puede romper funcionalidad) |
+| Módulos ES6 (`import`/`export`) | ✅ Automático (ya son estrictos por defecto) |
+
+> **¿Cuál es la práctica actual?** En proyectos modernos con módulos ES6 (`import`/`export`), el modo estricto está **activado automáticamente**, así que no necesitas escribirlo. Sin embargo, si trabajas con scripts tradicionales (sin módulos), es muy recomendable añadir `"use strict";` al inicio de cada archivo. En el contexto de aprendizaje, usarlo te ayudará a detectar errores y adoptar buenas prácticas desde el principio.
+
+---
+
+## 6. Variables y constantes
 
 ### Declaración de variables
 
@@ -250,7 +320,7 @@ class Usuario { }
 
 ---
 
-## 6. Tipos de datos
+## 7. Tipos de datos
 
 JavaScript tiene **tipos primitivos** y **tipos complejos (objetos)**.
 
@@ -344,7 +414,7 @@ frutas.includes("pera"); // true
 
 ---
 
-## 7. Operadores
+## 8. Operadores
 
 ### 7.1 Operadores aritméticos
 
@@ -450,7 +520,7 @@ NaN
 
 ---
 
-## 8. Estructuras de control
+## 9. Estructuras de control
 
 ### 8.1 Condicionales
 
@@ -541,7 +611,7 @@ for (let i = 0; i < 5; i++) {
 
 ---
 
-## 9. Funciones
+## 10. Funciones
 
 Las funciones permiten **agrupar código reutilizable** bajo un nombre.
 
@@ -654,7 +724,7 @@ const suma = numeros.reduce((acc, n) => acc + n, 0); // 15
 
 ---
 
-## 10. Strings y Template Literals
+## 11. Strings y Template Literals
 
 Las **cadenas de texto (strings)** son uno de los tipos de datos más utilizados en programación. En JavaScript trabajamos constantemente con texto: mostrar mensajes al usuario, procesar formularios, construir HTML dinámico, manipular URLs, etc.
 
@@ -662,7 +732,7 @@ JavaScript proporciona una amplia colección de métodos para manipular strings:
 
 Además, desde ES6 contamos con los **template literals** (plantillas de cadena), una forma moderna y elegante de trabajar con strings que permite interpolación de variables y textos multilínea sin complicaciones.
 
-### 10.1 Métodos de strings
+### 14.1 Métodos de strings
 
 ```javascript
 let texto = "JavaScript es genial";
@@ -694,7 +764,7 @@ texto.replace("genial", "increíble"); // "JavaScript es increíble"
 texto.split(" ");          // ["JavaScript", "es", "genial"]
 ```
 
-### 10.2 Template Literals (ES6)
+### 14.2 Template Literals (ES6)
 
 ```javascript
 const nombre = "Ana";
@@ -724,7 +794,7 @@ console.log(`Precio final: ${precio * (1 - descuento)}€`); // "Precio final: 8
 
 ---
 
-## 11. Arrays avanzados
+## 12. Arrays avanzados
 
 Los **arrays** son estructuras fundamentales en JavaScript. Prácticamente cualquier aplicación web necesita manejar listas de datos: productos en un carrito, mensajes en un chat, usuarios en una tabla, tareas pendientes...
 
@@ -734,7 +804,7 @@ Entender la diferencia entre **métodos mutables** (que modifican el array origi
 
 También veremos el **spread operator** (`...`) y la **desestructuración**, dos características de ES6 que simplifican enormemente el trabajo con arrays.
 
-### 11.1 Métodos mutables vs inmutables
+### 14.1 Métodos mutables vs inmutables
 
 ```javascript
 // MUTABLES - modifican el array original
@@ -756,7 +826,7 @@ original.filter(x => x > 1); // [2, 3]
 // original sigue siendo [1, 2, 3]
 ```
 
-### 11.2 Array functions (Higher Order Functions)
+### 14.2 Array functions (Higher Order Functions)
 
 ```javascript
 const productos = [
@@ -804,7 +874,7 @@ const resultado = productos
 
 > **¿Cuáles son las más usadas?** `map` y `filter` son con diferencia las más utilizadas en el día a día. `map` para transformar datos (ej: extraer propiedades, formatear valores) y `filter` para filtrar listas. `find` es muy útil para buscar un elemento concreto. `reduce` es potente pero más complejo; úsalo cuando realmente necesites acumular valores. El **encadenamiento** de estos métodos es un patrón muy común en código profesional.
 
-### 11.3 Spread operator y desestructuración
+### 13.3 Spread operator y desestructuración
 
 ```javascript
 // Spread operator (...)
@@ -828,7 +898,7 @@ let a = 1, b = 2;
 
 ---
 
-## 12. Objetos avanzados
+## 13. Objetos avanzados
 
 Los **objetos** son el corazón de JavaScript. De hecho, casi todo en JavaScript es un objeto: los arrays, las funciones, las fechas, incluso los elementos del DOM. Entender cómo funcionan los objetos es esencial para dominar el lenguaje.
 
@@ -838,7 +908,7 @@ En esta sección aprenderemos a manipular objetos de forma eficiente: acceder y 
 
 Estas técnicas son fundamentales cuando trabajamos con datos que vienen de APIs, formularios o bases de datos, situaciones muy habituales en el desarrollo web.
 
-### 12.1 Manipulación de objetos
+### 14.1 Manipulación de objetos
 
 ```javascript
 const usuario = {
@@ -868,7 +938,7 @@ Object.values(usuario);  // ["Ana", 25, "ana@email.com"]
 Object.entries(usuario); // [["nombre", "Ana"], ["edad", 25], ...]
 ```
 
-### 12.2 Desestructuración de objetos
+### 14.2 Desestructuración de objetos
 
 ```javascript
 const persona = {
@@ -904,7 +974,7 @@ function mostrar({ nombre, edad }) {
 mostrar(persona);
 ```
 
-### 12.3 Spread operator en objetos
+### 13.3 Spread operator en objetos
 
 ```javascript
 const original = { a: 1, b: 2 };
@@ -924,11 +994,11 @@ const modificado = { ...original, b: 10 };
 
 ---
 
-## 13. JSON (JavaScript Object Notation)
+## 14. JSON (JavaScript Object Notation)
 
 JSON es un formato de intercambio de datos basado en la sintaxis de objetos JavaScript.
 
-### 13.1 Sintaxis JSON
+### 14.1 Sintaxis JSON
 
 ```json
 {
@@ -951,7 +1021,7 @@ JSON es un formato de intercambio de datos basado en la sintaxis de objetos Java
 - No permite comas finales (trailing commas)
 - No permite funciones
 
-### 13.2 Conversión JavaScript ↔ JSON
+### 14.2 Conversión JavaScript ↔ JSON
 
 ```javascript
 // Objeto JavaScript → JSON string
@@ -978,7 +1048,7 @@ const formateado = JSON.stringify(objeto, null, 2);
 
 # PARTE 2: MANIPULACIÓN DEL DOM
 
-## 14. ¿Qué es el DOM?
+## 15. ¿Qué es el DOM?
 
 El **DOM (Document Object Model)** es una representación en forma de árbol de todos los elementos de una página HTML. JavaScript puede acceder y modificar este árbol para crear páginas dinámicas.
 
@@ -1014,9 +1084,9 @@ document.documentElement; // Elemento <html>
 
 ---
 
-## 15. Selección de elementos
+## 16. Selección de elementos
 
-### 15.1 Métodos tradicionales
+### 22.1 Métodos tradicionales
 
 ```javascript
 // Por ID (devuelve un elemento o null)
@@ -1034,7 +1104,7 @@ const inputs = document.getElementsByName("email");
 
 > **¿Cuál usar?** Aunque `getElementById` es ligeramente más rápido, en la práctica la diferencia es insignificante. Se recomienda usar siempre `querySelector` y `querySelectorAll` porque son más flexibles (aceptan cualquier selector CSS) y unifican la sintaxis de búsqueda.
 
-### 15.2 Métodos modernos (recomendados)
+### 22.2 Métodos modernos (recomendados)
 
 ```javascript
 // querySelector - devuelve el PRIMER elemento que coincide
@@ -1052,7 +1122,7 @@ const items = document.querySelectorAll("ul li");
 // HTMLCollection: vivo (se actualiza), no tiene forEach
 ```
 
-### 15.3 Selectores CSS en JavaScript
+### 17.3 Selectores CSS en JavaScript
 
 ```javascript
 // Por ID
@@ -1081,7 +1151,7 @@ document.querySelector("li:nth-child(2)");
 document.querySelector("input:not([disabled])");
 ```
 
-### 15.4 Búsquedas acotadas
+### 16.4 Búsquedas acotadas
 
 ```javascript
 // Buscar dentro de un elemento específico
@@ -1092,7 +1162,7 @@ const enlaces = menu.querySelectorAll("a");
 const enlaces2 = document.querySelectorAll("#menu a");
 ```
 
-### 15.5 Navegación por el DOM
+### 16.5 Navegación por el DOM
 
 ```javascript
 const elemento = document.querySelector(".item");
@@ -1112,9 +1182,9 @@ elemento.matches(".active");      // ¿Coincide con selector?
 
 ---
 
-## 16. Modificación de contenido
+## 17. Modificación de contenido
 
-### 16.1 Contenido de texto
+### 22.1 Contenido de texto
 
 ```javascript
 const parrafo = document.querySelector("p");
@@ -1130,7 +1200,7 @@ parrafo.innerText = "Texto visible";
 // innerText solo muestra lo visible
 ```
 
-### 16.2 Contenido HTML
+### 22.2 Contenido HTML
 
 ```javascript
 const div = document.querySelector("div");
@@ -1149,7 +1219,7 @@ console.log(div.outerHTML);
 
 > **¿Cuál usar?** Usa `textContent` para texto plano (es más seguro y rápido). Usa `innerHTML` solo cuando realmente necesites insertar HTML, y **nunca** con datos que provengan del usuario sin sanitizar, ya que es vulnerable a ataques XSS.
 
-### 16.3 Atributos HTML
+### 17.3 Atributos HTML
 
 ```javascript
 const enlace = document.querySelector("a");
@@ -1173,9 +1243,9 @@ elemento.dataset.userId = "5"; // Crea data-user-id
 
 ---
 
-## 17. Manipulación de clases CSS
+## 18. Manipulación de clases CSS
 
-### 17.1 className
+### 22.1 className
 
 ```javascript
 const elemento = document.querySelector("div");
@@ -1189,7 +1259,7 @@ elemento.className = "nueva-clase";
 
 > **¿Cuál usar?** Usa siempre `classList`. Es más seguro porque no sobrescribe accidentalmente otras clases, y sus métodos (`add`, `remove`, `toggle`, `contains`) hacen el código mucho más legible y menos propenso a errores.
 
-### 17.2 classList (recomendado)
+### 22.2 classList (recomendado)
 
 ```javascript
 const elemento = document.querySelector("div");
@@ -1213,9 +1283,9 @@ elemento.classList.toggle("visible", isVisible); // Añade si true, quita si fal
 
 ---
 
-## 18. Manipulación de estilos CSS
+## 19. Manipulación de estilos CSS
 
-### 18.1 Propiedad style
+### 22.1 Propiedad style
 
 ```javascript
 const elemento = document.querySelector("div");
@@ -1235,7 +1305,7 @@ elemento.style.color = "";
 elemento.style.removeProperty("color");
 ```
 
-### 18.2 getComputedStyle
+### 22.2 getComputedStyle
 
 ```javascript
 const elemento = document.querySelector("div");
@@ -1252,9 +1322,9 @@ console.log(estilos.getPropertyValue("font-size")); // 16px
 
 ---
 
-## 19. Creación de elementos
+## 20. Creación de elementos
 
-### 19.1 createElement
+### 22.1 createElement
 
 ```javascript
 // 1. Crear elemento
@@ -1270,7 +1340,7 @@ div.innerHTML = "<p>Párrafo</p>";
 document.body.appendChild(div);
 ```
 
-### 19.2 API de Elementos (métodos modernos)
+### 22.2 API de Elementos (métodos modernos)
 
 ```javascript
 const container = document.querySelector(".container");
@@ -1297,7 +1367,7 @@ nuevo.remove();
 
 > **¿Cuál usar?** Los métodos modernos (`append`, `prepend`, `before`, `after`, `remove`) son los más recomendados por su sintaxis clara y porque permiten añadir múltiples elementos a la vez. `appendChild` sigue siendo válido pero es más limitado. Usa `insertAdjacentHTML` cuando necesites insertar HTML como string de forma eficiente.
 
-### 19.3 Inserción adyacente (insertAdjacent)
+### 22.3 Inserción adyacente (insertAdjacent)
 
 ```javascript
 const referencia = document.querySelector(".referencia");
@@ -1327,7 +1397,7 @@ referencia.insertAdjacentText("beforeend", "Texto añadido");
 <!-- afterend -->
 ```
 
-### 19.4 Clonación de elementos
+### 22.4 Clonación de elementos
 
 ```javascript
 const original = document.querySelector(".card");
@@ -1343,9 +1413,9 @@ document.body.appendChild(clonProfundo);
 
 ---
 
-## 20. Eventos en JavaScript
+## 21. Eventos en JavaScript
 
-### 20.1 ¿Qué son los eventos?
+### 22.1 ¿Qué son los eventos?
 
 Los eventos son **acciones o sucesos** que ocurren en el navegador y a los que podemos responder con código JavaScript.
 
@@ -1363,7 +1433,7 @@ Los eventos son **acciones o sucesos** que ocurren en el navegador y a los que p
 - `scroll` - Desplazamiento
 - `resize` - Cambio de tamaño
 
-### 20.2 Formas de manejar eventos
+### 22.2 Formas de manejar eventos
 
 ```javascript
 // ❌ 1. Desde HTML (evitar)
@@ -1385,7 +1455,7 @@ btn.addEventListener("click", function() {
 
 > **¿Cuál usar?** Siempre `addEventListener`. Es el estándar moderno porque permite añadir múltiples listeners al mismo evento, ofrece opciones avanzadas (`once`, `passive`, `capture`), y se puede eliminar con `removeEventListener`. Las otras formas están obsoletas o tienen limitaciones importantes.
 
-### 20.3 addEventListener
+### 22.3 addEventListener
 
 ```javascript
 const boton = document.querySelector("#miBoton");
@@ -1410,7 +1480,7 @@ boton.addEventListener("click", handleClick);
 boton.removeEventListener("click", handleClick);
 ```
 
-### 20.4 El objeto Event
+### 22.4 El objeto Event
 
 ```javascript
 boton.addEventListener("click", function(event) {
@@ -1437,7 +1507,7 @@ boton.addEventListener("click", function(event) {
 });
 ```
 
-### 20.5 Propagación de eventos
+### 21.5 Propagación de eventos
 
 Los eventos se propagan en dos fases:
 1. **Captura** (capturing): De documento hacia el elemento
@@ -1471,7 +1541,7 @@ elemento.addEventListener("click", handler, { capture: true });
 └─────────────────────────────────────────────────┘
 ```
 
-### 20.6 Delegación de eventos
+### 21.6 Delegación de eventos
 
 Técnica para manejar eventos en elementos dinámicos o múltiples:
 
@@ -1490,7 +1560,7 @@ document.querySelector(".container").addEventListener("click", function(e) {
 });
 ```
 
-### 20.7 Opciones de addEventListener
+### 21.7 Opciones de addEventListener
 
 ```javascript
 elemento.addEventListener("click", handler, {
@@ -1513,9 +1583,9 @@ controller.abort();
 
 ---
 
-## 21. Eventos comunes
+## 22. Eventos comunes
 
-### 21.1 Eventos de ratón
+### 22.1 Eventos de ratón
 
 ```javascript
 const elemento = document.querySelector(".interactivo");
@@ -1546,7 +1616,7 @@ elemento.addEventListener("contextmenu", (e) => {
 });
 ```
 
-### 21.2 Eventos de teclado
+### 22.2 Eventos de teclado
 
 ```javascript
 document.addEventListener("keydown", (e) => {
@@ -1574,7 +1644,7 @@ document.addEventListener("keyup", (e) => {
 });
 ```
 
-### 21.3 Eventos de formulario
+### 22.3 Eventos de formulario
 
 ```javascript
 const formulario = document.querySelector("form");
@@ -1607,7 +1677,7 @@ input.addEventListener("blur", () => {
 });
 ```
 
-### 21.4 Eventos de ventana
+### 22.4 Eventos de ventana
 
 ```javascript
 // Carga completa
@@ -1633,7 +1703,7 @@ window.addEventListener("resize", () => {
 
 ---
 
-## 22. Ejemplo práctico: Lista de tareas
+## 23. Ejemplo práctico: Lista de tareas
 
 ```html
 <!DOCTYPE html>
@@ -1732,7 +1802,7 @@ window.addEventListener("resize", () => {
 
 ---
 
-## 23. Recursos y referencias
+## 24. Recursos y referencias
 
 ### Documentación oficial
 - **MDN Web Docs**: https://developer.mozilla.org/es/docs/Web/JavaScript
@@ -1761,4 +1831,3 @@ window.addEventListener("resize", () => {
 | d) | Se ha modificado el contenido de elementos del DOM |
 | e) | Se han asociado acciones a eventos del DOM |
 | f) | Se han identificado elementos de la interfaz de usuario |
-
