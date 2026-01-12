@@ -2,7 +2,6 @@
 
 ---
 
-
 # PARTE 1: FUNDAMENTOS DE JAVASCRIPT
 
 ## 1. ¿Qué es JavaScript?
@@ -60,9 +59,7 @@ No todos los navegadores soportan todas las características de JavaScript al mi
 - **Can I Use**: https://caniuse.com/
 - **Tabla Kangax**: https://kangax.github.io/compat-table/es6/
 
-!!! tip "Consejo"
-    Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
-
+Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
 
 ---
 
@@ -524,6 +521,8 @@ for (const clave in persona) {
 }
 ```
 
+> **¿Cuál usar?** Para arrays, usa `for...of` o los métodos funcionales (`forEach`, `map`, `filter`). El `for` clásico solo cuando necesites el índice o control total del bucle. Para objetos, usa `for...in` o mejor aún `Object.entries()` con `for...of`. Evita `for...in` en arrays porque puede dar resultados inesperados.
+
 ### 8.3 Control de bucles
 
 ```javascript
@@ -572,6 +571,8 @@ saludar("Ana");     // "Hola, Ana"
 duplicar(5);        // 10
 triplicar(3);       // 9
 ```
+
+> **¿Cuál usar?** Las **arrow functions** son las más utilizadas en código moderno por su sintaxis concisa y su comportamiento predecible con `this`. Usa funciones declaradas (`function nombre()`) cuando necesites hoisting (llamar a la función antes de declararla) o en métodos de objetos donde necesites acceso a `this`.
 
 ### 9.2 Parámetros
 
@@ -655,6 +656,12 @@ const suma = numeros.reduce((acc, n) => acc + n, 0); // 15
 
 ## 10. Strings y Template Literals
 
+Las **cadenas de texto (strings)** son uno de los tipos de datos más utilizados en programación. En JavaScript trabajamos constantemente con texto: mostrar mensajes al usuario, procesar formularios, construir HTML dinámico, manipular URLs, etc.
+
+JavaScript proporciona una amplia colección de métodos para manipular strings: buscar contenido, extraer partes, transformar mayúsculas/minúsculas, dividir en arrays... Dominar estos métodos te ahorrará mucho código y tiempo.
+
+Además, desde ES6 contamos con los **template literals** (plantillas de cadena), una forma moderna y elegante de trabajar con strings que permite interpolación de variables y textos multilínea sin complicaciones.
+
 ### 10.1 Métodos de strings
 
 ```javascript
@@ -713,9 +720,19 @@ let descuento = 0.2;
 console.log(`Precio final: ${precio * (1 - descuento)}€`); // "Precio final: 80€"
 ```
 
+> **¿Cuál usar?** Siempre **template literals** (con backticks `` ` ``). Son más legibles, permiten interpolación de variables sin concatenar con `+`, soportan multilínea sin caracteres especiales, y hacen el código mucho más limpio. La concatenación clásica con `+` está obsoleta en la práctica.
+
 ---
 
 ## 11. Arrays avanzados
+
+Los **arrays** son estructuras fundamentales en JavaScript. Prácticamente cualquier aplicación web necesita manejar listas de datos: productos en un carrito, mensajes en un chat, usuarios en una tabla, tareas pendientes...
+
+JavaScript moderno ofrece un conjunto muy potente de métodos para trabajar con arrays que van mucho más allá de los básicos `push` y `pop`. Las llamadas **Array Functions** o **Higher Order Functions** (`map`, `filter`, `reduce`, `find`...) permiten transformar, filtrar y procesar datos de forma declarativa y elegante.
+
+Entender la diferencia entre **métodos mutables** (que modifican el array original) e **inmutables** (que devuelven un nuevo array) es crucial para evitar bugs difíciles de detectar, especialmente cuando trabajamos con frameworks como React o Vue.
+
+También veremos el **spread operator** (`...`) y la **desestructuración**, dos características de ES6 que simplifican enormemente el trabajo con arrays.
 
 ### 11.1 Métodos mutables vs inmutables
 
@@ -785,6 +802,8 @@ const resultado = productos
 // ["Laptop", "Monitor", "Teclado"]
 ```
 
+> **¿Cuáles son las más usadas?** `map` y `filter` son con diferencia las más utilizadas en el día a día. `map` para transformar datos (ej: extraer propiedades, formatear valores) y `filter` para filtrar listas. `find` es muy útil para buscar un elemento concreto. `reduce` es potente pero más complejo; úsalo cuando realmente necesites acumular valores. El **encadenamiento** de estos métodos es un patrón muy común en código profesional.
+
 ### 11.3 Spread operator y desestructuración
 
 ```javascript
@@ -810,6 +829,14 @@ let a = 1, b = 2;
 ---
 
 ## 12. Objetos avanzados
+
+Los **objetos** son el corazón de JavaScript. De hecho, casi todo en JavaScript es un objeto: los arrays, las funciones, las fechas, incluso los elementos del DOM. Entender cómo funcionan los objetos es esencial para dominar el lenguaje.
+
+Un objeto es una colección de **pares clave-valor** que nos permite agrupar datos relacionados bajo una misma estructura. Por ejemplo, podemos representar un usuario con su nombre, edad, email y preferencias en un único objeto, en lugar de tener variables sueltas por todo el código.
+
+En esta sección aprenderemos a manipular objetos de forma eficiente: acceder y modificar propiedades, recorrer sus contenidos, y utilizar características modernas de ES6 como la **desestructuración** (extraer valores de forma elegante) y el **spread operator** (copiar y combinar objetos fácilmente).
+
+Estas técnicas son fundamentales cuando trabajamos con datos que vienen de APIs, formularios o bases de datos, situaciones muy habituales en el desarrollo web.
 
 ### 12.1 Manipulación de objetos
 
@@ -1005,6 +1032,8 @@ const parrafos = document.getElementsByTagName("p");
 const inputs = document.getElementsByName("email");
 ```
 
+> **¿Cuál usar?** Aunque `getElementById` es ligeramente más rápido, en la práctica la diferencia es insignificante. Se recomienda usar siempre `querySelector` y `querySelectorAll` porque son más flexibles (aceptan cualquier selector CSS) y unifican la sintaxis de búsqueda.
+
 ### 15.2 Métodos modernos (recomendados)
 
 ```javascript
@@ -1118,6 +1147,8 @@ console.log(div.outerHTML);
 // Nunca uses innerHTML con datos del usuario sin sanitizar
 ```
 
+> **¿Cuál usar?** Usa `textContent` para texto plano (es más seguro y rápido). Usa `innerHTML` solo cuando realmente necesites insertar HTML, y **nunca** con datos que provengan del usuario sin sanitizar, ya que es vulnerable a ataques XSS.
+
 ### 16.3 Atributos HTML
 
 ```javascript
@@ -1155,6 +1186,8 @@ console.log(elemento.className); // "card activo destacado"
 // Reemplazar todas las clases
 elemento.className = "nueva-clase";
 ```
+
+> **¿Cuál usar?** Usa siempre `classList`. Es más seguro porque no sobrescribe accidentalmente otras clases, y sus métodos (`add`, `remove`, `toggle`, `contains`) hacen el código mucho más legible y menos propenso a errores.
 
 ### 17.2 classList (recomendado)
 
@@ -1262,6 +1295,8 @@ container.replaceWith(nuevo);
 nuevo.remove();
 ```
 
+> **¿Cuál usar?** Los métodos modernos (`append`, `prepend`, `before`, `after`, `remove`) son los más recomendados por su sintaxis clara y porque permiten añadir múltiples elementos a la vez. `appendChild` sigue siendo válido pero es más limitado. Usa `insertAdjacentHTML` cuando necesites insertar HTML como string de forma eficiente.
+
 ### 19.3 Inserción adyacente (insertAdjacent)
 
 ```javascript
@@ -1347,6 +1382,8 @@ btn.addEventListener("click", function() {
 });
 // Permite múltiples funciones
 ```
+
+> **¿Cuál usar?** Siempre `addEventListener`. Es el estándar moderno porque permite añadir múltiples listeners al mismo evento, ofrece opciones avanzadas (`once`, `passive`, `capture`), y se puede eliminar con `removeEventListener`. Las otras formas están obsoletas o tienen limitaciones importantes.
 
 ### 20.3 addEventListener
 
@@ -1724,3 +1761,4 @@ window.addEventListener("resize", () => {
 | d) | Se ha modificado el contenido de elementos del DOM |
 | e) | Se han asociado acciones a eventos del DOM |
 | f) | Se han identificado elementos de la interfaz de usuario |
+
