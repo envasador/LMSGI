@@ -757,17 +757,17 @@
 <li><strong>Interpretado</strong>: El navegador lee el código y lo ejecuta línea por línea, sin necesidad de compilación previa.</li>
 </ul>
 <h3 id="javascript-en-el-ecosistema-web">JavaScript en el ecosistema web</h3>
-<pre><code>┌────────────────────────────────────────────────────────────┐
-│                    PÁGINA WEB                              │
-├────────────────────────────────────────────────────────────┤
-│  HTML            │  CSS            │  JavaScript           │
-│  (Estructura)    │  (Presentación) │  (Comportamiento)     │
-│                  │                 │                       │
-│  - Contenido     │  - Colores      │  - Interactividad     │
-│  - Semántica     │  - Tipografía   │  - Validación         │
-│  - Jerarquía     │  - Layout       │  - Dinamismo          │
-│  - Accesibilidad │ - Animaciones   │  - Comunicación API   │
-└────────────────────────────────────────────────────────────┘
+<pre><code>┌─────────────────────────────────────────────────────────┐
+│                    PÁGINA WEB                           │
+├─────────────────────────────────────────────────────────┤
+│  HTML          │  CSS           │  JavaScript           │
+│  (Estructura)  │  (Presentación)│  (Comportamiento)     │
+│                │                │                       │
+│  - Contenido   │  - Colores     │  - Interactividad     │
+│  - Semántica   │  - Tipografía  │  - Validación         │
+│  - Jerarquía   │  - Layout      │  - Dinamismo          │
+│  - Accesibilidad│ - Animaciones │  - Comunicación API   │
+└─────────────────────────────────────────────────────────┘
 </code></pre>
 <hr />
 <h2 id="2-la-especificacion-ecmascript">2. La especificación ECMAScript</h2>
@@ -828,9 +828,7 @@
 <li><strong>Can I Use</strong>: https://caniuse.com/</li>
 <li><strong>Tabla Kangax</strong>: https://kangax.github.io/compat-table/es6/</li>
 </ul>
-<blockquote>
 <p>Un <strong>polyfill</strong> es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.</p>
-</blockquote>
 <hr />
 <h2 id="3-la-consola-de-javascript">3. La consola de JavaScript</h2>
 <p>La consola es la herramienta principal para <strong>depurar</strong> y <strong>probar</strong> código JavaScript.</p>
@@ -958,7 +956,91 @@ console.clear();
 <p><strong>Recomendación</strong>: Usa <code>defer</code> para scripts que manipulan el DOM.</p>
 </blockquote>
 <hr />
-<h2 id="5-variables-y-constantes">5. Variables y constantes</h2>
+<h2 id="5-modo-estricto-use-strict">5. Modo estricto: "use strict"</h2>
+<p>JavaScript es un lenguaje muy permisivo por razones históricas de compatibilidad. Esto significa que permite ciertas prácticas que pueden causar errores difíciles de detectar. El <strong>modo estricto</strong> activa un conjunto de reglas más rigurosas que ayudan a escribir código más seguro y limpio.</p>
+<h3 id="que-hace-use-strict">¿Qué hace "use strict"?</h3>
+<ul>
+<li><strong>Convierte errores silenciosos en excepciones</strong>: Acciones que antes fallaban en silencio ahora lanzan errores.</li>
+<li><strong>Prohíbe sintaxis problemática</strong>: Evita el uso de características confusas o peligrosas.</li>
+<li><strong>Prepara el código para futuras versiones</strong>: Reserva palabras clave que se usarán en ECMAScript futuro.</li>
+</ul>
+<h3 id="como-activarlo">Cómo activarlo</h3>
+<pre><code class="language-javascript">// Al inicio del archivo (afecta a todo el archivo)
+&quot;use strict&quot;;
+
+let nombre = &quot;Ana&quot;;
+// ... resto del código
+
+// O dentro de una función (afecta solo a esa función)
+function miFuncion() {
+    &quot;use strict&quot;;
+    // código en modo estricto
+}
+</code></pre>
+<h3 id="errores-que-detecta-use-strict">Errores que detecta "use strict"</h3>
+<pre><code class="language-javascript">&quot;use strict&quot;;
+
+// ❌ Error: Variable no declarada
+nombre = &quot;Ana&quot;;  // ReferenceError: nombre is not defined
+// ✅ Correcto
+let nombre = &quot;Ana&quot;;
+
+// ❌ Error: Eliminar variables o funciones
+let x = 10;
+delete x;  // SyntaxError
+
+// ❌ Error: Parámetros duplicados
+function suma(a, a, b) { }  // SyntaxError
+
+// ❌ Error: Escritura en propiedades de solo lectura
+const obj = {};
+Object.defineProperty(obj, &quot;x&quot;, { value: 0, writable: false });
+obj.x = 10;  // TypeError
+
+// ❌ Error: Uso de palabras reservadas para el futuro
+let implements = 1;  // SyntaxError
+let interface = 2;   // SyntaxError
+let private = 3;     // SyntaxError
+
+// ❌ Error: Números octales con sintaxis antigua
+let octal = 010;  // SyntaxError (usar 0o10 en su lugar)
+</code></pre>
+<h3 id="cuando-usarlo">¿Cuándo usarlo?</h3>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>¿Usar "use strict"?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Código nuevo</td>
+<td>✅ Siempre</td>
+</tr>
+<tr>
+<td>Proyectos profesionales</td>
+<td>✅ Siempre</td>
+</tr>
+<tr>
+<td>Aprendizaje</td>
+<td>✅ Recomendado (detecta errores comunes)</td>
+</tr>
+<tr>
+<td>Código legacy antiguo</td>
+<td>⚠️ Con cuidado (puede romper funcionalidad)</td>
+</tr>
+<tr>
+<td>Módulos ES6 (<code>import</code>/<code>export</code>)</td>
+<td>✅ Automático (ya son estrictos por defecto)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>¿Cuál es la práctica actual?</strong> En proyectos modernos con módulos ES6 (<code>import</code>/<code>export</code>), el modo estricto está <strong>activado automáticamente</strong>, así que no necesitas escribirlo. Sin embargo, si trabajas con scripts tradicionales (sin módulos), es muy recomendable añadir <code>"use strict";</code> al inicio de cada archivo. En el contexto de aprendizaje, usarlo te ayudará a detectar errores y adoptar buenas prácticas desde el principio.</p>
+</blockquote>
+<hr />
+<h2 id="6-variables-y-constantes">6. Variables y constantes</h2>
 <h3 id="declaracion-de-variables">Declaración de variables</h3>
 <p>JavaScript ofrece tres formas de declarar variables:</p>
 <pre><code class="language-javascript">// var - Forma antigua, evitar en código moderno
@@ -1035,7 +1117,7 @@ class Usuario { }
 <p><strong>Regla</strong>: Usa <code>const</code> por defecto. Usa <code>let</code> solo cuando necesites reasignar.</p>
 </blockquote>
 <hr />
-<h2 id="6-tipos-de-datos">6. Tipos de datos</h2>
+<h2 id="7-tipos-de-datos">7. Tipos de datos</h2>
 <p>JavaScript tiene <strong>tipos primitivos</strong> y <strong>tipos complejos (objetos)</strong>.</p>
 <h3 id="61-tipos-primitivos">6.1 Tipos primitivos</h3>
 <pre><code class="language-javascript">// String (cadenas de texto)
@@ -1114,7 +1196,7 @@ frutas.indexOf(&quot;pera&quot;);  // 1 (posición)
 frutas.includes(&quot;pera&quot;); // true
 </code></pre>
 <hr />
-<h2 id="7-operadores">7. Operadores</h2>
+<h2 id="8-operadores">8. Operadores</h2>
 <h3 id="71-operadores-aritmeticos">7.1 Operadores aritméticos</h3>
 <pre><code class="language-javascript">let a = 10, b = 3;
 
@@ -1204,7 +1286,7 @@ NaN
 &quot;false&quot;      // string con contenido
 </code></pre>
 <hr />
-<h2 id="8-estructuras-de-control">8. Estructuras de control</h2>
+<h2 id="9-estructuras-de-control">9. Estructuras de control</h2>
 <h3 id="81-condicionales">8.1 Condicionales</h3>
 <pre><code class="language-javascript">// if - else if - else
 let edad = 18;
@@ -1285,7 +1367,7 @@ for (let i = 0; i &lt; 5; i++) {
 }
 </code></pre>
 <hr />
-<h2 id="9-funciones">9. Funciones</h2>
+<h2 id="10-funciones">10. Funciones</h2>
 <p>Las funciones permiten <strong>agrupar código reutilizable</strong> bajo un nombre.</p>
 <h3 id="91-declaracion-de-funciones">9.1 Declaración de funciones</h3>
 <pre><code class="language-javascript">// Función declarada (function declaration)
@@ -1383,11 +1465,11 @@ const mayor3 = numeros.find(n =&gt; n &gt; 3); // 4
 const suma = numeros.reduce((acc, n) =&gt; acc + n, 0); // 15
 </code></pre>
 <hr />
-<h2 id="10-strings-y-template-literals">10. Strings y Template Literals</h2>
+<h2 id="11-strings-y-template-literals">11. Strings y Template Literals</h2>
 <p>Las <strong>cadenas de texto (strings)</strong> son uno de los tipos de datos más utilizados en programación. En JavaScript trabajamos constantemente con texto: mostrar mensajes al usuario, procesar formularios, construir HTML dinámico, manipular URLs, etc.</p>
 <p>JavaScript proporciona una amplia colección de métodos para manipular strings: buscar contenido, extraer partes, transformar mayúsculas/minúsculas, dividir en arrays... Dominar estos métodos te ahorrará mucho código y tiempo.</p>
 <p>Además, desde ES6 contamos con los <strong>template literals</strong> (plantillas de cadena), una forma moderna y elegante de trabajar con strings que permite interpolación de variables y textos multilínea sin complicaciones.</p>
-<h3 id="101-metodos-de-strings">10.1 Métodos de strings</h3>
+<h3 id="141-metodos-de-strings">14.1 Métodos de strings</h3>
 <pre><code class="language-javascript">let texto = &quot;JavaScript es genial&quot;;
 
 // Propiedades
@@ -1416,7 +1498,7 @@ texto.replace(&quot;genial&quot;, &quot;increíble&quot;); // &quot;JavaScript e
 // División
 texto.split(&quot; &quot;);          // [&quot;JavaScript&quot;, &quot;es&quot;, &quot;genial&quot;]
 </code></pre>
-<h3 id="102-template-literals-es6">10.2 Template Literals (ES6)</h3>
+<h3 id="142-template-literals-es6">14.2 Template Literals (ES6)</h3>
 <pre><code class="language-javascript">const nombre = &quot;Ana&quot;;
 const edad = 25;
 
@@ -1443,12 +1525,12 @@ console.log(`Precio final: ${precio * (1 - descuento)}€`); // &quot;Precio fin
 <p><strong>¿Cuál usar?</strong> Siempre <strong>template literals</strong> (con backticks <code>`</code>). Son más legibles, permiten interpolación de variables sin concatenar con <code>+</code>, soportan multilínea sin caracteres especiales, y hacen el código mucho más limpio. La concatenación clásica con <code>+</code> está obsoleta en la práctica.</p>
 </blockquote>
 <hr />
-<h2 id="11-arrays-avanzados">11. Arrays avanzados</h2>
+<h2 id="12-arrays-avanzados">12. Arrays avanzados</h2>
 <p>Los <strong>arrays</strong> son estructuras fundamentales en JavaScript. Prácticamente cualquier aplicación web necesita manejar listas de datos: productos en un carrito, mensajes en un chat, usuarios en una tabla, tareas pendientes...</p>
 <p>JavaScript moderno ofrece un conjunto muy potente de métodos para trabajar con arrays que van mucho más allá de los básicos <code>push</code> y <code>pop</code>. Las llamadas <strong>Array Functions</strong> o <strong>Higher Order Functions</strong> (<code>map</code>, <code>filter</code>, <code>reduce</code>, <code>find</code>...) permiten transformar, filtrar y procesar datos de forma declarativa y elegante.</p>
 <p>Entender la diferencia entre <strong>métodos mutables</strong> (que modifican el array original) e <strong>inmutables</strong> (que devuelven un nuevo array) es crucial para evitar bugs difíciles de detectar, especialmente cuando trabajamos con frameworks como React o Vue.</p>
 <p>También veremos el <strong>spread operator</strong> (<code>...</code>) y la <strong>desestructuración</strong>, dos características de ES6 que simplifican enormemente el trabajo con arrays.</p>
-<h3 id="111-metodos-mutables-vs-inmutables">11.1 Métodos mutables vs inmutables</h3>
+<h3 id="141-metodos-mutables-vs-inmutables">14.1 Métodos mutables vs inmutables</h3>
 <pre><code class="language-javascript">// MUTABLES - modifican el array original
 const arr = [3, 1, 4, 1, 5];
 arr.push(9);        // Añade al final
@@ -1467,7 +1549,7 @@ original.map(x =&gt; x * 2); // [2, 4, 6]
 original.filter(x =&gt; x &gt; 1); // [2, 3]
 // original sigue siendo [1, 2, 3]
 </code></pre>
-<h3 id="112-array-functions-higher-order-functions">11.2 Array functions (Higher Order Functions)</h3>
+<h3 id="142-array-functions-higher-order-functions">14.2 Array functions (Higher Order Functions)</h3>
 <pre><code class="language-javascript">const productos = [
     { nombre: &quot;Laptop&quot;, precio: 1000, stock: 5 },
     { nombre: &quot;Mouse&quot;, precio: 25, stock: 50 },
@@ -1513,7 +1595,7 @@ const resultado = productos
 <blockquote>
 <p><strong>¿Cuáles son las más usadas?</strong> <code>map</code> y <code>filter</code> son con diferencia las más utilizadas en el día a día. <code>map</code> para transformar datos (ej: extraer propiedades, formatear valores) y <code>filter</code> para filtrar listas. <code>find</code> es muy útil para buscar un elemento concreto. <code>reduce</code> es potente pero más complejo; úsalo cuando realmente necesites acumular valores. El <strong>encadenamiento</strong> de estos métodos es un patrón muy común en código profesional.</p>
 </blockquote>
-<h3 id="113-spread-operator-y-desestructuracion">11.3 Spread operator y desestructuración</h3>
+<h3 id="133-spread-operator-y-desestructuracion">13.3 Spread operator y desestructuración</h3>
 <pre><code class="language-javascript">// Spread operator (...)
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
@@ -1533,12 +1615,12 @@ let a = 1, b = 2;
 [a, b] = [b, a]; // a = 2, b = 1
 </code></pre>
 <hr />
-<h2 id="12-objetos-avanzados">12. Objetos avanzados</h2>
+<h2 id="13-objetos-avanzados">13. Objetos avanzados</h2>
 <p>Los <strong>objetos</strong> son el corazón de JavaScript. De hecho, casi todo en JavaScript es un objeto: los arrays, las funciones, las fechas, incluso los elementos del DOM. Entender cómo funcionan los objetos es esencial para dominar el lenguaje.</p>
 <p>Un objeto es una colección de <strong>pares clave-valor</strong> que nos permite agrupar datos relacionados bajo una misma estructura. Por ejemplo, podemos representar un usuario con su nombre, edad, email y preferencias en un único objeto, en lugar de tener variables sueltas por todo el código.</p>
 <p>En esta sección aprenderemos a manipular objetos de forma eficiente: acceder y modificar propiedades, recorrer sus contenidos, y utilizar características modernas de ES6 como la <strong>desestructuración</strong> (extraer valores de forma elegante) y el <strong>spread operator</strong> (copiar y combinar objetos fácilmente).</p>
 <p>Estas técnicas son fundamentales cuando trabajamos con datos que vienen de APIs, formularios o bases de datos, situaciones muy habituales en el desarrollo web.</p>
-<h3 id="121-manipulacion-de-objetos">12.1 Manipulación de objetos</h3>
+<h3 id="141-manipulacion-de-objetos">14.1 Manipulación de objetos</h3>
 <pre><code class="language-javascript">const usuario = {
     nombre: &quot;Ana&quot;,
     edad: 25,
@@ -1565,7 +1647,7 @@ Object.keys(usuario);    // [&quot;nombre&quot;, &quot;edad&quot;, &quot;email&q
 Object.values(usuario);  // [&quot;Ana&quot;, 25, &quot;ana@email.com&quot;]
 Object.entries(usuario); // [[&quot;nombre&quot;, &quot;Ana&quot;], [&quot;edad&quot;, 25], ...]
 </code></pre>
-<h3 id="122-desestructuracion-de-objetos">12.2 Desestructuración de objetos</h3>
+<h3 id="142-desestructuracion-de-objetos">14.2 Desestructuración de objetos</h3>
 <pre><code class="language-javascript">const persona = {
     nombre: &quot;Ana&quot;,
     edad: 25,
@@ -1598,7 +1680,7 @@ function mostrar({ nombre, edad }) {
 }
 mostrar(persona);
 </code></pre>
-<h3 id="123-spread-operator-en-objetos">12.3 Spread operator en objetos</h3>
+<h3 id="133-spread-operator-en-objetos">13.3 Spread operator en objetos</h3>
 <pre><code class="language-javascript">const original = { a: 1, b: 2 };
 
 // Copiar objeto
@@ -1614,9 +1696,9 @@ const modificado = { ...original, b: 10 };
 // { a: 1, b: 10 }
 </code></pre>
 <hr />
-<h2 id="13-json-javascript-object-notation">13. JSON (JavaScript Object Notation)</h2>
+<h2 id="14-json-javascript-object-notation">14. JSON (JavaScript Object Notation)</h2>
 <p>JSON es un formato de intercambio de datos basado en la sintaxis de objetos JavaScript.</p>
-<h3 id="131-sintaxis-json">13.1 Sintaxis JSON</h3>
+<h3 id="141-sintaxis-json">14.1 Sintaxis JSON</h3>
 <pre><code class="language-json">{
     &quot;nombre&quot;: &quot;Ana García&quot;,
     &quot;edad&quot;: 25,
@@ -1635,7 +1717,7 @@ const modificado = { ...original, b: 10 };
 - No permite comentarios
 - No permite comas finales (trailing commas)
 - No permite funciones</p>
-<h3 id="132-conversion-javascript-json">13.2 Conversión JavaScript ↔ JSON</h3>
+<h3 id="142-conversion-javascript-json">14.2 Conversión JavaScript ↔ JSON</h3>
 <pre><code class="language-javascript">// Objeto JavaScript → JSON string
 const objeto = { nombre: &quot;Ana&quot;, edad: 25 };
 const jsonString = JSON.stringify(objeto);
@@ -1657,7 +1739,7 @@ const formateado = JSON.stringify(objeto, null, 2);
 </code></pre>
 <hr />
 <h1 id="parte-2-manipulacion-del-dom">PARTE 2: MANIPULACIÓN DEL DOM</h1>
-<h2 id="14-que-es-el-dom">14. ¿Qué es el DOM?</h2>
+<h2 id="15-que-es-el-dom">15. ¿Qué es el DOM?</h2>
 <p>El <strong>DOM (Document Object Model)</strong> es una representación en forma de árbol de todos los elementos de una página HTML. JavaScript puede acceder y modificar este árbol para crear páginas dinámicas.</p>
 <h3 id="visualizacion-del-arbol-dom">Visualización del árbol DOM</h3>
 <pre><code>                    document
@@ -1684,8 +1766,8 @@ document.head;           // Elemento &lt;head&gt;
 document.documentElement; // Elemento &lt;html&gt;
 </code></pre>
 <hr />
-<h2 id="15-seleccion-de-elementos">15. Selección de elementos</h2>
-<h3 id="151-metodos-tradicionales">15.1 Métodos tradicionales</h3>
+<h2 id="16-seleccion-de-elementos">16. Selección de elementos</h2>
+<h3 id="221-metodos-tradicionales">22.1 Métodos tradicionales</h3>
 <pre><code class="language-javascript">// Por ID (devuelve un elemento o null)
 const elemento = document.getElementById(&quot;miId&quot;);
 
@@ -1701,7 +1783,7 @@ const inputs = document.getElementsByName(&quot;email&quot;);
 <blockquote>
 <p><strong>¿Cuál usar?</strong> Aunque <code>getElementById</code> es ligeramente más rápido, en la práctica la diferencia es insignificante. Se recomienda usar siempre <code>querySelector</code> y <code>querySelectorAll</code> porque son más flexibles (aceptan cualquier selector CSS) y unifican la sintaxis de búsqueda.</p>
 </blockquote>
-<h3 id="152-metodos-modernos-recomendados">15.2 Métodos modernos (recomendados)</h3>
+<h3 id="222-metodos-modernos-recomendados">22.2 Métodos modernos (recomendados)</h3>
 <pre><code class="language-javascript">// querySelector - devuelve el PRIMER elemento que coincide
 const elemento = document.querySelector(&quot;#miId&quot;);
 const elemento2 = document.querySelector(&quot;.miClase&quot;);
@@ -1716,7 +1798,7 @@ const items = document.querySelectorAll(&quot;ul li&quot;);
 // NodeList: estático, tiene forEach
 // HTMLCollection: vivo (se actualiza), no tiene forEach
 </code></pre>
-<h3 id="153-selectores-css-en-javascript">15.3 Selectores CSS en JavaScript</h3>
+<h3 id="173-selectores-css-en-javascript">17.3 Selectores CSS en JavaScript</h3>
 <pre><code class="language-javascript">// Por ID
 document.querySelector(&quot;#miId&quot;);
 
@@ -1742,7 +1824,7 @@ document.querySelector(&quot;li:first-child&quot;);
 document.querySelector(&quot;li:nth-child(2)&quot;);
 document.querySelector(&quot;input:not([disabled])&quot;);
 </code></pre>
-<h3 id="154-busquedas-acotadas">15.4 Búsquedas acotadas</h3>
+<h3 id="164-busquedas-acotadas">16.4 Búsquedas acotadas</h3>
 <pre><code class="language-javascript">// Buscar dentro de un elemento específico
 const menu = document.querySelector(&quot;#menu&quot;);
 const enlaces = menu.querySelectorAll(&quot;a&quot;);
@@ -1750,7 +1832,7 @@ const enlaces = menu.querySelectorAll(&quot;a&quot;);
 // Equivalente en una sola línea
 const enlaces2 = document.querySelectorAll(&quot;#menu a&quot;);
 </code></pre>
-<h3 id="155-navegacion-por-el-dom">15.5 Navegación por el DOM</h3>
+<h3 id="165-navegacion-por-el-dom">16.5 Navegación por el DOM</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;.item&quot;);
 
 // Elementos padre/hijo/hermano
@@ -1766,8 +1848,8 @@ elemento.closest(&quot;.container&quot;);   // Ancestro más cercano
 elemento.matches(&quot;.active&quot;);      // ¿Coincide con selector?
 </code></pre>
 <hr />
-<h2 id="16-modificacion-de-contenido">16. Modificación de contenido</h2>
-<h3 id="161-contenido-de-texto">16.1 Contenido de texto</h3>
+<h2 id="17-modificacion-de-contenido">17. Modificación de contenido</h2>
+<h3 id="221-contenido-de-texto">22.1 Contenido de texto</h3>
 <pre><code class="language-javascript">const parrafo = document.querySelector(&quot;p&quot;);
 
 // textContent - texto plano (recomendado)
@@ -1780,7 +1862,7 @@ parrafo.innerText = &quot;Texto visible&quot;;
 // Diferencia: textContent incluye texto oculto por CSS
 // innerText solo muestra lo visible
 </code></pre>
-<h3 id="162-contenido-html">16.2 Contenido HTML</h3>
+<h3 id="222-contenido-html">22.2 Contenido HTML</h3>
 <pre><code class="language-javascript">const div = document.querySelector(&quot;div&quot;);
 
 // innerHTML - contenido HTML interno
@@ -1797,7 +1879,7 @@ console.log(div.outerHTML);
 <blockquote>
 <p><strong>¿Cuál usar?</strong> Usa <code>textContent</code> para texto plano (es más seguro y rápido). Usa <code>innerHTML</code> solo cuando realmente necesites insertar HTML, y <strong>nunca</strong> con datos que provengan del usuario sin sanitizar, ya que es vulnerable a ataques XSS.</p>
 </blockquote>
-<h3 id="163-atributos-html">16.3 Atributos HTML</h3>
+<h3 id="173-atributos-html">17.3 Atributos HTML</h3>
 <pre><code class="language-javascript">const enlace = document.querySelector(&quot;a&quot;);
 
 // Propiedades directas (atributos estándar)
@@ -1817,8 +1899,8 @@ elemento.dataset.id;           // Acceso a data-id
 elemento.dataset.userId = &quot;5&quot;; // Crea data-user-id
 </code></pre>
 <hr />
-<h2 id="17-manipulacion-de-clases-css">17. Manipulación de clases CSS</h2>
-<h3 id="171-classname">17.1 className</h3>
+<h2 id="18-manipulacion-de-clases-css">18. Manipulación de clases CSS</h2>
+<h3 id="221-classname">22.1 className</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;div&quot;);
 
 // Obtener todas las clases como string
@@ -1830,7 +1912,7 @@ elemento.className = &quot;nueva-clase&quot;;
 <blockquote>
 <p><strong>¿Cuál usar?</strong> Usa siempre <code>classList</code>. Es más seguro porque no sobrescribe accidentalmente otras clases, y sus métodos (<code>add</code>, <code>remove</code>, <code>toggle</code>, <code>contains</code>) hacen el código mucho más legible y menos propenso a errores.</p>
 </blockquote>
-<h3 id="172-classlist-recomendado">17.2 classList (recomendado)</h3>
+<h3 id="222-classlist-recomendado">22.2 classList (recomendado)</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;div&quot;);
 
 // Propiedades
@@ -1850,8 +1932,8 @@ elemento.classList.replace(&quot;old&quot;, &quot;new&quot;);     // Reemplazar
 elemento.classList.toggle(&quot;visible&quot;, isVisible); // Añade si true, quita si false
 </code></pre>
 <hr />
-<h2 id="18-manipulacion-de-estilos-css">18. Manipulación de estilos CSS</h2>
-<h3 id="181-propiedad-style">18.1 Propiedad style</h3>
+<h2 id="19-manipulacion-de-estilos-css">19. Manipulación de estilos CSS</h2>
+<h3 id="221-propiedad-style">22.1 Propiedad style</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;div&quot;);
 
 // Estilos inline (camelCase)
@@ -1868,7 +1950,7 @@ console.log(elemento.style.color);
 elemento.style.color = &quot;&quot;;
 elemento.style.removeProperty(&quot;color&quot;);
 </code></pre>
-<h3 id="182-getcomputedstyle">18.2 getComputedStyle</h3>
+<h3 id="222-getcomputedstyle">22.2 getComputedStyle</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;div&quot;);
 
 // Obtiene TODOS los estilos aplicados (CSS + inline)
@@ -1882,8 +1964,8 @@ console.log(estilos.getPropertyValue(&quot;font-size&quot;)); // 16px
 <p><strong>Mejor práctica</strong>: Usa clases CSS en lugar de estilos inline cuando sea posible.</p>
 </blockquote>
 <hr />
-<h2 id="19-creacion-de-elementos">19. Creación de elementos</h2>
-<h3 id="191-createelement">19.1 createElement</h3>
+<h2 id="20-creacion-de-elementos">20. Creación de elementos</h2>
+<h3 id="221-createelement">22.1 createElement</h3>
 <pre><code class="language-javascript">// 1. Crear elemento
 const div = document.createElement(&quot;div&quot;);
 
@@ -1896,7 +1978,7 @@ div.innerHTML = &quot;&lt;p&gt;Párrafo&lt;/p&gt;&quot;;
 // 3. Añadir al DOM
 document.body.appendChild(div);
 </code></pre>
-<h3 id="192-api-de-elementos-metodos-modernos">19.2 API de Elementos (métodos modernos)</h3>
+<h3 id="222-api-de-elementos-metodos-modernos">22.2 API de Elementos (métodos modernos)</h3>
 <pre><code class="language-javascript">const container = document.querySelector(&quot;.container&quot;);
 const nuevo = document.createElement(&quot;div&quot;);
 nuevo.textContent = &quot;Nuevo elemento&quot;;
@@ -1921,7 +2003,7 @@ nuevo.remove();
 <blockquote>
 <p><strong>¿Cuál usar?</strong> Los métodos modernos (<code>append</code>, <code>prepend</code>, <code>before</code>, <code>after</code>, <code>remove</code>) son los más recomendados por su sintaxis clara y porque permiten añadir múltiples elementos a la vez. <code>appendChild</code> sigue siendo válido pero es más limitado. Usa <code>insertAdjacentHTML</code> cuando necesites insertar HTML como string de forma eficiente.</p>
 </blockquote>
-<h3 id="193-insercion-adyacente-insertadjacent">19.3 Inserción adyacente (insertAdjacent)</h3>
+<h3 id="223-insercion-adyacente-insertadjacent">22.3 Inserción adyacente (insertAdjacent)</h3>
 <pre><code class="language-javascript">const referencia = document.querySelector(&quot;.referencia&quot;);
 
 // insertAdjacentHTML - insertar HTML
@@ -1946,7 +2028,7 @@ referencia.insertAdjacentText(&quot;beforeend&quot;, &quot;Texto añadido&quot;)
 &lt;/div&gt;
 &lt;!-- afterend --&gt;
 </code></pre>
-<h3 id="194-clonacion-de-elementos">19.4 Clonación de elementos</h3>
+<h3 id="224-clonacion-de-elementos">22.4 Clonación de elementos</h3>
 <pre><code class="language-javascript">const original = document.querySelector(&quot;.card&quot;);
 
 // Clon superficial (solo el elemento)
@@ -1958,8 +2040,8 @@ const clonProfundo = original.cloneNode(true);
 document.body.appendChild(clonProfundo);
 </code></pre>
 <hr />
-<h2 id="20-eventos-en-javascript">20. Eventos en JavaScript</h2>
-<h3 id="201-que-son-los-eventos">20.1 ¿Qué son los eventos?</h3>
+<h2 id="21-eventos-en-javascript">21. Eventos en JavaScript</h2>
+<h3 id="221-que-son-los-eventos">22.1 ¿Qué son los eventos?</h3>
 <p>Los eventos son <strong>acciones o sucesos</strong> que ocurren en el navegador y a los que podemos responder con código JavaScript.</p>
 <p><strong>Eventos comunes</strong>:
 - <code>click</code> - Clic del ratón
@@ -1974,7 +2056,7 @@ document.body.appendChild(clonProfundo);
 - <code>load</code> - Carga completada
 - <code>scroll</code> - Desplazamiento
 - <code>resize</code> - Cambio de tamaño</p>
-<h3 id="202-formas-de-manejar-eventos">20.2 Formas de manejar eventos</h3>
+<h3 id="222-formas-de-manejar-eventos">22.2 Formas de manejar eventos</h3>
 <pre><code class="language-javascript">// ❌ 1. Desde HTML (evitar)
 &lt;button onclick=&quot;alert('Hola')&quot;&gt;Click&lt;/button&gt;
 
@@ -1994,7 +2076,7 @@ btn.addEventListener(&quot;click&quot;, function() {
 <blockquote>
 <p><strong>¿Cuál usar?</strong> Siempre <code>addEventListener</code>. Es el estándar moderno porque permite añadir múltiples listeners al mismo evento, ofrece opciones avanzadas (<code>once</code>, <code>passive</code>, <code>capture</code>), y se puede eliminar con <code>removeEventListener</code>. Las otras formas están obsoletas o tienen limitaciones importantes.</p>
 </blockquote>
-<h3 id="203-addeventlistener">20.3 addEventListener</h3>
+<h3 id="223-addeventlistener">22.3 addEventListener</h3>
 <pre><code class="language-javascript">const boton = document.querySelector(&quot;#miBoton&quot;);
 
 // Sintaxis básica
@@ -2016,7 +2098,7 @@ boton.addEventListener(&quot;click&quot;, handleClick);
 // Eliminar evento
 boton.removeEventListener(&quot;click&quot;, handleClick);
 </code></pre>
-<h3 id="204-el-objeto-event">20.4 El objeto Event</h3>
+<h3 id="224-el-objeto-event">22.4 El objeto Event</h3>
 <pre><code class="language-javascript">boton.addEventListener(&quot;click&quot;, function(event) {
     // Propiedades comunes
     console.log(event.type);        // &quot;click&quot;
@@ -2040,7 +2122,7 @@ boton.removeEventListener(&quot;click&quot;, handleClick);
     event.stopPropagation();        // Detiene propagación
 });
 </code></pre>
-<h3 id="205-propagacion-de-eventos">20.5 Propagación de eventos</h3>
+<h3 id="215-propagacion-de-eventos">21.5 Propagación de eventos</h3>
 <p>Los eventos se propagan en dos fases:
 1. <strong>Captura</strong> (capturing): De documento hacia el elemento
 2. <strong>Burbujeo</strong> (bubbling): Del elemento hacia el documento</p>
@@ -2068,7 +2150,7 @@ elemento.addEventListener(&quot;click&quot;, handler, { capture: true });
 │                      ↑ Burbujeo                 │
 └─────────────────────────────────────────────────┘
 </code></pre>
-<h3 id="206-delegacion-de-eventos">20.6 Delegación de eventos</h3>
+<h3 id="216-delegacion-de-eventos">21.6 Delegación de eventos</h3>
 <p>Técnica para manejar eventos en elementos dinámicos o múltiples:</p>
 <pre><code class="language-javascript">// ❌ Ineficiente: un listener por cada botón
 document.querySelectorAll(&quot;.btn&quot;).forEach(btn =&gt; {
@@ -2083,7 +2165,7 @@ document.querySelector(&quot;.container&quot;).addEventListener(&quot;click&quot
     }
 });
 </code></pre>
-<h3 id="207-opciones-de-addeventlistener">20.7 Opciones de addEventListener</h3>
+<h3 id="217-opciones-de-addeventlistener">21.7 Opciones de addEventListener</h3>
 <pre><code class="language-javascript">elemento.addEventListener(&quot;click&quot;, handler, {
     once: true,      // Se ejecuta solo una vez
     passive: true,   // No llamará preventDefault()
@@ -2102,8 +2184,8 @@ elemento.addEventListener(&quot;click&quot;, handler, {
 controller.abort();
 </code></pre>
 <hr />
-<h2 id="21-eventos-comunes">21. Eventos comunes</h2>
-<h3 id="211-eventos-de-raton">21.1 Eventos de ratón</h3>
+<h2 id="22-eventos-comunes">22. Eventos comunes</h2>
+<h3 id="221-eventos-de-raton">22.1 Eventos de ratón</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;.interactivo&quot;);
 
 elemento.addEventListener(&quot;click&quot;, (e) =&gt; {
@@ -2131,7 +2213,7 @@ elemento.addEventListener(&quot;contextmenu&quot;, (e) =&gt; {
     console.log(&quot;Click derecho&quot;);
 });
 </code></pre>
-<h3 id="212-eventos-de-teclado">21.2 Eventos de teclado</h3>
+<h3 id="222-eventos-de-teclado">22.2 Eventos de teclado</h3>
 <pre><code class="language-javascript">document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
     console.log(&quot;Tecla:&quot;, e.key);
     console.log(&quot;Código:&quot;, e.code);
@@ -2156,7 +2238,7 @@ document.addEventListener(&quot;keyup&quot;, (e) =&gt; {
     console.log(&quot;Tecla soltada:&quot;, e.key);
 });
 </code></pre>
-<h3 id="213-eventos-de-formulario">21.3 Eventos de formulario</h3>
+<h3 id="223-eventos-de-formulario">22.3 Eventos de formulario</h3>
 <pre><code class="language-javascript">const formulario = document.querySelector(&quot;form&quot;);
 const input = document.querySelector(&quot;input&quot;);
 
@@ -2186,7 +2268,7 @@ input.addEventListener(&quot;blur&quot;, () =&gt; {
     console.log(&quot;Input pierde foco&quot;);
 });
 </code></pre>
-<h3 id="214-eventos-de-ventana">21.4 Eventos de ventana</h3>
+<h3 id="224-eventos-de-ventana">22.4 Eventos de ventana</h3>
 <pre><code class="language-javascript">// Carga completa
 window.addEventListener(&quot;load&quot;, () =&gt; {
     console.log(&quot;Página completamente cargada&quot;);
@@ -2208,7 +2290,7 @@ window.addEventListener(&quot;resize&quot;, () =&gt; {
 });
 </code></pre>
 <hr />
-<h2 id="22-ejemplo-practico-lista-de-tareas">22. Ejemplo práctico: Lista de tareas</h2>
+<h2 id="23-ejemplo-practico-lista-de-tareas">23. Ejemplo práctico: Lista de tareas</h2>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;es&quot;&gt;
 &lt;head&gt;
@@ -2303,7 +2385,7 @@ window.addEventListener(&quot;resize&quot;, () =&gt; {
 &lt;/html&gt;
 </code></pre>
 <hr />
-<h2 id="23-recursos-y-referencias">23. Recursos y referencias</h2>
+<h2 id="24-recursos-y-referencias">24. Recursos y referencias</h2>
 <h3 id="documentacion-oficial">Documentación oficial</h3>
 <ul>
 <li><strong>MDN Web Docs</strong>: https://developer.mozilla.org/es/docs/Web/JavaScript</li>
