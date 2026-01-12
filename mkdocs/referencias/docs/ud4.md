@@ -1,282 +1,553 @@
-# UD2: Introducción a JavaScript y manipulación del DOM
-
----
-# PARTE 1: FUNDAMENTOS DE JAVASCRIPT
-
+# UD2: Fundamentos de JavaScript
 ## 1. ¿Qué es JavaScript?
 
-JavaScript es un **lenguaje de programación interpretado** que se ejecuta principalmente en el navegador del usuario. Mientras HTML estructura el contenido y CSS lo estiliza, JavaScript añade **interactividad y comportamiento dinámico** a las páginas web.
+Cualquier página web de Internet está construida, como mínimo, por **HTML** (un lenguaje de marcas) y **CSS** (un lenguaje de estilos). El primero permite construir todo el contenido e información de la página mediante etiquetas, mientras que el segundo le da estilo visual y construye una interfaz más agradable para el usuario.
 
-### Características fundamentales
+Sin embargo, utilizar solo HTML y CSS nos **limita considerablemente**. Si bien podemos hacer muchas cosas con estos dos lenguajes, hay otras que serían totalmente imposibles. Imagina que quieres mostrar 500 elementos en una página. Con HTML tendrías que escribir 500 líneas de código, una por cada elemento. Con JavaScript, no serían más de 10 líneas, ya que podemos automatizar la tarea con un bucle.
 
-- **Lenguaje de alto nivel**: Su sintaxis es relativamente cercana al lenguaje humano, lo que facilita su aprendizaje.
-- **Tipado dinámico**: No es necesario declarar el tipo de las variables; JavaScript lo infiere automáticamente.
-- **Orientado a eventos**: Responde a acciones del usuario como clics, pulsaciones de teclas o movimientos del ratón.
-- **Multiplataforma**: Funciona en cualquier navegador moderno sin necesidad de plugins adicionales.
-- **Interpretado**: El navegador lee el código y lo ejecuta línea por línea, sin necesidad de compilación previa.
+Aquí es donde entra **JavaScript**: un lenguaje de programación que nos permite añadir **interactividad y comportamiento dinámico** a nuestras páginas web.
 
-### JavaScript en el ecosistema web
+### El tercer pilar del desarrollo web
+
+Podemos pensar en el desarrollo web como una casa:
+
+- **HTML** es la **estructura**: los cimientos, las paredes, las habitaciones. Define qué contenido hay y cómo está organizado.
+- **CSS** es la **decoración**: la pintura, los muebles, la iluminación. Define cómo se ve todo.
+- **JavaScript** es la **electricidad y fontanería**: lo que hace que las cosas funcionen. Define qué ocurre cuando pulsas un interruptor o abres un grifo.
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    PÁGINA WEB                           │
-├─────────────────────────────────────────────────────────┤
-│  HTML          │  CSS           │  JavaScript           │
-│  (Estructura)  │  (Presentación)│  (Comportamiento)     │
-│                │                │                       │
-│  - Contenido   │  - Colores     │  - Interactividad     │
-│  - Semántica   │  - Tipografía  │  - Validación         │
-│  - Jerarquía   │  - Layout      │  - Dinamismo          │
-│  - Accesibilidad│ - Animaciones │  - Comunicación API   │
-└─────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                      PÁGINA WEB                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   HTML              CSS                 JavaScript              │
+│   (Estructura)      (Presentación)      (Comportamiento)        │
+│                                                                 │
+│   • Contenido       • Colores           • Interactividad        │
+│   • Semántica       • Tipografías       • Validación            │
+│   • Jerarquía       • Layouts           • Animaciones           │
+│   • Accesibilidad   • Responsive        • Comunicación API      │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 ```
+
+### ¿Qué podemos hacer con JavaScript?
+
+Con JavaScript podemos hacer prácticamente cualquier cosa en una página web:
+
+- **Modificar el contenido**: Cambiar textos, imágenes o cualquier elemento de la página sin recargarla.
+- **Responder a acciones del usuario**: Detectar clics, movimientos del ratón, pulsaciones de teclas...
+- **Validar formularios**: Comprobar que los datos introducidos son correctos antes de enviarlos.
+- **Crear animaciones**: Mover elementos, hacer transiciones, efectos visuales...
+- **Comunicarse con servidores**: Enviar y recibir datos sin recargar la página (AJAX/Fetch).
+- **Almacenar datos**: Guardar información en el navegador del usuario.
+
+### Un poco de historia
+
+JavaScript fue creado en **1995** por **Brendan Eich** en tan solo **10 días** mientras trabajaba en Netscape. Originalmente se llamaba **Mocha**, luego **LiveScript**, y finalmente **JavaScript**.
+
+Este último nombre fue una estrategia de marketing para aprovechar la popularidad de Java en aquel momento. Sin embargo, es importante entender que **JavaScript y Java son lenguajes completamente diferentes**. El nombre es una fuente constante de confusión para principiantes, pero más allá del nombre, no comparten casi nada.
+
+A pesar de sus humildes orígenes (¡10 días!), JavaScript se ha convertido en uno de los lenguajes de programación más populares del mundo. Hoy en día no solo se usa en navegadores, sino también:
+
+- **En servidores**: Con Node.js podemos crear aplicaciones de backend completas.
+- **En móviles**: Con React Native o Ionic podemos crear apps móviles.
+- **En escritorio**: Con Electron podemos crear aplicaciones de escritorio (VS Code está hecho con Electron).
+
+> **Nota para el estudiante**: Puedes aprender a programar en semanas, pero eso no significa que no cometas errores. Puedes aprender a programar bien y sin demasiados errores en meses. Pero dominar la programación es una tarea que requiere años. No te frustres si al principio las cosas no salen como esperas. Es completamente normal. La clave está en practicar constantemente y no tener miedo a cometer errores.
 
 ---
 
 ## 2. La especificación ECMAScript
 
-ECMAScript es la **especificación oficial** donde se definen todos los detalles de cómo debe funcionar JavaScript. Los navegadores (Chrome, Firefox, Edge, Safari) implementan motores de JavaScript que siguen esta especificación.
+Cuando hablamos de JavaScript, es importante entender qué es **ECMAScript**. Imagina que ECMAScript es como el "reglamento oficial" que define cómo debe funcionar JavaScript. Es la especificación donde se documentan todos los detalles del lenguaje: qué características debe tener, cómo deben comportarse, qué sintaxis es válida...
 
-### Evolución histórica
+### ¿Por qué existe ECMAScript?
 
-| Versión | Año | Novedades principales |
-|---------|-----|----------------------|
-| ES1 | 1997 | Primera versión |
+En los primeros años de la web, había una guerra entre navegadores. Netscape tenía JavaScript, pero Microsoft creó su propia versión llamada JScript para Internet Explorer. El problema era que cada navegador implementaba el lenguaje a su manera, lo que causaba enormes problemas de compatibilidad. Un código que funcionaba en Netscape podía fallar estrepitosamente en Internet Explorer.
+
+Para solucionar este caos, en 1997 se decidió crear un estándar internacional bajo el nombre de **ECMAScript** (por la organización ECMA International que lo mantiene). De esta forma, los diferentes navegadores (Chrome, Firefox, Safari, Edge...) saben cómo deben desarrollar sus motores de JavaScript para que cualquier código funcione exactamente igual, independientemente del navegador que se utilice.
+
+### La evolución de ECMAScript
+
+ECMAScript va acompañado de un número que indica la versión. En cada nueva versión se añaden nuevas funcionalidades que mantienen JavaScript vivo y moderno:
+
+| Versión | Año | Novedades destacadas |
+|---------|-----|---------------------|
+| ES1 | 1997 | Primera versión del estándar |
 | ES3 | 1999 | Expresiones regulares, try/catch |
-| ES5 | 2009 | Modo estricto, JSON, métodos de array |
-| **ES6/ES2015** | 2015 | let/const, arrow functions, clases, promesas, módulos |
-| ES2016 | 2016 | includes(), exponenciación (**) |
-| ES2017 | 2017 | async/await, Object.entries() |
-| ES2018+ | 2018+ | Spread en objetos, Promise.finally(), etc. |
+| ES5 | 2009 | Modo estricto, JSON nativo, métodos de array (forEach, map, filter...) |
+| **ES6/ES2015** | 2015 | **La gran revolución**: let/const, arrow functions, clases, promesas, módulos, template literals, desestructuración... |
+| ES2016 | 2016 | Array.includes(), operador exponenciación (**) |
+| ES2017 | 2017 | async/await, Object.entries(), Object.values() |
+| ES2018 | 2018 | Spread en objetos, Promise.finally() |
+| ES2020 | 2020 | Optional chaining (?.), nullish coalescing (??), BigInt |
+| ES2021+ | 2021... | Y sigue evolucionando cada año... |
 
-> **Importante**: ES6 (2015) marcó un antes y un después. La mayoría del código moderno utiliza características de ES6+.
+El año **2015** marcó un antes y un después en JavaScript. ES6 (también llamado ES2015) introdujo tantas mejoras que prácticamente transformó el lenguaje. La mayoría del código moderno que verás utiliza características de ES6 o posteriores. Si ves código con `var` en lugar de `let`/`const`, o funciones con `function` en lugar de `=>`, probablemente es código antiguo.
 
-### Compatibilidad y Polyfills
+### Compatibilidad entre navegadores
 
-No todos los navegadores soportan todas las características de JavaScript al mismo tiempo. Para verificar compatibilidad:
+Aunque los navegadores intentan implementar el estándar ECMAScript lo antes posible, no todos lo consiguen al mismo tiempo. Para comprobar si una característica está disponible en los navegadores, puedes consultar:
 
-- **Can I Use**: https://caniuse.com/
-- **Tabla Kangax**: https://kangax.github.io/compat-table/es6/
+- **Can I Use** (https://caniuse.com/): Muestra la compatibilidad de cualquier característica web.
+- **Tabla Kangax** (https://kangax.github.io/compat-table/es6/): Específica para ECMAScript.
 
-Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
+Cuando una característica no está disponible en un navegador antiguo que necesitas soportar, existen dos soluciones:
+
+1. **Polyfill**: Un fragmento de código que "rellena" la funcionalidad que falta.
+2. **Transpilador** (como Babel): Una herramienta que convierte código moderno en código compatible con navegadores antiguos.
 
 ---
 
 ## 3. La consola de JavaScript
 
-La consola es la herramienta principal para **depurar** y **probar** código JavaScript.
+La consola es tu **mejor amiga** cuando programas en JavaScript. Es una herramienta que incluyen todos los navegadores modernos donde puedes escribir código, ver mensajes, detectar errores y depurar tus programas. Piensa en ella como una ventana que te permite "hablar" con JavaScript directamente y ver qué está pasando en tu código.
 
-### Acceso a la consola
+### Cómo acceder a la consola
 
-- **Windows/Linux**: `Ctrl + Shift + J` (directo a consola) o `F12` → pestaña Console
-- **Mac**: `Cmd + Option + J`
+Todos los navegadores modernos incluyen herramientas de desarrollo (conocidas como **DevTools**). Para acceder a la consola:
 
-### Métodos principales de console
+**En Windows/Linux:**
+- Pulsa `F12` y luego ve a la pestaña "Console"
+- O pulsa `Ctrl + Shift + J` para ir directamente a la consola
+
+**En Mac:**
+- Pulsa `Cmd + Option + J`
+
+Una vez abierta, verás un cursor parpadeante donde puedes escribir código JavaScript y ver el resultado inmediatamente. Pruébalo: escribe `2 + 2` y pulsa Enter. Verás `4` como resultado.
+
+### El clásico "Hola Mundo"
+
+El primer programa que se hace en cualquier lenguaje de programación es mostrar el mensaje "Hola Mundo". Es una tradición que viene desde los años 70. En JavaScript es muy sencillo:
 
 ```javascript
-// Mensaje informativo
-console.log("Hola mundo");
+console.log("Hola Mundo");
+```
 
-// Advertencia (texto amarillo)
-console.warn("Cuidado con este valor");
+Si escribes esto en la consola y pulsas Enter, verás el mensaje "Hola Mundo" aparecer. ¡Felicidades! Acabas de ejecutar tu primer código JavaScript.
 
-// Error (texto rojo)
-console.error("Ha ocurrido un error");
+Pero, ¿qué significa exactamente este código?
 
-// Información
-console.info("Versión 1.0.0");
+- `console` es un **objeto** que representa la consola del navegador
+- `.log()` es un **método** de ese objeto que muestra información
+- `"Hola Mundo"` es el **argumento** que le pasamos, el texto que queremos mostrar
 
-// Tabla (para arrays y objetos)
-console.table([
-    { nombre: "Ana", edad: 25 },
-    { nombre: "Luis", edad: 30 }
-]);
+### Los diferentes métodos de console
 
-// Agrupar mensajes
-console.group("Datos del usuario");
-console.log("Nombre: Ana");
-console.log("Edad: 25");
-console.groupEnd();
+El objeto `console` tiene varios métodos que nos permiten mostrar información de diferentes formas. Cada uno tiene un estilo visual diferente:
 
-// Medir tiempo de ejecución
-console.time("proceso");
-// ... código a medir ...
-console.timeEnd("proceso");
+```javascript
+// Mensaje informativo normal - aparece en negro/blanco
+console.log("Este es un mensaje normal");
+console.log("Valor de x:", x);  // Puedes mostrar variables
+console.log("Usuario:", usuario, "Edad:", edad);  // Varios valores
 
-// Limpiar consola
+// Mensaje de advertencia - aparece en amarillo con icono ⚠️
+console.warn("¡Cuidado! Esta función está obsoleta");
+
+// Mensaje de error - aparece en rojo con icono ❌
+console.error("¡Error! No se pudo conectar al servidor");
+
+// Mensaje informativo - similar a log pero con icono ℹ️
+console.info("La aplicación se ha iniciado correctamente");
+
+// Limpiar toda la consola
 console.clear();
 ```
 
-### Debugger
+### Mostrar datos en formato tabla
 
-La palabra clave `debugger` detiene la ejecución del código y abre las DevTools:
+Cuando trabajamos con arrays u objetos, `console.table()` es increíblemente útil porque muestra los datos en un formato de tabla muy legible:
 
 ```javascript
-function calcular(a, b) {
-    debugger; // La ejecución se pausa aquí
-    return a + b;
+const usuarios = [
+    { nombre: "Ana", edad: 25, ciudad: "Madrid" },
+    { nombre: "Luis", edad: 30, ciudad: "Barcelona" },
+    { nombre: "María", edad: 28, ciudad: "Valencia" }
+];
+
+console.table(usuarios);
+```
+
+Esto mostrará una tabla con columnas para cada propiedad, mucho más fácil de leer que el formato normal.
+
+### Medir el tiempo de ejecución
+
+A veces queremos saber cuánto tarda en ejecutarse un fragmento de código. Para eso usamos `console.time()` y `console.timeEnd()`:
+
+```javascript
+console.time("Mi proceso");
+
+// Código que queremos medir...
+let suma = 0;
+for (let i = 0; i < 1000000; i++) {
+    suma += i;
+}
+
+console.timeEnd("Mi proceso");
+// Resultado: "Mi proceso: 12.345ms"
+```
+
+### El debugger
+
+Cuando tu código no funciona como esperas y necesitas investigar qué está pasando, puedes usar la palabra clave `debugger` para pausar la ejecución:
+
+```javascript
+function calcularPrecio(cantidad, precioUnitario) {
+    debugger;  // La ejecución se pausará aquí
+    let subtotal = cantidad * precioUnitario;
+    let iva = subtotal * 0.21;
+    return subtotal + iva;
 }
 ```
+
+Cuando el navegador encuentra `debugger`, abre las DevTools y te permite ver el valor de todas las variables, ejecutar el código paso a paso, y entender qué está pasando.
+
+> **Consejo importante**: Acostúmbrate a tener la consola **siempre abierta** mientras desarrollas. Los errores de JavaScript aparecen ahí, y si no la miras, nunca sabrás qué está fallando.
 
 ---
 
 ## 4. Cómo incluir JavaScript en HTML
 
-Existen tres formas de incluir JavaScript, ordenadas de **menos a más recomendable**:
+Existen varias formas de añadir código JavaScript a una página web. Vamos a verlas ordenadas de **menos recomendable** a **más recomendable**.
 
-### 4.1 JavaScript inline (evitar)
+### 4.1. JavaScript en línea (inline) — ❌ Evitar siempre
+
+La forma más directa (pero peor) es escribir JavaScript directamente en los atributos HTML:
 
 ```html
-<button onclick="alert('Hola')">Clic aquí</button>
+<button onclick="alert('¡Hola!')">Púlsame</button>
 ```
 
-❌ **Problemas**: Mezcla HTML con JavaScript, difícil de mantener, no reutilizable.
+**¿Por qué es mala práctica?**
 
-### 4.2 JavaScript interno (para pruebas rápidas)
+1. **Mezcla HTML con JavaScript**: El HTML debería contener solo estructura.
+2. **No es reutilizable**: Si tienes 10 botones que hacen lo mismo, tienes que copiar el código 10 veces.
+3. **Difícil de depurar**: Los errores son más difíciles de encontrar.
+4. **Problemas de seguridad**: Facilita ataques XSS.
+
+### 4.2. JavaScript interno — ⚠️ Solo para pruebas rápidas
+
+Podemos incluir código JavaScript dentro de etiquetas `<script>` en el propio documento HTML:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Mi página</title>
 </head>
 <body>
-    <h1>Contenido</h1>
+    <h1>Hola Mundo</h1>
     
     <script>
-        console.log("JavaScript interno");
+        console.log("¡La página se ha cargado!");
     </script>
 </body>
 </html>
 ```
 
-### 4.3 JavaScript externo (recomendado)
+Esta forma está bien para hacer pruebas rápidas mientras aprendes, pero no es ideal para proyectos reales porque el código JavaScript queda mezclado con el HTML.
 
+### 4.3. JavaScript externo — ✅ Siempre recomendado
+
+La mejor práctica es separar el JavaScript en archivos `.js` independientes:
+
+**index.html:**
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Mi página</title>
 </head>
 <body>
-    <h1>Contenido</h1>
+    <h1>Hola Mundo</h1>
     
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 ```
 
-### Atributos defer y async
+**js/main.js:**
+```javascript
+console.log("¡La página se ha cargado!");
+```
+
+**Ventajas:**
+
+1. **Separación de responsabilidades**: HTML para estructura, JS para comportamiento.
+2. **Reutilización**: El mismo archivo JS puede usarse en varias páginas.
+3. **Caché del navegador**: El archivo JS se descarga una vez y se reutiliza.
+4. **Más fácil de mantener**: Todo el JavaScript está organizado en archivos.
+
+### Los atributos defer y async
+
+Cuando el navegador encuentra una etiqueta `<script>`, **detiene** la carga del HTML hasta que el script se descarga y ejecuta. Para evitar esto, tenemos dos atributos:
 
 ```html
-<!-- Sin atributos: bloquea el HTML hasta que carga y ejecuta -->
-<script src="app.js"></script>
-
-<!-- defer: carga en paralelo, ejecuta después del HTML -->
+<!-- defer: carga en paralelo, ejecuta al terminar el HTML -->
 <script src="app.js" defer></script>
 
-<!-- async: carga en paralelo, ejecuta cuando está listo -->
+<!-- async: carga en paralelo, ejecuta inmediatamente cuando está listo -->
 <script src="app.js" async></script>
 ```
 
 | Atributo | Carga | Ejecución | Orden garantizado |
 |----------|-------|-----------|-------------------|
-| (ninguno) | Bloquea | Inmediata | Sí |
-| `defer` | Paralela | Al terminar HTML | Sí |
-| `async` | Paralela | Cuando está listo | No |
+| (ninguno) | Bloquea HTML | Inmediata | Sí |
+| `defer` | En paralelo | Al terminar HTML | Sí |
+| `async` | En paralelo | Cuando está listo | No |
 
-> **Recomendación**: Usa `defer` para scripts que manipulan el DOM.
+> **Recomendación**: Usa `defer` para la mayoría de scripts. Usa `async` solo para scripts independientes como analytics.
 
 ---
 
-## 5. Modo estricto: "use strict"
+## 5. Buenas prácticas y código limpio
 
-JavaScript es un lenguaje muy permisivo por razones históricas de compatibilidad. Esto significa que permite ciertas prácticas que pueden causar errores difíciles de detectar. El **modo estricto** activa un conjunto de reglas más rigurosas que ayudan a escribir código más seguro y limpio.
+Antes de empezar a escribir código JavaScript, es fundamental conocer una serie de **buenas prácticas** que te ayudarán a crear código más legible, mantenible y menos propenso a errores. **Cuanto antes las adoptes, mejores hábitos desarrollarás**.
 
-### ¿Qué hace "use strict"?
+### 5.1. El modo estricto: "use strict"
 
-- **Convierte errores silenciosos en excepciones**: Acciones que antes fallaban en silencio ahora lanzan errores.
-- **Prohíbe sintaxis problemática**: Evita el uso de características confusas o peligrosas.
-- **Prepara el código para futuras versiones**: Reserva palabras clave que se usarán en ECMAScript futuro.
-
-### Cómo activarlo
+JavaScript es un lenguaje muy **permisivo** por razones históricas. Esto significa que permite ciertas prácticas que pueden causar errores difíciles de detectar. Veamos un ejemplo:
 
 ```javascript
-// Al inicio del archivo (afecta a todo el archivo)
+// Sin modo estricto - JavaScript no se queja
+function calcularPrecio(cantidad) {
+    precio = cantidad * 10;  // ¡Olvidé poner let/const!
+    return precio;
+}
+
+calcularPrecio(5);
+console.log(precio);  // 50 - ¡La variable existe fuera de la función!
+```
+
+Al olvidar `let` o `const`, JavaScript crea **automáticamente** una variable global. Esto es peligrosísimo.
+
+El **modo estricto** (`"use strict"`) activa reglas más rigurosas:
+
+```javascript
 "use strict";
 
-let nombre = "Ana";
-// ... resto del código
+nombre = "Ana";  // ❌ ReferenceError: nombre is not defined
+```
 
-// O dentro de una función (afecta solo a esa función)
-function miFuncion() {
-    "use strict";
-    // código en modo estricto
+¡Ahora JavaScript nos avisa inmediatamente!
+
+#### Errores que detecta "use strict"
+
+```javascript
+"use strict";
+
+// ❌ Variables sin declarar
+usuario = "Ana";  // ReferenceError
+
+// ❌ Parámetros duplicados
+function suma(a, a, b) { }  // SyntaxError
+
+// ❌ Palabras reservadas para el futuro
+let interface = "algo";  // SyntaxError
+```
+
+> **¿Cuándo usarlo?** En **módulos ES6** (archivos con `import`/`export`) el modo estricto está activado automáticamente. En scripts tradicionales, añade `"use strict";` al inicio del archivo.
+
+### 5.2. Nombres descriptivos
+
+Una de las tareas más importantes en programación es **ponerle un buen nombre** a una variable. Un buen nombre hace que el código sea autoexplicativo.
+
+```javascript
+// ❌ Nombres poco claros
+let x = 100;
+let t = x * 0.21;
+let y = x + t;
+
+// ✅ Nombres descriptivos
+let precioBase = 100;
+let iva = precioBase * 0.21;
+let precioTotal = precioBase + iva;
+```
+
+En el segundo ejemplo **no necesitas ningún comentario** para entender qué hace el código.
+
+#### Convenciones de nombrado en JavaScript
+
+```javascript
+// camelCase para variables y funciones
+let nombreCompleto = "Ana García";
+function calcularEdad() { }
+
+// UPPER_SNAKE_CASE para constantes que representan valores fijos
+const IVA = 0.21;
+const MAX_INTENTOS = 3;
+
+// PascalCase para clases
+class Usuario { }
+class CarritoDeCompras { }
+
+// Verbos para funciones (hacen cosas)
+function obtenerDatos() { }
+function calcularTotal() { }
+function validarFormulario() { }
+
+// Sustantivos para variables (son cosas)
+let usuario = { };
+let listaDeProductos = [];
+
+// Prefijos para booleanos
+let isActivo = true;       // ¿está activo?
+let hasPermiso = false;    // ¿tiene permiso?
+let canEditar = true;      // ¿puede editar?
+```
+
+### 5.3. Por qué evitar break y continue
+
+Las sentencias `break` y `continue` permiten **interrumpir el flujo normal** de un bucle. Aunque funcionan, su uso excesivo hace que el código sea difícil de seguir.
+
+El problema es que **rompen la predictibilidad** del bucle:
+
+```javascript
+// ❌ Con múltiples breaks - ¿cuántas veces se ejecuta?
+for (let i = 0; i < 100; i++) {
+    if (condicionA) break;
+    // ... código ...
+    if (condicionB) break;
+    // ... más código ...
+    if (condicionC) break;
+}
+
+// ✅ Mejor: condición explícita
+let encontrado = false;
+let i = 0;
+while (i < 100 && !encontrado) {
+    if (datos[i] === valorBuscado) {
+        encontrado = true;
+    }
+    i++;
+}
+
+// ✅ Aún mejor: usar métodos de array
+const resultado = datos.find(item => item === valorBuscado);
+```
+
+#### ⚠️ Cuidado con continue en bucles while
+
+Un error muy común que puede congelar tu navegador:
+
+```javascript
+// ❌ ¡BUCLE INFINITO!
+let i = 0;
+while (i < 10) {
+    if (i === 5) {
+        continue;  // Salta al inicio...
+    }
+    console.log(i);
+    i++;  // ...pero esto NUNCA se ejecuta cuando i === 5
 }
 ```
 
-### Errores que detecta "use strict"
+### 5.4. Usa siempre comparación estricta (=== y !==)
+
+En JavaScript existen dos tipos de comparación:
+
+- **Comparación débil** (`==`): Convierte los tipos antes de comparar
+- **Comparación estricta** (`===`): Compara valor Y tipo
+
+La comparación débil puede dar resultados sorprendentes:
 
 ```javascript
-"use strict";
+// Comparación débil (==) - resultados inesperados
+0 == false         // true  😱
+"" == false        // true  😱
+null == undefined  // true  😱
+"5" == 5           // true  😱
+[] == false        // true  😱
 
-// ❌ Error: Variable no declarada
-nombre = "Ana";  // ReferenceError: nombre is not defined
-// ✅ Correcto
-let nombre = "Ana";
-
-// ❌ Error: Eliminar variables o funciones
-let x = 10;
-delete x;  // SyntaxError
-
-// ❌ Error: Parámetros duplicados
-function suma(a, a, b) { }  // SyntaxError
-
-// ❌ Error: Escritura en propiedades de solo lectura
-const obj = {};
-Object.defineProperty(obj, "x", { value: 0, writable: false });
-obj.x = 10;  // TypeError
-
-// ❌ Error: Uso de palabras reservadas para el futuro
-let implements = 1;  // SyntaxError
-let interface = 2;   // SyntaxError
-let private = 3;     // SyntaxError
-
-// ❌ Error: Números octales con sintaxis antigua
-let octal = 010;  // SyntaxError (usar 0o10 en su lugar)
+// Comparación estricta (===) - predecible
+0 === false         // false
+"" === false        // false
+null === undefined  // false
+"5" === 5           // false
 ```
 
-### ¿Cuándo usarlo?
+> **Regla de oro**: Usa **siempre** `===` y `!==`. No hay ninguna situación en código moderno donde la comparación débil sea necesaria.
 
-| Situación | ¿Usar "use strict"? |
-|-----------|---------------------|
-| Código nuevo | ✅ Siempre |
-| Proyectos profesionales | ✅ Siempre |
-| Aprendizaje | ✅ Recomendado (detecta errores comunes) |
-| Código legacy antiguo | ⚠️ Con cuidado (puede romper funcionalidad) |
-| Módulos ES6 (`import`/`export`) | ✅ Automático (ya son estrictos por defecto) |
+### 5.5. Resumen de buenas prácticas
 
-> **¿Cuál es la práctica actual?** En proyectos modernos con módulos ES6 (`import`/`export`), el modo estricto está **activado automáticamente**, así que no necesitas escribirlo. Sin embargo, si trabajas con scripts tradicionales (sin módulos), es muy recomendable añadir `"use strict";` al inicio de cada archivo. En el contexto de aprendizaje, usarlo te ayudará a detectar errores y adoptar buenas prácticas desde el principio.
+| Práctica | Recomendación |
+|----------|---------------|
+| Modo estricto | Usar `"use strict"` en scripts tradicionales |
+| Nombres | Descriptivos, en inglés, convención correcta |
+| Variables | `const` por defecto, `let` si necesitas reasignar, nunca `var` |
+| Comparaciones | Siempre `===` y `!==` |
+| `break`/`continue` | Evitar; preferir condiciones claras o métodos de array |
+| Comentarios | Explicar el "porqué", no el "qué" |
 
 ---
 
 ## 6. Variables y constantes
 
-### Declaración de variables
-
-JavaScript ofrece tres formas de declarar variables:
+En programación, una **variable** es como una caja etiquetada donde guardamos información. La etiqueta es el **nombre** de la variable, y dentro de la caja está el **valor** que almacena.
 
 ```javascript
-// var - Forma antigua, evitar en código moderno
-var antigua = "no usar";
+// Creamos una "caja" llamada "nombre" y guardamos "Ana" dentro
+let nombre = "Ana";
 
-// let - Variable que puede cambiar
-let contador = 0;
-contador = 1; // ✅ Permitido
+// Ahora podemos usar el valor
+console.log(nombre);  // "Ana"
+
+// Y podemos cambiar lo que hay dentro
+nombre = "Luis";
+console.log(nombre);  // "Luis"
+```
+
+### Las tres formas de declarar variables
+
+JavaScript nos ofrece tres palabras clave para crear variables:
+
+```javascript
+// var - La forma antigua (evitar en código moderno)
+var nombre = "Ana";
+
+// let - Variable que puede cambiar su valor
+let edad = 25;
+edad = 26;  // ✅ Permitido
 
 // const - Constante, no puede reasignarse
 const PI = 3.14159;
-PI = 3.14; // ❌ Error: Assignment to constant variable
+PI = 3.14;  // ❌ Error: Assignment to constant variable
+```
+
+### ¿Por qué evitar var?
+
+La palabra clave `var` tiene comportamientos extraños que pueden causar bugs:
+
+**Problema 1: var ignora los bloques**
+
+```javascript
+// Con var - la variable "escapa" del bloque
+if (true) {
+    var mensaje = "Hola";
+}
+console.log(mensaje);  // "Hola" - ¡Accesible fuera del if!
+
+// Con let - la variable queda contenida
+if (true) {
+    let saludo = "Hola";
+}
+console.log(saludo);  // ❌ ReferenceError: saludo is not defined
+```
+
+**Problema 2: var permite redeclarar**
+
+```javascript
+// Con var - no da error
+var usuario = "Ana";
+var usuario = "Luis";  // Sobrescribe silenciosamente
+
+// Con let - te avisa del error
+let persona = "Ana";
+let persona = "Luis";  // ❌ SyntaxError
 ```
 
 ### Diferencias entre var, let y const
@@ -284,549 +555,763 @@ PI = 3.14; // ❌ Error: Assignment to constant variable
 | Característica | var | let | const |
 |---------------|-----|-----|-------|
 | Ámbito | Función | Bloque | Bloque |
-| Reasignable | Sí | Sí | No |
-| Redeclarable | Sí | No | No |
-| Hoisting | Sí (undefined) | Sí (TDZ*) | Sí (TDZ*) |
+| Puede reasignarse | Sí | Sí | No |
+| Puede redeclararse | Sí | No | No |
+| Usar en código moderno | ❌ Nunca | ✅ Cuando necesites reasignar | ✅ Por defecto |
 
-*TDZ = Temporal Dead Zone (no accesible antes de declaración)
+### El ámbito de bloque explicado
+
+El **ámbito de bloque** significa que la variable solo existe dentro de las llaves `{ }` donde fue declarada:
 
 ```javascript
-// Ámbito de bloque vs función
-if (true) {
-    var x = 1;   // Accesible fuera del if
-    let y = 2;   // Solo dentro del if
-    const z = 3; // Solo dentro del if
+function ejemplo() {
+    let a = 1;  // Existe en toda la función
+    
+    if (true) {
+        let b = 2;  // Solo existe dentro del if
+        console.log(a);  // ✅ 1
+        console.log(b);  // ✅ 2
+    }
+    
+    console.log(a);  // ✅ 1
+    console.log(b);  // ❌ Error: b is not defined
 }
-console.log(x); // 1
-console.log(y); // Error: y is not defined
 ```
 
-### Convenciones de nombres
+### const no significa inmutable
+
+`const` solo impide **reasignar** la variable, pero si el valor es un objeto o array, **podemos modificar su contenido**:
 
 ```javascript
-// camelCase para variables y funciones
-let nombreCompleto = "Ana García";
-function calcularTotal() { }
+const usuario = {
+    nombre: "Ana",
+    edad: 25
+};
 
-// UPPER_SNAKE_CASE para constantes "verdaderas"
-const MAX_INTENTOS = 3;
-const API_URL = "https://api.ejemplo.com";
+// ❌ No podemos reasignar
+usuario = { nombre: "Luis" };  // TypeError
 
-// PascalCase para clases
-class Usuario { }
+// ✅ Pero SÍ podemos modificar las propiedades
+usuario.nombre = "Luis";  // Funciona
+usuario.edad = 26;        // Funciona
+
+// Lo mismo con arrays
+const numeros = [1, 2, 3];
+numeros = [4, 5, 6];  // ❌ TypeError
+numeros.push(4);      // ✅ [1, 2, 3, 4]
 ```
 
-> **Regla**: Usa `const` por defecto. Usa `let` solo cuando necesites reasignar.
+> **Regla práctica**: Usa `const` por defecto para todo. Solo usa `let` cuando realmente necesites reasignar el valor. **Nunca uses `var`**.
 
 ---
 
 ## 7. Tipos de datos
 
-JavaScript tiene **tipos primitivos** y **tipos complejos (objetos)**.
+En JavaScript, cada valor que manejamos tiene un **tipo de dato**. Es importante conocerlos porque determinan qué operaciones podemos hacer con cada valor.
 
-### 6.1 Tipos primitivos
+JavaScript tiene dos categorías principales:
+- **Tipos primitivos**: Valores simples e inmutables
+- **Tipos de objeto**: Estructuras complejas
+
+### 7.1. Tipos primitivos
+
+#### String (cadenas de texto)
+
+Los strings representan texto:
 
 ```javascript
-// String (cadenas de texto)
-let texto = "Hola mundo";
-let texto2 = 'También con comillas simples';
-let plantilla = `Template literal con ${texto}`;
+// Tres formas de crear strings
+let saludo = "Hola mundo";           // Comillas dobles
+let nombre = 'Ana García';           // Comillas simples
+let mensaje = `Hola, ${nombre}`;     // Backticks (template literal)
+```
 
-// Number (números)
+Los **template literals** (con backticks) tienen superpoderes:
+
+```javascript
+const nombre = "Ana";
+const edad = 25;
+
+// 1. Interpolación de variables
+const presentacion = `Me llamo ${nombre} y tengo ${edad} años`;
+// "Me llamo Ana y tengo 25 años"
+
+// 2. Expresiones dentro de ${}
+const precio = 100;
+const mensaje = `El total con IVA es ${precio * 1.21}€`;
+// "El total con IVA es 121€"
+
+// 3. Múltiples líneas
+const html = `
+    <div class="card">
+        <h2>${nombre}</h2>
+        <p>Edad: ${edad} años</p>
+    </div>
+`;
+```
+
+> **¿Cuál usar?** Siempre **template literals** (backticks). Son más legibles y permiten interpolación.
+
+#### Number (números)
+
+JavaScript tiene un solo tipo para todos los números:
+
+```javascript
 let entero = 42;
-let decimal = 3.14;
-let negativo = -10;
-let infinito = Infinity;
-let noNumero = NaN; // Not a Number
+let decimal = 3.14159;
+let negativo = -273.15;
+let notacionCientifica = 2.5e6;  // 2,500,000
 
-// Boolean (verdadero/falso)
+// Valores especiales
+let infinito = 1 / 0;        // Infinity
+let noNumero = "hola" * 5;   // NaN (Not a Number)
+
+// NaN no es igual a sí mismo
+console.log(NaN === NaN);    // false
+console.log(isNaN(NaN));     // true (usar esto para comprobar)
+```
+
+**Cuidado con los decimales:**
+
+```javascript
+console.log(0.1 + 0.2);  // 0.30000000000000004 (!!)
+// Esto pasa en TODOS los lenguajes con punto flotante
+```
+
+#### Boolean (verdadero/falso)
+
+Solo dos valores posibles:
+
+```javascript
 let activo = true;
 let bloqueado = false;
 
-// Undefined (variable declarada sin valor)
-let sinValor;
-console.log(sinValor); // undefined
+// Se usan en condiciones
+if (activo) {
+    console.log("El usuario está activo");
+}
 
-// Null (ausencia intencional de valor)
+// Resultado de comparaciones
+let esMayor = 18 >= 18;  // true
+```
+
+#### Undefined y Null
+
+Representan "ausencia de valor":
+
+```javascript
+// undefined - "no se ha definido ningún valor"
+let sinValor;
+console.log(sinValor);  // undefined
+
+// null - "intencionalmente vacío"
 let vacio = null;
 
-// Symbol (identificador único, ES6)
-let id = Symbol("descripcion");
-
-// BigInt (enteros muy grandes, ES2020)
-let grande = 9007199254740991n;
+// La diferencia es semántica:
+// - undefined: "no sé qué valor tiene"
+// - null: "sé que no tiene valor, a propósito"
 ```
 
-### 6.2 El operador typeof
+### 7.2. El operador typeof
+
+Para saber qué tipo de dato es un valor:
 
 ```javascript
-typeof "Hola"       // "string"
-typeof 42           // "number"
-typeof true         // "boolean"
-typeof undefined    // "undefined"
-typeof null         // "object" (bug histórico)
-typeof Symbol()     // "symbol"
-typeof {}           // "object"
-typeof []           // "object"
-typeof function(){} // "function"
+typeof "Hola"        // "string"
+typeof 42            // "number"
+typeof true          // "boolean"
+typeof undefined     // "undefined"
+typeof null          // "object"  ← ¡Bug histórico!
+typeof {}            // "object"
+typeof []            // "object"  ← Los arrays son objetos
+typeof function(){}  // "function"
 ```
 
-### 6.3 Tipos complejos: Objetos
+### 7.3. Objetos
+
+Los objetos son colecciones de **pares clave-valor**:
 
 ```javascript
-// Objeto literal
+// Crear un objeto
 let persona = {
     nombre: "Ana",
     edad: 25,
-    activo: true,
-    direccion: {
-        calle: "Mayor",
-        numero: 10
-    }
+    ciudad: "Madrid",
+    activo: true
 };
 
-// Acceso a propiedades
-console.log(persona.nombre);           // "Ana"
-console.log(persona["edad"]);          // 25
-console.log(persona.direccion.calle);  // "Mayor"
+// Acceder a propiedades
+console.log(persona.nombre);      // "Ana" (notación de punto)
+console.log(persona["edad"]);     // 25 (notación de corchetes)
+
+// Modificar propiedades
+persona.edad = 26;
+
+// Añadir nuevas propiedades
+persona.email = "ana@email.com";
+
+// Eliminar propiedades
+delete persona.activo;
+
+// Objetos anidados
+let usuario = {
+    nombre: "Ana",
+    direccion: {
+        calle: "Gran Vía",
+        ciudad: "Madrid"
+    }
+};
+console.log(usuario.direccion.ciudad);  // "Madrid"
 ```
 
-### 6.4 Arrays (listas)
+### 7.4. Arrays (listas)
+
+Los arrays son listas ordenadas. Cada elemento tiene un índice que empieza en **0**:
 
 ```javascript
-// Declaración
 let frutas = ["manzana", "pera", "naranja"];
-let mixto = [1, "dos", true, null];
+//              [0]        [1]      [2]
 
-// Acceso por índice (empieza en 0)
-console.log(frutas[0]); // "manzana"
-console.log(frutas[2]); // "naranja"
+// Acceder por índice
+console.log(frutas[0]);   // "manzana"
+console.log(frutas[2]);   // "naranja"
 
-// Propiedades y métodos comunes
-frutas.length;           // 3
+// Propiedad length
+console.log(frutas.length);  // 3
+
+// Métodos básicos
 frutas.push("uva");      // Añade al final
 frutas.pop();            // Elimina del final
 frutas.unshift("kiwi");  // Añade al inicio
 frutas.shift();          // Elimina del inicio
-frutas.indexOf("pera");  // 1 (posición)
-frutas.includes("pera"); // true
+
+// Los arrays pueden contener cualquier tipo
+let mixto = [42, "texto", true, null, { nombre: "Ana" }, [1, 2, 3]];
+```
+
+### 7.5. Valores Falsy y Truthy
+
+En JavaScript, cualquier valor puede evaluarse como `true` o `false` en un contexto booleano.
+
+**Solo hay 8 valores FALSY:**
+
+```javascript
+false       // El booleano false
+0           // El número cero
+-0          // Cero negativo
+0n          // BigInt cero
+""          // String vacío
+null        // Ausencia de valor
+undefined   // Sin definir
+NaN         // Not a Number
+```
+
+**Todo lo demás es TRUTHY**, incluyendo:
+
+```javascript
+"0"           // String con "0" (¡no es el número 0!)
+"false"       // String con "false" (¡no es el booleano!)
+[]            // Array vacío
+{}            // Objeto vacío
+```
+
+Este comportamiento se usa mucho en condiciones:
+
+```javascript
+let nombre = "";
+
+if (nombre) {
+    console.log("Tiene nombre");
+} else {
+    console.log("No tiene nombre");  // Se ejecuta esto
+}
+
+// Valores por defecto
+let usuario = null;
+let nombreMostrar = usuario || "Anónimo";  // "Anónimo"
 ```
 
 ---
 
 ## 8. Operadores
 
-### 7.1 Operadores aritméticos
+Los operadores son símbolos que nos permiten realizar operaciones con valores.
+
+### 8.1. Operadores aritméticos
 
 ```javascript
-let a = 10, b = 3;
+let a = 10;
+let b = 3;
 
-a + b   // 13  Suma
-a - b   // 7   Resta
-a * b   // 30  Multiplicación
-a / b   // 3.333...  División
-a % b   // 1   Módulo (resto)
-a ** b  // 1000  Exponenciación (ES2016)
+a + b    // 13  Suma
+a - b    // 7   Resta
+a * b    // 30  Multiplicación
+a / b    // 3.333...  División
+a % b    // 1   Módulo (resto)
+a ** b   // 1000  Exponenciación (10³)
 
 // Incremento y decremento
 let c = 5;
-c++;    // c = 6 (postincremento)
-++c;    // c = 7 (preincremento)
-c--;    // c = 6 (postdecremento)
+c++;     // c ahora es 6
+c--;     // c ahora es 5
 ```
 
-### 7.2 Operadores de asignación
+### 8.2. Operadores de asignación
 
 ```javascript
 let x = 10;
 
-x += 5;  // x = x + 5  → 15
-x -= 3;  // x = x - 3  → 12
-x *= 2;  // x = x * 2  → 24
-x /= 4;  // x = x / 4  → 6
-x %= 4;  // x = x % 4  → 2
-x **= 3; // x = x ** 3 → 8
+x += 5;   // x = x + 5   → 15
+x -= 3;   // x = x - 3   → 12
+x *= 2;   // x = x * 2   → 24
+x /= 4;   // x = x / 4   → 6
 ```
 
-### 7.3 Operadores de comparación
+### 8.3. Operadores de comparación
 
 ```javascript
-// Igualdad débil (convierte tipos)
-5 == "5"     // true ⚠️
-0 == false   // true ⚠️
-null == undefined // true ⚠️
+// Igualdad estricta (SIEMPRE usar)
+5 === 5        // true
+5 === "5"      // false (diferente tipo)
+5 !== "5"      // true
 
-// Igualdad estricta (compara valor Y tipo)
-5 === "5"    // false ✅
-0 === false  // false ✅
-
-// Desigualdad
-5 != "5"     // false (débil)
-5 !== "5"    // true (estricta) ✅
-
-// Comparación
-5 > 3        // true
-5 >= 5       // true
-3 < 5        // true
-3 <= 2       // false
+// Comparaciones
+5 > 3          // true
+5 >= 5         // true
+3 < 5          // true
+3 <= 2         // false
 ```
 
-> **Regla de oro**: Siempre usa `===` y `!==` para evitar errores de conversión de tipos.
-
-### 7.4 Operadores lógicos
+### 8.4. Operadores lógicos
 
 ```javascript
-// AND (&&) - Ambos deben ser verdaderos
+// AND (&&) - ambos deben ser true
 true && true    // true
 true && false   // false
-false && true   // false
 
-// OR (||) - Al menos uno verdadero
+// OR (||) - al menos uno debe ser true
 true || false   // true
-false || true   // true
 false || false  // false
 
-// NOT (!) - Invierte el valor
+// NOT (!) - invierte el valor
 !true           // false
 !false          // true
-!0              // true (0 es falsy)
-!"texto"        // false (string no vacío es truthy)
-
-// Nullish Coalescing (??) - ES2020
-// Devuelve el lado derecho si el izquierdo es null o undefined
-let nombre = null ?? "Anónimo";     // "Anónimo"
-let edad = 0 ?? 18;                 // 0 (no es null/undefined)
-let valor = undefined ?? "default"; // "default"
 ```
 
-### 7.5 Valores Falsy y Truthy
+#### Evaluación en cortocircuito
 
 ```javascript
-// Valores FALSY (se evalúan como false)
-false
-0
--0
-""           // string vacío
-null
-undefined
-NaN
+// && devuelve el primer valor falsy, o el último si todos son truthy
+"Hola" && "Mundo"   // "Mundo"
+"Hola" && ""        // ""
 
-// Todo lo demás es TRUTHY
-"0"          // string con contenido
-[]           // array vacío
-{}           // objeto vacío
-"false"      // string con contenido
+// || devuelve el primer valor truthy, o el último si todos son falsy
+"" || "default"     // "default"
+"valor" || "otro"   // "valor"
+
+// Uso práctico: valores por defecto
+let nombre = usuario.nombre || "Anónimo";
+```
+
+### 8.5. Nullish Coalescing (??)
+
+El operador `??` solo considera `null` y `undefined` como "vacíos":
+
+```javascript
+// Con || los valores falsy como 0 se ignoran
+let cantidad = 0;
+let resultado = cantidad || 10;  // 10 (0 es falsy)
+
+// Con ?? solo null/undefined se ignoran
+let resultado2 = cantidad ?? 10;  // 0 (0 no es null)
+```
+
+### 8.6. Optional Chaining (?.)
+
+Comprueba si cada paso existe antes de continuar:
+
+```javascript
+let usuario = {
+    nombre: "Ana",
+    direccion: {
+        ciudad: "Madrid"
+    }
+};
+
+// Sin optional chaining - puede fallar
+console.log(usuario.trabajo.empresa);  // ❌ Error
+
+// Con optional chaining - devuelve undefined
+console.log(usuario.trabajo?.empresa);  // undefined (no error)
+console.log(usuario.direccion?.ciudad); // "Madrid"
 ```
 
 ---
 
 ## 9. Estructuras de control
 
-### 8.1 Condicionales
+Las estructuras de control nos permiten tomar decisiones y repetir acciones.
+
+### 9.1. Condicionales: if / else
 
 ```javascript
-// if - else if - else
 let edad = 18;
 
-if (edad < 16) {
-    console.log("Menor de edad");
-} else if (edad < 18) {
-    console.log("Casi mayor de edad");
-} else {
-    console.log("Mayor de edad");
+// if simple
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
 }
 
-// Operador ternario
-let mensaje = edad >= 18 ? "Mayor" : "Menor";
+// if / else
+let hora = 14;
+if (hora < 12) {
+    console.log("Buenos días");
+} else {
+    console.log("Buenas tardes");
+}
 
-// Switch
+// if / else if / else
+let nota = 7;
+if (nota >= 9) {
+    console.log("Sobresaliente");
+} else if (nota >= 7) {
+    console.log("Notable");
+} else if (nota >= 5) {
+    console.log("Aprobado");
+} else {
+    console.log("Suspenso");
+}
+```
+
+### 9.2. Operador ternario
+
+Para condiciones simples:
+
+```javascript
+// condición ? valorSiTrue : valorSiFalse
+let edad = 20;
+let mensaje = edad >= 18 ? "Mayor de edad" : "Menor de edad";
+```
+
+### 9.3. Switch
+
+Para muchas condiciones sobre el mismo valor:
+
+```javascript
 let dia = 3;
+let nombre;
+
 switch (dia) {
     case 1:
-        console.log("Lunes");
+        nombre = "Lunes";
         break;
     case 2:
-        console.log("Martes");
+        nombre = "Martes";
         break;
     case 3:
-        console.log("Miércoles");
+        nombre = "Miércoles";
         break;
     default:
-        console.log("Otro día");
+        nombre = "Día inválido";
 }
 ```
 
-### 8.2 Bucles
+> **Importante**: No olvides el `break` después de cada caso.
+
+### 9.4. Bucles
+
+#### Bucle while
 
 ```javascript
-// for clásico
-for (let i = 0; i < 5; i++) {
-    console.log(i); // 0, 1, 2, 3, 4
-}
-
-// while
 let contador = 0;
-while (contador < 3) {
-    console.log(contador);
+while (contador < 5) {
+    console.log("Contador:", contador);
     contador++;
 }
-
-// do...while (se ejecuta al menos una vez)
-let num = 0;
-do {
-    console.log(num);
-    num++;
-} while (num < 3);
-
-// for...of (para arrays - obtiene valores)
-const colores = ["rojo", "verde", "azul"];
-for (const color of colores) {
-    console.log(color); // rojo, verde, azul
-}
-
-// for...in (para objetos - obtiene claves)
-const persona = { nombre: "Ana", edad: 25 };
-for (const clave in persona) {
-    console.log(`${clave}: ${persona[clave]}`);
-}
+// 0, 1, 2, 3, 4
 ```
 
-> **¿Cuál usar?** Para arrays, usa `for...of` o los métodos funcionales (`forEach`, `map`, `filter`). El `for` clásico solo cuando necesites el índice o control total del bucle. Para objetos, usa `for...in` o mejor aún `Object.entries()` con `for...of`. Evita `for...in` en arrays porque puede dar resultados inesperados.
-
-### 8.3 Control de bucles
+#### Bucle for
 
 ```javascript
-// break - sale del bucle
-for (let i = 0; i < 10; i++) {
-    if (i === 5) break;
-    console.log(i); // 0, 1, 2, 3, 4
-}
-
-// continue - salta a la siguiente iteración
 for (let i = 0; i < 5; i++) {
-    if (i === 2) continue;
-    console.log(i); // 0, 1, 3, 4
+    console.log("Iteración:", i);
 }
+// 0, 1, 2, 3, 4
+
+// Desglose:
+// let i = 0   → Se ejecuta una vez al inicio
+// i < 5       → Se comprueba antes de cada iteración
+// i++         → Se ejecuta después de cada iteración
 ```
+
+#### Bucle for...of (para arrays)
+
+```javascript
+const frutas = ["manzana", "pera", "naranja"];
+
+for (const fruta of frutas) {
+    console.log(fruta);
+}
+// manzana, pera, naranja
+```
+
+#### Bucle for...in (para objetos)
+
+```javascript
+const persona = {
+    nombre: "Ana",
+    edad: 25,
+    ciudad: "Madrid"
+};
+
+for (const propiedad in persona) {
+    console.log(`${propiedad}: ${persona[propiedad]}`);
+}
+// nombre: Ana
+// edad: 25
+// ciudad: Madrid
+```
+
+> **Regla**: Usa `for...of` para arrays y `for...in` para objetos.
 
 ---
 
 ## 10. Funciones
 
-Las funciones permiten **agrupar código reutilizable** bajo un nombre.
+Las funciones son **bloques de código reutilizables** que realizan una tarea específica.
 
-### 9.1 Declaración de funciones
+### ¿Por qué usar funciones?
 
 ```javascript
-// Función declarada (function declaration)
+// ❌ Sin funciones - código repetido
+let area1 = 10 * 5;
+let area2 = 20 * 15;
+let area3 = 7 * 3;
+
+// ✅ Con función - código reutilizable
+function calcularArea(base, altura) {
+    return base * altura;
+}
+
+let area1 = calcularArea(10, 5);   // 50
+let area2 = calcularArea(20, 15);  // 300
+let area3 = calcularArea(7, 3);    // 21
+```
+
+### 10.1. Formas de crear funciones
+
+#### Función declarada
+
+```javascript
 function saludar(nombre) {
     return "Hola, " + nombre;
 }
 
-// Función expresada (function expression)
+console.log(saludar("Ana"));  // "Hola, Ana"
+```
+
+#### Función expresada
+
+```javascript
 const despedir = function(nombre) {
     return "Adiós, " + nombre;
 };
+```
 
-// Arrow function (ES6)
+#### Arrow function (función flecha) - ES6
+
+```javascript
 const duplicar = (numero) => {
     return numero * 2;
 };
 
-// Arrow function simplificada (una línea, return implícito)
+// Versión corta: si solo hay una línea
 const triplicar = numero => numero * 3;
 
-// Uso
-saludar("Ana");     // "Hola, Ana"
-duplicar(5);        // 10
-triplicar(3);       // 9
+// Sin parámetros
+const saludar = () => "Hola";
+
+console.log(duplicar(5));   // 10
+console.log(triplicar(3));  // 9
 ```
 
-> **¿Cuál usar?** Las **arrow functions** son las más utilizadas en código moderno por su sintaxis concisa y su comportamiento predecible con `this`. Usa funciones declaradas (`function nombre()`) cuando necesites hoisting (llamar a la función antes de declararla) o en métodos de objetos donde necesites acceso a `this`.
+> **¿Cuál usar?** Las **arrow functions** son las más utilizadas en código moderno por su sintaxis concisa.
 
-### 9.2 Parámetros
+### 10.2. Parámetros y argumentos
 
 ```javascript
-// Parámetros por defecto (ES6)
+// Parámetros son las variables en la declaración
+function suma(a, b) {  // a y b son parámetros
+    return a + b;
+}
+
+// Argumentos son los valores al llamar
+suma(5, 3);  // 5 y 3 son argumentos
+
+// Parámetros por defecto
 function saludar(nombre = "visitante") {
     return `Hola, ${nombre}`;
 }
-saludar();          // "Hola, visitante"
-saludar("Ana");     // "Hola, Ana"
 
-// Rest parameters (ES6)
-function sumar(...numeros) {
-    return numeros.reduce((acc, num) => acc + num, 0);
-}
-sumar(1, 2, 3, 4);  // 10
+saludar();        // "Hola, visitante"
+saludar("Ana");   // "Hola, Ana"
 
-// Desestructuración en parámetros
-function mostrarUsuario({ nombre, edad }) {
-    console.log(`${nombre} tiene ${edad} años`);
+// Rest parameters
+function sumarTodos(...numeros) {
+    let total = 0;
+    for (const num of numeros) {
+        total += num;
+    }
+    return total;
 }
-mostrarUsuario({ nombre: "Ana", edad: 25 });
+
+sumarTodos(1, 2, 3, 4, 5);  // 15
 ```
 
-### 9.3 Scope (ámbito)
+### 10.3. Return
+
+La palabra `return` hace dos cosas:
+1. Devuelve un valor
+2. Termina la ejecución de la función
 
 ```javascript
-// Variable global
-let global = "Soy global";
-
-function ejemplo() {
-    // Variable local
-    let local = "Soy local";
-    console.log(global); // ✅ Accesible
-    console.log(local);  // ✅ Accesible
+function verificarEdad(edad) {
+    if (edad < 0) {
+        return "Edad inválida";  // Sale aquí
+    }
+    
+    if (edad < 18) {
+        return "Menor de edad";
+    }
+    
+    return "Mayor de edad";
 }
-
-console.log(global); // ✅ Accesible
-console.log(local);  // ❌ Error: local is not defined
 ```
 
-### 9.4 Funciones callback
+### 10.4. Funciones callback
 
 Una **callback** es una función que se pasa como argumento a otra función:
 
 ```javascript
-// Función que recibe callback
-function procesar(numero, callback) {
-    return callback(numero);
+function procesarUsuario(nombre, callback) {
+    console.log("Procesando...");
+    callback(nombre);
 }
 
-// Uso con diferentes callbacks
-procesar(5, n => n * 2);    // 10
-procesar(5, n => n ** 2);   // 25
+procesarUsuario("Ana", nombre => {
+    console.log("Usuario procesado:", nombre);
+});
 
-// Ejemplo con setTimeout
-setTimeout(() => {
-    console.log("Esto aparece después de 2 segundos");
-}, 2000);
-
-// Ejemplo con arrays
+// Muy usadas en métodos de array
 const numeros = [1, 2, 3, 4, 5];
 
-// forEach - ejecuta función por cada elemento
-numeros.forEach(n => console.log(n));
+// map: transforma cada elemento
+const dobles = numeros.map(n => n * 2);  // [2, 4, 6, 8, 10]
 
-// map - transforma cada elemento
-const dobles = numeros.map(n => n * 2); // [2, 4, 6, 8, 10]
+// filter: filtra elementos
+const pares = numeros.filter(n => n % 2 === 0);  // [2, 4]
 
-// filter - filtra elementos
-const pares = numeros.filter(n => n % 2 === 0); // [2, 4]
-
-// find - encuentra el primer elemento
-const mayor3 = numeros.find(n => n > 3); // 4
-
-// reduce - reduce a un valor
-const suma = numeros.reduce((acc, n) => acc + n, 0); // 15
+// find: encuentra el primero que cumple
+const mayor3 = numeros.find(n => n > 3);  // 4
 ```
 
 ---
 
-## 11. Strings y Template Literals
+## 11. Strings: trabajando con texto
 
-Las **cadenas de texto (strings)** son uno de los tipos de datos más utilizados en programación. En JavaScript trabajamos constantemente con texto: mostrar mensajes al usuario, procesar formularios, construir HTML dinámico, manipular URLs, etc.
+Las cadenas de texto son uno de los tipos de datos más utilizados. JavaScript proporciona muchos métodos para manipularlas.
 
-JavaScript proporciona una amplia colección de métodos para manipular strings: buscar contenido, extraer partes, transformar mayúsculas/minúsculas, dividir en arrays... Dominar estos métodos te ahorrará mucho código y tiempo.
-
-Además, desde ES6 contamos con los **template literals** (plantillas de cadena), una forma moderna y elegante de trabajar con strings que permite interpolación de variables y textos multilínea sin complicaciones.
-
-### 14.1 Métodos de strings
+### 11.1. Propiedades y métodos básicos
 
 ```javascript
-let texto = "JavaScript es genial";
+const texto = "JavaScript es genial";
 
-// Propiedades
-texto.length;              // 20
+// Longitud
+texto.length;  // 20
 
 // Acceso a caracteres
-texto[0];                  // "J"
-texto.charAt(0);           // "J"
+texto[0];           // "J"
+texto.charAt(0);    // "J"
+texto.at(-1);       // "l" (último carácter)
 
 // Búsqueda
-texto.indexOf("es");       // 11
-texto.includes("genial");  // true
-texto.startsWith("Java");  // true
-texto.endsWith("genial");  // true
+texto.indexOf("es");        // 11 (posición)
+texto.indexOf("Python");    // -1 (no encontrado)
+texto.includes("genial");   // true
+texto.startsWith("Java");   // true
+texto.endsWith("genial");   // true
 
 // Extracción
-texto.slice(0, 10);        // "JavaScript"
-texto.substring(11, 13);   // "es"
+texto.slice(0, 10);         // "JavaScript"
+texto.slice(-6);            // "genial"
 
 // Transformación
-texto.toUpperCase();       // "JAVASCRIPT ES GENIAL"
-texto.toLowerCase();       // "javascript es genial"
-texto.trim();              // Elimina espacios inicio/fin
-texto.replace("genial", "increíble"); // "JavaScript es increíble"
+texto.toUpperCase();        // "JAVASCRIPT ES GENIAL"
+texto.toLowerCase();        // "javascript es genial"
+texto.trim();               // Elimina espacios al inicio/final
+texto.replace("genial", "increíble");  // "JavaScript es increíble"
 
-// División
-texto.split(" ");          // ["JavaScript", "es", "genial"]
+// División y unión
+texto.split(" ");           // ["JavaScript", "es", "genial"]
+["Hola", "mundo"].join("-"); // "Hola-mundo"
+
+// Repetición
+"Ja".repeat(3);             // "JaJaJa"
+
+// Relleno
+"5".padStart(3, "0");       // "005"
+"5".padEnd(3, "0");         // "500"
 ```
-
-### 14.2 Template Literals (ES6)
-
-```javascript
-const nombre = "Ana";
-const edad = 25;
-
-// Concatenación clásica
-let mensaje1 = "Hola, " + nombre + ". Tienes " + edad + " años.";
-
-// Template literal (backticks `)
-let mensaje2 = `Hola, ${nombre}. Tienes ${edad} años.`;
-
-// Multilínea
-let html = `
-    <div class="card">
-        <h2>${nombre}</h2>
-        <p>Edad: ${edad}</p>
-    </div>
-`;
-
-// Expresiones dentro de ${}
-let precio = 100;
-let descuento = 0.2;
-console.log(`Precio final: ${precio * (1 - descuento)}€`); // "Precio final: 80€"
-```
-
-> **¿Cuál usar?** Siempre **template literals** (con backticks `` ` ``). Son más legibles, permiten interpolación de variables sin concatenar con `+`, soportan multilínea sin caracteres especiales, y hacen el código mucho más limpio. La concatenación clásica con `+` está obsoleta en la práctica.
 
 ---
 
-## 12. Arrays avanzados
+## 12. Arrays: trabajando con listas
 
-Los **arrays** son estructuras fundamentales en JavaScript. Prácticamente cualquier aplicación web necesita manejar listas de datos: productos en un carrito, mensajes en un chat, usuarios en una tabla, tareas pendientes...
+Los arrays son estructuras fundamentales. Prácticamente cualquier aplicación necesita manejar listas de datos.
 
-JavaScript moderno ofrece un conjunto muy potente de métodos para trabajar con arrays que van mucho más allá de los básicos `push` y `pop`. Las llamadas **Array Functions** o **Higher Order Functions** (`map`, `filter`, `reduce`, `find`...) permiten transformar, filtrar y procesar datos de forma declarativa y elegante.
-
-Entender la diferencia entre **métodos mutables** (que modifican el array original) e **inmutables** (que devuelven un nuevo array) es crucial para evitar bugs difíciles de detectar, especialmente cuando trabajamos con frameworks como React o Vue.
-
-También veremos el **spread operator** (`...`) y la **desestructuración**, dos características de ES6 que simplifican enormemente el trabajo con arrays.
-
-### 14.1 Métodos mutables vs inmutables
+### 12.1. Métodos que modifican el array (mutables)
 
 ```javascript
-// MUTABLES - modifican el array original
-const arr = [3, 1, 4, 1, 5];
-arr.push(9);        // Añade al final
-arr.pop();          // Elimina del final
-arr.shift();        // Elimina del inicio
-arr.unshift(2);     // Añade al inicio
-arr.splice(1, 2);   // Elimina/inserta elementos
-arr.sort();         // Ordena
-arr.reverse();      // Invierte
+const frutas = ["manzana", "pera"];
 
-// INMUTABLES - devuelven nuevo array
-const original = [1, 2, 3];
-original.concat([4, 5]); // [1, 2, 3, 4, 5]
-original.slice(1);       // [2, 3]
-original.map(x => x * 2); // [2, 4, 6]
-original.filter(x => x > 1); // [2, 3]
-// original sigue siendo [1, 2, 3]
+// Añadir
+frutas.push("naranja");      // Al final
+frutas.unshift("kiwi");      // Al inicio
+
+// Eliminar
+frutas.pop();                // Del final
+frutas.shift();              // Del inicio
+
+// Modificar en posición
+frutas.splice(1, 0, "uva");  // Insertar en posición 1
+frutas.splice(1, 1);         // Eliminar 1 elemento en posición 1
+
+// Ordenar
+const numeros = [3, 1, 4, 1, 5];
+numeros.sort();              // [1, 1, 3, 4, 5]
+numeros.reverse();           // [5, 4, 3, 1, 1]
 ```
 
-### 14.2 Array functions (Higher Order Functions)
+### 12.2. Métodos que devuelven nuevo array (inmutables)
+
+```javascript
+const original = [1, 2, 3];
+
+// Crear copia
+const copia = [...original];
+
+// Concatenar
+const nuevo = original.concat([4, 5]);  // [1, 2, 3, 4, 5]
+
+// Extraer porción
+original.slice(1);      // [2, 3]
+original.slice(0, 2);   // [1, 2]
+```
+
+### 12.3. Array functions (Higher Order Functions)
+
+Estos son los métodos más potentes y utilizados:
 
 ```javascript
 const productos = [
@@ -836,169 +1321,144 @@ const productos = [
     { nombre: "Monitor", precio: 300, stock: 10 }
 ];
 
-// map - Transformar
+// forEach - Ejecutar código para cada elemento
+productos.forEach(p => console.log(p.nombre));
+
+// map - Transformar cada elemento
 const nombres = productos.map(p => p.nombre);
 // ["Laptop", "Mouse", "Teclado", "Monitor"]
 
-// filter - Filtrar
+// filter - Filtrar elementos
 const caros = productos.filter(p => p.precio > 100);
 // [{ nombre: "Laptop"... }, { nombre: "Monitor"... }]
 
-// find - Encontrar uno
+// find - Encontrar el primero que cumpla
 const laptop = productos.find(p => p.nombre === "Laptop");
-// { nombre: "Laptop", precio: 1000, stock: 5 }
 
-// findIndex - Encontrar índice
-const indice = productos.findIndex(p => p.nombre === "Mouse");
-// 1
+// findIndex - Encontrar la posición
+const indice = productos.findIndex(p => p.nombre === "Mouse");  // 1
 
 // some - ¿Alguno cumple?
-const hayBaratos = productos.some(p => p.precio < 50);
-// true
+const hayBaratos = productos.some(p => p.precio < 50);  // true
 
 // every - ¿Todos cumplen?
-const todosConStock = productos.every(p => p.stock > 0);
-// true
+const todosConStock = productos.every(p => p.stock > 0);  // true
 
-// reduce - Reducir a un valor
-const valorTotal = productos.reduce((total, p) => total + (p.precio * p.stock), 0);
-// 5000 + 1250 + 2250 + 3000 = 11500
+// reduce - Reducir a un único valor
+const valorTotal = productos.reduce((total, p) => {
+    return total + (p.precio * p.stock);
+}, 0);
+// 11500
+```
 
-// Encadenamiento
+### 12.4. Encadenamiento de métodos
+
+```javascript
 const resultado = productos
     .filter(p => p.precio > 50)
     .map(p => p.nombre)
-    .sort();
-// ["Laptop", "Monitor", "Teclado"]
+    .sort()
+    .join(", ");
+// "Laptop, Monitor, Teclado"
 ```
 
-> **¿Cuáles son las más usadas?** `map` y `filter` son con diferencia las más utilizadas en el día a día. `map` para transformar datos (ej: extraer propiedades, formatear valores) y `filter` para filtrar listas. `find` es muy útil para buscar un elemento concreto. `reduce` es potente pero más complejo; úsalo cuando realmente necesites acumular valores. El **encadenamiento** de estos métodos es un patrón muy común en código profesional.
+> **¿Cuáles son los más usados?** `map` y `filter` con diferencia. `find` para buscar un elemento concreto. `reduce` cuando necesites acumular valores.
 
-### 13.3 Spread operator y desestructuración
+### 12.5. Spread operator y desestructuración
 
 ```javascript
-// Spread operator (...)
+// Spread operator (...) - "expandir" un array
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
-const combinado = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
+const combinado = [...arr1, ...arr2];  // [1, 2, 3, 4, 5, 6]
 
-// Copiar array
-const copia = [...arr1];
-
-// Desestructuración de arrays
+// Desestructuración
 const [primero, segundo, ...resto] = [1, 2, 3, 4, 5];
-console.log(primero); // 1
-console.log(segundo); // 2
-console.log(resto);   // [3, 4, 5]
-
-// Intercambiar valores
-let a = 1, b = 2;
-[a, b] = [b, a]; // a = 2, b = 1
+console.log(primero);  // 1
+console.log(segundo);  // 2
+console.log(resto);    // [3, 4, 5]
 ```
 
 ---
 
-## 13. Objetos avanzados
+## 13. Objetos: trabajando con estructuras
 
-Los **objetos** son el corazón de JavaScript. De hecho, casi todo en JavaScript es un objeto: los arrays, las funciones, las fechas, incluso los elementos del DOM. Entender cómo funcionan los objetos es esencial para dominar el lenguaje.
+Los objetos son el corazón de JavaScript. Permiten agrupar datos relacionados.
 
-Un objeto es una colección de **pares clave-valor** que nos permite agrupar datos relacionados bajo una misma estructura. Por ejemplo, podemos representar un usuario con su nombre, edad, email y preferencias en un único objeto, en lugar de tener variables sueltas por todo el código.
-
-En esta sección aprenderemos a manipular objetos de forma eficiente: acceder y modificar propiedades, recorrer sus contenidos, y utilizar características modernas de ES6 como la **desestructuración** (extraer valores de forma elegante) y el **spread operator** (copiar y combinar objetos fácilmente).
-
-Estas técnicas son fundamentales cuando trabajamos con datos que vienen de APIs, formularios o bases de datos, situaciones muy habituales en el desarrollo web.
-
-### 14.1 Manipulación de objetos
-
-```javascript
-const usuario = {
-    nombre: "Ana",
-    edad: 25,
-    email: "ana@email.com"
-};
-
-// Acceso
-usuario.nombre;          // "Ana"
-usuario["edad"];         // 25
-
-// Añadir/modificar propiedades
-usuario.telefono = "123456789";
-usuario.edad = 26;
-
-// Eliminar propiedad
-delete usuario.telefono;
-
-// Comprobar existencia
-"nombre" in usuario;     // true
-usuario.hasOwnProperty("nombre"); // true
-
-// Obtener claves, valores, entradas
-Object.keys(usuario);    // ["nombre", "edad", "email"]
-Object.values(usuario);  // ["Ana", 25, "ana@email.com"]
-Object.entries(usuario); // [["nombre", "Ana"], ["edad", 25], ...]
-```
-
-### 14.2 Desestructuración de objetos
+### 13.1. Métodos de Object
 
 ```javascript
 const persona = {
     nombre: "Ana",
     edad: 25,
-    ciudad: "Madrid",
-    trabajo: {
-        empresa: "Tech Corp",
-        cargo: "Developer"
-    }
+    ciudad: "Madrid"
 };
 
-// Desestructuración básica
-const { nombre, edad } = persona;
-console.log(nombre); // "Ana"
+// Obtener claves
+Object.keys(persona);     // ["nombre", "edad", "ciudad"]
 
-// Renombrar variable
-const { nombre: nombreUsuario } = persona;
-console.log(nombreUsuario); // "Ana"
+// Obtener valores
+Object.values(persona);   // ["Ana", 25, "Madrid"]
 
-// Valores por defecto
-const { pais = "España" } = persona;
-console.log(pais); // "España"
+// Obtener pares [clave, valor]
+Object.entries(persona);
+// [["nombre", "Ana"], ["edad", 25], ["ciudad", "Madrid"]]
 
-// Desestructuración anidada
-const { trabajo: { empresa } } = persona;
-console.log(empresa); // "Tech Corp"
-
-// En parámetros de función
-function mostrar({ nombre, edad }) {
-    console.log(`${nombre} tiene ${edad} años`);
-}
-mostrar(persona);
+// Comprobar propiedad
+"nombre" in persona;  // true
 ```
 
-### 13.3 Spread operator en objetos
+### 13.2. Desestructuración de objetos
+
+```javascript
+const usuario = {
+    nombre: "Ana",
+    edad: 25,
+    ciudad: "Madrid"
+};
+
+// Extraer propiedades
+const { nombre, edad } = usuario;
+console.log(nombre);  // "Ana"
+
+// Renombrar
+const { nombre: nombreUsuario } = usuario;
+
+// Valor por defecto
+const { pais = "España" } = usuario;
+
+// En parámetros de función
+function mostrarUsuario({ nombre, edad }) {
+    console.log(`${nombre} tiene ${edad} años`);
+}
+mostrarUsuario(usuario);
+```
+
+### 13.3. Spread operator en objetos
 
 ```javascript
 const original = { a: 1, b: 2 };
 
-// Copiar objeto
+// Copiar
 const copia = { ...original };
 
-// Combinar objetos
-const extra = { c: 3, d: 4 };
+// Combinar
+const extra = { c: 3 };
 const combinado = { ...original, ...extra };
-// { a: 1, b: 2, c: 3, d: 4 }
+// { a: 1, b: 2, c: 3 }
 
-// Sobrescribir propiedades
+// Sobrescribir
 const modificado = { ...original, b: 10 };
 // { a: 1, b: 10 }
 ```
 
 ---
 
-## 14. JSON (JavaScript Object Notation)
+## 14. JSON: formato de intercambio de datos
 
-JSON es un formato de intercambio de datos basado en la sintaxis de objetos JavaScript.
+**JSON** (JavaScript Object Notation) es un formato de texto para intercambiar datos. Es usado en prácticamente todas las APIs web.
 
-### 14.1 Sintaxis JSON
+### 14.1. Sintaxis JSON
 
 ```json
 {
@@ -1007,35 +1467,33 @@ JSON es un formato de intercambio de datos basado en la sintaxis de objetos Java
     "activo": true,
     "cursos": ["HTML", "CSS", "JavaScript"],
     "direccion": {
-        "calle": "Mayor",
-        "numero": 10
-    },
-    "telefono": null
+        "calle": "Gran Vía",
+        "numero": 123
+    }
 }
 ```
 
-**Reglas JSON**:
-- Las claves siempre van entre comillas dobles
-- Los strings siempre usan comillas dobles
+**Reglas de JSON:**
+- Las claves **siempre** van entre comillas dobles
+- Los strings usan comillas dobles (no simples)
 - No permite comentarios
-- No permite comas finales (trailing commas)
-- No permite funciones
+- No permite comas finales
 
-### 14.2 Conversión JavaScript ↔ JSON
+### 14.2. Conversión JavaScript ↔ JSON
 
 ```javascript
-// Objeto JavaScript → JSON string
-const objeto = { nombre: "Ana", edad: 25 };
-const jsonString = JSON.stringify(objeto);
+// Objeto → JSON string
+const usuario = { nombre: "Ana", edad: 25 };
+const jsonString = JSON.stringify(usuario);
 // '{"nombre":"Ana","edad":25}'
 
-// JSON string → Objeto JavaScript
+// JSON string → Objeto
 const json = '{"nombre":"Ana","edad":25}';
-const objetoJS = JSON.parse(json);
+const objeto = JSON.parse(json);
 // { nombre: "Ana", edad: 25 }
 
-// stringify con formato
-const formateado = JSON.stringify(objeto, null, 2);
+// Con formato legible
+const formateado = JSON.stringify(usuario, null, 2);
 /*
 {
   "nombre": "Ana",
@@ -1046,770 +1504,12 @@ const formateado = JSON.stringify(objeto, null, 2);
 
 ---
 
-# PARTE 2: MANIPULACIÓN DEL DOM
-
-## 15. ¿Qué es el DOM?
-
-El **DOM (Document Object Model)** es una representación en forma de árbol de todos los elementos de una página HTML. JavaScript puede acceder y modificar este árbol para crear páginas dinámicas.
-
-### Visualización del árbol DOM
-
-```
-                    document
-                        │
-                      html
-                    /      \
-                head        body
-                  │        /    \
-                title    div     footer
-                         │
-                       /   \
-                     h1     p
-```
-
-### El objeto document
-
-```javascript
-// document representa todo el documento HTML
-console.log(document);
-
-// Propiedades útiles
-document.title;          // Título de la página
-document.URL;            // URL actual
-document.domain;         // Dominio
-document.body;           // Elemento <body>
-document.head;           // Elemento <head>
-document.documentElement; // Elemento <html>
-```
-
----
-
-## 16. Selección de elementos
-
-### 22.1 Métodos tradicionales
-
-```javascript
-// Por ID (devuelve un elemento o null)
-const elemento = document.getElementById("miId");
-
-// Por clase (devuelve HTMLCollection)
-const elementos = document.getElementsByClassName("miClase");
-
-// Por etiqueta (devuelve HTMLCollection)
-const parrafos = document.getElementsByTagName("p");
-
-// Por name (devuelve NodeList)
-const inputs = document.getElementsByName("email");
-```
-
-> **¿Cuál usar?** Aunque `getElementById` es ligeramente más rápido, en la práctica la diferencia es insignificante. Se recomienda usar siempre `querySelector` y `querySelectorAll` porque son más flexibles (aceptan cualquier selector CSS) y unifican la sintaxis de búsqueda.
-
-### 22.2 Métodos modernos (recomendados)
-
-```javascript
-// querySelector - devuelve el PRIMER elemento que coincide
-const elemento = document.querySelector("#miId");
-const elemento2 = document.querySelector(".miClase");
-const elemento3 = document.querySelector("div.container > p");
-
-// querySelectorAll - devuelve TODOS los elementos (NodeList)
-const elementos = document.querySelectorAll(".miClase");
-const parrafos = document.querySelectorAll("p");
-const items = document.querySelectorAll("ul li");
-
-// Diferencia NodeList vs HTMLCollection
-// NodeList: estático, tiene forEach
-// HTMLCollection: vivo (se actualiza), no tiene forEach
-```
-
-### 17.3 Selectores CSS en JavaScript
-
-```javascript
-// Por ID
-document.querySelector("#miId");
-
-// Por clase
-document.querySelector(".miClase");
-document.querySelectorAll(".miClase");
-
-// Por etiqueta
-document.querySelector("p");
-
-// Por atributo
-document.querySelector("[data-id='123']");
-document.querySelector("input[type='text']");
-
-// Combinadores
-document.querySelector("div p");        // Descendiente
-document.querySelector("div > p");      // Hijo directo
-document.querySelector("h1 + p");       // Hermano adyacente
-document.querySelector("h1 ~ p");       // Hermanos generales
-
-// Pseudo-clases
-document.querySelector("li:first-child");
-document.querySelector("li:nth-child(2)");
-document.querySelector("input:not([disabled])");
-```
-
-### 16.4 Búsquedas acotadas
-
-```javascript
-// Buscar dentro de un elemento específico
-const menu = document.querySelector("#menu");
-const enlaces = menu.querySelectorAll("a");
-
-// Equivalente en una sola línea
-const enlaces2 = document.querySelectorAll("#menu a");
-```
-
-### 16.5 Navegación por el DOM
-
-```javascript
-const elemento = document.querySelector(".item");
-
-// Elementos padre/hijo/hermano
-elemento.parentElement;           // Padre
-elemento.children;                // Hijos (HTMLCollection)
-elemento.firstElementChild;       // Primer hijo
-elemento.lastElementChild;        // Último hijo
-elemento.previousElementSibling;  // Hermano anterior
-elemento.nextElementSibling;      // Hermano siguiente
-
-// Métodos de búsqueda relativa
-elemento.closest(".container");   // Ancestro más cercano
-elemento.matches(".active");      // ¿Coincide con selector?
-```
-
----
-
-## 17. Modificación de contenido
-
-### 22.1 Contenido de texto
-
-```javascript
-const parrafo = document.querySelector("p");
-
-// textContent - texto plano (recomendado)
-parrafo.textContent = "Nuevo texto";
-console.log(parrafo.textContent);
-
-// innerText - texto visible (respeta CSS)
-parrafo.innerText = "Texto visible";
-
-// Diferencia: textContent incluye texto oculto por CSS
-// innerText solo muestra lo visible
-```
-
-### 22.2 Contenido HTML
-
-```javascript
-const div = document.querySelector("div");
-
-// innerHTML - contenido HTML interno
-div.innerHTML = "<p>Párrafo <strong>con negrita</strong></p>";
-console.log(div.innerHTML);
-
-// outerHTML - incluye el propio elemento
-console.log(div.outerHTML);
-// <div><p>Párrafo <strong>con negrita</strong></p></div>
-
-// ⚠️ SEGURIDAD: innerHTML puede ejecutar scripts maliciosos
-// Nunca uses innerHTML con datos del usuario sin sanitizar
-```
-
-> **¿Cuál usar?** Usa `textContent` para texto plano (es más seguro y rápido). Usa `innerHTML` solo cuando realmente necesites insertar HTML, y **nunca** con datos que provengan del usuario sin sanitizar, ya que es vulnerable a ataques XSS.
-
-### 17.3 Atributos HTML
-
-```javascript
-const enlace = document.querySelector("a");
-
-// Propiedades directas (atributos estándar)
-enlace.href = "https://ejemplo.com";
-enlace.id = "miEnlace";
-enlace.className = "link activo";
-
-// Métodos getAttribute/setAttribute (cualquier atributo)
-enlace.getAttribute("href");
-enlace.setAttribute("href", "https://otro.com");
-enlace.hasAttribute("target");
-enlace.removeAttribute("target");
-
-// Atributos data-*
-const elemento = document.querySelector("[data-id]");
-elemento.dataset.id;           // Acceso a data-id
-elemento.dataset.userId = "5"; // Crea data-user-id
-```
-
----
-
-## 18. Manipulación de clases CSS
-
-### 22.1 className
-
-```javascript
-const elemento = document.querySelector("div");
-
-// Obtener todas las clases como string
-console.log(elemento.className); // "card activo destacado"
-
-// Reemplazar todas las clases
-elemento.className = "nueva-clase";
-```
-
-> **¿Cuál usar?** Usa siempre `classList`. Es más seguro porque no sobrescribe accidentalmente otras clases, y sus métodos (`add`, `remove`, `toggle`, `contains`) hacen el código mucho más legible y menos propenso a errores.
-
-### 22.2 classList (recomendado)
-
-```javascript
-const elemento = document.querySelector("div");
-
-// Propiedades
-elemento.classList;        // DOMTokenList ["card", "activo"]
-elemento.classList.length; // 2
-elemento.classList.value;  // "card activo"
-
-// Métodos
-elemento.classList.add("nueva");              // Añadir
-elemento.classList.add("clase1", "clase2");   // Añadir varias
-elemento.classList.remove("antigua");         // Eliminar
-elemento.classList.toggle("activo");          // Alternar
-elemento.classList.contains("card");          // ¿Contiene? → true/false
-elemento.classList.replace("old", "new");     // Reemplazar
-
-// toggle con condición
-elemento.classList.toggle("visible", isVisible); // Añade si true, quita si false
-```
-
----
-
-## 19. Manipulación de estilos CSS
-
-### 22.1 Propiedad style
-
-```javascript
-const elemento = document.querySelector("div");
-
-// Estilos inline (camelCase)
-elemento.style.color = "red";
-elemento.style.backgroundColor = "#f0f0f0";
-elemento.style.fontSize = "16px";
-elemento.style.marginTop = "20px";
-elemento.style.display = "none";
-
-// Obtener valor
-console.log(elemento.style.color);
-
-// Eliminar estilo
-elemento.style.color = "";
-elemento.style.removeProperty("color");
-```
-
-### 22.2 getComputedStyle
-
-```javascript
-const elemento = document.querySelector("div");
-
-// Obtiene TODOS los estilos aplicados (CSS + inline)
-const estilos = getComputedStyle(elemento);
-
-console.log(estilos.color);           // rgb(0, 0, 0)
-console.log(estilos.fontSize);        // 16px
-console.log(estilos.getPropertyValue("font-size")); // 16px
-```
-
-> **Mejor práctica**: Usa clases CSS en lugar de estilos inline cuando sea posible.
-
----
-
-## 20. Creación de elementos
-
-### 22.1 createElement
-
-```javascript
-// 1. Crear elemento
-const div = document.createElement("div");
-
-// 2. Configurar elemento
-div.id = "miDiv";
-div.className = "card";
-div.textContent = "Contenido";
-div.innerHTML = "<p>Párrafo</p>";
-
-// 3. Añadir al DOM
-document.body.appendChild(div);
-```
-
-### 22.2 API de Elementos (métodos modernos)
-
-```javascript
-const container = document.querySelector(".container");
-const nuevo = document.createElement("div");
-nuevo.textContent = "Nuevo elemento";
-
-// before/after - fuera del elemento
-container.before(nuevo);  // Antes del container
-container.after(nuevo);   // Después del container
-
-// prepend/append - dentro del elemento
-container.prepend(nuevo); // Como primer hijo
-container.append(nuevo);  // Como último hijo
-
-// replaceChildren - reemplaza todos los hijos
-container.replaceChildren(nuevo);
-
-// replaceWith - reemplaza el propio elemento
-container.replaceWith(nuevo);
-
-// remove - elimina el elemento
-nuevo.remove();
-```
-
-> **¿Cuál usar?** Los métodos modernos (`append`, `prepend`, `before`, `after`, `remove`) son los más recomendados por su sintaxis clara y porque permiten añadir múltiples elementos a la vez. `appendChild` sigue siendo válido pero es más limitado. Usa `insertAdjacentHTML` cuando necesites insertar HTML como string de forma eficiente.
-
-### 22.3 Inserción adyacente (insertAdjacent)
-
-```javascript
-const referencia = document.querySelector(".referencia");
-
-// insertAdjacentHTML - insertar HTML
-referencia.insertAdjacentHTML("beforebegin", "<p>Antes</p>");
-referencia.insertAdjacentHTML("afterbegin", "<p>Primer hijo</p>");
-referencia.insertAdjacentHTML("beforeend", "<p>Último hijo</p>");
-referencia.insertAdjacentHTML("afterend", "<p>Después</p>");
-
-// insertAdjacentElement - insertar elemento
-const elem = document.createElement("span");
-referencia.insertAdjacentElement("beforeend", elem);
-
-// insertAdjacentText - insertar texto
-referencia.insertAdjacentText("beforeend", "Texto añadido");
-```
-
-**Posiciones de inserción**:
-```
-<!-- beforebegin -->
-<div class="referencia">
-    <!-- afterbegin -->
-    Contenido existente
-    <!-- beforeend -->
-</div>
-<!-- afterend -->
-```
-
-### 22.4 Clonación de elementos
-
-```javascript
-const original = document.querySelector(".card");
-
-// Clon superficial (solo el elemento)
-const clonSuperficial = original.cloneNode(false);
-
-// Clon profundo (elemento + hijos)
-const clonProfundo = original.cloneNode(true);
-
-document.body.appendChild(clonProfundo);
-```
-
----
-
-## 21. Eventos en JavaScript
-
-### 22.1 ¿Qué son los eventos?
-
-Los eventos son **acciones o sucesos** que ocurren en el navegador y a los que podemos responder con código JavaScript.
-
-**Eventos comunes**:
-- `click` - Clic del ratón
-- `dblclick` - Doble clic
-- `mouseover` / `mouseout` - Ratón entra/sale
-- `mousedown` / `mouseup` - Botón presionado/soltado
-- `keydown` / `keyup` - Tecla presionada/soltada
-- `submit` - Envío de formulario
-- `change` - Cambio en input
-- `input` - Entrada de datos
-- `focus` / `blur` - Foco ganado/perdido
-- `load` - Carga completada
-- `scroll` - Desplazamiento
-- `resize` - Cambio de tamaño
-
-### 22.2 Formas de manejar eventos
-
-```javascript
-// ❌ 1. Desde HTML (evitar)
-<button onclick="alert('Hola')">Click</button>
-
-// ⚠️ 2. Propiedad on[evento]
-const btn = document.querySelector("button");
-btn.onclick = function() {
-    alert("Hola");
-};
-// Limitación: solo una función por evento
-
-// ✅ 3. addEventListener (recomendado)
-btn.addEventListener("click", function() {
-    alert("Hola");
-});
-// Permite múltiples funciones
-```
-
-> **¿Cuál usar?** Siempre `addEventListener`. Es el estándar moderno porque permite añadir múltiples listeners al mismo evento, ofrece opciones avanzadas (`once`, `passive`, `capture`), y se puede eliminar con `removeEventListener`. Las otras formas están obsoletas o tienen limitaciones importantes.
-
-### 22.3 addEventListener
-
-```javascript
-const boton = document.querySelector("#miBoton");
-
-// Sintaxis básica
-boton.addEventListener("click", function() {
-    console.log("¡Click!");
-});
-
-// Con arrow function
-boton.addEventListener("click", () => {
-    console.log("¡Click!");
-});
-
-// Con función nombrada (permite removeEventListener)
-function handleClick() {
-    console.log("¡Click!");
-}
-boton.addEventListener("click", handleClick);
-
-// Eliminar evento
-boton.removeEventListener("click", handleClick);
-```
-
-### 22.4 El objeto Event
-
-```javascript
-boton.addEventListener("click", function(event) {
-    // Propiedades comunes
-    console.log(event.type);        // "click"
-    console.log(event.target);      // Elemento que disparó el evento
-    console.log(event.currentTarget); // Elemento con el listener
-    console.log(event.timeStamp);   // Momento del evento
-    
-    // Para eventos de ratón
-    console.log(event.clientX);     // Posición X en viewport
-    console.log(event.clientY);     // Posición Y en viewport
-    console.log(event.button);      // Botón del ratón (0=izq, 2=der)
-    
-    // Para eventos de teclado
-    console.log(event.key);         // Tecla pulsada
-    console.log(event.code);        // Código de tecla
-    console.log(event.ctrlKey);     // ¿Ctrl presionado?
-    console.log(event.shiftKey);    // ¿Shift presionado?
-    
-    // Métodos
-    event.preventDefault();         // Cancela acción por defecto
-    event.stopPropagation();        // Detiene propagación
-});
-```
-
-### 21.5 Propagación de eventos
-
-Los eventos se propagan en dos fases:
-1. **Captura** (capturing): De documento hacia el elemento
-2. **Burbujeo** (bubbling): Del elemento hacia el documento
-
-```javascript
-// Por defecto, addEventListener escucha en fase de burbujeo
-elemento.addEventListener("click", handler);
-
-// Para escuchar en fase de captura
-elemento.addEventListener("click", handler, true);
-// o
-elemento.addEventListener("click", handler, { capture: true });
-```
-
-```
-┌─────────────────────────────────────────────────┐
-│ document                                        │
-│   ┌───────────────────────────────────────────┐ │
-│   │ <body>                                    │ │
-│   │   ┌─────────────────────────────────────┐ │ │
-│   │   │ <div>                               │ │ │
-│   │   │   ┌───────────────────────────────┐ │ │ │
-│   │   │   │ <button>  ← CLICK             │ │ │ │
-│   │   │   └───────────────────────────────┘ │ │ │
-│   │   │              ↑ Burbujeo            │ │ │
-│   │   └─────────────────────────────────────┘ │ │
-│   │                  ↑ Burbujeo               │ │
-│   └───────────────────────────────────────────┘ │
-│                      ↑ Burbujeo                 │
-└─────────────────────────────────────────────────┘
-```
-
-### 21.6 Delegación de eventos
-
-Técnica para manejar eventos en elementos dinámicos o múltiples:
-
-```javascript
-// ❌ Ineficiente: un listener por cada botón
-document.querySelectorAll(".btn").forEach(btn => {
-    btn.addEventListener("click", handler);
-});
-
-// ✅ Delegación: un listener en el contenedor
-document.querySelector(".container").addEventListener("click", function(e) {
-    // Verificar si el clic fue en un botón
-    if (e.target.matches(".btn")) {
-        console.log("Botón clickeado:", e.target.textContent);
-    }
-});
-```
-
-### 21.7 Opciones de addEventListener
-
-```javascript
-elemento.addEventListener("click", handler, {
-    once: true,      // Se ejecuta solo una vez
-    passive: true,   // No llamará preventDefault()
-    capture: false,  // Escuchar en fase de captura
-    signal: controller.signal // Para cancelar con AbortController
-});
-
-// AbortController para cancelar eventos
-const controller = new AbortController();
-
-elemento.addEventListener("click", handler, {
-    signal: controller.signal
-});
-
-// Más tarde, cancelar todos los eventos asociados
-controller.abort();
-```
-
----
-
-## 22. Eventos comunes
-
-### 22.1 Eventos de ratón
-
-```javascript
-const elemento = document.querySelector(".interactivo");
-
-elemento.addEventListener("click", (e) => {
-    console.log("Click");
-});
-
-elemento.addEventListener("dblclick", (e) => {
-    console.log("Doble click");
-});
-
-elemento.addEventListener("mouseenter", (e) => {
-    console.log("Ratón entra");
-});
-
-elemento.addEventListener("mouseleave", (e) => {
-    console.log("Ratón sale");
-});
-
-elemento.addEventListener("mousemove", (e) => {
-    console.log(`Posición: ${e.clientX}, ${e.clientY}`);
-});
-
-elemento.addEventListener("contextmenu", (e) => {
-    e.preventDefault(); // Evita menú contextual
-    console.log("Click derecho");
-});
-```
-
-### 22.2 Eventos de teclado
-
-```javascript
-document.addEventListener("keydown", (e) => {
-    console.log("Tecla:", e.key);
-    console.log("Código:", e.code);
-    
-    // Detectar combinaciones
-    if (e.ctrlKey && e.key === "s") {
-        e.preventDefault();
-        console.log("Guardar");
-    }
-    
-    // Teclas especiales
-    if (e.key === "Escape") {
-        console.log("Escape presionado");
-    }
-    
-    if (e.key === "Enter") {
-        console.log("Enter presionado");
-    }
-});
-
-document.addEventListener("keyup", (e) => {
-    console.log("Tecla soltada:", e.key);
-});
-```
-
-### 22.3 Eventos de formulario
-
-```javascript
-const formulario = document.querySelector("form");
-const input = document.querySelector("input");
-
-// Envío de formulario
-formulario.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evita envío tradicional
-    console.log("Formulario enviado");
-    // Procesar datos...
-});
-
-// Cambio en input (al perder foco)
-input.addEventListener("change", (e) => {
-    console.log("Valor cambiado:", e.target.value);
-});
-
-// Entrada de datos (en tiempo real)
-input.addEventListener("input", (e) => {
-    console.log("Escribiendo:", e.target.value);
-});
-
-// Foco
-input.addEventListener("focus", () => {
-    console.log("Input tiene foco");
-});
-
-input.addEventListener("blur", () => {
-    console.log("Input pierde foco");
-});
-```
-
-### 22.4 Eventos de ventana
-
-```javascript
-// Carga completa
-window.addEventListener("load", () => {
-    console.log("Página completamente cargada");
-});
-
-// DOM listo (antes que load)
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM listo");
-});
-
-// Scroll
-window.addEventListener("scroll", () => {
-    console.log("Scroll Y:", window.scrollY);
-});
-
-// Redimensionado
-window.addEventListener("resize", () => {
-    console.log("Ancho:", window.innerWidth);
-});
-```
-
----
-
-## 23. Ejemplo práctico: Lista de tareas
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <style>
-        .completada {
-            text-decoration: line-through;
-            opacity: 0.6;
-        }
-        .tarea {
-            padding: 10px;
-            margin: 5px 0;
-            background: #f0f0f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>Lista de Tareas</h1>
-    
-    <form id="formTarea">
-        <input type="text" id="inputTarea" placeholder="Nueva tarea..." required>
-        <button type="submit">Añadir</button>
-    </form>
-    
-    <div id="listaTareas"></div>
-    
-    <script>
-        // Elementos del DOM
-        const formulario = document.querySelector("#formTarea");
-        const inputTarea = document.querySelector("#inputTarea");
-        const listaTareas = document.querySelector("#listaTareas");
-        
-        // Array para almacenar tareas
-        let tareas = [];
-        
-        // Función para renderizar tareas
-        function renderizarTareas() {
-            listaTareas.innerHTML = "";
-            
-            tareas.forEach((tarea, index) => {
-                const div = document.createElement("div");
-                div.className = `tarea ${tarea.completada ? "completada" : ""}`;
-                div.innerHTML = `
-                    <span>${tarea.texto}</span>
-                    <div>
-                        <button data-accion="completar" data-index="${index}">
-                            ${tarea.completada ? "Deshacer" : "Completar"}
-                        </button>
-                        <button data-accion="eliminar" data-index="${index}">
-                            Eliminar
-                        </button>
-                    </div>
-                `;
-                listaTareas.appendChild(div);
-            });
-        }
-        
-        // Evento: Añadir tarea
-        formulario.addEventListener("submit", (e) => {
-            e.preventDefault();
-            
-            const texto = inputTarea.value.trim();
-            if (texto) {
-                tareas.push({ texto, completada: false });
-                inputTarea.value = "";
-                renderizarTareas();
-            }
-        });
-        
-        // Evento: Delegación para botones
-        listaTareas.addEventListener("click", (e) => {
-            if (e.target.matches("button")) {
-                const accion = e.target.dataset.accion;
-                const index = parseInt(e.target.dataset.index);
-                
-                if (accion === "completar") {
-                    tareas[index].completada = !tareas[index].completada;
-                } else if (accion === "eliminar") {
-                    tareas.splice(index, 1);
-                }
-                
-                renderizarTareas();
-            }
-        });
-    </script>
-</body>
-</html>
-```
-
----
-
-## 24. Recursos y referencias
+## 15. Recursos y referencias
 
 ### Documentación oficial
 - **MDN Web Docs**: https://developer.mozilla.org/es/docs/Web/JavaScript
 - **JavaScript.info**: https://javascript.info/
 - **LenguajeJS**: https://lenguajejs.com/javascript/
-- **LenguajeJS DOM**: https://lenguajejs.com/dom/
-- **LenguajeJS Eventos**: https://lenguajejs.com/eventos/
 
 ### Práctica
 - **Eloquent JavaScript**: https://eloquentjavascript.net/
@@ -1817,11 +1517,11 @@ window.addEventListener("resize", () => {
 
 ### Herramientas
 - **Can I Use**: https://caniuse.com/
-- **DevDocs**: https://devdocs.io/javascript/
+- **ESLint**: https://eslint.org/
 
 ---
 
-## Criterios de evaluación UD2 (RA3)
+## Criterios de evaluación (RA3)
 
 | Criterio | Descripción |
 |----------|-------------|
@@ -1831,3 +1531,4 @@ window.addEventListener("resize", () => {
 | d) | Se ha modificado el contenido de elementos del DOM |
 | e) | Se han asociado acciones a eventos del DOM |
 | f) | Se han identificado elementos de la interfaz de usuario |
+
