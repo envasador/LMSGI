@@ -59,7 +59,7 @@ No todos los navegadores soportan todas las características de JavaScript al mi
 - **Can I Use**: https://caniuse.com/
 - **Tabla Kangax**: https://kangax.github.io/compat-table/es6/
 
-Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
+> Un **polyfill** es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.
 
 ---
 
