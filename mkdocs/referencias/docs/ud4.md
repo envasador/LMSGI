@@ -1532,3 +1532,4 @@ const formateado = JSON.stringify(usuario, null, 2);
 | e) | Se han asociado acciones a eventos del DOM |
 | f) | Se han identificado elementos de la interfaz de usuario |
 
+---
