@@ -828,8 +828,7 @@
 <li><strong>Can I Use</strong>: https://caniuse.com/</li>
 <li><strong>Tabla Kangax</strong>: https://kangax.github.io/compat-table/es6/</li>
 </ul>
-<p>!!! tip "Consejo"
-    Un <strong>polyfill</strong> es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.</p>
+<p>Un <strong>polyfill</strong> es un fragmento de código que proporciona funcionalidad que el navegador no soporta nativamente.</p>
 <hr />
 <h2 id="3-la-consola-de-javascript">3. La consola de JavaScript</h2>
 <p>La consola es la herramienta principal para <strong>depurar</strong> y <strong>probar</strong> código JavaScript.</p>
@@ -1267,6 +1266,9 @@ for (const clave in persona) {
     console.log(`${clave}: ${persona[clave]}`);
 }
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Para arrays, usa <code>for...of</code> o los métodos funcionales (<code>forEach</code>, <code>map</code>, <code>filter</code>). El <code>for</code> clásico solo cuando necesites el índice o control total del bucle. Para objetos, usa <code>for...in</code> o mejor aún <code>Object.entries()</code> con <code>for...of</code>. Evita <code>for...in</code> en arrays porque puede dar resultados inesperados.</p>
+</blockquote>
 <h3 id="83-control-de-bucles">8.3 Control de bucles</h3>
 <pre><code class="language-javascript">// break - sale del bucle
 for (let i = 0; i &lt; 10; i++) {
@@ -1307,6 +1309,9 @@ saludar(&quot;Ana&quot;);     // &quot;Hola, Ana&quot;
 duplicar(5);        // 10
 triplicar(3);       // 9
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Las <strong>arrow functions</strong> son las más utilizadas en código moderno por su sintaxis concisa y su comportamiento predecible con <code>this</code>. Usa funciones declaradas (<code>function nombre()</code>) cuando necesites hoisting (llamar a la función antes de declararla) o en métodos de objetos donde necesites acceso a <code>this</code>.</p>
+</blockquote>
 <h3 id="92-parametros">9.2 Parámetros</h3>
 <pre><code class="language-javascript">// Parámetros por defecto (ES6)
 function saludar(nombre = &quot;visitante&quot;) {
@@ -1377,6 +1382,9 @@ const suma = numeros.reduce((acc, n) =&gt; acc + n, 0); // 15
 </code></pre>
 <hr />
 <h2 id="10-strings-y-template-literals">10. Strings y Template Literals</h2>
+<p>Las <strong>cadenas de texto (strings)</strong> son uno de los tipos de datos más utilizados en programación. En JavaScript trabajamos constantemente con texto: mostrar mensajes al usuario, procesar formularios, construir HTML dinámico, manipular URLs, etc.</p>
+<p>JavaScript proporciona una amplia colección de métodos para manipular strings: buscar contenido, extraer partes, transformar mayúsculas/minúsculas, dividir en arrays... Dominar estos métodos te ahorrará mucho código y tiempo.</p>
+<p>Además, desde ES6 contamos con los <strong>template literals</strong> (plantillas de cadena), una forma moderna y elegante de trabajar con strings que permite interpolación de variables y textos multilínea sin complicaciones.</p>
 <h3 id="101-metodos-de-strings">10.1 Métodos de strings</h3>
 <pre><code class="language-javascript">let texto = &quot;JavaScript es genial&quot;;
 
@@ -1429,8 +1437,15 @@ let precio = 100;
 let descuento = 0.2;
 console.log(`Precio final: ${precio * (1 - descuento)}€`); // &quot;Precio final: 80€&quot;
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Siempre <strong>template literals</strong> (con backticks <code>`</code>). Son más legibles, permiten interpolación de variables sin concatenar con <code>+</code>, soportan multilínea sin caracteres especiales, y hacen el código mucho más limpio. La concatenación clásica con <code>+</code> está obsoleta en la práctica.</p>
+</blockquote>
 <hr />
 <h2 id="11-arrays-avanzados">11. Arrays avanzados</h2>
+<p>Los <strong>arrays</strong> son estructuras fundamentales en JavaScript. Prácticamente cualquier aplicación web necesita manejar listas de datos: productos en un carrito, mensajes en un chat, usuarios en una tabla, tareas pendientes...</p>
+<p>JavaScript moderno ofrece un conjunto muy potente de métodos para trabajar con arrays que van mucho más allá de los básicos <code>push</code> y <code>pop</code>. Las llamadas <strong>Array Functions</strong> o <strong>Higher Order Functions</strong> (<code>map</code>, <code>filter</code>, <code>reduce</code>, <code>find</code>...) permiten transformar, filtrar y procesar datos de forma declarativa y elegante.</p>
+<p>Entender la diferencia entre <strong>métodos mutables</strong> (que modifican el array original) e <strong>inmutables</strong> (que devuelven un nuevo array) es crucial para evitar bugs difíciles de detectar, especialmente cuando trabajamos con frameworks como React o Vue.</p>
+<p>También veremos el <strong>spread operator</strong> (<code>...</code>) y la <strong>desestructuración</strong>, dos características de ES6 que simplifican enormemente el trabajo con arrays.</p>
 <h3 id="111-metodos-mutables-vs-inmutables">11.1 Métodos mutables vs inmutables</h3>
 <pre><code class="language-javascript">// MUTABLES - modifican el array original
 const arr = [3, 1, 4, 1, 5];
@@ -1493,6 +1508,9 @@ const resultado = productos
     .sort();
 // [&quot;Laptop&quot;, &quot;Monitor&quot;, &quot;Teclado&quot;]
 </code></pre>
+<blockquote>
+<p><strong>¿Cuáles son las más usadas?</strong> <code>map</code> y <code>filter</code> son con diferencia las más utilizadas en el día a día. <code>map</code> para transformar datos (ej: extraer propiedades, formatear valores) y <code>filter</code> para filtrar listas. <code>find</code> es muy útil para buscar un elemento concreto. <code>reduce</code> es potente pero más complejo; úsalo cuando realmente necesites acumular valores. El <strong>encadenamiento</strong> de estos métodos es un patrón muy común en código profesional.</p>
+</blockquote>
 <h3 id="113-spread-operator-y-desestructuracion">11.3 Spread operator y desestructuración</h3>
 <pre><code class="language-javascript">// Spread operator (...)
 const arr1 = [1, 2, 3];
@@ -1514,6 +1532,10 @@ let a = 1, b = 2;
 </code></pre>
 <hr />
 <h2 id="12-objetos-avanzados">12. Objetos avanzados</h2>
+<p>Los <strong>objetos</strong> son el corazón de JavaScript. De hecho, casi todo en JavaScript es un objeto: los arrays, las funciones, las fechas, incluso los elementos del DOM. Entender cómo funcionan los objetos es esencial para dominar el lenguaje.</p>
+<p>Un objeto es una colección de <strong>pares clave-valor</strong> que nos permite agrupar datos relacionados bajo una misma estructura. Por ejemplo, podemos representar un usuario con su nombre, edad, email y preferencias en un único objeto, en lugar de tener variables sueltas por todo el código.</p>
+<p>En esta sección aprenderemos a manipular objetos de forma eficiente: acceder y modificar propiedades, recorrer sus contenidos, y utilizar características modernas de ES6 como la <strong>desestructuración</strong> (extraer valores de forma elegante) y el <strong>spread operator</strong> (copiar y combinar objetos fácilmente).</p>
+<p>Estas técnicas son fundamentales cuando trabajamos con datos que vienen de APIs, formularios o bases de datos, situaciones muy habituales en el desarrollo web.</p>
 <h3 id="121-manipulacion-de-objetos">12.1 Manipulación de objetos</h3>
 <pre><code class="language-javascript">const usuario = {
     nombre: &quot;Ana&quot;,
@@ -1674,6 +1696,9 @@ const parrafos = document.getElementsByTagName(&quot;p&quot;);
 // Por name (devuelve NodeList)
 const inputs = document.getElementsByName(&quot;email&quot;);
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Aunque <code>getElementById</code> es ligeramente más rápido, en la práctica la diferencia es insignificante. Se recomienda usar siempre <code>querySelector</code> y <code>querySelectorAll</code> porque son más flexibles (aceptan cualquier selector CSS) y unifican la sintaxis de búsqueda.</p>
+</blockquote>
 <h3 id="152-metodos-modernos-recomendados">15.2 Métodos modernos (recomendados)</h3>
 <pre><code class="language-javascript">// querySelector - devuelve el PRIMER elemento que coincide
 const elemento = document.querySelector(&quot;#miId&quot;);
@@ -1767,6 +1792,9 @@ console.log(div.outerHTML);
 // ⚠️ SEGURIDAD: innerHTML puede ejecutar scripts maliciosos
 // Nunca uses innerHTML con datos del usuario sin sanitizar
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Usa <code>textContent</code> para texto plano (es más seguro y rápido). Usa <code>innerHTML</code> solo cuando realmente necesites insertar HTML, y <strong>nunca</strong> con datos que provengan del usuario sin sanitizar, ya que es vulnerable a ataques XSS.</p>
+</blockquote>
 <h3 id="163-atributos-html">16.3 Atributos HTML</h3>
 <pre><code class="language-javascript">const enlace = document.querySelector(&quot;a&quot;);
 
@@ -1797,6 +1825,9 @@ console.log(elemento.className); // &quot;card activo destacado&quot;
 // Reemplazar todas las clases
 elemento.className = &quot;nueva-clase&quot;;
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Usa siempre <code>classList</code>. Es más seguro porque no sobrescribe accidentalmente otras clases, y sus métodos (<code>add</code>, <code>remove</code>, <code>toggle</code>, <code>contains</code>) hacen el código mucho más legible y menos propenso a errores.</p>
+</blockquote>
 <h3 id="172-classlist-recomendado">17.2 classList (recomendado)</h3>
 <pre><code class="language-javascript">const elemento = document.querySelector(&quot;div&quot;);
 
@@ -1885,6 +1916,9 @@ container.replaceWith(nuevo);
 // remove - elimina el elemento
 nuevo.remove();
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Los métodos modernos (<code>append</code>, <code>prepend</code>, <code>before</code>, <code>after</code>, <code>remove</code>) son los más recomendados por su sintaxis clara y porque permiten añadir múltiples elementos a la vez. <code>appendChild</code> sigue siendo válido pero es más limitado. Usa <code>insertAdjacentHTML</code> cuando necesites insertar HTML como string de forma eficiente.</p>
+</blockquote>
 <h3 id="193-insercion-adyacente-insertadjacent">19.3 Inserción adyacente (insertAdjacent)</h3>
 <pre><code class="language-javascript">const referencia = document.querySelector(&quot;.referencia&quot;);
 
@@ -1955,6 +1989,9 @@ btn.addEventListener(&quot;click&quot;, function() {
 });
 // Permite múltiples funciones
 </code></pre>
+<blockquote>
+<p><strong>¿Cuál usar?</strong> Siempre <code>addEventListener</code>. Es el estándar moderno porque permite añadir múltiples listeners al mismo evento, ofrece opciones avanzadas (<code>once</code>, <code>passive</code>, <code>capture</code>), y se puede eliminar con <code>removeEventListener</code>. Las otras formas están obsoletas o tienen limitaciones importantes.</p>
+</blockquote>
 <h3 id="203-addeventlistener">20.3 addEventListener</h3>
 <pre><code class="language-javascript">const boton = document.querySelector(&quot;#miBoton&quot;);
 
