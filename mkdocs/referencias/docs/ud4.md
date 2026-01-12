@@ -19,17 +19,17 @@ JavaScript es un **lenguaje de programación interpretado** que se ejecuta princ
 ### JavaScript en el ecosistema web
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    PÁGINA WEB                           │
-├─────────────────────────────────────────────────────────┤
-│  HTML          │  CSS           │  JavaScript           │
-│  (Estructura)  │  (Presentación)│  (Comportamiento)     │
-│                │                │                       │
-│  - Contenido   │  - Colores     │  - Interactividad     │
-│  - Semántica   │  - Tipografía  │  - Validación         │
-│  - Jerarquía   │  - Layout      │  - Dinamismo          │
-│  - Accesibilidad│ - Animaciones │  - Comunicación API   │
-└─────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────┐
+│                    PÁGINA WEB                              │
+├────────────────────────────────────────────────────────────┤
+│  HTML            │  CSS            │  JavaScript           │
+│  (Estructura)    │  (Presentación) │  (Comportamiento)     │
+│                  │                 │                       │
+│  - Contenido     │  - Colores      │  - Interactividad     │
+│  - Semántica     │  - Tipografía   │  - Validación         │
+│  - Jerarquía     │  - Layout       │  - Dinamismo          │
+│  - Accesibilidad │ - Animaciones   │  - Comunicación API   │
+└────────────────────────────────────────────────────────────┘
 ```
 
 ---
