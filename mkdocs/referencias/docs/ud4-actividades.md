@@ -222,8 +222,6 @@ const UMBRAL_ENVIO_REDUCIDO = 50;
 // TODO: Usa console.log() con template literals para mostrar
 // el ticket formateado como en el ejemplo
 
-// Pista para formatear precios: numero.toFixed(2)
-// Pista para alinear texto: string.padStart(10) o string.padEnd(30)
 
 ```
 
