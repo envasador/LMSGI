@@ -1533,3 +1533,6 @@ const formateado = JSON.stringify(usuario, null, 2);
 | f) | Se han identificado elementos de la interfaz de usuario |
 
 ---
+
+
+
