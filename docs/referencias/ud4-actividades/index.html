@@ -1140,6 +1140,355 @@ const UMBRAL_ENVIO_REDUCIDO = 50;
 <p><strong>Productos agotados</strong>: Añadir campo <code>stock</code> al catálogo y comprobar disponibilidad.</p>
 </li>
 </ol>
+<h1 id="actividad-2-gestor-de-inventario-de-tienda">ACTIVIDAD 2: Gestor de Inventario de Tienda</h1>
+<h2 id="nivel-intermedio">Nivel: Intermedio</h2>
+<h2 id="conceptos-trabajados-arrays-objetos-metodos-de-array-map-filter-find-reduce-funciones-json">Conceptos trabajados: Arrays, objetos, métodos de array (map, filter, find, reduce), funciones, JSON</h2>
+<h3 id="contexto_1">Contexto</h3>
+<p>Una pequeña tienda de electrónica necesita un sistema para gestionar su inventario. El sistema debe permitir realizar diversas operaciones sobre los productos: buscar, filtrar, actualizar stock, calcular estadísticas, etc.</p>
+<h3 id="datos-iniciales">Datos iniciales</h3>
+<pre><code class="language-javascript">const inventario = [
+    {
+        id: 1,
+        nombre: &quot;Laptop HP Pavilion&quot;,
+        categoria: &quot;portatiles&quot;,
+        precio: 699.99,
+        stock: 15,
+        caracteristicas: {
+            procesador: &quot;Intel i5&quot;,
+            ram: &quot;8GB&quot;,
+            almacenamiento: &quot;512GB SSD&quot;
+        },
+        activo: true
+    },
+    {
+        id: 2,
+        nombre: &quot;Monitor Samsung 27\&quot;&quot;,
+        categoria: &quot;monitores&quot;,
+        precio: 249.99,
+        stock: 23,
+        caracteristicas: {
+            resolucion: &quot;2560x1440&quot;,
+            panel: &quot;IPS&quot;,
+            tasaRefresco: &quot;75Hz&quot;
+        },
+        activo: true
+    },
+    {
+        id: 3,
+        nombre: &quot;Teclado Mecánico Logitech&quot;,
+        categoria: &quot;perifericos&quot;,
+        precio: 89.99,
+        stock: 45,
+        caracteristicas: {
+            tipo: &quot;mecánico&quot;,
+            switches: &quot;Cherry MX Red&quot;,
+            retroiluminacion: true
+        },
+        activo: true
+    },
+    {
+        id: 4,
+        nombre: &quot;Ratón Inalámbrico Logitech&quot;,
+        categoria: &quot;perifericos&quot;,
+        precio: 34.99,
+        stock: 0,
+        caracteristicas: {
+            tipo: &quot;inalámbrico&quot;,
+            dpi: 4000,
+            botones: 6
+        },
+        activo: false
+    },
+    {
+        id: 5,
+        nombre: &quot;Laptop Dell XPS 15&quot;,
+        categoria: &quot;portatiles&quot;,
+        precio: 1299.99,
+        stock: 8,
+        caracteristicas: {
+            procesador: &quot;Intel i7&quot;,
+            ram: &quot;16GB&quot;,
+            almacenamiento: &quot;1TB SSD&quot;
+        },
+        activo: true
+    },
+    {
+        id: 6,
+        nombre: &quot;Webcam HD Logitech&quot;,
+        categoria: &quot;perifericos&quot;,
+        precio: 59.99,
+        stock: 32,
+        caracteristicas: {
+            resolucion: &quot;1080p&quot;,
+            fps: 30,
+            microfono: true
+        },
+        activo: true
+    },
+    {
+        id: 7,
+        nombre: &quot;Monitor LG UltraWide 34\&quot;&quot;,
+        categoria: &quot;monitores&quot;,
+        precio: 449.99,
+        stock: 5,
+        caracteristicas: {
+            resolucion: &quot;3440x1440&quot;,
+            panel: &quot;IPS&quot;,
+            tasaRefresco: &quot;144Hz&quot;
+        },
+        activo: true
+    },
+    {
+        id: 8,
+        nombre: &quot;Auriculares Gaming HyperX&quot;,
+        categoria: &quot;audio&quot;,
+        precio: 79.99,
+        stock: 28,
+        caracteristicas: {
+            tipo: &quot;over-ear&quot;,
+            microfono: true,
+            conexion: &quot;USB/Jack 3.5mm&quot;
+        },
+        activo: true
+    }
+];
+</code></pre>
+<h3 id="requisitos-funcionales_1">Requisitos funcionales</h3>
+<p>Debes implementar las siguientes funciones:</p>
+<h4 id="funciones-de-busqueda-y-filtrado">Funciones de búsqueda y filtrado</h4>
+<pre><code class="language-javascript">// 1. Buscar producto por ID
+// Devuelve el producto o null si no existe
+function buscarProductoPorId(id) {
+    // TODO
+}
+
+// 2. Buscar productos por nombre (búsqueda parcial, sin distinguir mayúsculas)
+// Devuelve array de productos que coincidan
+function buscarProductosPorNombre(termino) {
+    // TODO
+}
+
+// 3. Filtrar productos por categoría
+// Devuelve array de productos de esa categoría
+function filtrarPorCategoria(categoria) {
+    // TODO
+}
+
+// 4. Filtrar productos por rango de precio
+// Devuelve productos con precio entre min y max (inclusive)
+function filtrarPorRangoPrecio(precioMin, precioMax) {
+    // TODO
+}
+
+// 5. Obtener productos con stock bajo (menos de X unidades)
+function productosStockBajo(umbral = 10) {
+    // TODO
+}
+
+// 6. Obtener solo productos activos
+function productosActivos() {
+    // TODO
+}
+</code></pre>
+<h4 id="funciones-de-transformacion">Funciones de transformación</h4>
+<pre><code class="language-javascript">// 7. Obtener lista simplificada de productos
+// Devuelve array de objetos con solo: id, nombre, precio, disponible (stock &gt; 0)
+function listaSimplificada() {
+    // TODO
+}
+
+// 8. Aplicar descuento a una categoría
+// Devuelve nuevo array con los precios modificados (no modifica el original)
+function aplicarDescuento(categoria, porcentaje) {
+    // TODO
+}
+
+// 9. Obtener nombres de productos formateados
+// Devuelve array de strings: &quot;NOMBRE - PRECIO€&quot;
+function nombresFormateados() {
+    // TODO
+}
+</code></pre>
+<h4 id="funciones-de-estadisticas-usar-reduce">Funciones de estadísticas (usar reduce)</h4>
+<pre><code class="language-javascript">// 10. Calcular valor total del inventario (precio × stock de cada producto)
+function valorTotalInventario() {
+    // TODO
+}
+
+// 11. Calcular precio promedio de productos
+function precioPromedio() {
+    // TODO
+}
+
+// 12. Contar productos por categoría
+// Devuelve objeto: { portatiles: 2, monitores: 2, perifericos: 3, audio: 1 }
+function contarPorCategoria() {
+    // TODO
+}
+
+// 13. Obtener resumen del inventario
+// Devuelve objeto con: totalProductos, productosActivos, valorTotal, 
+// productoMasCaro, productoMasBarato, stockTotal
+function resumenInventario() {
+    // TODO
+}
+</code></pre>
+<h4 id="funciones-de-modificacion">Funciones de modificación</h4>
+<pre><code class="language-javascript">// 14. Actualizar stock de un producto
+// Devuelve true si se actualizó, false si no se encontró el producto
+function actualizarStock(id, nuevoStock) {
+    // TODO
+}
+
+// 15. Registrar venta (reducir stock)
+// Devuelve objeto con: exito (boolean), mensaje, nuevoStock
+function registrarVenta(id, cantidad) {
+    // TODO
+}
+
+// 16. Añadir nuevo producto
+// Genera ID automáticamente (máximo ID actual + 1)
+// Devuelve el producto creado
+function agregarProducto(nombre, categoria, precio, stock, caracteristicas) {
+    // TODO
+}
+</code></pre>
+<h4 id="funciones-de-exportacion">Funciones de exportación</h4>
+<pre><code class="language-javascript">// 17. Exportar inventario a JSON
+// Devuelve string JSON formateado
+function exportarJSON() {
+    // TODO
+}
+
+// 18. Generar informe de texto
+// Devuelve string con informe formateado del inventario
+function generarInforme() {
+    // TODO
+}
+</code></pre>
+<h3 id="ejemplo-de-uso-y-salida-esperada">Ejemplo de uso y salida esperada</h3>
+<pre><code class="language-javascript">// Pruebas de las funciones
+console.log(&quot;=== PRUEBAS DEL GESTOR DE INVENTARIO ===\n&quot;);
+
+// Búsquedas
+console.log(&quot;1. Buscar producto ID 3:&quot;);
+console.log(buscarProductoPorId(3));
+// { id: 3, nombre: &quot;Teclado Mecánico Logitech&quot;, ... }
+
+console.log(&quot;\n2. Buscar productos con 'logitech':&quot;);
+console.log(buscarProductosPorNombre(&quot;logitech&quot;));
+// [{ id: 3, ... }, { id: 4, ... }, { id: 6, ... }]
+
+console.log(&quot;\n3. Productos de la categoría 'monitores':&quot;);
+console.log(filtrarPorCategoria(&quot;monitores&quot;));
+// [{ id: 2, ... }, { id: 7, ... }]
+
+console.log(&quot;\n4. Productos entre 50€ y 100€:&quot;);
+console.log(filtrarPorRangoPrecio(50, 100));
+// [{ id: 3, ... }, { id: 6, ... }, { id: 8, ... }]
+
+console.log(&quot;\n5. Productos con stock bajo (menos de 10):&quot;);
+console.log(productosStockBajo(10));
+// [{ id: 4, ... }, { id: 5, ... }, { id: 7, ... }]
+
+// Estadísticas
+console.log(&quot;\n6. Valor total del inventario:&quot;);
+console.log(valorTotalInventario());
+// 45000.00 (aproximadamente)
+
+console.log(&quot;\n7. Productos por categoría:&quot;);
+console.log(contarPorCategoria());
+// { portatiles: 2, monitores: 2, perifericos: 3, audio: 1 }
+
+console.log(&quot;\n8. Resumen completo:&quot;);
+console.log(resumenInventario());
+/*
+{
+    totalProductos: 8,
+    productosActivos: 7,
+    valorTotal: 45000.00,
+    productoMasCaro: { id: 5, nombre: &quot;Laptop Dell XPS 15&quot;, precio: 1299.99 },
+    productoMasBarato: { id: 4, nombre: &quot;Ratón Inalámbrico Logitech&quot;, precio: 34.99 },
+    stockTotal: 156
+}
+*/
+
+// Transformaciones
+console.log(&quot;\n9. Lista simplificada:&quot;);
+console.log(listaSimplificada());
+/*
+[
+    { id: 1, nombre: &quot;Laptop HP Pavilion&quot;, precio: 699.99, disponible: true },
+    { id: 2, nombre: &quot;Monitor Samsung 27\&quot;&quot;, precio: 249.99, disponible: true },
+    ...
+]
+*/
+
+console.log(&quot;\n10. Aplicar 15% descuento a periféricos:&quot;);
+const conDescuento = aplicarDescuento(&quot;perifericos&quot;, 15);
+console.log(conDescuento.filter(p =&gt; p.categoria === &quot;perifericos&quot;));
+// Los periféricos ahora tienen precio reducido un 15%
+
+// Modificaciones
+console.log(&quot;\n11. Registrar venta:&quot;);
+console.log(registrarVenta(3, 5));
+// { exito: true, mensaje: &quot;Venta registrada&quot;, nuevoStock: 40 }
+
+console.log(registrarVenta(4, 2));
+// { exito: false, mensaje: &quot;Stock insuficiente (disponible: 0)&quot;, nuevoStock: 0 }
+
+// Informe
+console.log(&quot;\n12. Informe del inventario:&quot;);
+console.log(generarInforme());
+</code></pre>
+<h3 id="ejemplo-de-informe-generado">Ejemplo de informe generado</h3>
+<pre><code>╔══════════════════════════════════════════════════════════════╗
+║           INFORME DE INVENTARIO - TechStore                  ║
+║                  Fecha: 15/01/2025                           ║
+╠══════════════════════════════════════════════════════════════╣
+
+📊 RESUMEN GENERAL
+─────────────────────────────────────────────────────
+Total de productos:     8
+Productos activos:      7
+Productos sin stock:    1
+Valor total inventario: 45,234.50€
+Stock total unidades:   156
+
+💰 ANÁLISIS DE PRECIOS
+─────────────────────────────────────────────────────
+Precio promedio:        369.99€
+Producto más caro:      Laptop Dell XPS 15 (1,299.99€)
+Producto más barato:    Ratón Inalámbrico Logitech (34.99€)
+
+📦 PRODUCTOS POR CATEGORÍA
+─────────────────────────────────────────────────────
+  • Portátiles:    2 productos
+  • Monitores:     2 productos
+  • Periféricos:   3 productos
+  • Audio:         1 producto
+
+⚠️  ALERTAS DE STOCK (menos de 10 unidades)
+─────────────────────────────────────────────────────
+  ⚠ Ratón Inalámbrico Logitech - Stock: 0 (SIN STOCK)
+  ⚠ Laptop Dell XPS 15 - Stock: 8
+  ⚠ Monitor LG UltraWide 34&quot; - Stock: 5
+
+📋 LISTADO COMPLETO
+─────────────────────────────────────────────────────
+ID  | Nombre                        | Precio    | Stock | Estado
+────┼───────────────────────────────┼───────────┼───────┼─────────
+1   | Laptop HP Pavilion            | 699.99€   | 15    | ✓ Activo
+2   | Monitor Samsung 27&quot;           | 249.99€   | 23    | ✓ Activo
+3   | Teclado Mecánico Logitech     | 89.99€    | 45    | ✓ Activo
+4   | Ratón Inalámbrico Logitech    | 34.99€    | 0     | ✗ Inactivo
+5   | Laptop Dell XPS 15            | 1299.99€  | 8     | ✓ Activo
+6   | Webcam HD Logitech            | 59.99€    | 32    | ✓ Activo
+7   | Monitor LG UltraWide 34&quot;      | 449.99€   | 5     | ✓ Activo
+8   | Auriculares Gaming HyperX     | 79.99€    | 28    | ✓ Activo
+
+╚══════════════════════════════════════════════════════════════╝
+</code></pre>
 
 
 
