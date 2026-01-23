@@ -246,3 +246,384 @@ const UMBRAL_ENVIO_REDUCIDO = 50;
 4. **Sistema de puntos**: El cliente premium acumula 1 punto por cada euro gastado. Mostrar puntos ganados.
 
 5. **Productos agotados**: Añadir campo `stock` al catálogo y comprobar disponibilidad.
+
+
+
+# ACTIVIDAD 2: Gestor de Inventario de Tienda
+
+## Nivel: Intermedio
+## Conceptos trabajados: Arrays, objetos, métodos de array (map, filter, find, reduce), funciones, JSON
+
+### Contexto
+
+Una pequeña tienda de electrónica necesita un sistema para gestionar su inventario. El sistema debe permitir realizar diversas operaciones sobre los productos: buscar, filtrar, actualizar stock, calcular estadísticas, etc.
+
+### Datos iniciales
+
+```javascript
+const inventario = [
+    {
+        id: 1,
+        nombre: "Laptop HP Pavilion",
+        categoria: "portatiles",
+        precio: 699.99,
+        stock: 15,
+        caracteristicas: {
+            procesador: "Intel i5",
+            ram: "8GB",
+            almacenamiento: "512GB SSD"
+        },
+        activo: true
+    },
+    {
+        id: 2,
+        nombre: "Monitor Samsung 27\"",
+        categoria: "monitores",
+        precio: 249.99,
+        stock: 23,
+        caracteristicas: {
+            resolucion: "2560x1440",
+            panel: "IPS",
+            tasaRefresco: "75Hz"
+        },
+        activo: true
+    },
+    {
+        id: 3,
+        nombre: "Teclado Mecánico Logitech",
+        categoria: "perifericos",
+        precio: 89.99,
+        stock: 45,
+        caracteristicas: {
+            tipo: "mecánico",
+            switches: "Cherry MX Red",
+            retroiluminacion: true
+        },
+        activo: true
+    },
+    {
+        id: 4,
+        nombre: "Ratón Inalámbrico Logitech",
+        categoria: "perifericos",
+        precio: 34.99,
+        stock: 0,
+        caracteristicas: {
+            tipo: "inalámbrico",
+            dpi: 4000,
+            botones: 6
+        },
+        activo: false
+    },
+    {
+        id: 5,
+        nombre: "Laptop Dell XPS 15",
+        categoria: "portatiles",
+        precio: 1299.99,
+        stock: 8,
+        caracteristicas: {
+            procesador: "Intel i7",
+            ram: "16GB",
+            almacenamiento: "1TB SSD"
+        },
+        activo: true
+    },
+    {
+        id: 6,
+        nombre: "Webcam HD Logitech",
+        categoria: "perifericos",
+        precio: 59.99,
+        stock: 32,
+        caracteristicas: {
+            resolucion: "1080p",
+            fps: 30,
+            microfono: true
+        },
+        activo: true
+    },
+    {
+        id: 7,
+        nombre: "Monitor LG UltraWide 34\"",
+        categoria: "monitores",
+        precio: 449.99,
+        stock: 5,
+        caracteristicas: {
+            resolucion: "3440x1440",
+            panel: "IPS",
+            tasaRefresco: "144Hz"
+        },
+        activo: true
+    },
+    {
+        id: 8,
+        nombre: "Auriculares Gaming HyperX",
+        categoria: "audio",
+        precio: 79.99,
+        stock: 28,
+        caracteristicas: {
+            tipo: "over-ear",
+            microfono: true,
+            conexion: "USB/Jack 3.5mm"
+        },
+        activo: true
+    }
+];
+```
+
+### Requisitos funcionales
+
+Debes implementar las siguientes funciones:
+
+#### Funciones de búsqueda y filtrado
+
+```javascript
+// 1. Buscar producto por ID
+// Devuelve el producto o null si no existe
+function buscarProductoPorId(id) {
+    // TODO
+}
+
+// 2. Buscar productos por nombre (búsqueda parcial, sin distinguir mayúsculas)
+// Devuelve array de productos que coincidan
+function buscarProductosPorNombre(termino) {
+    // TODO
+}
+
+// 3. Filtrar productos por categoría
+// Devuelve array de productos de esa categoría
+function filtrarPorCategoria(categoria) {
+    // TODO
+}
+
+// 4. Filtrar productos por rango de precio
+// Devuelve productos con precio entre min y max (inclusive)
+function filtrarPorRangoPrecio(precioMin, precioMax) {
+    // TODO
+}
+
+// 5. Obtener productos con stock bajo (menos de X unidades)
+function productosStockBajo(umbral = 10) {
+    // TODO
+}
+
+// 6. Obtener solo productos activos
+function productosActivos() {
+    // TODO
+}
+```
+
+#### Funciones de transformación
+
+```javascript
+// 7. Obtener lista simplificada de productos
+// Devuelve array de objetos con solo: id, nombre, precio, disponible (stock > 0)
+function listaSimplificada() {
+    // TODO
+}
+
+// 8. Aplicar descuento a una categoría
+// Devuelve nuevo array con los precios modificados (no modifica el original)
+function aplicarDescuento(categoria, porcentaje) {
+    // TODO
+}
+
+// 9. Obtener nombres de productos formateados
+// Devuelve array de strings: "NOMBRE - PRECIO€"
+function nombresFormateados() {
+    // TODO
+}
+```
+
+#### Funciones de estadísticas (usar reduce)
+
+```javascript
+// 10. Calcular valor total del inventario (precio × stock de cada producto)
+function valorTotalInventario() {
+    // TODO
+}
+
+// 11. Calcular precio promedio de productos
+function precioPromedio() {
+    // TODO
+}
+
+// 12. Contar productos por categoría
+// Devuelve objeto: { portatiles: 2, monitores: 2, perifericos: 3, audio: 1 }
+function contarPorCategoria() {
+    // TODO
+}
+
+// 13. Obtener resumen del inventario
+// Devuelve objeto con: totalProductos, productosActivos, valorTotal, 
+// productoMasCaro, productoMasBarato, stockTotal
+function resumenInventario() {
+    // TODO
+}
+```
+
+#### Funciones de modificación
+
+```javascript
+// 14. Actualizar stock de un producto
+// Devuelve true si se actualizó, false si no se encontró el producto
+function actualizarStock(id, nuevoStock) {
+    // TODO
+}
+
+// 15. Registrar venta (reducir stock)
+// Devuelve objeto con: exito (boolean), mensaje, nuevoStock
+function registrarVenta(id, cantidad) {
+    // TODO
+}
+
+// 16. Añadir nuevo producto
+// Genera ID automáticamente (máximo ID actual + 1)
+// Devuelve el producto creado
+function agregarProducto(nombre, categoria, precio, stock, caracteristicas) {
+    // TODO
+}
+```
+
+#### Funciones de exportación
+
+```javascript
+// 17. Exportar inventario a JSON
+// Devuelve string JSON formateado
+function exportarJSON() {
+    // TODO
+}
+
+// 18. Generar informe de texto
+// Devuelve string con informe formateado del inventario
+function generarInforme() {
+    // TODO
+}
+```
+
+### Ejemplo de uso y salida esperada
+
+```javascript
+// Pruebas de las funciones
+console.log("=== PRUEBAS DEL GESTOR DE INVENTARIO ===\n");
+
+// Búsquedas
+console.log("1. Buscar producto ID 3:");
+console.log(buscarProductoPorId(3));
+// { id: 3, nombre: "Teclado Mecánico Logitech", ... }
+
+console.log("\n2. Buscar productos con 'logitech':");
+console.log(buscarProductosPorNombre("logitech"));
+// [{ id: 3, ... }, { id: 4, ... }, { id: 6, ... }]
+
+console.log("\n3. Productos de la categoría 'monitores':");
+console.log(filtrarPorCategoria("monitores"));
+// [{ id: 2, ... }, { id: 7, ... }]
+
+console.log("\n4. Productos entre 50€ y 100€:");
+console.log(filtrarPorRangoPrecio(50, 100));
+// [{ id: 3, ... }, { id: 6, ... }, { id: 8, ... }]
+
+console.log("\n5. Productos con stock bajo (menos de 10):");
+console.log(productosStockBajo(10));
+// [{ id: 4, ... }, { id: 5, ... }, { id: 7, ... }]
+
+// Estadísticas
+console.log("\n6. Valor total del inventario:");
+console.log(valorTotalInventario());
+// 45000.00 (aproximadamente)
+
+console.log("\n7. Productos por categoría:");
+console.log(contarPorCategoria());
+// { portatiles: 2, monitores: 2, perifericos: 3, audio: 1 }
+
+console.log("\n8. Resumen completo:");
+console.log(resumenInventario());
+/*
+{
+    totalProductos: 8,
+    productosActivos: 7,
+    valorTotal: 45000.00,
+    productoMasCaro: { id: 5, nombre: "Laptop Dell XPS 15", precio: 1299.99 },
+    productoMasBarato: { id: 4, nombre: "Ratón Inalámbrico Logitech", precio: 34.99 },
+    stockTotal: 156
+}
+*/
+
+// Transformaciones
+console.log("\n9. Lista simplificada:");
+console.log(listaSimplificada());
+/*
+[
+    { id: 1, nombre: "Laptop HP Pavilion", precio: 699.99, disponible: true },
+    { id: 2, nombre: "Monitor Samsung 27\"", precio: 249.99, disponible: true },
+    ...
+]
+*/
+
+console.log("\n10. Aplicar 15% descuento a periféricos:");
+const conDescuento = aplicarDescuento("perifericos", 15);
+console.log(conDescuento.filter(p => p.categoria === "perifericos"));
+// Los periféricos ahora tienen precio reducido un 15%
+
+// Modificaciones
+console.log("\n11. Registrar venta:");
+console.log(registrarVenta(3, 5));
+// { exito: true, mensaje: "Venta registrada", nuevoStock: 40 }
+
+console.log(registrarVenta(4, 2));
+// { exito: false, mensaje: "Stock insuficiente (disponible: 0)", nuevoStock: 0 }
+
+// Informe
+console.log("\n12. Informe del inventario:");
+console.log(generarInforme());
+```
+
+### Ejemplo de informe generado
+
+```
+╔══════════════════════════════════════════════════════════════╗
+║           INFORME DE INVENTARIO - TechStore                  ║
+║                  Fecha: 15/01/2025                           ║
+╠══════════════════════════════════════════════════════════════╣
+
+📊 RESUMEN GENERAL
+─────────────────────────────────────────────────────
+Total de productos:     8
+Productos activos:      7
+Productos sin stock:    1
+Valor total inventario: 45,234.50€
+Stock total unidades:   156
+
+💰 ANÁLISIS DE PRECIOS
+─────────────────────────────────────────────────────
+Precio promedio:        369.99€
+Producto más caro:      Laptop Dell XPS 15 (1,299.99€)
+Producto más barato:    Ratón Inalámbrico Logitech (34.99€)
+
+📦 PRODUCTOS POR CATEGORÍA
+─────────────────────────────────────────────────────
+  • Portátiles:    2 productos
+  • Monitores:     2 productos
+  • Periféricos:   3 productos
+  • Audio:         1 producto
+
+⚠️  ALERTAS DE STOCK (menos de 10 unidades)
+─────────────────────────────────────────────────────
+  ⚠ Ratón Inalámbrico Logitech - Stock: 0 (SIN STOCK)
+  ⚠ Laptop Dell XPS 15 - Stock: 8
+  ⚠ Monitor LG UltraWide 34" - Stock: 5
+
+📋 LISTADO COMPLETO
+─────────────────────────────────────────────────────
+ID  | Nombre                        | Precio    | Stock | Estado
+────┼───────────────────────────────┼───────────┼───────┼─────────
+1   | Laptop HP Pavilion            | 699.99€   | 15    | ✓ Activo
+2   | Monitor Samsung 27"           | 249.99€   | 23    | ✓ Activo
+3   | Teclado Mecánico Logitech     | 89.99€    | 45    | ✓ Activo
+4   | Ratón Inalámbrico Logitech    | 34.99€    | 0     | ✗ Inactivo
+5   | Laptop Dell XPS 15            | 1299.99€  | 8     | ✓ Activo
+6   | Webcam HD Logitech            | 59.99€    | 32    | ✓ Activo
+7   | Monitor LG UltraWide 34"      | 449.99€   | 5     | ✓ Activo
+8   | Auriculares Gaming HyperX     | 79.99€    | 28    | ✓ Activo
+
+╚══════════════════════════════════════════════════════════════╝
+```
