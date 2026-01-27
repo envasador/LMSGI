@@ -642,13 +642,10 @@ ID  | Nombre                        | Precio    | Stock | Estado
 
 
 
-# Actividad 3: Sistema de Gestión de Tareas
+# ACTIVIDAD 3: Sistema de Gestión de Tareas (TaskManager)
 
-## Módulo: Lenguajes de Marcas y Sistemas de Gestión de la Información (LMSGI)
-### Ciclo: Desarrollo de Aplicaciones Web (DAW)
-
----
-
+## Nivel: Intermedio-Avanzado (Escalable)
+## Conceptos trabajados: Arrays, objetos, métodos de array (map, filter, find, reduce), funciones, JSON, fechas, arquitectura modular
 ## Contexto
 
 Una empresa de desarrollo de software necesita un sistema para gestionar las tareas de sus empleados. El sistema debe permitir crear tareas, asignarles prioridades, añadir subtareas, filtrar por diferentes criterios y generar estadísticas.
