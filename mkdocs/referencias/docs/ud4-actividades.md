@@ -627,3 +627,609 @@ ID  | Nombre                        | Precio    | Stock | Estado
 
 ╚══════════════════════════════════════════════════════════════╝
 ```
+
+### Ampliaciones opcionales
+
+1. **Sistema de categorías dinámico**: Permitir crear nuevas categorías y asignar productos.
+
+2. **Historial de cambios**: Registrar todas las modificaciones de stock con fecha y motivo.
+
+3. **Sistema de alertas**: Configurar alertas automáticas cuando el stock baje de cierto umbral.
+
+4. **Búsqueda avanzada**: Permitir buscar por múltiples criterios combinados (categoría + rango de precio + en stock).
+
+5. **Ordenación**: Implementar funciones para ordenar por precio, nombre, stock, etc.
+
+
+
+# Actividad 3: Sistema de Gestión de Tareas
+
+## Módulo: Lenguajes de Marcas y Sistemas de Gestión de la Información (LMSGI)
+### Ciclo: Desarrollo de Aplicaciones Web (DAW)
+
+---
+
+## Contexto
+
+Una empresa de desarrollo de software necesita un sistema para gestionar las tareas de sus empleados. El sistema debe permitir crear tareas, asignarles prioridades, añadir subtareas, filtrar por diferentes criterios y generar estadísticas.
+
+Tu trabajo es desarrollar las funciones JavaScript que gestionen este sistema.
+
+---
+
+## Modelo de datos
+
+Cada tarea tiene la siguiente estructura:
+
+```javascript
+const ejemploTarea = {
+    id: 1,
+    titulo: "Completar ejercicio de JavaScript",
+    descripcion: "Terminar la actividad 3 del módulo LMSGI",
+    prioridad: "alta",        // "baja", "media", "alta"
+    estado: "pendiente",      // "pendiente", "en-progreso", "completada"
+    fechaCreacion: "2025-01-15T10:30:00",
+    fechaLimite: "2025-01-20T23:59:59",
+    etiquetas: ["estudios", "javascript"],
+    subtareas: [
+        { id: 1, titulo: "Leer enunciado", completada: true },
+        { id: 2, titulo: "Implementar funciones", completada: false },
+        { id: 3, titulo: "Probar código", completada: false }
+    ]
+};
+```
+
+---
+
+## Datos de prueba
+
+Utiliza estos datos para probar tu código:
+
+```javascript
+const tareas = [
+    {
+        id: 1,
+        titulo: "Preparar presentación del proyecto",
+        descripcion: "Crear slides para la presentación del viernes",
+        prioridad: "alta",
+        estado: "en-progreso",
+        fechaCreacion: "2025-01-10T09:00:00",
+        fechaLimite: "2025-01-17T18:00:00",
+        etiquetas: ["trabajo", "presentacion"],
+        subtareas: [
+            { id: 1, titulo: "Recopilar datos", completada: true },
+            { id: 2, titulo: "Diseñar slides", completada: true },
+            { id: 3, titulo: "Añadir gráficos", completada: false },
+            { id: 4, titulo: "Revisar ortografía", completada: false }
+        ]
+    },
+    {
+        id: 2,
+        titulo: "Estudiar para examen de LMSGI",
+        descripcion: "Repasar temas de JavaScript y JSON",
+        prioridad: "alta",
+        estado: "pendiente",
+        fechaCreacion: "2025-01-12T14:30:00",
+        fechaLimite: "2025-01-22T09:00:00",
+        etiquetas: ["estudios", "javascript"],
+        subtareas: [
+            { id: 1, titulo: "Repasar variables y tipos", completada: false },
+            { id: 2, titulo: "Practicar arrays", completada: false },
+            { id: 3, titulo: "Practicar objetos", completada: false }
+        ]
+    },
+    {
+        id: 3,
+        titulo: "Comprar regalo de cumpleaños",
+        descripcion: "Buscar regalo para el cumpleaños de María",
+        prioridad: "media",
+        estado: "pendiente",
+        fechaCreacion: "2025-01-14T11:00:00",
+        fechaLimite: "2025-01-25T20:00:00",
+        etiquetas: ["personal", "compras"],
+        subtareas: []
+    },
+    {
+        id: 4,
+        titulo: "Actualizar portfolio",
+        descripcion: "Añadir los últimos proyectos al portfolio online",
+        prioridad: "baja",
+        estado: "pendiente",
+        fechaCreacion: "2025-01-08T16:00:00",
+        fechaLimite: "2025-01-30T23:59:59",
+        etiquetas: ["trabajo", "portfolio"],
+        subtareas: [
+            { id: 1, titulo: "Seleccionar proyectos", completada: true },
+            { id: 2, titulo: "Escribir descripciones", completada: false },
+            { id: 3, titulo: "Subir capturas", completada: false }
+        ]
+    },
+    {
+        id: 5,
+        titulo: "Revisar código del sprint",
+        descripcion: "Code review de las PRs pendientes",
+        prioridad: "alta",
+        estado: "completada",
+        fechaCreacion: "2025-01-05T10:00:00",
+        fechaLimite: "2025-01-12T18:00:00",
+        etiquetas: ["trabajo", "codigo"],
+        subtareas: [
+            { id: 1, titulo: "PR #123", completada: true },
+            { id: 2, titulo: "PR #124", completada: true },
+            { id: 3, titulo: "PR #125", completada: true }
+        ]
+    },
+    {
+        id: 6,
+        titulo: "Leer libro de clean code",
+        descripcion: "Terminar el libro Clean Code de Robert Martin",
+        prioridad: "baja",
+        estado: "en-progreso",
+        fechaCreacion: "2025-01-01T00:00:00",
+        fechaLimite: "2025-02-28T23:59:59",
+        etiquetas: ["estudios", "lectura"],
+        subtareas: [
+            { id: 1, titulo: "Capítulos 1-5", completada: true },
+            { id: 2, titulo: "Capítulos 6-10", completada: true },
+            { id: 3, titulo: "Capítulos 11-15", completada: false },
+            { id: 4, titulo: "Capítulos 16-17", completada: false }
+        ]
+    }
+];
+```
+
+---
+
+## Requisitos
+
+### PARTE 1: Gestión de tareas 
+
+Implementa las siguientes funciones:
+
+```javascript
+/**
+ * Crea una nueva tarea y la añade al array de tareas
+ * El ID se genera automáticamente (máximo ID existente + 1)
+ * La fecha de creación es la fecha actual
+ * El estado inicial es "pendiente"
+ * Las subtareas iniciales es un array vacío
+ * 
+ * @param {string} titulo - Título de la tarea
+ * @param {string} descripcion - Descripción de la tarea
+ * @param {string} prioridad - "baja", "media" o "alta"
+ * @param {string} fechaLimite - Fecha límite en formato ISO
+ * @param {array} etiquetas - Array de etiquetas (opcional, por defecto [])
+ * @returns {object} - La tarea creada
+ */
+function crearTarea(titulo, descripcion, prioridad, fechaLimite, etiquetas) {
+    // TODO
+}
+
+
+/**
+ * Busca y devuelve una tarea por su ID
+ * 
+ * @param {number} id - ID de la tarea a buscar
+ * @returns {object|null} - La tarea encontrada o null si no existe
+ */
+function obtenerTarea(id) {
+    // TODO
+}
+
+
+/**
+ * Actualiza una tarea existente con los cambios proporcionados
+ * Solo actualiza las propiedades que vengan en el objeto cambios
+ * 
+ * @param {number} id - ID de la tarea a actualizar
+ * @param {object} cambios - Objeto con las propiedades a cambiar
+ * @returns {object|null} - La tarea actualizada o null si no existe
+ * 
+ * Ejemplo de uso:
+ * actualizarTarea(1, { titulo: "Nuevo título", prioridad: "baja" })
+ */
+function actualizarTarea(id, cambios) {
+    // TODO
+}
+
+
+/**
+ * Elimina una tarea del array
+ * 
+ * @param {number} id - ID de la tarea a eliminar
+ * @returns {boolean} - true si se eliminó, false si no existía
+ */
+function eliminarTarea(id) {
+    // TODO
+}
+
+
+/**
+ * Cambia el estado de una tarea
+ * 
+ * @param {number} id - ID de la tarea
+ * @param {string} nuevoEstado - "pendiente", "en-progreso" o "completada"
+ * @returns {object|null} - La tarea actualizada o null si no existe
+ */
+function cambiarEstado(id, nuevoEstado) {
+    // TODO
+}
+```
+
+---
+
+### PARTE 2: Gestión de subtareas
+
+```javascript
+/**
+ * Añade una subtarea a una tarea existente
+ * El ID de la subtarea se genera automáticamente
+ * 
+ * @param {number} tareaId - ID de la tarea padre
+ * @param {string} titulo - Título de la subtarea
+ * @returns {object|null} - La subtarea creada o null si la tarea no existe
+ */
+function agregarSubtarea(tareaId, titulo) {
+    // TODO
+}
+
+
+/**
+ * Cambia el estado de una subtarea (completada <-> pendiente)
+ * 
+ * @param {number} tareaId - ID de la tarea padre
+ * @param {number} subtareaId - ID de la subtarea
+ * @returns {object|null} - La subtarea actualizada o null si no existe
+ */
+function toggleSubtarea(tareaId, subtareaId) {
+    // TODO
+}
+
+
+/**
+ * Calcula el porcentaje de progreso de una tarea
+ * basándose en sus subtareas completadas
+ * Si no tiene subtareas, devuelve 0
+ * 
+ * @param {number} tareaId - ID de la tarea
+ * @returns {number} - Porcentaje de 0 a 100
+ */
+function calcularProgreso(tareaId) {
+    // TODO
+}
+```
+
+---
+
+### PARTE 3: Filtros y búsquedas
+
+```javascript
+/**
+ * Filtra las tareas por estado
+ * 
+ * @param {string} estado - "pendiente", "en-progreso" o "completada"
+ * @returns {array} - Array de tareas que coinciden
+ */
+function filtrarPorEstado(estado) {
+    // TODO
+}
+
+
+/**
+ * Filtra las tareas por prioridad
+ * 
+ * @param {string} prioridad - "baja", "media" o "alta"
+ * @returns {array} - Array de tareas que coinciden
+ */
+function filtrarPorPrioridad(prioridad) {
+    // TODO
+}
+
+
+/**
+ * Filtra las tareas que contengan una etiqueta específica
+ * 
+ * @param {string} etiqueta - Etiqueta a buscar
+ * @returns {array} - Array de tareas que contienen la etiqueta
+ */
+function filtrarPorEtiqueta(etiqueta) {
+    // TODO
+}
+
+
+/**
+ * Busca tareas que contengan el término en el título o descripción
+ * La búsqueda no distingue mayúsculas/minúsculas
+ * 
+ * @param {string} termino - Término a buscar
+ * @returns {array} - Array de tareas que coinciden
+ */
+function buscarTareas(termino) {
+    // TODO
+}
+
+
+/**
+ * Devuelve las tareas vencidas (fecha límite pasada y no completadas)
+ * 
+ * @returns {array} - Array de tareas vencidas
+ */
+function tareasVencidas() {
+    // TODO
+}
+
+
+/**
+ * Devuelve las tareas que vencen en los próximos X días
+ * 
+ * @param {number} dias - Número de días (por defecto 7)
+ * @returns {array} - Array de tareas próximas a vencer
+ */
+function tareasProximas(dias) {
+    // TODO
+}
+```
+
+---
+
+### PARTE 4: Estadísticas
+
+```javascript
+/**
+ * Genera un objeto con estadísticas del sistema
+ * 
+ * @returns {object} - Objeto con las estadísticas:
+ *   - totalTareas: número total de tareas
+ *   - porEstado: { pendiente: X, "en-progreso": Y, completada: Z }
+ *   - porPrioridad: { baja: X, media: Y, alta: Z }
+ *   - tareasVencidas: número de tareas vencidas
+ *   - progresoPromedio: media del progreso de todas las tareas
+ */
+function obtenerEstadisticas() {
+    // TODO
+}
+```
+
+---
+
+### PARTE 5: Generar informe
+
+```javascript
+/**
+ * Genera un informe de texto formateado con el estado de las tareas
+ * 
+ * @returns {string} - Informe formateado
+ */
+function generarInforme() {
+    // TODO
+}
+```
+
+El informe debe mostrar algo similar a esto:
+
+```
+============================================================
+           INFORME DE TAREAS - TaskManager
+              Fecha: 16/01/2025
+============================================================
+
+RESUMEN GENERAL
+------------------------------------------------------------
+Total de tareas:        6
+  - Pendientes:         3 (50%)
+  - En progreso:        2 (33%)
+  - Completadas:        1 (17%)
+
+Por prioridad:
+  - Alta:               3 tareas
+  - Media:              1 tarea
+  - Baja:               2 tareas
+
+Progreso promedio:      45%
+
+TAREAS VENCIDAS
+------------------------------------------------------------
+  (ninguna)
+
+TAREAS PROXIMAS (7 dias)
+------------------------------------------------------------
+  [ALTA] Preparar presentación del proyecto
+    Vence: 17/01/2025 - Progreso: 50%
+
+  [ALTA] Estudiar para examen de LMSGI
+    Vence: 22/01/2025 - Progreso: 0%
+
+LISTADO COMPLETO
+------------------------------------------------------------
+
+PRIORIDAD ALTA:
+  [EN-PROGRESO] Preparar presentación del proyecto
+    Progreso: 50% (2/4 subtareas)
+    Etiquetas: trabajo, presentacion
+
+  [PENDIENTE] Estudiar para examen de LMSGI
+    Progreso: 0% (0/3 subtareas)
+    Etiquetas: estudios, javascript
+
+  [COMPLETADA] Revisar código del sprint
+    Progreso: 100% (3/3 subtareas)
+    Etiquetas: trabajo, codigo
+
+PRIORIDAD MEDIA:
+  [PENDIENTE] Comprar regalo de cumpleaños
+    Sin subtareas
+    Etiquetas: personal, compras
+
+PRIORIDAD BAJA:
+  [PENDIENTE] Actualizar portfolio
+    Progreso: 33% (1/3 subtareas)
+    Etiquetas: trabajo, portfolio
+
+  [EN-PROGRESO] Leer libro de clean code
+    Progreso: 50% (2/4 subtareas)
+    Etiquetas: estudios, lectura
+
+============================================================
+```
+
+---
+
+## Código base
+
+Usa esta estructura para tu archivo JavaScript:
+
+```javascript
+"use strict";
+
+// ============================================
+// DATOS
+// ============================================
+
+const tareas = [
+    // ... (copia aquí los datos de prueba)
+];
+
+
+// ============================================
+// PARTE 1: GESTIÓN DE TAREAS
+// ============================================
+
+function crearTarea(titulo, descripcion, prioridad, fechaLimite, etiquetas) {
+    // TODO
+}
+
+function obtenerTarea(id) {
+    // TODO
+}
+
+function actualizarTarea(id, cambios) {
+    // TODO
+}
+
+function eliminarTarea(id) {
+    // TODO
+}
+
+function cambiarEstado(id, nuevoEstado) {
+    // TODO
+}
+
+
+// ============================================
+// PARTE 2: GESTIÓN DE SUBTAREAS
+// ============================================
+
+function agregarSubtarea(tareaId, titulo) {
+    // TODO
+}
+
+function toggleSubtarea(tareaId, subtareaId) {
+    // TODO
+}
+
+function calcularProgreso(tareaId) {
+    // TODO
+}
+
+
+// ============================================
+// PARTE 3: FILTROS Y BÚSQUEDAS
+// ============================================
+
+function filtrarPorEstado(estado) {
+    // TODO
+}
+
+function filtrarPorPrioridad(prioridad) {
+    // TODO
+}
+
+function filtrarPorEtiqueta(etiqueta) {
+    // TODO
+}
+
+function buscarTareas(termino) {
+    // TODO
+}
+
+function tareasVencidas() {
+    // TODO
+}
+
+function tareasProximas(dias = 7) {
+    // TODO
+}
+
+
+// ============================================
+// PARTE 4: ESTADÍSTICAS
+// ============================================
+
+function obtenerEstadisticas() {
+    // TODO
+}
+
+
+// ============================================
+// PARTE 5: GENERAR INFORME
+// ============================================
+
+function generarInforme() {
+    // TODO
+}
+
+
+// ============================================
+// PRUEBAS
+// ============================================
+
+// Descomenta estas líneas para probar tus funciones:
+
+// console.log("=== PRUEBA: Obtener tarea ===");
+// console.log(obtenerTarea(1));
+
+// console.log("=== PRUEBA: Filtrar por estado ===");
+// console.log(filtrarPorEstado("pendiente"));
+
+// console.log("=== PRUEBA: Calcular progreso ===");
+// console.log(calcularProgreso(1));
+
+// console.log("=== PRUEBA: Estadísticas ===");
+// console.log(obtenerEstadisticas());
+
+// console.log("=== PRUEBA: Informe ===");
+// console.log(generarInforme());
+```
+
+## Consejos
+
+- **Empieza por las funciones más sencillas** (obtenerTarea, filtrarPorEstado)
+- **Prueba cada función** antes de pasar a la siguiente
+- **Usa console.log()** para depurar
+- Recuerda que **find()** devuelve un elemento y **filter()** devuelve un array
+- Para trabajar con fechas, puedes usar `new Date(fechaString)` para convertir strings a fechas
+- Para comparar fechas: `fecha1 < fecha2` funciona directamente con objetos Date
+
+---
+
+## Ampliaciones opcionales
+
+Si terminas antes de tiempo, puedes implementar:
+
+1. **Filtro combinado**: Función que permita filtrar por varios criterios a la vez
+   ```javascript
+   filtrarTareas({ estado: "pendiente", prioridad: "alta", etiqueta: "trabajo" })
+   ```
+
+2. **Ordenación**: Función para ordenar tareas por diferentes campos
+   ```javascript
+   ordenarTareas(tareas, "fechaLimite", "asc")
+   ordenarTareas(tareas, "prioridad", "desc")
+   ```
+
+3. **Exportar/Importar JSON**: Funciones para exportar las tareas a JSON e importar desde JSON
+
+4. **Validación**: Añadir validación a las funciones (comprobar que la prioridad es válida, que las fechas son correctas, etc.)
+
+---
+
