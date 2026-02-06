@@ -19,10 +19,11 @@ Entender el DOM como árbol de nodos es fundamental: cada elemento, cada fragmen
 El DOM es un árbol de objetos que representa la estructura del documento HTML. Cada elemento HTML, fragmento de texto y comentario se convierte en un nodo que JavaScript puede manipular.
 
 **Conceptos clave:**
-- HTML es texto estático; el DOM es una estructura dinámica en memoria
-- El navegador parsea el HTML y construye el DOM automáticamente
-- JavaScript accede al DOM a través del objeto global `document`
-- Los cambios en el DOM se reflejan inmediatamente en la página
+
+* HTML es texto estático; el DOM es una estructura dinámica en memoria
+* El navegador parsea el HTML y construye el DOM automáticamente
+* JavaScript accede al DOM a través del objeto global `document`
+* Los cambios en el DOM se reflejan inmediatamente en la página
 
 **Tipos de nodos principales:**
 
@@ -491,8 +492,8 @@ Interfaz para personalizar colores y tamaños usando CSS variables, con preview 
 ## Recursos
 
 **Documentación:**
-- [LenguajeJS - DOM](https://lenguajejs.com/dom/)
-- [MDN - Document Object Model](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model)
+* [LenguajeJS * DOM](https://lenguajejs.com/dom/)
+* [MDN * Document Object Model](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model)
 
 **Herramientas:**
-- Chrome DevTools - Panel Elements
+* Chrome DevTools * Panel Elements
