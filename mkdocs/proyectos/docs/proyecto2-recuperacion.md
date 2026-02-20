@@ -3,14 +3,14 @@ hide:
   - navigation
 ---
 
-**Proyecto Integrado Recuperación — HTML5, CSS3 y JavaScript**
+# **Proyecto 2 Integrado Recuperación — HTML5, CSS3 y JavaScript**
 
 **RA2 (Recuperación) \+ RA3**
 
 | *Este proyecto está diseñado para el alumnado que necesita recuperar el RA2 (HTML5 y CSS3) y, a la vez, acreditar el RA3 (JavaScript y manipulación del DOM). Deberás completar las tres fases en orden: primero la estructura HTML, luego el estilo CSS y finalmente las funcionalidades JavaScript.* |
 | :---- |
 
-# **Contexto del proyecto**
+## **Contexto del proyecto**
 
 Una empresa local necesita un sitio web completo y moderno. Tú eres el desarrollador web responsable del proyecto desde cero: desde la estructura del documento hasta la interactividad final.
 
@@ -26,17 +26,17 @@ El proyecto se divide en tres fases. Cada fase debe completarse antes de pasar a
 | **Fase 2** | **RA2** | Presentación visual con CSS3, Flexbox/Grid y diseño responsive. |
 | **Fase 3** | **RA3** | Funcionalidades interactivas con JavaScript y manipulación del DOM. |
 
-# **Fase 1 — Estructura y Semántica HTML5**
+## **Fase 1 — Estructura y Semántica HTML5**
 
 En esta primera fase te centrarás exclusivamente en la estructura y el contenido de tu sitio web. Sin estilos, sin colores, sin JavaScript. El objetivo es construir una base sólida con HTML5 semántico, accesible y validado.
 
-## **Objetivo de la fase**
+### **Objetivo de la fase**
 
 Crear un sitio web de seis páginas con estructura HTML5 correcta, contenido bien organizado y formulario funcional. Todo debe ser válido según el W3C y semánticamente correcto.
 
-## **Requisitos**
+### **Requisitos**
 
-### **1\. Estructura HTML5 semántica**
+#### **1\. Estructura HTML5 semántica**
 
 Seis páginas HTML conectadas entre sí:
 
@@ -54,7 +54,7 @@ Seis páginas HTML conectadas entre sí:
 
 Cada página debe tener al menos tres secciones de contenido diferenciadas y una estructura única (no una simple plantilla repetida).
 
-### **2\. Elementos obligatorios en cada página**
+#### **2\. Elementos obligatorios en cada página**
 
 * DOCTYPE correcto, charset UTF-8, viewport y metadatos completos (title, description).
 
@@ -64,7 +64,7 @@ Cada página debe tener al menos tres secciones de contenido diferenciadas y una
 
 * Navegación coherente con enlaces internos funcionales.
 
-### **3\. Contenido multimedia**
+#### **3\. Contenido multimedia**
 
 * Imágenes con atributos alt, width y height.
 
@@ -72,7 +72,7 @@ Cada página debe tener al menos tres secciones de contenido diferenciadas y una
 
 * Uso correcto de figure y figcaption donde corresponda.
 
-### **4\. Formulario completo (en contacto.html)**
+#### **4\. Formulario completo (en contacto.html)**
 
 * Al menos 6 tipos de campos distintos: text, email, tel, select, textarea, radio o checkbox.
 
@@ -82,15 +82,15 @@ Cada página debe tener al menos tres secciones de contenido diferenciadas y una
 
 * Botón de envío.
 
-### **5\. Tabla de datos**
+#### **5\. Tabla de datos**
 
 Incluye al menos una tabla de datos con estructura semántica (thead, tbody, th con scope) en la página que sea más apropiada.
 
-### **6\. Validación W3C — Fase 1**
+#### **6\. Validación W3C — Fase 1**
 
 El HTML de todas las páginas debe validar con 0 errores en validator.w3.org. Incluye captura de pantalla de la validación exitosa para cada página en el README.md.
 
-## **Entregable Fase 1**
+#### **Entregable Fase 1**
 
 * Repositorio en GitHub con las seis páginas HTML.
 
@@ -98,17 +98,17 @@ El HTML de todas las páginas debe validar con 0 errores en validator.w3.org. In
 
 * README.md con descripción del proyecto y decisiones tomadas.
 
-# **Fase 2 — Presentación y Diseño con CSS3**
+## **Fase 2 — Presentación y Diseño con CSS3**
 
 Con la estructura HTML ya construida y validada, es el momento de darle vida visual. En esta fase aplicarás CSS3 moderno: variables, Flexbox o Grid y diseño responsive. El HTML no debe modificarse para adaptarlo al CSS; si necesitas cambios estructurales, soluciónalo con CSS.
 
-## **Objetivo de la fase**
+### **Objetivo de la fase**
 
 Aplicar una hoja de estilo CSS3 externa, organizada y moderna, que presente el contenido de forma atractiva y funcione correctamente en dispositivos móviles, tablets y escritorio.
 
-## **Requisitos**
+### **Requisitos**
 
-### **1\. Organización del CSS**
+#### **1\. Organización del CSS**
 
 * Archivo CSS externo (styles.css o equivalente en una carpeta css/).
 
@@ -120,7 +120,7 @@ Aplicar una hoja de estilo CSS3 externa, organizada y moderna, que presente el c
 
 * Código organizado por secciones con comentarios.
 
-### **2\. Layout moderno**
+#### **2\. Layout moderno**
 
 * Uso de Flexbox y/o Grid para la distribución de elementos.
 
@@ -128,7 +128,7 @@ Aplicar una hoja de estilo CSS3 externa, organizada y moderna, que presente el c
 
 * Diseño visual coherente y profesional en todas las páginas.
 
-### **3\. Tipografía y estilos visuales**
+#### **3\. Tipografía y estilos visuales**
 
 * Google Fonts o tipografía del sistema, correctamente importada y aplicada.
 
@@ -138,19 +138,19 @@ Aplicar una hoja de estilo CSS3 externa, organizada y moderna, que presente el c
 
 * Al menos una animación CSS presente.
 
-### **4\. Dark mode**
+#### **4\. Dark mode**
 
 * Implementación funcional del modo oscuro mediante variables CSS que cambian según el tema.
 
 * El usuario puede activarlo y desactivarlo. El estado preferido del sistema (prefers-color-scheme) se tiene en cuenta.
 
-### **5\. Metodología BEM**
+#### **5\. Metodología BEM**
 
 * Nomenclatura consistente en todas las clases CSS siguiendo Block\_\_Element--Modifier.
 
 * Sin clases genéricas ni nombres sin semántica (box1, div-red, etc.).
 
-### **6\. Diseño responsive**
+#### **6\. Diseño responsive**
 
 * Enfoque mobile-first: diseño base para móvil con media queries progresivas.
 
@@ -160,11 +160,11 @@ Aplicar una hoja de estilo CSS3 externa, organizada y moderna, que presente el c
 
 * Uso de unidades relativas (rem, %, vw, vh).
 
-### **7\. Validación W3C — Fase 2**
+#### **7\. Validación W3C — Fase 2**
 
 El archivo CSS debe validar con 0 errores en jigsaw.w3.org/css-validator. Incluye captura de pantalla en el README con enlace directo al resultado.
 
-## **Entregable Fase 2**
+#### **Entregable Fase 2**
 
 * Repositorio actualizado con el archivo CSS externo.
 
@@ -172,17 +172,17 @@ El archivo CSS debe validar con 0 errores en jigsaw.w3.org/css-validator. Incluy
 
 * Demo visible en GitHub Pages o similar.
 
-# **Fase 3 — Funcionalidades Interactivas con JavaScript**
+## **Fase 3 — Funcionalidades Interactivas con JavaScript**
 
 El cliente ha quedado satisfecho con el diseño. Ahora quiere que la web sea dinámica. En esta fase añadirás JavaScript moderno (ES6+) para manipular el DOM y ofrecer al usuario una experiencia interactiva.
 
-## **Objetivo de la fase**
+### **Objetivo de la fase**
 
 Implementar funcionalidades interactivas en la web ya desarrollada, utilizando JavaScript moderno sin librerías externas.
 
-## **Requisitos**
+### **Requisitos**
 
-### **1\. JavaScript moderno (ES6+)**
+#### **1\. JavaScript moderno (ES6+)**
 
 * Usar let y const en lugar de var.
 
@@ -194,7 +194,7 @@ Implementar funcionalidades interactivas en la web ya desarrollada, utilizando J
 
 * Código sin errores en la consola del navegador.
 
-### **2\. Manipulación del DOM**
+#### **2\. Manipulación del DOM**
 
 * Seleccionar elementos con querySelector, querySelectorAll, getElementById.
 
@@ -206,7 +206,7 @@ Implementar funcionalidades interactivas en la web ya desarrollada, utilizando J
 
 * Manipular estilos con classList.add, classList.remove, classList.toggle.
 
-### **3\. Funcionalidades interactivas obligatorias**
+#### **3\. Funcionalidades interactivas obligatorias**
 
 Las tres primeras funcionalidades forman una única feature coherente: un gestor de elementos del propio proyecto. Puede ser un catálogo de productos, un portfolio, una lista de servicios, un blog de entradas... Las tres partes trabajan juntas y son inseparables.
 
@@ -222,7 +222,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 **Flujo libre:** una funcionalidad adicional e independiente (modo oscuro, carrito de compra, valoraciones, acordeón de FAQs, temporizador...).
 
-## **Entregable Fase 3**
+#### **Entregable Fase 3**
 
 * Repositorio actualizado con js/script.js.
 
@@ -230,11 +230,11 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Demo funcional accesible en GitHub Pages o similar.
 
-# **Evaluación — RA2**
+## **Evaluación — RA2**
 
-## **(RA2) Utiliza lenguajes de marcas para la transmisión y presentación de información a través de la web.**
+### **(RA2) Utiliza lenguajes de marcas para la transmisión y presentación de información a través de la web.**
 
-### **Criterio 2.b — Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.**
+#### **Criterio 2.b — Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -257,7 +257,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Validación: código que pase las validaciones del W3C sin errores.
 
-### **Criterio 2.c — Se ha reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.**
+#### **Criterio 2.c — Se ha reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -280,7 +280,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Atributos multimedia: dimensiones en imágenes, controles en video/audio, fuentes alternativas.
 
-### **Criterio 2.d — Se han establecido las semejanzas y diferencias entre las diferentes versiones de HTML.**
+#### **Criterio 2.d — Se han establecido las semejanzas y diferencias entre las diferentes versiones de HTML.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -301,7 +301,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Atributos modernos: uso de atributos HTML5 y tipos de input modernos.
 
-### **Criterio 2.e — Se han utilizado herramientas en la creación de documentos web.**
+#### **Criterio 2.e — Se han utilizado herramientas en la creación de documentos web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -324,7 +324,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Herramientas de desarrollo: uso efectivo del navegador y sus DevTools para depuración y testing responsive.
 
-### **Criterio 2.f — Se han identificado las ventajas que aporta la utilización de hojas de estilo.**
+#### **Criterio 2.f — Se han identificado las ventajas que aporta la utilización de hojas de estilo.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -347,7 +347,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Documentación de ventajas: README que explica las ventajas conseguidas (separación de responsabilidades, consistencia visual, facilidad de cambios globales, etc.).
 
-### **Criterio 2.g — Se han aplicado hojas de estilo.**
+#### **Criterio 2.g — Se han aplicado hojas de estilo.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -372,7 +372,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Jerarquía tipográfica: fuentes web apropiadas con jerarquía visual clara, contraste adecuado y legibilidad optimizada.
 
-### **Criterio 2.h — Se han validado documentos HTML y CSS.**
+#### **Criterio 2.h — Se han validado documentos HTML y CSS.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -395,11 +395,11 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Corrección de advertencias: advertencias justificadas o corregidas cuando sea posible.
 
-# **Evaluación — RA3**
+## **Evaluación — RA3**
 
-## **(RA3) Accede y manipula documentos web utilizando lenguajes de script de cliente.**
+### **(RA3) Accede y manipula documentos web utilizando lenguajes de script de cliente.**
 
-### **Criterio 3.a — Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.**
+#### **Criterio 3.a — Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -420,7 +420,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Uso de ejemplos concretos del propio proyecto para ilustrar la clasificación.
 
-### **Criterio 3.b — Se ha identificado la sintaxis básica de los lenguajes de script de cliente.**
+#### **Criterio 3.b — Se ha identificado la sintaxis básica de los lenguajes de script de cliente.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -441,7 +441,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Código indentado, con nombres de variables descriptivos y comentarios cuando sea necesario.
 
-### **Criterio 3.c — Se han utilizado métodos para la selección y acceso de los diferentes elementos de un documento web.**
+#### **Criterio 3.c — Se han utilizado métodos para la selección y acceso de los diferentes elementos de un documento web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -462,7 +462,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Relación clara y coherente entre los selectores CSS usados en el HTML y los usados en JavaScript.
 
-### **Criterio 3.d — Se han creado y modificado elementos de documentos web.**
+#### **Criterio 3.d — Se han creado y modificado elementos de documentos web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -483,7 +483,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Uso de innerHTML o template literals de forma segura para construir la estructura del elemento.
 
-### **Criterio 3.e — Se han eliminado elementos de documentos web.**
+#### **Criterio 3.e — Se han eliminado elementos de documentos web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -504,7 +504,7 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Feedback visual opcional al eliminar (animación, mensaje de confirmación...).
 
-### **Criterio 3.f — Se han realizado modificaciones sobre los estilos de un documento web.**
+#### **Criterio 3.f — Se han realizado modificaciones sobre los estilos de un documento web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
