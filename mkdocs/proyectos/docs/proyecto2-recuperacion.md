@@ -521,6 +521,6 @@ Las tres mecánicas DOM integradas en esta funcionalidad:
 
 * Los filtros ocultan elementos con una clase CSS (hidden, display-none) en lugar de eliminarlos del DOM.
 
-* La validación del formulario aplica clases de error/éxito a los campos de forma individual.
+* La validación del formulario aplica clases de error/éxito a los campos de forma individual
 
 * Uso de classList.toggle para estados binarios (modo oscuro, elemento seleccionado...).
