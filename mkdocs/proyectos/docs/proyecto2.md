@@ -3,11 +3,11 @@ hide:
   - navigation
 ---
 
-**Proyecto 2 — Funcionalidades Interactivas con JavaScript**
+# **Proyecto 2 — Funcionalidades Interactivas con JavaScript**
 
 **RA3 · JavaScript y Manipulación del DOM**
 
-# **Contexto del proyecto**
+## **Contexto del proyecto**
 
 En el proyecto anterior construiste la base de tu sitio web: la estructura HTML5 y la presentación con CSS3. El cliente ha quedado satisfecho con el resultado visual, pero ahora necesita que la web "cobre vida".
 
@@ -19,9 +19,9 @@ Tu trabajo es implementar estas funcionalidades usando JavaScript moderno (ES6+)
 
 Añadir interactividad a tu sitio web mediante JavaScript, implementando manipulación dinámica del DOM: creación, modificación y eliminación de elementos, gestión de estilos, y funcionalidades interactivas completas.
 
-# **Requisitos del proyecto**
+## **Requisitos del proyecto**
 
-## **1\. JavaScript moderno (ES6+)**
+### **1\. JavaScript moderno (ES6+)**
 
 * Usar let y const en lugar de var.
 
@@ -33,7 +33,7 @@ Añadir interactividad a tu sitio web mediante JavaScript, implementando manipul
 
 * El código debe estar bien estructurado, indentado y comentado.
 
-## **2\. Manipulación del DOM**
+### **2\. Manipulación del DOM**
 
 * Seleccionar elementos con querySelector, querySelectorAll, getElementById y similares.
 
@@ -45,7 +45,7 @@ Añadir interactividad a tu sitio web mediante JavaScript, implementando manipul
 
 * Manipular estilos con classList.add, classList.remove y classList.toggle.
 
-## **3\. Funcionalidades interactivas (obligatorias)**
+### **3\. Funcionalidades interactivas (obligatorias)**
 
 Las tres primeras funcionalidades forman una única feature coherente: un gestor de elementos del propio proyecto. Dependiendo del tipo de sitio web, puede ser un catálogo de productos, un portfolio de trabajos, una lista de servicios, un blog de entradas... El usuario puede añadir elementos mediante un formulario, verlos presentados visualmente y filtrarlos. Las tres partes son inseparables y trabajan juntas.
 
@@ -61,7 +61,7 @@ Esta funcionalidad principal debe implementar las tres mecánicas DOM de forma i
 
 **Flujo libre:** una funcionalidad adicional e independiente, coherente con el proyecto (modo oscuro, carrito de compra, sistema de valoraciones, contador de visitas, acordeón de FAQs, temporizador...).
 
-## **4\. Buenas prácticas de código**
+### **4\. Buenas prácticas de código**
 
 * El código JavaScript debe estar en un archivo externo js/script.js.
 
@@ -71,7 +71,7 @@ Esta funcionalidad principal debe implementar las tres mecánicas DOM de forma i
 
 * El código debe funcionar sin errores en la consola del navegador.
 
-# **Entregable**
+### **Entregable**
 
 Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
@@ -81,11 +81,11 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 | **README.md actualizado** | Documentación de las decisiones técnicas tomadas y ejemplos de manipulación del DOM implementados. |
 | **GitHub Pages** | Demo funcional y accesible desde el navegador a través de GitHub Pages o servidor equivalente. |
 
-# **Evaluación — RA3**
+### **Evaluación — RA3**
 
-## **(RA3) Accede y manipula documentos web utilizando lenguajes de script de cliente.**
+#### **(RA3) Accede y manipula documentos web utilizando lenguajes de script de cliente.**
 
-### **Criterio 3.a — Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.**
+##### **Criterio 3.a — Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -106,7 +106,7 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
 * Uso de ejemplos concretos del propio proyecto para ilustrar la clasificación.
 
-### **Criterio 3.b — Se ha identificado la sintaxis básica de los lenguajes de script de cliente.**
+##### **Criterio 3.b — Se ha identificado la sintaxis básica de los lenguajes de script de cliente.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -127,7 +127,7 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
 * Código indentado, con nombres de variables descriptivos y comentarios cuando sea necesario.
 
-### **Criterio 3.c — Se han utilizado métodos para la selección y acceso de los diferentes elementos de un documento web.**
+##### **Criterio 3.c — Se han utilizado métodos para la selección y acceso de los diferentes elementos de un documento web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -148,7 +148,7 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
 * Relación clara y coherente entre los selectores CSS usados en el HTML y los usados en JavaScript.
 
-### **Criterio 3.d — Se han creado y modificado elementos de documentos web.**
+##### **Criterio 3.d — Se han creado y modificado elementos de documentos web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -169,7 +169,7 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
 * Uso de innerHTML o template literals de forma segura para construir la estructura del elemento.
 
-### **Criterio 3.e — Se han eliminado elementos de documentos web.**
+##### **Criterio 3.e — Se han eliminado elementos de documentos web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
@@ -190,7 +190,7 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
 * Feedback visual opcional al eliminar (animación, mensaje de confirmación...).
 
-### **Criterio 3.f — Se han realizado modificaciones sobre los estilos de un documento web.**
+##### **Criterio 3.f — Se han realizado modificaciones sobre los estilos de un documento web.**
 
 | Nota | Descripción | Indicador |
 | :---: | ----- | ----- |
