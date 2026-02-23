@@ -209,4 +209,4 @@ Actualizar el repositorio de GitHub con las siguientes incorporaciones:
 
 * La validación del formulario aplica clases de error/éxito a los campos de forma individual.
 
-* Uso de classList.toggle para estados binarios (modo oscuro, elemento seleccionado...).
+* Uso de classList.toggle para estados binarios (modo oscuro, elemento seleccionado... ).
