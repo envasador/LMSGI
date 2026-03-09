@@ -3,66 +3,48 @@ hide:
   - navigation
 ---
 
-# UT5 Definición de esquemas y vocabularios en lenguajes de marcas. Introducción
-## Objetivos de aprendizaje
+# UT5 — Esquemas y vocabularios en lenguajes de marcas
 
-El objetivo principal de este tema es que el alumnado comprenda y aplique los conceptos de esquemas y vocabularios en el contexto de los lenguajes de marcas, centrándose en su utilidad para describir, validar y asegurar la integridad de los datos estructurados. Se busca que el estudiante no solo conozca las tecnologías, sino que también sepa utilizarlas con sentido práctico.
+## ¿Qué vamos a aprender aquí?
 
-## 1. Introducción: ¿Qué son los esquemas y vocabularios?
+En esta unidad vamos a entender qué son los esquemas y los vocabularios, para qué sirven y cómo se usan en la práctica. No se trata solo de conocer la teoría: al final de este tema serás capaz de crear tus propios esquemas y validar documentos XML y JSON con ellos.
 
-### 1.1 Lenguajes de marcas
+## 1. El problema que resuelven los esquemas
 
-Dentro de los lenguajes de marcas, XML (eXtensible Markup Language) y JSON (JavaScript Object Notation) son los ejemplos más utilizados para el intercambio de datos. Estos lenguajes permiten representar información estructurada de forma jerárquica y comprensible tanto para personas como para máquinas.
+Imagina que estás desarrollando una aplicación que recibe datos de un videojuego desde un servidor externo. Esperas recibir algo así:
 
-Por ejemplo, un archivo XML puede representar los datos de un libro:
-```xml
-<libro>
-  <titulo>1984</titulo>
-  <autor>George Orwell</autor>
-</libro>
-```
-Y en JSON sería:
 ```json
 {
-  "titulo": "1984",
-  "autor": "George Orwell"
+  "nombre": "Halo",
+  "pegi": 18,
+  "genero": "Acción"
 }
 ```
 
-Ambos documentos contienen la misma información, pero están representados con diferentes estructuras y sintaxis.
+Pero el servidor te manda esto:
 
-### 1.2 ¿Qué es un esquema?
-Un **esquema** es un documento que define cómo debe estar estructurado otro documento. Sirve como guía o patrón para asegurar que los datos sean correctos y cumplan unas normas mínimas. Sin un esquema, podríamos tener documentos incompletos, con datos mal formateados o erróneos.
-
-### 1.3 ¿Qué es un vocabulario?
-En el contexto de los lenguajes de marcas, un **vocabulario** es el conjunto de etiquetas, atributos, tipos de datos y estructuras predefinidas que se utilizan para describir un tipo de información. Por ejemplo, un vocabulario de “libros” incluiría etiquetas como `<titulo>`, `<autor>`, `<paginas>` y reglas sobre cómo deben organizarse.
-
----
-
-## 2. Tecnologías para definir esquemas: XML y JSON
-
-### 2.1 XML y XSD
-- **XML** es el lenguaje de marcas que se utiliza para representar datos.
-- **XSD** (XML Schema Definition) es el lenguaje que se utiliza para definir la estructura válida que debe tener un documento XML.
-
-#### ¿Para qué se usa XSD?
-XSD permite validar un documento XML contra una estructura predefinida. Es decir, asegura que el documento XML:
-- Contiene los elementos esperados.
-- Los elementos aparecen en el orden correcto.
-- Los datos son del tipo adecuado (texto, números, fechas, etc.).
-- Se cumplen restricciones como valores mínimos, formatos o presencia obligatoria.
-
-Es especialmente útil cuando se intercambian datos entre sistemas distintos o se automatiza el procesamiento de información. En estos casos, saber con certeza que los datos cumplen una estructura es clave para evitar errores.
-
-#### ¿Dónde se define el XSD?
-El XSD se escribe como un archivo independiente (por ejemplo, `videojuego.xsd`) y se enlaza en el documento XML mediante atributos en la etiqueta raíz:
-```xml
-<videojuego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="videojuego.xsd">
+```json
+{
+  "nombre": "Halo",
+  "pegi": "dieciocho",
+  "genero": "Acción"
+}
 ```
-Esto indica que el XML debe validarse con el esquema indicado.
 
-#### Ejemplo de XML:
+Tu aplicación intenta hacer una comparación numérica con `pegi` y falla porque es un texto, no un número. Ese tipo de errores son muy comunes cuando dos sistemas intercambian datos sin haber acordado antes cómo deben estar estructurados.
+
+Ahí es donde entran los **esquemas**.
+
+Un esquema es un documento que define exactamente cómo debe estar organizado otro documento: qué campos tiene, de qué tipo son, cuáles son obligatorios y qué restricciones deben cumplir. Es como un contrato entre quien produce los datos y quien los consume.
+
+Y un **vocabulario** es el conjunto de etiquetas, campos y estructuras que se usan para describir un tipo concreto de información. Si defines un vocabulario para "videojuegos", decides que existe un campo `nombre`, un campo `pegi`, un campo `genero`, etc. El vocabulario da nombre a las cosas; el esquema garantiza que se usan bien.
+
+## 2. XML y XSD
+
+### Repaso rápido de XML
+
+Ya conoces XML de unidades anteriores. Es un lenguaje de marcas que representa información de forma jerárquica usando etiquetas de apertura y cierre:
+
 ```xml
 <videojuego>
   <titulo>The Legend of Zelda</titulo>
@@ -73,42 +55,58 @@ Esto indica que el XML debe validarse con el esquema indicado.
 </videojuego>
 ```
 
-### Ejemplo de XSD correspondiente:
+El problema de XML sin esquema es que cualquier cosa es válida sintácticamente. Nadie impide escribir `<pegi>doce</pegi>` o eliminar el campo `estudio`. El documento está bien formado, pero los datos son incorrectos o incompletos.
+
+### Aquí entra XSD
+
+**XSD** (XML Schema Definition) es el lenguaje que usamos para describir cómo debe estar estructurado un XML. Con un archivo XSD puedes comprobar automáticamente que:
+
+- Aparecen todos los elementos obligatorios.
+- Los elementos están en el orden correcto.
+- Cada valor es del tipo adecuado: texto, número, fecha...
+- Se cumplen restricciones específicas.
+
+El esquema se escribe en un archivo separado, por ejemplo `videojuego.xsd`, y se enlaza desde el XML así:
+
+```xml
+<videojuego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="videojuego.xsd">
+  <titulo>The Legend of Zelda</titulo>
+  <estudio>Nintendo</estudio>
+  <genero>Aventura</genero>
+  <pegi>12</pegi>
+  <arte>Pixel</arte>
+</videojuego>
+```
+
+Y el archivo XSD correspondiente quedaría así:
+
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="videojuego">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="titulo"  type="xs:string"/>
         <xs:element name="estudio" type="xs:string"/>
-        <xs:element name="genero" type="xs:string"/>
-        <xs:element name="pegi" type="xs:integer"/>
-        <xs:element name="arte" type="xs:string"/>
+        <xs:element name="genero"  type="xs:string"/>
+        <xs:element name="pegi"    type="xs:integer"/>
+        <xs:element name="arte"    type="xs:string"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>
 ```
 
-### 2.2 JSON y JSON Schema
-- **JSON** es un formato ligero para el intercambio de datos, muy usado en desarrollo web y APIs.
-- **JSON Schema** es el equivalente a XSD, pero para describir y validar la estructura de un archivo JSON.
+Fíjate en lo que está pasando aquí. `videojuego` se declara como un tipo complejo (`complexType`) formado por una secuencia de cinco elementos. La secuencia significa que deben aparecer en ese orden exacto. Cada elemento tiene un tipo: `xs:string` para texto y `xs:integer` para números enteros.
 
-#### ¿Para qué se usa JSON Schema?
-JSON Schema permite:
-- Validar que un documento JSON tenga los campos esperados.
-- Comprobar que los datos son del tipo correcto.
-- Establecer restricciones (valores mínimos, longitud de cadenas, formato de correos, etc.).
+Si alguien envía `<pegi>doce</pegi>`, la validación falla. Si alguien omite `<estudio>`, también falla. El esquema actúa como un guardián que comprueba la calidad de los datos antes de que lleguen a tu código.
 
-Se usa ampliamente en:
-- APIs REST (por ejemplo, para validar peticiones y respuestas).
-- Formularios web.
-- Configuraciones y archivos de intercambio de datos.
+## 3. JSON y JSON Schema
 
-#### ¿Dónde se define?
-El esquema JSON suele estar en un archivo separado (por ejemplo, `videojuego_schema.json`) y se utiliza en herramientas o entornos que soportan validación automática. A diferencia de XML, no se suele enlazar directamente desde el JSON.
+### JSON, el formato que ya conoces
 
-#### Ejemplo de JSON:
+JSON es el formato más usado hoy en día para intercambiar datos en aplicaciones web, especialmente en APIs. Es más ligero que XML y más fácil de leer:
+
 ```json
 {
   "nombre": "Halo",
@@ -119,138 +117,48 @@ El esquema JSON suele estar en un archivo separado (por ejemplo, `videojuego_sch
 }
 ```
 
-#### Ejemplo de JSON Schema correspondiente:
+### Y su esquema: JSON Schema
+
+**JSON Schema** hace exactamente lo mismo que XSD pero para JSON. Te permite definir qué propiedades debe tener el objeto, de qué tipo son, cuáles son obligatorias y qué valores están permitidos.
+
+Una diferencia importante respecto a XML: en JSON no hay forma de enlazar el esquema directamente desde el documento. El esquema vive en un archivo separado —por ejemplo `videojuego_schema.json`— y la validación se hace desde herramientas externas o desde tu editor de código.
+
+El esquema para el JSON de arriba quedaría así:
+
 ```json
 {
   "type": "object",
   "properties": {
-    "nombre": { "type": "string" },
+    "nombre":  { "type": "string" },
     "estudio": { "type": "string" },
-    "genero": { "type": "string" },
-    "pegi": { "type": "integer", "minimum": 3, "maximum": 18 },
-    "arte": { "type": "string" }
+    "genero":  { "type": "string" },
+    "pegi":    { "type": "integer", "minimum": 3, "maximum": 18 },
+    "arte":    { "type": "string" }
   },
   "required": ["nombre", "estudio", "genero", "pegi"]
 }
 ```
-## 3. Creación y validación de descripciones de documentos
 
-Uno de los usos más relevantes de los esquemas es garantizar que los documentos de datos (ya sean XML o JSON) cumplan una estructura predefinida. Esto asegura la calidad de los datos y facilita su tratamiento automático.
+Aquí hay dos cosas interesantes. Primero, el campo `pegi` tiene restricciones de valor: tiene que ser un entero entre 3 y 18. Si alguien manda `"pegi": 99`, la validación fallará. Segundo, el campo `arte` está definido pero no está en `required`, lo que significa que es opcional. Si no viene en el JSON, el documento sigue siendo válido.
 
-Los esquemas permiten definir tanto los tipos de datos (por ejemplo, texto, número o fecha) como restricciones específicas, como el número mínimo o máximo, el formato (correo electrónico, URI, etc.), longitud o valores obligatorios.
+## 4. Cómo validar en la práctica
 
-Una vez creado un esquema, se puede usar para **validar** si un documento cumple lo que define. Esta validación puede hacerse manualmente o mediante herramientas automáticas, como:
+El proceso es siempre el mismo: primero creas el esquema, después lo usas para validar el documento. Para empezar puedes usar herramientas online sin instalar nada:
 
-- [https://jsonschemavalidator.net](https://jsonschemavalidator.net) para validar JSON.
-- [https://www.freeformatter.com/xml-validator-xsd.html](https://www.freeformatter.com/xml-validator-xsd.html) para validar XML contra XSD.
-- Editores como **Visual Studio Code**, que permiten cargar el esquema y mostrar errores de validación en tiempo real.
+- **Validar JSON contra JSON Schema**: [jsonschemavalidator.net](https://jsonschemavalidator.net)
+- **Validar XML contra XSD**: [freeformatter.com/xml-validator-xsd.html](https://www.freeformatter.com/xml-validator-xsd.html)
 
-**Ejemplo de validación de JSON:**
+Cuando trabajes en local con **Visual Studio Code**, puedes asociar tu JSON Schema a un archivo y el editor te mostrará los errores en tiempo real mientras escribes. Para XML, la extensión *XML Language Support* hace lo mismo con XSD.
 
-Documento JSON:
-```json
-{
-  "curso": "1º DAW",
-  "asignatura": "Lenguajes de Marcas",
-  "horas": 96
-}
-```
+En **WebStorm** el soporte es nativo. Para JSON, ve a `Settings → Languages & Frameworks → Schemas and DTDs → JSON Schema Mappings` y añade tu esquema. Para XML, con enlazar el XSD en la etiqueta raíz ya tienes validación automática, autocompletado y resaltado de errores mientras editas.
 
-Esquema JSON correspondiente:
-```json
-{
-  "type": "object",
-  "properties": {
-    "curso": { "type": "string" },
-    "asignatura": { "type": "string" },
-    "horas": { "type": "integer", "minimum": 1 }
-  },
-  "required": ["curso", "asignatura", "horas"]
-}
-```
+## 5. Actividad
 
----
-
-## 4. Herramientas de creación y validación
-
-### Para XML y XSD:
-
-- **Freeformatter XML Validator**: permite validar archivos XML contra su XSD desde el navegador.
-- **Oxygen XML Editor**: entorno profesional con soporte para edición, validación, esquemas y transformaciones.
-- **Visual Studio Code**: con extensiones como XML Language Support, permite validar mientras se edita.
-
-### Para JSON y JSON Schema:
-
-- **JSONLint**: comprueba la validez de la sintaxis JSON.
-- **JSON Schema Validator**: herramienta online para validar estructura contra un esquema.
-- **Visual Studio Code**: con JSON Schema Store u otras extensiones, ofrece autocompletado y validación en tiempo real.
-
-### En WebStorm
-
-WebStorm tiene soporte nativo para trabajar con archivos JSON, XML y sus esquemas (JSON Schema y XSD). Aunque no usa tantas extensiones como Visual Studio Code, muchas funciones ya están integradas.
-
-#### Para JSON y JSON Schema
-
-##### Validación automática con JSON Schema
-
-WebStorm detecta muchos esquemas de forma automática (como los de TypeScript, ESLint, etc.), pero puedes usar tus propios esquemas así:
-
-1. Ve a `Preferences` (o `Settings`) → `Languages & Frameworks` → `Schemas and DTDs` → `JSON Schema Mappings`.
-2. Haz clic en `+` para añadir tu esquema JSON.
-3. Asocia tu esquema a archivos concretos o patrones como `*.json`.
-4. WebStorm validará, autocompletará y marcará errores en tiempo real al editar tus JSON.
-
-##### Otras funciones útiles
-
-- Autocompletado basado en el esquema.
-- Advertencias y errores de validación en el editor.
-- Navegación rápida por el esquema.
-
----
-
-#### Para XML y XSD
-
-##### Soporte nativo de XML y esquemas XSD
-
-WebStorm reconoce archivos `.xml` y `.xsd`. Si enlazas el esquema correctamente, se activa la validación automática.
-
-###### Ejemplo de enlace a esquema:
-```xml
-<documento xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:noNamespaceSchemaLocation="archivo.xsd">
-```
-##### Funcionalidades
-
-- Validación automática de estructura y tipos. 
-- Autocompletado de etiquetas y atributos definidos en el XSD. 
-- Resaltado de errores en directo.
-
-##### Mapeo de esquemas manual
-
-- Ve a Preferences → Languages & Frameworks → Schemas and DTDs → XML Catalog. 
-- Puedes añadir rutas a archivos .xsd y asociarlos a archivos XML específicos o a un patrón.
-
----
-#### Plugins útiles (opcional)
-
-Aunque muchas funciones vienen integradas, puedes explorar estos plugins desde Settings > Plugins:
-
-- JSON Viewer 
-- Tools 
-- thView + XSLT Support
----
-
-## 5. Actividad para practicar
-
-**Enunciado:**
 Crea un documento JSON que represente un catálogo de productos. Cada producto debe tener:
 
-- `nombre`: string
-- `precio`: número mayor que 0
-- `stock`: entero positivo
-- `categoría`: uno de "libros", "ropa", "informática"
+- `nombre`: texto.
+- `precio`: número mayor que 0.
+- `stock`: entero positivo.
+- `categoria`: solo puede ser `"libros"`, `"ropa"` o `"informatica"`.
 
-Después, crea su JSON Schema y valida con una herramienta online.
-
----
-
+Crea también el JSON Schema con todas las restricciones anteriores y valídalo con la herramienta online. Después prueba a meter un precio negativo o una categoría inventada y observa qué error te da el validador.
