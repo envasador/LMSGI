@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -730,10 +730,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#el-problema-de-confiar-ciegamente-en-los-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objetivos
+        El problema de confiar ciegamente en los datos
       
     </span>
   </a>
@@ -741,33 +741,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#como-se-construye-un-json-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introducción
+        Cómo se construye un JSON Schema
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#511-diseno-y-uso-de-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1.1 Diseño y Uso de JSON Schema
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.1.1 Diseño y Uso de JSON Schema">
+    <nav class="md-nav" aria-label="Cómo se construye un JSON Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-es-json-schema" class="md-nav__link">
+  <a href="#el-esqueleto-basico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué es JSON Schema?
+        El esqueleto básico
       
     </span>
   </a>
@@ -775,55 +764,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#estandares" class="md-nav__link">
+  <a href="#los-tipos-de-dato-disponibles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estándares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#estructura-de-un-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Estructura de un JSON Schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tipos-de-datos-en-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de Datos en JSON Schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validacion-de-valores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validación de Valores
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Validación de Valores">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejemplo de pattern
+        Los tipos de dato disponibles
       
     </span>
   </a>
@@ -834,40 +778,57 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#anadiendo-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Añadiendo restricciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#estructuras-complejas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructuras Complejas
+        Estructuras complejas
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Estructuras Complejas">
+    <nav class="md-nav" aria-label="Estructuras complejas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-objeto-anidado" class="md-nav__link">
+  <a href="#objetos-dentro-de-objetos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de objeto anidado
+        Objetos dentro de objetos
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#arrays-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays de objetos
+      
+    </span>
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#formatos-especiales" class="md-nav__link">
+  <a href="#reutilizando-definiciones-con-ref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Formatos Especiales
+        Reutilizando definiciones con $ref
       
     </span>
   </a>
@@ -880,10 +841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-practico-definicion-de-un-producto" class="md-nav__link">
+  <a href="#ejemplo-completo-esquema-de-un-producto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo Práctico: Definición de un producto
+        Ejemplo completo: esquema de un producto
       
     </span>
   </a>
@@ -891,22 +852,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#512-actividad" class="md-nav__link">
+  <a href="#actividad-ponlo-en-practica-con-webstorm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1.2 Actividad
+        Actividad: ponlo en práctica con WebStorm
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.1.2 Actividad">
+    <nav class="md-nav" aria-label="Actividad: ponlo en práctica con WebStorm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo" class="md-nav__link">
+  <a href="#crea-estos-dos-archivos-en-tu-proyecto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)
+        Crea estos dos archivos en tu proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asocia-el-esquema-en-webstorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asocia el esquema en WebStorm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ahora-rompelo-a-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ahora rómpelo a propósito
       
     </span>
   </a>
@@ -1007,10 +990,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#el-problema-de-confiar-ciegamente-en-los-datos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objetivos
+        El problema de confiar ciegamente en los datos
       
     </span>
   </a>
@@ -1018,33 +1001,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
+  <a href="#como-se-construye-un-json-schema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Introducción
+        Cómo se construye un JSON Schema
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#511-diseno-y-uso-de-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1.1 Diseño y Uso de JSON Schema
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.1.1 Diseño y Uso de JSON Schema">
+    <nav class="md-nav" aria-label="Cómo se construye un JSON Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-es-json-schema" class="md-nav__link">
+  <a href="#el-esqueleto-basico" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué es JSON Schema?
+        El esqueleto básico
       
     </span>
   </a>
@@ -1052,55 +1024,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#estandares" class="md-nav__link">
+  <a href="#los-tipos-de-dato-disponibles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estándares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#estructura-de-un-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Estructura de un JSON Schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tipos-de-datos-en-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tipos de Datos en JSON Schema
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validacion-de-valores" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validación de Valores
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Validación de Valores">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejemplo de pattern
+        Los tipos de dato disponibles
       
     </span>
   </a>
@@ -1111,40 +1038,57 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#anadiendo-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Añadiendo restricciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#estructuras-complejas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructuras Complejas
+        Estructuras complejas
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Estructuras Complejas">
+    <nav class="md-nav" aria-label="Estructuras complejas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-objeto-anidado" class="md-nav__link">
+  <a href="#objetos-dentro-de-objetos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de objeto anidado
+        Objetos dentro de objetos
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#arrays-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrays de objetos
+      
+    </span>
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#formatos-especiales" class="md-nav__link">
+  <a href="#reutilizando-definiciones-con-ref" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Formatos Especiales
+        Reutilizando definiciones con $ref
       
     </span>
   </a>
@@ -1157,10 +1101,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-practico-definicion-de-un-producto" class="md-nav__link">
+  <a href="#ejemplo-completo-esquema-de-un-producto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo Práctico: Definición de un producto
+        Ejemplo completo: esquema de un producto
       
     </span>
   </a>
@@ -1168,22 +1112,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#512-actividad" class="md-nav__link">
+  <a href="#actividad-ponlo-en-practica-con-webstorm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1.2 Actividad
+        Actividad: ponlo en práctica con WebStorm
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.1.2 Actividad">
+    <nav class="md-nav" aria-label="Actividad: ponlo en práctica con WebStorm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo" class="md-nav__link">
+  <a href="#crea-estos-dos-archivos-en-tu-proyecto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)
+        Crea estos dos archivos en tu proyecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asocia-el-esquema-en-webstorm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Asocia el esquema en WebStorm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ahora-rompelo-a-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ahora rómpelo a propósito
       
     </span>
   </a>
@@ -1212,86 +1178,98 @@
 
 
 
-<h1 id="51-json-schema-y-herramientas-de-validacion"><strong>5.1 JSON Schema y Herramientas de Validación</strong></h1>
-<h3 id="objetivos">Objetivos</h3>
+<h1 id="51-json-schema-y-herramientas-de-validacion">5.1 — JSON Schema y herramientas de validación</h1>
+<h2 id="el-problema-de-confiar-ciegamente-en-los-datos">El problema de confiar ciegamente en los datos</h2>
+<p>Piensa en esto: llevas horas construyendo una funcionalidad que muestra el precio de un producto. Todo funciona perfectamente en tus pruebas. Lo subes a producción y a los cinco minutos la app peta. ¿Por qué? Porque el precio llegó como <code>"19.99"</code> en lugar de <code>19.99</code>. Una comilla de diferencia. Un string donde debería haber un número.</p>
+<p>Bienvenido al mundo real de las APIs y el intercambio de datos.</p>
+<p>No puedes controlar lo que te mandan sistemas externos. Pero sí puedes decidir qué aceptas y qué rechazas antes de que esos datos toquen tu código. Para eso existe <strong>JSON Schema</strong>: un estándar que te permite describir exactamente cómo debe ser un documento JSON y validar automáticamente que los datos cumplen esas reglas.</p>
+<p>En pocas palabras: le pones un portero a tus datos.</p>
+<h2 id="como-se-construye-un-json-schema">Cómo se construye un JSON Schema</h2>
+<p>Un JSON Schema es él mismo un documento JSON. Lo que hace es describir las reglas que debe cumplir <em>otro</em> documento JSON. Vamos por partes.</p>
+<h3 id="el-esqueleto-basico">El esqueleto básico</h3>
+<pre><code class="language-json">{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: { },
+  &quot;required&quot;: [ ]
+}
+</code></pre>
+<p><code>$schema</code> le dice al validador qué versión del estándar estás usando. Hay varias versiones (Draft 7, Draft 2019-09...), pero Draft 7 es la más compatible con las herramientas que vas a usar, así que quédate con esa por ahora.</p>
+<p><code>type</code> define qué tipo de dato es el documento raíz. En la mayoría de casos será <code>"object"</code>, pero también puede ser un array, un string, o cualquier otro tipo.</p>
+<p><code>properties</code> es donde defines cada campo del objeto: su nombre y las reglas que debe cumplir.</p>
+<p><code>required</code> es la lista negra de campos que no pueden faltar. Si llega un documento sin alguno de ellos, el validador lo rechaza sin contemplaciones.</p>
+<h3 id="los-tipos-de-dato-disponibles">Los tipos de dato disponibles</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Qué acepta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>Texto</td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td>Números con o sin decimales</td>
+</tr>
+<tr>
+<td><code>integer</code></td>
+<td>Solo enteros, nada de decimales</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>true</code> o <code>false</code></td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td>Una lista de elementos</td>
+</tr>
+<tr>
+<td><code>object</code></td>
+<td>Un conjunto de pares clave-valor</td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td>Ausencia de valor</td>
+</tr>
+</tbody>
+</table>
+<p>La diferencia entre <code>number</code> e <code>integer</code> parece obvia pero se olvida fácil: si un campo debería ser siempre un número entero (una edad, una cantidad de stock, un identificador), usa <code>integer</code>. Evitarás que alguien meta <code>18.7</code> como edad.</p>
+<h2 id="anadiendo-restricciones">Añadiendo restricciones</h2>
+<p>Saber que un campo es un <code>string</code> a veces no es suficiente. Quizás ese string tiene que ser un email. O tiene que tener al menos tres caracteres. O tiene que seguir un formato concreto. Para todo eso tienes las restricciones.</p>
+<p><strong>Para textos:</strong></p>
+<p><code>minLength</code> y <code>maxLength</code> controlan la longitud. Un campo <code>nombre</code> con <code>"minLength": 1</code> evita que lleguen nombres vacíos. Parece una tontería hasta que ves que alguien manda <code>""</code> y tu interfaz muestra un saludo al vacío.</p>
+<p><code>format</code> valida formatos especiales conocidos: <code>"email"</code>, <code>"date-time"</code>, <code>"uri"</code>... El validador sabe cómo debe ser cada uno y te ahorra escribir la lógica tú mismo.</p>
+<p><strong>Para números:</strong></p>
+<p><code>minimum</code> y <code>maximum</code> definen el rango permitido. Un precio con <code>"minimum": 0</code> evita que nadie meta un precio negativo. Un campo <code>pegi</code> con <code>"minimum": 3, "maximum": 18</code> asegura que el valor está dentro del rango oficial.</p>
+<p><strong>Para formatos más específicos: <code>pattern</code></strong></p>
+<p>Cuando ningún <code>format</code> estándar cubre lo que necesitas, puedes usar <code>pattern</code> con una expresión regular. Si no has trabajado con expresiones regulares antes, al principio parecen jeroglíficos, pero tienen una lógica muy clara una vez que pillas los símbolos básicos:</p>
 <ul>
-<li>Comprender la necesidad de validar documentos JSON.</li>
-<li>Aprender a diseñar y aplicar JSON Schema correctamente.</li>
+<li><code>^</code> marca el inicio del texto, <code>$</code> marca el final. Si no los pones, el patrón puede coincidir con <em>una parte</em> del texto y no detectar errores.</li>
+<li><code>[A-Z]</code> es cualquier letra mayúscula. <code>[0-9]</code> es cualquier dígito.</li>
+<li><code>{n}</code> significa "exactamente n veces".</li>
 </ul>
-<h3 id="introduccion">Introducción</h3>
-<p>Cuando trabajamos con JSON en aplicaciones reales (APIs, bases de datos, configuraciones), necesitamos asegurarnos de que los datos cumplen una estructura y tipos específicos. Para eso existe <strong>JSON Schema</strong>, un estándar abierto que define reglas para validar documentos JSON.</p>
-<hr />
-<h3 id="511-diseno-y-uso-de-json-schema"><strong>5.1.1 Diseño y Uso de JSON Schema</strong></h3>
-<h4 id="que-es-json-schema">¿Qué es JSON Schema?</h4>
-<p>JSON Schema es una <strong>especificación</strong> que nos permite <strong>describir</strong> y <strong>validar</strong> documentos JSON. Nos ayuda a definir:</p>
-<ul>
-<li><strong>Tipos de datos</strong> correctos.</li>
-<li><strong>Estructuras</strong> anidadas (objetos, arrays).</li>
-<li><strong>Reglas de validación</strong> como valores mínimos, patrones de texto, etc.</li>
-<li><strong>Formatos especiales</strong> como emails o fechas.</li>
-</ul>
-<h4 id="estandares">Estándares</h4>
-<p>Actualmente, los más utilizados son:</p>
-<ul>
-<li><strong>Draft 7</strong>: muy extendido y compatible con la mayor parte de herramientas.</li>
-<li><strong>Draft 2019-09</strong>: versión moderna con nuevas mejoras, como vocabularios personalizados.</li>
-</ul>
-<h4 id="estructura-de-un-json-schema">Estructura de un JSON Schema</h4>
-<p>Un JSON Schema está formado por varios atributos importantes:</p>
-<ul>
-<li><strong>$schema</strong>: (obligatorio) indica la versión de JSON Schema utilizada.</li>
-<li><strong>type</strong>: especifica el tipo de dato (object, array, string, etc.).</li>
-<li><strong>properties</strong>: define las propiedades del objeto, con su nombre y reglas.</li>
-<li><strong>required</strong>: lista de propiedades que deben existir obligatoriamente.</li>
-<li><strong>items</strong>: define el tipo de elementos que contiene un array.</li>
-<li><strong>additionalProperties</strong>: indica si se permiten propiedades no listadas en "properties".</li>
-</ul>
-<h4 id="tipos-de-datos-en-json-schema">Tipos de Datos en JSON Schema</h4>
-<ul>
-<li><strong>string</strong>: cadenas de texto.</li>
-<li><strong>number</strong>: números (pueden tener decimales).</li>
-<li><strong>integer</strong>: números enteros.</li>
-<li><strong>boolean</strong>: valores <code>true</code> o <code>false</code>.</li>
-<li><strong>array</strong>: listas de elementos.</li>
-<li><strong>object</strong>: conjuntos de pares clave-valor.</li>
-<li><strong>null</strong>: valor nulo (sin contenido).</li>
-</ul>
-<h4 id="validacion-de-valores">Validación de Valores</h4>
-<ul>
-<li><strong>minLength</strong> y <strong>maxLength</strong>: controlan la longitud de las cadenas de texto.</li>
-<li><strong>minimum</strong> y <strong>maximum</strong>: definen valores mínimo y máximo permitidos para números.</li>
-<li><strong>pattern</strong>: permite definir expresiones regulares para validar formatos específicos en strings (por ejemplo, códigos postales). Una <strong>expresión regular</strong> es una secuencia de caracteres que define un patrón de búsqueda. Se utilizan para comprobar si un texto cumple un formato determinado. Una expresión regular utiliza una sintaxis especial donde:</li>
-<li><code>^</code> indica el inicio de una cadena.</li>
-<li><code>$</code> indica el final de una cadena.</li>
-<li><code>[A-Z]</code> representa una letra mayúscula.</li>
-<li><code>[0-9]</code> representa un dígito.</li>
-<li><code>{n}</code> indica la cantidad exacta de repeticiones.</li>
-<li><code>.</code> representa cualquier carácter.</li>
-<li><code>*</code> indica cero o más repeticiones.</li>
-<li><code>+</code> indica una o más repeticiones. </li>
-</ul>
-<p>Por ejemplo, podríamos definir una expresión regular para validar un número de teléfono, un código postal o una matrícula de coche.</p>
-<h5 id="ejemplo-de-pattern">Ejemplo de pattern</h5>
+<p>Con eso ya puedes construir patrones útiles. Por ejemplo, para validar una matrícula española antigua estilo <code>"ABC1234"</code>:</p>
 <pre><code class="language-json">{
   &quot;type&quot;: &quot;string&quot;,
   &quot;pattern&quot;: &quot;^[A-Z]{3}[0-9]{4}$&quot;
 }
 </code></pre>
-<p>(Valida textos como "ABC1234").</p>
-<h4 id="estructuras-complejas">Estructuras Complejas</h4>
-<ul>
-<li><strong>Objetos anidados</strong>: una propiedad puede ser un objeto que contenga más propiedades.</li>
-<li><strong>Arrays de objetos</strong>: un array puede contener varios objetos validados según un esquema.</li>
-<li><strong>$ref</strong>: permite referenciar otros schemas, reutilizando definiciones comunes.</li>
-</ul>
-<h5 id="ejemplo-de-objeto-anidado">Ejemplo de objeto anidado</h5>
+<p>Léelo en voz alta: <em>"empieza con tres letras mayúsculas, seguidas de cuatro dígitos, y termina ahí"</em>. Si le mandas <code>"AB1234"</code> o <code>"ABCD1234"</code>, falla.</p>
+<h2 id="estructuras-complejas">Estructuras complejas</h2>
+<p>El mundo real no es plano. Un pedido tiene productos, cada producto tiene un precio y un nombre, y el pedido tiene una dirección de entrega que tiene calle, número y ciudad. JSON Schema maneja todo eso.</p>
+<h3 id="objetos-dentro-de-objetos">Objetos dentro de objetos</h3>
+<p>Una propiedad puede ser ella misma un objeto con sus propias reglas:</p>
 <pre><code class="language-json">{
   &quot;type&quot;: &quot;object&quot;,
   &quot;properties&quot;: {
     &quot;direccion&quot;: {
       &quot;type&quot;: &quot;object&quot;,
       &quot;properties&quot;: {
-        &quot;calle&quot;: { &quot;type&quot;: &quot;string&quot; },
+        &quot;calle&quot;:  { &quot;type&quot;: &quot;string&quot; },
         &quot;numero&quot;: { &quot;type&quot;: &quot;integer&quot; }
       },
       &quot;required&quot;: [&quot;calle&quot;, &quot;numero&quot;]
@@ -1299,39 +1277,43 @@
   }
 }
 </code></pre>
-<h4 id="formatos-especiales">Formatos Especiales</h4>
-<ul>
-<li><strong>email</strong>: valida que una cadena sea un correo electrónico.</li>
-<li><strong>date-time</strong>: valida fechas y horas en formato ISO.</li>
-<li><strong>uri</strong>: valida direcciones URL.</li>
-</ul>
-<h3 id="ejemplo-practico-definicion-de-un-producto"><strong>Ejemplo Práctico: Definición de un producto</strong></h3>
+<p>Puedes anidar todo lo que necesites. Cada nivel tiene sus propias reglas independientes.</p>
+<h3 id="arrays-de-objetos">Arrays de objetos</h3>
+<p>Si tienes una lista de elementos —los productos de un pedido, los comentarios de un post— usas <code>items</code> para describir cómo debe ser cada elemento:</p>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;array&quot;,
+  &quot;items&quot;: {
+    &quot;type&quot;: &quot;object&quot;,
+    &quot;properties&quot;: {
+      &quot;nombre&quot;:   { &quot;type&quot;: &quot;string&quot; },
+      &quot;cantidad&quot;: { &quot;type&quot;: &quot;integer&quot;, &quot;minimum&quot;: 1 }
+    },
+    &quot;required&quot;: [&quot;nombre&quot;, &quot;cantidad&quot;]
+  }
+}
+</code></pre>
+<p>Todos los objetos del array se validarán contra ese mismo esquema. Si uno falla, el array entero falla.</p>
+<h3 id="reutilizando-definiciones-con-ref">Reutilizando definiciones con <code>$ref</code></h3>
+<p>Cuando el mismo subesquema aparece en varios sitios (por ejemplo, la estructura de una dirección se usa tanto en el usuario como en el pedido), puedes definirla una vez en <code>$defs</code> y referenciarla con <code>$ref</code>. Evita duplicar código y hace el esquema mucho más mantenible. Esto lo veremos con más detalle más adelante.</p>
+<h2 id="ejemplo-completo-esquema-de-un-producto">Ejemplo completo: esquema de un producto</h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
   &quot;title&quot;: &quot;Producto&quot;,
   &quot;type&quot;: &quot;object&quot;,
   &quot;properties&quot;: {
-    &quot;nombre&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;minLength&quot;: 1 },
-    &quot;precio&quot;: { &quot;type&quot;: &quot;number&quot;, &quot;minimum&quot;: 0 },
+    &quot;nombre&quot;:  { &quot;type&quot;: &quot;string&quot;,  &quot;minLength&quot;: 1 },
+    &quot;precio&quot;:  { &quot;type&quot;: &quot;number&quot;,  &quot;minimum&quot;: 0 },
     &quot;enStock&quot;: { &quot;type&quot;: &quot;boolean&quot; }
   },
-  &quot;required&quot;: [&quot;nombre&quot;, &quot;precio&quot;]
+  &quot;required&quot;: [&quot;nombre&quot;, &quot;precio&quot;],
+  &quot;additionalProperties&quot;: false
 }
 </code></pre>
-<hr />
-<h2 id="512-actividad"><strong>5.1.2 Actividad</strong></h2>
-<ul>
-<li><strong>Crear un JSON Schema para un usuario</strong></li>
-<li><strong>Validar documentos usando JSON Schema Lint</strong></li>
-<li><strong>Integrar validación en WebStorm</strong></li>
-</ul>
-<h3 id="como-se-haria-integrar-validacion-en-webstorm-explicacion-paso-a-paso-con-ejemplo">Cómo se haría integrar validación en WebStorm (Explicación paso a paso con ejemplo)</h3>
-<p><strong>Crear los archivos necesarios:</strong></p>
-<ul>
-<li><code>usuario.schema.json</code>: Este archivo contiene el esquema que define cómo debe ser un documento de usuario.</li>
-<li><code>usuario.json</code>: Este archivo será el que validaremos contra el esquema.</li>
-</ul>
-<p><strong>Contenido de <code>usuario.schema.json</code>:</strong></p>
+<p>Fíjate en <code>additionalProperties: false</code> al final. Eso significa que si alguien manda un campo extra que no está en <code>properties</code> —como <code>"descuento"</code> o <code>"color"</code>— la validación también falla. Es opcional, pero en entornos donde quieres control total sobre los datos que recibes es muy útil.</p>
+<h2 id="actividad-ponlo-en-practica-con-webstorm">Actividad: ponlo en práctica con WebStorm</h2>
+<p>Vamos a construir un esquema para un usuario y a ver cómo WebStorm lo usa para avisarte de errores mientras escribes, sin tener que salir del editor.</p>
+<h3 id="crea-estos-dos-archivos-en-tu-proyecto">Crea estos dos archivos en tu proyecto</h3>
+<p><strong><code>usuario.schema.json</code></strong></p>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;http://json-schema.org/draft-07/schema#&quot;,
   &quot;title&quot;: &quot;Usuario&quot;,
@@ -1353,21 +1335,25 @@
   &quot;required&quot;: [&quot;nombre&quot;, &quot;correo&quot;, &quot;fechaAlta&quot;]
 }
 </code></pre>
-<p><strong>Contenido de <code>usuario.json</code>:</strong></p>
+<p><strong><code>usuario.json</code></strong></p>
 <pre><code class="language-json">{
   &quot;nombre&quot;: &quot;Alejandro Carmona&quot;,
   &quot;correo&quot;: &quot;acarmar112@g.educaand.es&quot;,
   &quot;fechaAlta&quot;: &quot;2024-04-28T12:34:56Z&quot;
 }
 </code></pre>
-<p><strong>Asociar el Schema en WebStorm:</strong></p>
-<p><strong>Resultados:</strong></p>
-<ul>
-<li>WebStorm validará automáticamente el archivo <code>usuario.json</code>.</li>
-<li>Si hay errores (por ejemplo, si el correo no tiene formato válido), WebStorm los señalará directamente.</li>
-<li>También ofrecerá autocompletado de propiedades basado en el Schema.</li>
-</ul>
-<hr />
+<h3 id="asocia-el-esquema-en-webstorm">Asocia el esquema en WebStorm</h3>
+<p>Ve a <code>Settings → Languages &amp; Frameworks → Schemas and DTDs → JSON Schema Mappings</code>. Haz clic en <code>+</code>, ponle un nombre al mapeo, selecciona <code>usuario.schema.json</code> como esquema y asócialo al archivo <code>usuario.json</code>.</p>
+<p>A partir de ahí WebStorm sabe qué estructura debe tener ese archivo y te avisa en tiempo real si algo no cuadra.</p>
+<h3 id="ahora-rompelo-a-proposito">Ahora rómpelo a propósito</h3>
+<p>Esto es lo importante. Prueba cada una de estas modificaciones en <code>usuario.json</code> y observa qué pasa:</p>
+<ol>
+<li>Borra el campo <code>correo</code>. ¿Qué error aparece?</li>
+<li>Escribe el correo como <code>"esto no es un email"</code>. ¿Lo detecta?</li>
+<li>Pon <code>"fechaAlta": "hoy"</code> en lugar del formato ISO. ¿Falla?</li>
+<li>Añade un campo <code>"edad": 25</code>. Si tienes <code>additionalProperties: false</code> en el esquema, ¿lo acepta?</li>
+</ol>
+<p>Cuando entiendas exactamente qué valida el esquema y qué no, habrás pillado la idea. Ese es el objetivo.</p>
 
 
 
