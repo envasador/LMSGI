@@ -4,8 +4,6 @@
 
 El DOM (Document Object Model) es la representación en memoria que el navegador crea del documento HTML. No es el código HTML que escribimos, sino una estructura de datos viva que JavaScript puede leer y modificar. Esta unidad establece las bases para manipular dinámicamente páginas web, permitiendo crear experiencias interactivas y actualizaciones sin necesidad de recargar la página.
 
----
-
 ## 1. Fundamentos del DOM
 
 ### Introducción
@@ -48,8 +46,6 @@ elemento.nextElementSibling      // Hermano siguiente
 ```
 
 **Recomendación:** Usar las propiedades de elementos (`children`, `nextElementSibling`) porque ignoran los nodos de texto causados por espacios en blanco en el HTML.
-
----
 
 ## 2. Selección de Elementos
 
@@ -113,7 +109,110 @@ for (let i = 0; i < 100; i++) {
 }
 ```
 
----
+# 2.4. Diferencias entre NodeList y HTMLCollection
+
+## ¿Qué son?
+
+Cuando trabajas con el DOM en JavaScript, necesitas formas de obtener y manipular múltiples elementos a la vez. El DOM te proporciona dos tipos de colecciones para esto: **NodeList** y **HTMLCollection**. Aunque ambas parecen arrays y se usan de forma similar, tienen diferencias importantes que debes conocer para evitar errores en tus aplicaciones web.
+
+## Tipo de contenido que almacenan
+
+**HTMLCollection** es más restrictiva: solo puede contener elementos HTML (etiquetas). Piensa en ella como una colección especializada exclusivamente para etiquetas HTML del documento.
+
+**NodeList** es más flexible: puede contener cualquier tipo de nodo del DOM. Esto incluye no solo elementos HTML, sino también nodos de texto (como espacios en blanco o saltos de línea entre etiquetas), comentarios HTML, y otros de los doce tipos de nodos que existen en el DOM.
+
+Por ejemplo:
+
+```javascript
+// Imaginemos este HTML:
+// <div id="contenedor">
+//   <p>Primer párrafo</p>
+//   <p>Segundo párrafo</p>
+// </div>
+
+const contenedor = document.getElementById('contenedor');
+
+// children devuelve HTMLCollection (solo los <p>)
+console.log(contenedor.children); // HTMLCollection con 2 elementos
+
+// childNodes devuelve NodeList (elementos <p> + nodos de texto)
+console.log(contenedor.childNodes); // NodeList con 5 nodos: 
+// texto (salto de línea), <p>, texto, <p>, texto
+```
+
+## Comportamiento dinámico vs estático
+
+Esta es una diferencia crucial que puede causarte errores si no la entiendes.
+
+**HTMLCollection es "viva" (live)**: se actualiza automáticamente cuando el DOM cambia. Si añades o eliminas elementos que coincidan con la consulta original, la colección refleja esos cambios al instante.
+
+```javascript
+const parrafos = document.getElementsByTagName('p');
+console.log(parrafos.length); // Por ejemplo: 3
+
+// Añadimos un nuevo párrafo al documento
+const nuevoParrafo = document.createElement('p');
+document.body.appendChild(nuevoParrafo);
+
+console.log(parrafos.length); // Ahora es 4 (se actualizó automáticamente)
+```
+
+**NodeList es generalmente estática**: especialmente cuando la obtienes con `querySelectorAll()`. Una vez creada, es como una "fotografía" del DOM en ese momento. Aunque cambies el DOM después, la colección no se actualiza.
+
+```javascript
+const parrafos = document.querySelectorAll('p');
+console.log(parrafos.length); // Por ejemplo: 3
+
+// Añadimos un nuevo párrafo
+const nuevoParrafo = document.createElement('p');
+document.body.appendChild(nuevoParrafo);
+
+console.log(parrafos.length); // Sigue siendo 3 (no se actualiza)
+```
+
+Existe una excepción importante: el NodeList devuelto por `childNodes` sí es dinámico, actualizándose como lo hace HTMLCollection.
+
+## Métodos disponibles
+
+**HTMLCollection** tiene métodos limitados: `item()` (para acceder por índice), `namedItem()` (para acceder por `name` o `id`), y la propiedad `length`. Notablemente, no tiene `forEach()`, lo que dificulta iterar sobre ella.
+
+**NodeList** incluye los mismos métodos básicos pero añade `forEach()`, permitiéndote iterar directamente sin necesidad de conversiones.
+
+```javascript
+// Con NodeList (funciona)
+const parrafos = document.querySelectorAll('p');
+parrafos.forEach(p => console.log(p.textContent));
+
+// Con HTMLCollection (no funciona directamente)
+const divs = document.getElementsByTagName('div');
+// divs.forEach() // ERROR: forEach is not a function
+
+// Necesitas convertirla a array primero
+Array.from(divs).forEach(div => console.log(div.textContent));
+// O usar el operador spread
+[...divs].forEach(div => console.log(div.textContent));
+```
+
+## Métodos que devuelven cada tipo
+
+**HTMLCollection** se obtiene mediante:
+- `getElementsByTagName()` - selecciona por nombre de etiqueta
+- `getElementsByClassName()` - selecciona por clase
+- Propiedad `children` - obtiene hijos directos de un elemento
+
+**NodeList** se obtiene principalmente con:
+- `querySelectorAll()` - selecciona usando selectores CSS
+- Propiedad `childNodes` - obtiene todos los nodos hijos (incluyendo texto)
+
+## ¿Cuál usar en la práctica?
+
+Para la mayoría de casos modernos, **`querySelectorAll()` (que devuelve NodeList)** es la opción preferida porque:
+- Usa selectores CSS familiares y potentes
+- Incluye el método `forEach()` para iteración directa
+- Su comportamiento estático es más predecible y evita efectos secundarios inesperados
+
+Sin embargo, si necesitas una colección que se actualice automáticamente cuando cambies el DOM, las HTMLCollection devueltas por `getElementsByTagName()` o `getElementsByClassName()` pueden ser útiles, aunque tendrás que lidiar con la falta de `forEach()`.
+
 
 ## 3. Creación y Modificación de Elementos
 
@@ -240,8 +339,6 @@ Eliminar elementos del DOM es tan importante como añadirlos. El método moderno
 elemento.remove();
 ```
 
----
-
 ## 4. Atributos y Propiedades
 
 ### Introducción
@@ -303,8 +400,6 @@ producto.dataset.descuento = "10";
 const precio = Number(producto.dataset.precio);
 ```
 
----
-
 ## 5. Gestión de Clases CSS
 
 ### Introducción
@@ -358,8 +453,6 @@ elemento.classList.add('error');
 // ❌ Estilos inline para estados
 elemento.style.color = 'red';
 ```
-
----
 
 ## 6. Manipulación de Estilos CSS
 
@@ -431,8 +524,6 @@ const estilos = getComputedStyle(document.documentElement);
 const color = estilos.getPropertyValue('--color-primario');
 ```
 
----
-
 ## 7. Propiedades Útiles de Elementos
 
 ### Introducción
@@ -470,24 +561,6 @@ elemento.tagName        // "DIV" (siempre mayúsculas)
 elemento.id
 elemento.className
 ```
-
----
-
-## Actividades Prácticas
-
-### Actividad 1: Generador de Lista Dinámica
-Crear una función que genere una lista HTML a partir de un array de objetos con estructura compleja.
-
-### Actividad 2: Sistema de Pestañas
-Implementar tabs donde solo una pestaña esté activa a la vez, gestionando clases y contenido.
-
-### Actividad 3: Filtro de Productos
-Sistema de filtrado usando `data-*` attributes para categoría, precio y disponibilidad.
-
-### Actividad 4: Constructor de Temas
-Interfaz para personalizar colores y tamaños usando CSS variables, con preview en tiempo real.
-
----
 
 ## Recursos
 

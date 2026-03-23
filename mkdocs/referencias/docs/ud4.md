@@ -1502,6 +1502,73 @@ const formateado = JSON.stringify(usuario, null, 2);
 */
 ```
 
+
+### 15 La desestructuración (destructuring) 
+
+Es una expresión de JavaScript introducida en ES6 que permite desempacar valores de arrays o propiedades de objetos en variables distintas de manera sencilla y en una sola línea.
+
+## Concepto básico
+
+La desestructuración te permite extraer datos de estructuras complejas (arrays, objetos, mapas y sets) y crear nuevas variables con esos datos de forma directa, sin tener que acceder a cada elemento individualmente.
+
+## Desestructuración de objetos
+
+Usa llaves `{}` en el lado izquierdo de una asignación para indicar que estás desestructurando un objeto: [lenguajejs](https://lenguajejs.com/javascript/objetos/desestructuracion-objetos/)
+
+```javascript
+const usuario = {
+  firstName: "Juan",
+  lastName: "Pérez",
+  age: 30
+};
+
+const { firstName, lastName } = usuario;
+console.log(firstName); // "Juan"
+console.log(lastName);  // "Pérez"
+```
+
+Puedes asignar valores por defecto y renombrar variables: 
+
+```javascript
+const { firstName: nombre, age: edad = 18 } = usuario;
+console.log(nombre); // "Juan"
+console.log(edad);   // 30
+```
+
+## Desestructuración de arrays
+
+Usa corchetes `[]` y se basa en la posición de los elementos en el array: 
+
+```javascript
+const colores = ["rojo", "amarillo", "verde"];
+
+const [primero, segundo, tercero] = colores;
+console.log(primero);  // "rojo"
+console.log(segundo);  // "amarillo"
+```
+
+Puedes "saltarte" elementos que no te interesan dejando espacios vacíos: 
+
+```javascript
+const [primero, , tercero] = colores;
+console.log(primero);  // "rojo"
+console.log(tercero);  // "verde"
+```
+
+## Ventajas principales
+
+- **Menos código**: Extraes múltiples valores en una sola línea en lugar de hacer múltiples asignaciones 
+- **Mayor legibilidad**: El código es más claro y expresivo
+- **Útil en funciones**: Puedes desestructurar parámetros directamente: 
+
+```javascript
+function mostrarMenu({ title = "Sin título", width = 200, height = 100 }) {
+  console.log(`${title} ${width} ${height}`);
+}
+
+mostrarMenu({ title: "Mi Menú", width: 300 }); 
+// "Mi Menú 300 100"
+```
 ---
 
 ## 15. Recursos y referencias
