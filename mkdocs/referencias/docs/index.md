@@ -12,15 +12,28 @@ Este curso está diseñado para que adquieras las habilidades necesarias en el m
 
 ## Tabla de contenido
 
+### Introducción.
+
 * [Unidad 1: Introducción a los lenguajes de marcas](ud1.md)
+
+### HTML y CSS.
+
 * [Unidad 2: HTML5](ud2-1.md)
 * [Unidad 3: CSS3](ud3.md)
+
+### JavaScript ( DOM Y Eventos )
+
 * [Unidad 4: Introducción a JavaScript](ud4.md)
 * [Unidad 4.1: Manipulación del DOM y eventos](ud4-1.md)
+
+### XML, JSON Y Asincronía.
+
 * [Unidad 5: Definición de esquemas y vocabularios](ud5.md)
 * [Unidad 5.1: JSON Schema y Herramientas de Validación](ud5-1.md)
-* [Unidad 5.2: Trabajo con APIs ](ud5-2.md)
-* [Unidad 5.3: Transformación de documentos con JavaScript ](ud5-3.md)
+* [Unidad 5.2: Callbacks y asincronía en JavaScript ](ud5-2.md)
+* [Unidad 5.3: Fetch y APIs](ud5-3.md)
+* [Unidad 5.4: Datos que persisten: localStorage y APIs](ud5-4.md)
+* [Unidad 5.5: Transformación de documentos con JavaScript](ud5-5.md)
 
 ## Referencias web generales
 

@@ -4,18 +4,18 @@ site_dir: ../../docs/referencias
 
 # Page tree
 nav:
-  - Inicio: index.md
-  - Introducción: ud1.md
-  - HTML5: ud2-1.md
-  - CSS3: ud3.md
-  - Introducción Javascript: ud4.md
-  - Actividades de JS: ud4-actividades.md
-  - Manipulación del DOM y eventos: ud4-1.md
-  - Definición de esquemas y vocabularios: ud5.md
-  - JSON Schema y Herramientas de Validación: ud5-1.md
-  - Trabajo con APIs: ud5-2.md
-  - Transformación de documentos con JavaScript: ud5-3.md
-
+  - 1. Introducción: ud1.md
+  - 2 HTML5: ud2-1.md
+  - 3 CSS3: ud3.md
+  - 4 Introducción Javascript: ud4.md
+  - 4.1 Actividades de JS: ud4-actividades.md
+  - 4.2 Manipulación del DOM y eventos: ud4-1.md
+  - 5 Definición de esquemas y vocabularios: ud5.md
+  - 5.1 JSON Schema y Herramientas de Validación: ud5-1.md
+  - 5.2 Callbacks y asincronía en JavaScript: ud5-2.md
+  - 5.3 Fetch y APIs: ud5-3.md
+  - 5.4 Datos que persisten: ud5-4.md
+  - 5.5 Transformación de documentos con JavaScript: ud5-5.md
 
 extra:
   social:
