@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#52-trabajo-con-apis" class="md-skip">
+        <a href="#520-callbacks-y-asincronia-en-javascript" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -426,7 +426,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -757,10 +759,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tu-aplicacion-no-vive-sola" class="md-nav__link">
+  <a href="#1-javascript-hace-una-cosa-a-la-vez" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tu aplicación no vive sola
+        1. JavaScript hace una cosa a la vez
       
     </span>
   </a>
@@ -768,10 +770,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-problema-de-esperar" class="md-nav__link">
+  <a href="#2-el-event-loop-como-javascript-gestiona-el-tiempo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El problema de esperar
+        2. El Event Loop: cómo JavaScript gestiona el tiempo
       
     </span>
   </a>
@@ -779,33 +781,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#promises-la-herramienta-para-gestionar-el-tiempo" class="md-nav__link">
+  <a href="#3-callbacks-funciones-que-se-llaman-despues" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Promises: la herramienta para gestionar el tiempo
+        3. Callbacks: funciones que se llaman después
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fetch-api-hablar-con-el-mundo-exterior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fetch API: hablar con el mundo exterior
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fetch API: hablar con el mundo exterior">
+    <nav class="md-nav" aria-label="3. Callbacks: funciones que se llaman después">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#un-ejemplo-real-la-pokeapi" class="md-nav__link">
+  <a href="#callbacks-en-operaciones-asincronas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Un ejemplo real: la PokéAPI
+        Callbacks en operaciones asíncronas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-problema-callback-hell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema: Callback Hell
       
     </span>
   </a>
@@ -818,33 +820,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#herramientas-que-te-haran-la-vida-mas-facil" class="md-nav__link">
+  <a href="#4-promises-una-forma-mejor-de-gestionar-el-tiempo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Herramientas que te harán la vida más fácil
+        4. Promises: una forma mejor de gestionar el tiempo
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicio-consulta-un-pokemon-desde-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejercicio: consulta un Pokémon desde JavaScript
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicio: consulta un Pokémon desde JavaScript">
+    <nav class="md-nav" aria-label="4. Promises: una forma mejor de gestionar el tiempo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lo-que-tiene-que-hacer" class="md-nav__link">
+  <a href="#como-funciona-una-promise-por-dentro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lo que tiene que hacer
+        Cómo funciona una Promise por dentro
       
     </span>
   </a>
@@ -852,32 +843,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#el-codigo" class="md-nav__link">
+  <a href="#encadenar-promises" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El código
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resultado esperado
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#para-ir-mas-lejos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Para ir más lejos
+        Encadenar Promises
       
     </span>
   </a>
@@ -886,6 +855,56 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-async-await-promises-con-cara-humana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. async / await: Promises con cara humana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. async / await: Promises con cara humana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#las-funciones-async-siempre-devuelven-una-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las funciones async siempre devuelven una Promise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-el-camino-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. El camino completo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-para-practicar-antes-de-las-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Para practicar antes de las APIs
+      
+    </span>
+  </a>
   
 </li>
       
@@ -932,6 +951,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -951,10 +972,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tu-aplicacion-no-vive-sola" class="md-nav__link">
+  <a href="#1-javascript-hace-una-cosa-a-la-vez" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tu aplicación no vive sola
+        1. JavaScript hace una cosa a la vez
       
     </span>
   </a>
@@ -962,10 +983,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-problema-de-esperar" class="md-nav__link">
+  <a href="#2-el-event-loop-como-javascript-gestiona-el-tiempo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El problema de esperar
+        2. El Event Loop: cómo JavaScript gestiona el tiempo
       
     </span>
   </a>
@@ -973,33 +994,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#promises-la-herramienta-para-gestionar-el-tiempo" class="md-nav__link">
+  <a href="#3-callbacks-funciones-que-se-llaman-despues" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Promises: la herramienta para gestionar el tiempo
+        3. Callbacks: funciones que se llaman después
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fetch-api-hablar-con-el-mundo-exterior" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fetch API: hablar con el mundo exterior
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Fetch API: hablar con el mundo exterior">
+    <nav class="md-nav" aria-label="3. Callbacks: funciones que se llaman después">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#un-ejemplo-real-la-pokeapi" class="md-nav__link">
+  <a href="#callbacks-en-operaciones-asincronas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Un ejemplo real: la PokéAPI
+        Callbacks en operaciones asíncronas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-problema-callback-hell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema: Callback Hell
       
     </span>
   </a>
@@ -1012,33 +1033,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#herramientas-que-te-haran-la-vida-mas-facil" class="md-nav__link">
+  <a href="#4-promises-una-forma-mejor-de-gestionar-el-tiempo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Herramientas que te harán la vida más fácil
+        4. Promises: una forma mejor de gestionar el tiempo
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicio-consulta-un-pokemon-desde-javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejercicio: consulta un Pokémon desde JavaScript
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ejercicio: consulta un Pokémon desde JavaScript">
+    <nav class="md-nav" aria-label="4. Promises: una forma mejor de gestionar el tiempo">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lo-que-tiene-que-hacer" class="md-nav__link">
+  <a href="#como-funciona-una-promise-por-dentro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lo que tiene que hacer
+        Cómo funciona una Promise por dentro
       
     </span>
   </a>
@@ -1046,32 +1056,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#el-codigo" class="md-nav__link">
+  <a href="#encadenar-promises" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El código
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resultado esperado
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#para-ir-mas-lejos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Para ir más lejos
+        Encadenar Promises
       
     </span>
   </a>
@@ -1080,6 +1068,56 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-async-await-promises-con-cara-humana" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. async / await: Promises con cara humana
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. async / await: Promises con cara humana">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#las-funciones-async-siempre-devuelven-una-promise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las funciones async siempre devuelven una Promise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-el-camino-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. El camino completo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-para-practicar-antes-de-las-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Para practicar antes de las APIs
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1097,116 +1135,255 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
 
 
 
-<h1 id="52-trabajo-con-apis">5.2 — Trabajo con APIs</h1>
-<h2 id="tu-aplicacion-no-vive-sola">Tu aplicación no vive sola</h2>
-<p>Hasta ahora has construido cosas que funcionan con datos que tú mismo escribes. Pero las aplicaciones reales hacen algo diferente: hablan con el mundo exterior. Consultan el tiempo de una ciudad, buscan información de películas, muestran precios actualizados, cargan perfiles de usuario desde un servidor. Toda esa información viene de fuera, de <strong>APIs</strong>.</p>
-<p>Una API (Application Programming Interface) es básicamente una puerta trasera que un servicio ofrece para que otras aplicaciones puedan pedir sus datos. Tú haces una petición a una URL y recibes un JSON con la información que necesitas. Simple en concepto, pero hay un detalle que complica las cosas: esa petición no es instantánea.</p>
-<h2 id="el-problema-de-esperar">El problema de esperar</h2>
-<p>Cuando JavaScript ejecuta código, lo hace línea a línea, sin parar. Si le pides datos a un servidor y ese servidor tarda dos segundos en responder, tienes un problema: ¿qué hace tu programa mientras espera? ¿Se congela y deja de responder al usuario?</p>
-<p>No. JavaScript resuelve esto con <strong>asincronía</strong>: la capacidad de lanzar una operación que tardará un tiempo y seguir ejecutando el resto del código mientras tanto. Cuando la respuesta llega, se procesa. Mientras tanto, la página sigue funcionando con normalidad.</p>
-<p>Piénsalo como pedir una pizza por teléfono. No te quedas parado en medio de la cocina esperando que llegue. Sigues haciendo otras cosas y cuando llaman al timbre, atiendes la puerta.</p>
-<h2 id="promises-la-herramienta-para-gestionar-el-tiempo">Promises: la herramienta para gestionar el tiempo</h2>
-<p>Una <strong>Promise</strong> representa el resultado de una operación que todavía no ha terminado. En el momento en que la creas, no sabes si va a salir bien o mal. Por eso tiene tres estados posibles:</p>
+
+<h1 id="520-callbacks-y-asincronia-en-javascript">5.2.0 — Callbacks y asincronía en JavaScript</h1>
+<h2 id="1-javascript-hace-una-cosa-a-la-vez">1. JavaScript hace una cosa a la vez</h2>
+<p>Antes de entrar en APIs y Promises, hay que entender algo fundamental sobre cómo funciona JavaScript: es <strong>single-threaded</strong>. Eso significa que solo puede hacer una cosa a la vez. No dos. No en paralelo. Una.</p>
+<p>Cuando ejecutas este código:</p>
+<pre><code class="language-javascript">console.log('uno');
+console.log('dos');
+console.log('tres');
+</code></pre>
+<p>JavaScript ejecuta la primera línea, la termina, ejecuta la segunda, la termina, ejecuta la tercera. En orden, sin interrupciones. A eso se le llama ejecución <strong>síncrona</strong>.</p>
+<p>El problema llega cuando una de esas operaciones tarda mucho. Si JavaScript tiene que esperar a que un servidor responda antes de pasar a la siguiente línea, la página entera se congela durante ese tiempo. El usuario no puede hacer clic en nada, el scroll no responde, todo se bloquea. Eso es inaceptable en una aplicación web.</p>
+<p>La solución es la <strong>asincronía</strong>: una forma de decirle a JavaScript <em>"empieza esta operación, y cuando termine ya me avisas — mientras tanto sigo con lo demás"</em>.</p>
+<p>Para entender cómo funciona eso, primero hay que entender el <strong>Event Loop</strong>.</p>
+<h2 id="2-el-event-loop-como-javascript-gestiona-el-tiempo">2. El Event Loop: cómo JavaScript gestiona el tiempo</h2>
+<p>Aunque JavaScript es single-threaded, el navegador no lo es. El navegador tiene varios mecanismos que trabajan en paralelo con JavaScript:</p>
 <ul>
-<li><strong>Pending</strong> — la operación está en marcha, todavía no hay resultado.</li>
-<li><strong>Fulfilled</strong> — todo fue bien, ya tienes el resultado.</li>
-<li><strong>Rejected</strong> — algo salió mal, hay un error.</li>
+<li><strong>La pila de llamadas (Call Stack)</strong> — donde se ejecuta el código JavaScript, una función a la vez.</li>
+<li><strong>Las Web APIs</strong> — funciones que el navegador ejecuta por su cuenta: temporizadores, peticiones de red, eventos del DOM...</li>
+<li><strong>La cola de tareas (Task Queue)</strong> — donde esperan los callbacks listos para ejecutarse.</li>
+<li><strong>El Event Loop</strong> — el mecanismo que mueve callbacks de la cola a la pila cuando la pila está vacía.</li>
 </ul>
-<p>Así se crea una Promise básica:</p>
-<pre><code class="language-javascript">let promesa = new Promise((resolve, reject) =&gt; {
-    let exito = true;
+<p>Veámoslo con un ejemplo simple usando <code>setTimeout</code>, que es la forma más básica de asincronía:</p>
+<pre><code class="language-javascript">console.log('inicio');
 
-    if (exito) {
-        resolve('Operación exitosa');
-    } else {
-        reject('Ocurrió un error');
-    }
+setTimeout(() =&gt; {
+    console.log('esto es asíncrono');
+}, 2000);
+
+console.log('fin');
+</code></pre>
+<p>¿Qué imprime esto y en qué orden?</p>
+<pre><code>inicio
+fin
+esto es asíncrono   ← aparece 2 segundos después
+</code></pre>
+<p>Lo que ha pasado por dentro:</p>
+<ol>
+<li><code>console.log('inicio')</code> entra en la pila, se ejecuta, sale.</li>
+<li><code>setTimeout</code> entra en la pila. JavaScript le pasa el temporizador al navegador y sale de la pila <strong>sin esperar</strong>.</li>
+<li><code>console.log('fin')</code> entra en la pila, se ejecuta, sale.</li>
+<li>La pila está vacía. El navegador ha estado contando los 2 segundos en segundo plano.</li>
+<li>Cuando el temporizador termina, el callback <code>() =&gt; console.log('esto es asíncrono')</code> pasa a la cola de tareas.</li>
+<li>El Event Loop ve que la pila está vacía y mueve el callback a la pila.</li>
+<li>El callback se ejecuta.</li>
+</ol>
+<p>Esto explica algo que sorprende al principio: <strong>un <code>setTimeout</code> con 0 milisegundos no se ejecuta inmediatamente</strong>:</p>
+<pre><code class="language-javascript">console.log('uno');
+
+setTimeout(() =&gt; console.log('dos'), 0);
+
+console.log('tres');
+
+// uno
+// tres
+// dos
+</code></pre>
+<p>Aunque el tiempo es cero, el callback pasa por la cola de tareas y no puede ejecutarse hasta que la pila esté vacía. <code>'tres'</code> siempre va antes.</p>
+<h2 id="3-callbacks-funciones-que-se-llaman-despues">3. Callbacks: funciones que se llaman después</h2>
+<p>Un <strong>callback</strong> es simplemente una función que le pasas a otra función para que la llame cuando termine su trabajo. Es el mecanismo más básico de asincronía en JavaScript y lleva ahí desde el principio.</p>
+<p>Ya los has usado sin darte cuenta:</p>
+<pre><code class="language-javascript">// addEventListener recibe un callback
+document.querySelector('button').addEventListener('click', () =&gt; {
+    console.log('botón pulsado');
 });
 
-promesa
+// forEach recibe un callback
+[1, 2, 3].forEach(numero =&gt; {
+    console.log(numero);
+});
+
+// setTimeout recibe un callback
+setTimeout(() =&gt; {
+    console.log('han pasado 2 segundos');
+}, 2000);
+</code></pre>
+<p>En todos estos casos estás pasando una función como argumento. Esa función no se ejecuta ahora — se ejecuta después, cuando ocurre algo: un clic, cada iteración del array, el paso del tiempo.</p>
+<h3 id="callbacks-en-operaciones-asincronas">Callbacks en operaciones asíncronas</h3>
+<p>Donde los callbacks se complican es cuando los usas para gestionar operaciones que tardan tiempo, como peticiones de red. El patrón clásico es este:</p>
+<pre><code class="language-javascript">function obtenerUsuario(id, callback) {
+    // Simulamos una petición que tarda 1 segundo
+    setTimeout(() =&gt; {
+        const usuario = { id: id, nombre: 'Lucía' };
+        callback(usuario);
+    }, 1000);
+}
+
+obtenerUsuario(1, usuario =&gt; {
+    console.log('Usuario recibido:', usuario.nombre);
+});
+
+console.log('Esta línea se ejecuta antes que el usuario');
+</code></pre>
+<p>La función <code>obtenerUsuario</code> acepta un <code>id</code> y un <code>callback</code>. Cuando tiene los datos listos, llama al callback pasándole el resultado. Tú defines qué hacer con esos datos en la función que pasas.</p>
+<h3 id="el-problema-callback-hell">El problema: Callback Hell</h3>
+<p>Ahora imagina que necesitas encadenar varias operaciones asíncronas: primero obtienes el usuario, después sus pedidos, después los detalles de cada pedido...</p>
+<pre><code class="language-javascript">obtenerUsuario(1, usuario =&gt; {
+    obtenerPedidos(usuario.id, pedidos =&gt; {
+        obtenerDetalles(pedidos[0].id, detalles =&gt; {
+            obtenerFactura(detalles.facturaId, factura =&gt; {
+                console.log('Factura:', factura);
+                // ¿Necesitas otro paso? Otro nivel más...
+            });
+        });
+    });
+});
+</code></pre>
+<p>Esto tiene un nombre: <strong>Callback Hell</strong>, o pirámide de la muerte. El código se va indentando hacia la derecha indefinidamente y se vuelve imposible de leer, de mantener y de depurar. Si en algún punto ocurre un error, propagarlo correctamente por todos los niveles es una pesadilla.</p>
+<p>Este problema es exactamente la razón por la que se inventaron las Promises.</p>
+<hr />
+<h2 id="4-promises-una-forma-mejor-de-gestionar-el-tiempo">4. Promises: una forma mejor de gestionar el tiempo</h2>
+<p>Una <strong>Promise</strong> resuelve el Callback Hell ofreciendo una forma de encadenar operaciones asíncronas de forma lineal, en lugar de anidada.</p>
+<p>El mismo ejemplo anterior con Promises quedaría así:</p>
+<pre><code class="language-javascript">obtenerUsuario(1)
+    .then(usuario =&gt; obtenerPedidos(usuario.id))
+    .then(pedidos =&gt; obtenerDetalles(pedidos[0].id))
+    .then(detalles =&gt; obtenerFactura(detalles.facturaId))
+    .then(factura =&gt; console.log('Factura:', factura))
+    .catch(error =&gt; console.error('Algo falló:', error));
+</code></pre>
+<p>Plano, lineal, un solo <code>.catch()</code> para todos los errores. Mucho más manejable.</p>
+<h3 id="como-funciona-una-promise-por-dentro">Cómo funciona una Promise por dentro</h3>
+<p>Una Promise es un objeto que representa un valor que todavía no existe pero existirá en el futuro — o fallará. Tiene tres estados:</p>
+<ul>
+<li><strong>Pending</strong> — esperando resultado.</li>
+<li><strong>Fulfilled</strong> — completada con éxito.</li>
+<li><strong>Rejected</strong> — falló.</li>
+</ul>
+<p>Una vez que pasa de <em>pending</em> a cualquiera de los otros dos, <strong>no puede volver atrás ni cambiar de estado</strong>.</p>
+<p>Cuando creas una Promise le pasas una función con dos argumentos: <code>resolve</code> y <code>reject</code>. Llamas a <code>resolve(valor)</code> cuando todo va bien, y a <code>reject(error)</code> cuando algo falla:</p>
+<pre><code class="language-javascript">function esperar(segundos) {
+    return new Promise((resolve, reject) =&gt; {
+        if (segundos &lt; 0) {
+            reject(new Error('Los segundos no pueden ser negativos'));
+            return;
+        }
+        setTimeout(() =&gt; {
+            resolve(`Han pasado ${segundos} segundos`);
+        }, segundos * 1000);
+    });
+}
+
+esperar(2)
+    .then(mensaje =&gt; console.log(mensaje))  // 'Han pasado 2 segundos'
+    .catch(error =&gt; console.error(error.message));
+
+esperar(-1)
     .then(mensaje =&gt; console.log(mensaje))
+    .catch(error =&gt; console.error(error.message));  // 'Los segundos no pueden ser negativos'
+</code></pre>
+<h3 id="encadenar-promises">Encadenar Promises</h3>
+<p>Cada <code>.then()</code> puede devolver un valor o una nueva Promise. Si devuelve un valor, el siguiente <code>.then()</code> lo recibe directamente. Si devuelve una Promise, el siguiente <code>.then()</code> espera a que se resuelva:</p>
+<pre><code class="language-javascript">esperar(1)
+    .then(mensaje =&gt; {
+        console.log(mensaje);         // 'Han pasado 1 segundos'
+        return esperar(1);            // Devuelve una nueva Promise
+    })
+    .then(mensaje =&gt; {
+        console.log(mensaje);         // 'Han pasado 1 segundos'
+        return 'valor directo';       // Devuelve un valor normal
+    })
+    .then(valor =&gt; {
+        console.log(valor);           // 'valor directo'
+    });
+</code></pre>
+<p>Esto es lo que permite la cadena plana en lugar de la pirámide anidada.</p>
+<hr />
+<h2 id="5-async-await-promises-con-cara-humana">5. async / await: Promises con cara humana</h2>
+<p><code>async/await</code> es la evolución final. Por debajo sigue siendo Promises — el navegador las convierte automáticamente — pero la sintaxis se parece a código síncrono normal, lo que hace el código mucho más fácil de leer y de depurar.</p>
+<pre><code class="language-javascript">// Con Promises y .then()
+function cargarDatos() {
+    return obtenerUsuario(1)
+        .then(usuario =&gt; obtenerPedidos(usuario.id))
+        .then(pedidos =&gt; obtenerDetalles(pedidos[0].id))
+        .catch(error =&gt; console.error(error));
+}
+
+// Con async/await — exactamente lo mismo, diferente cara
+async function cargarDatos() {
+    try {
+        const usuario  = await obtenerUsuario(1);
+        const pedidos  = await obtenerPedidos(usuario.id);
+        const detalles = await obtenerDetalles(pedidos[0].id);
+        return detalles;
+    } catch (error) {
+        console.error(error);
+    }
+}
+</code></pre>
+<p><code>await</code> pausa la ejecución de la función <code>async</code> en ese punto y espera a que la Promise se resuelva. La función no bloquea el hilo principal — otras cosas pueden seguir ejecutándose mientras espera. Solo esa función está pausada.</p>
+<h3 id="las-funciones-async-siempre-devuelven-una-promise">Las funciones async siempre devuelven una Promise</h3>
+<p>Este es el punto que más confusión genera. Cuando declaras una función con <code>async</code>, aunque hagas <code>return</code> de un valor normal, JavaScript lo envuelve automáticamente en una Promise:</p>
+<pre><code class="language-javascript">async function obtenerNombre() {
+    return 'Lucía'; // Parece que devuelve un string...
+}
+
+const nombre = obtenerNombre();
+console.log(nombre); // Promise { 'Lucía' } — no es un string, es una Promise
+</code></pre>
+<p>Para acceder al valor tienes que esperarla:</p>
+<pre><code class="language-javascript">// Dentro de otra función async
+async function main() {
+    const nombre = await obtenerNombre();
+    console.log(nombre); // 'Lucía'
+}
+
+// Fuera de una función async
+obtenerNombre().then(nombre =&gt; console.log(nombre)); // 'Lucía'
+</code></pre>
+<p>Una función <code>async</code> no puede "escapar" de ser asíncrona. Si necesitas su valor, tienes que recibirlo de forma asíncrona también.</p>
+<h2 id="6-el-camino-completo">6. El camino completo</h2>
+<p>Ahora que tienes el contexto completo, tiene sentido ver la evolución:</p>
+<p><strong>1. Callbacks</strong> — el origen. Simples pero se vuelven inmanejables cuando se anidan.</p>
+<pre><code class="language-javascript">obtenerUsuario(1, usuario =&gt; {
+    obtenerPedidos(usuario.id, pedidos =&gt; {
+        // pirámide creciente...
+    });
+});
+</code></pre>
+<p><strong>2. Promises</strong> — resuelven el anidamiento con cadenas planas y un <code>.catch()</code> centralizado.</p>
+<pre><code class="language-javascript">obtenerUsuario(1)
+    .then(usuario =&gt; obtenerPedidos(usuario.id))
+    .then(pedidos =&gt; console.log(pedidos))
     .catch(error =&gt; console.error(error));
 </code></pre>
-<p><code>resolve</code> es lo que llamas cuando todo va bien — la promesa pasa a <em>fulfilled</em> y se ejecuta el <code>.then()</code>. <code>reject</code> es lo que llamas cuando algo falla — la promesa pasa a <em>rejected</em> y se ejecuta el <code>.catch()</code>.</p>
-<p>En la práctica, tú casi nunca creas Promises a mano. Lo que haces es consumir las que otras funciones ya crean para ti, como <code>fetch</code>.</p>
-<h2 id="fetch-api-hablar-con-el-mundo-exterior">Fetch API: hablar con el mundo exterior</h2>
-<p><code>fetch</code> es la función nativa de JavaScript para hacer peticiones HTTP. Le pasas una URL y te devuelve una Promise que, cuando se resuelve, contiene la respuesta del servidor.</p>
-<pre><code class="language-javascript">fetch('https://una-api.com/datos')
-    .then(response =&gt; response.json())
-    .then(data =&gt; console.log(data))
-    .catch(error =&gt; console.error('Error:', error));
+<p><strong>3. async/await</strong> — la misma lógica con la legibilidad del código síncrono.</p>
+<pre><code class="language-javascript">async function cargar() {
+    try {
+        const usuario = await obtenerUsuario(1);
+        const pedidos = await obtenerPedidos(usuario.id);
+        console.log(pedidos);
+    } catch (error) {
+        console.error(error);
+    }
+}
 </code></pre>
-<p>Hay dos <code>.then()</code> encadenados y eso puede despistar al principio. Esto es lo que hace cada uno:</p>
-<p>El primero recibe el objeto <code>response</code>, que es la respuesta HTTP en bruto. No contiene los datos todavía — contiene la respuesta del servidor, cabeceras incluidas. Para extraer el cuerpo como JSON llamamos a <code>response.json()</code>, que devuelve otra Promise.</p>
-<p>El segundo ya recibe los datos parseados, listos para usar.</p>
-<p>El <code>.catch()</code> captura cualquier error que ocurra en toda la cadena: si la red falla, si el servidor no responde, si el JSON está mal formado...</p>
-<h3 id="un-ejemplo-real-la-pokeapi">Un ejemplo real: la PokéAPI</h3>
-<p>Nada mejor que una API pública y gratuita para practicar. La <a href="https://pokeapi.co">PokéAPI</a> tiene datos de todos los Pokémon y no requiere registro ni autenticación.</p>
-<pre><code class="language-javascript">fetch('https://pokeapi.co/api/v2/pokemon/ditto')
-    .then(response =&gt; response.json())
-    .then(data =&gt; {
-        console.log('Nombre:', data.name);
-        console.log('Altura:', data.height);
-        console.log('Peso:', data.weight);
-    })
-    .catch(error =&gt; {
-        console.error('Error al obtener el Pokémon:', error);
-    });
-</code></pre>
-<p>Pruébalo en la consola del navegador ahora mismo. Si todo va bien deberías ver los datos de Ditto en décimas de segundo.</p>
-<h2 id="herramientas-que-te-haran-la-vida-mas-facil">Herramientas que te harán la vida más fácil</h2>
-<p><strong>Postman</strong> es una aplicación que te permite hacer peticiones HTTP de forma visual, sin escribir una línea de código. Sirve para explorar una API nueva antes de programar nada: ves exactamente qué datos devuelve, con qué estructura y qué campos tiene. Cuando ya entiendes la respuesta, escribes el <code>fetch</code> con confianza.</p>
-<p><strong>WebStorm</strong> detecta errores de sintaxis en JSON y JavaScript mientras escribes. Si asocias un JSON Schema a tus datos (como vimos en la sección anterior), también te avisa cuando la estructura no encaja.</p>
-<p><strong>JSON Schema Lint</strong> (<a href="https://jsonschemalint.com">jsonschemalint.com</a>) es un validador online para cuando necesitas comprobar rápidamente si un JSON es válido sin abrir el editor.</p>
-<h2 id="ejercicio-consulta-un-pokemon-desde-javascript">Ejercicio: consulta un Pokémon desde JavaScript</h2>
-<p>Vamos a construir un programa que consulte la PokéAPI, extraiga información relevante y gestione correctamente los errores.</p>
-<h3 id="lo-que-tiene-que-hacer">Lo que tiene que hacer</h3>
-<ol>
-<li>Pedir los datos de un Pokémon concreto a <code>https://pokeapi.co/api/v2/pokemon/{nombre}</code>.</li>
-<li>Mostrar en consola su nombre, altura, peso y tipos.</li>
-<li>Si el Pokémon no existe, mostrar un mensaje de error claro.</li>
-</ol>
-<h3 id="el-codigo">El código</h3>
-<pre><code class="language-javascript">const nombrePokemon = 'pikachu'; // Cambia esto para probar con otros
-
-fetch(`https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`)
-    .then(response =&gt; {
-        if (!response.ok) {
-            throw new Error(`Pokémon &quot;${nombrePokemon}&quot; no encontrado`);
-        }
-        return response.json();
-    })
-    .then(data =&gt; {
-        const tipos = data.types.map(tipoInfo =&gt; tipoInfo.type.name);
-
-        console.log('Nombre:', data.name);
-        console.log('Altura:', data.height, 'dm');
-        console.log('Peso:',   data.weight, 'hg');
-        console.log('Tipos:',  tipos.join(', '));
-    })
-    .catch(error =&gt; {
-        console.error('Error:', error.message);
-    });
-</code></pre>
-<p>Hay un detalle importante aquí que el ejemplo básico no tenía: <code>if (!response.ok)</code>. Cuando un servidor responde con un código de error HTTP (como <code>404</code> porque el Pokémon no existe), <code>fetch</code> <strong>no</strong> lanza un error automáticamente — la Promise se resuelve igualmente porque el servidor <em>sí</em> respondió. Eres tú quien tiene que comprobar si la respuesta fue exitosa y lanzar el error manualmente con <code>throw</code>.</p>
-<p>Si no haces esa comprobación, intentarás parsear como JSON una respuesta de error y obtendrás un fallo confuso en lugar de un mensaje útil.</p>
-<h3 id="resultado-esperado">Resultado esperado</h3>
-<pre><code>Nombre: pikachu
-Altura: 4 dm
-Peso: 60 hg
-Tipos: electric
-</code></pre>
-<h3 id="para-ir-mas-lejos">Para ir más lejos</h3>
-<p>Cuando tengas el ejercicio funcionando, prueba estas variaciones:</p>
-<ul>
-<li>Pide el nombre al usuario con <code>prompt()</code> en lugar de tenerlo hardcodeado.</li>
-<li>Muestra la imagen del Pokémon en la página usando <code>data.sprites.front_default</code>.</li>
-<li>Usa <code>toLowerCase()</code> sobre el nombre introducido para evitar problemas con mayúsculas.</li>
-<li>¿Qué pasa si buscas <code>"pikachuu"</code> con doble u? ¿El error se gestiona correctamente?</li>
-</ul>
+<p>Los tres mecanismos siguen conviviendo en el código real. Los callbacks no han desaparecido — <code>addEventListener</code>, <code>forEach</code>, <code>setTimeout</code> los siguen usando. Las Promises aparecen constantemente en librerías y en el código que devuelve <code>fetch</code>. Y <code>async/await</code> es lo que escribes tú cuando creas código nuevo.</p>
+<h2 id="7-para-practicar-antes-de-las-apis">7. Para practicar antes de las APIs</h2>
+<p>Antes de pasar a <code>fetch</code>, practica con <code>setTimeout</code> para sentirte cómodo con la asincronía sin la complejidad adicional de la red.</p>
+<p><strong>Ejercicio 1 — callbacks:</strong></p>
+<p>Escribe una función <code>esperar(tiempo, callback)</code> que llame al callback después de <code>tiempo</code> milisegundos. Úsala para encadenar tres mensajes con un segundo de diferencia entre cada uno.</p>
+<p><strong>Ejercicio 2 — Promises:</strong></p>
+<p>Convierte la función anterior para que devuelva una Promise en lugar de aceptar un callback. Encadena tres <code>esperar()</code> con <code>.then()</code>.</p>
+<p><strong>Ejercicio 3 — async/await:</strong></p>
+<p>Reescribe el ejercicio 2 usando <code>async/await</code> y <code>try/catch</code>. ¿Cuántas líneas menos necesitas?</p>
+<p>Cuando los tres ejercicios funcionen y entiendas por qué cada uno funciona como funciona, estás listo para las APIs.</p>
 
 
 
@@ -1214,8 +1391,13 @@ Tipos: electric
 
 
 
+  
+  
 
 
+
+
+  
 
 
 

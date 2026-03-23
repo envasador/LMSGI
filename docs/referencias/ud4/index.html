@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1688,8 +1688,63 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#15-la-desestructuracion-destructuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15 La desestructuración (destructuring)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepto-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepto básico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desestructuracion-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desestructuración de objetos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desestructuracion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desestructuración de arrays
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas principales
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3017,8 +3072,63 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#15-la-desestructuracion-destructuring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15 La desestructuración (destructuring)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepto-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepto básico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desestructuracion-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desestructuración de objetos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desestructuracion-de-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desestructuración de arrays
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas principales
+      
+    </span>
+  </a>
   
 </li>
       
@@ -4422,6 +4532,53 @@ const formateado = JSON.stringify(usuario, null, 2);
   &quot;edad&quot;: 25
 }
 */
+</code></pre>
+<h3 id="15-la-desestructuracion-destructuring">15 La desestructuración (destructuring)</h3>
+<p>Es una expresión de JavaScript introducida en ES6 que permite desempacar valores de arrays o propiedades de objetos en variables distintas de manera sencilla y en una sola línea.</p>
+<h2 id="concepto-basico">Concepto básico</h2>
+<p>La desestructuración te permite extraer datos de estructuras complejas (arrays, objetos, mapas y sets) y crear nuevas variables con esos datos de forma directa, sin tener que acceder a cada elemento individualmente.</p>
+<h2 id="desestructuracion-de-objetos">Desestructuración de objetos</h2>
+<p>Usa llaves <code>{}</code> en el lado izquierdo de una asignación para indicar que estás desestructurando un objeto: <a href="https://lenguajejs.com/javascript/objetos/desestructuracion-objetos/">lenguajejs</a></p>
+<pre><code class="language-javascript">const usuario = {
+  firstName: &quot;Juan&quot;,
+  lastName: &quot;Pérez&quot;,
+  age: 30
+};
+
+const { firstName, lastName } = usuario;
+console.log(firstName); // &quot;Juan&quot;
+console.log(lastName);  // &quot;Pérez&quot;
+</code></pre>
+<p>Puedes asignar valores por defecto y renombrar variables: </p>
+<pre><code class="language-javascript">const { firstName: nombre, age: edad = 18 } = usuario;
+console.log(nombre); // &quot;Juan&quot;
+console.log(edad);   // 30
+</code></pre>
+<h2 id="desestructuracion-de-arrays">Desestructuración de arrays</h2>
+<p>Usa corchetes <code>[]</code> y se basa en la posición de los elementos en el array: </p>
+<pre><code class="language-javascript">const colores = [&quot;rojo&quot;, &quot;amarillo&quot;, &quot;verde&quot;];
+
+const [primero, segundo, tercero] = colores;
+console.log(primero);  // &quot;rojo&quot;
+console.log(segundo);  // &quot;amarillo&quot;
+</code></pre>
+<p>Puedes "saltarte" elementos que no te interesan dejando espacios vacíos: </p>
+<pre><code class="language-javascript">const [primero, , tercero] = colores;
+console.log(primero);  // &quot;rojo&quot;
+console.log(tercero);  // &quot;verde&quot;
+</code></pre>
+<h2 id="ventajas-principales">Ventajas principales</h2>
+<ul>
+<li><strong>Menos código</strong>: Extraes múltiples valores en una sola línea en lugar de hacer múltiples asignaciones </li>
+<li><strong>Mayor legibilidad</strong>: El código es más claro y expresivo</li>
+<li><strong>Útil en funciones</strong>: Puedes desestructurar parámetros directamente: </li>
+</ul>
+<pre><code class="language-javascript">function mostrarMenu({ title = &quot;Sin título&quot;, width = 200, height = 100 }) {
+  console.log(`${title} ${width} ${height}`);
+}
+
+mostrarMenu({ title: &quot;Mi Menú&quot;, width: 300 }); 
+// &quot;Mi Menú 300 100&quot;
 </code></pre>
 <hr />
 <h2 id="15-recursos-y-referencias">15. Recursos y referencias</h2>
