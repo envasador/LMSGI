@@ -140,7 +140,7 @@ Tienes que crear y entregar:
 
 **`juegos.xsd`** — XSD que valide `juegos.xml`. Debe:
 - Reflejar la estructura: `<saga>` contiene uno o más `<juego>`, y cada `<juego>` sus campos.
-- Definir `anio` y `puntuacion` como `xs:integer` y el resto como `xs:string`.
+- Definir `anio` y `puntuacion` como entero y el resto como string.
 - Estar enlazado en el `juegos.xml` con `xsi:noNamespaceSchemaLocation`.
 
 Incluye en el README evidencia de validación de ambos: una captura de pantalla o la salida del validador es suficiente.
