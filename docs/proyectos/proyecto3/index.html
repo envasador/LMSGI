@@ -1,0 +1,1597 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../proyecto2-recuperacion/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/sello-rafael-alberti-imago-blanco.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Proyecto 3 - Lenguajes de Marcas - Proyectos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheet/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proyecto-enciclopedia-hyrule-api-esquemas-y-transformacion-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Lenguajes de Marcas - Proyectos" class="md-header__button md-logo" aria-label="Lenguajes de Marcas - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lenguajes de Marcas - Proyectos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proyecto 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="daw-style" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Proyecto 1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Proyecto 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../proyecto2-recuperacion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Proyecto 2 [Recuperación proyecto 1]
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Proyecto 3
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenguajes de Marcas - Proyectos" class="md-nav__button md-logo" aria-label="Lenguajes de Marcas - Proyectos" data-md-component="logo">
+      
+  <img src="../assets/sello-rafael-alberti-imago-blanco.svg" alt="logo">
+
+    </a>
+    Lenguajes de Marcas - Proyectos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyecto2-recuperacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 2 [Recuperación proyecto 1]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-encargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El encargo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#punto-de-partida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punto de partida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-tienes-que-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que tienes que construir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lo que tienes que construir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloque-1-buscador-con-la-zelda-api-y-almacenamiento-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 1 — Buscador con la Zelda API y almacenamiento local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-2-importacion-del-catalogo-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 2 — Importación del catálogo XML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-3-validacion-con-esquemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 3 — Validación con esquemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El README
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rúbrica de evaluación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rúbrica de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ra4-mecanismos-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA4 — Mecanismos de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ra5-conversion-de-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA5 — Conversión de documentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ra6-gestion-de-informacion-e-intercambio-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA6 — Gestión de información e intercambio de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-sobre-el-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nota sobre el Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el-encargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El encargo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#punto-de-partida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punto de partida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-que-tienes-que-construir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lo que tienes que construir
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lo que tienes que construir">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloque-1-buscador-con-la-zelda-api-y-almacenamiento-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 1 — Buscador con la Zelda API y almacenamiento local
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-2-importacion-del-catalogo-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 2 — Importación del catálogo XML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-3-validacion-con-esquemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloque 3 — Validación con esquemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estructura-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructura del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El README
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rúbrica de evaluación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rúbrica de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ra4-mecanismos-de-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA4 — Mecanismos de validación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ra5-conversion-de-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA5 — Conversión de documentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ra6-gestion-de-informacion-e-intercambio-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RA6 — Gestión de información e intercambio de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nota-sobre-el-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nota sobre el Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="proyecto-enciclopedia-hyrule-api-esquemas-y-transformacion-de-datos">Proyecto — Enciclopedia Hyrule: API, esquemas y transformación de datos</h1>
+<p><strong>Resultados de aprendizaje evaluados:</strong> RA4 (b,c,d,e,f) · RA5 (c,e,f,g) · RA6 (a,b,d,e)<br />
+<strong>Entrega:</strong> Repositorio Git con README<br />
+<strong>Plazo:</strong> Un mes. Fecha límite de entrega: se comunicará en el aula.</p>
+<h2 id="el-encargo">El encargo</h2>
+<p>Una startup quiere lanzar una enciclopedia web sobre el universo de The Legend of Zelda. La idea es construir un sitio donde los fans puedan buscar personajes y monstruos de toda la saga, guardar sus favoritos y exportar datos para compartirlos.</p>
+<p>El equipo de contenido ya tiene preparado un archivo XML con información básica de los juegos principales de la saga — datos que migrarán al nuevo sistema. Tu trabajo es construir la aplicación web que integre la API externa, gestione el almacenamiento local y procese ese XML heredado.</p>
+<p>La API que usaréis es la <strong>Zelda API</strong> (<a href="https://zelda.fanapis.com">zelda.fanapis.com</a>), completamente gratuita y sin necesidad de registro ni API key.</p>
+<h2 id="punto-de-partida">Punto de partida</h2>
+<p>La documentación oficial de la Zelda API está en <code>https://docs.zelda.fanapis.com</code>. Léela, explora los endpoints disponibles y entiende qué devuelve cada uno antes de escribir código. Usa Postman o Hoppscotch (<a href="https://hoppscotch.io">hoppscotch.io</a>) para probar las peticiones directamente y ver la estructura real de las respuestas.</p>
+<p>Esa fase de investigación forma parte del trabajo y se espera que quede reflejada en el README: qué endpoints exploraste, cuáles decidiste usar y por qué.</p>
+<h2 id="lo-que-tienes-que-construir">Lo que tienes que construir</h2>
+<p>La aplicación tiene tres bloques funcionales que deben estar integrados en una misma interfaz web.</p>
+<h3 id="bloque-1-buscador-con-la-zelda-api-y-almacenamiento-local">Bloque 1 — Buscador con la Zelda API y almacenamiento local</h3>
+<p>La aplicación debe permitir buscar tanto <strong>personajes</strong> como <strong>monstruos</strong> de la saga.</p>
+<p>Funcionalidades requeridas:</p>
+<ul>
+<li>Campo de texto para buscar por nombre, con selector para elegir si se busca entre personajes o monstruos.</li>
+<li>Mostrar los resultados en tarjetas con nombre, descripción y, si está disponible, raza y género (en el caso de personajes).</li>
+<li>Guardar en localStorage como caché los resultados de cada búsqueda, evitando peticiones repetidas a la misma consulta.</li>
+<li>Permitir añadir elementos a una lista de favoritos que persista entre recargas.</li>
+<li>Permitir eliminar elementos de favoritos de forma individual y vaciar la lista completa.</li>
+<li>Al cargar la página, mostrar los favoritos guardados sin hacer ninguna petición a la API.</li>
+</ul>
+<p>La interfaz debe gestionar correctamente todos los casos posibles que pueda devolver la API.</p>
+<h3 id="bloque-2-importacion-del-catalogo-xml">Bloque 2 — Importación del catálogo XML</h3>
+<p>El equipo de contenido te entrega este XML con los juegos principales de la saga. Debe estar incluido en tu repositorio como <code>juegos.xml</code>:</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;saga nombre=&quot;The Legend of Zelda&quot;&gt;
+    &lt;juego id=&quot;001&quot;&gt;
+        &lt;titulo&gt;The Legend of Zelda: Ocarina of Time&lt;/titulo&gt;
+        &lt;desarrolladora&gt;Nintendo EAD&lt;/desarrolladora&gt;
+        &lt;publicadora&gt;Nintendo&lt;/publicadora&gt;
+        &lt;plataforma&gt;Nintendo 64&lt;/plataforma&gt;
+        &lt;anio&gt;1998&lt;/anio&gt;
+        &lt;puntuacion&gt;99&lt;/puntuacion&gt;
+    &lt;/juego&gt;
+    &lt;juego id=&quot;002&quot;&gt;
+        &lt;titulo&gt;The Legend of Zelda: Breath of the Wild&lt;/titulo&gt;
+        &lt;desarrolladora&gt;Nintendo EPD&lt;/desarrolladora&gt;
+        &lt;publicadora&gt;Nintendo&lt;/publicadora&gt;
+        &lt;plataforma&gt;Nintendo Switch&lt;/plataforma&gt;
+        &lt;anio&gt;2017&lt;/anio&gt;
+        &lt;puntuacion&gt;97&lt;/puntuacion&gt;
+    &lt;/juego&gt;
+    &lt;juego id=&quot;003&quot;&gt;
+        &lt;titulo&gt;The Legend of Zelda: Majora's Mask&lt;/titulo&gt;
+        &lt;desarrolladora&gt;Nintendo EAD&lt;/desarrolladora&gt;
+        &lt;publicadora&gt;Nintendo&lt;/publicadora&gt;
+        &lt;plataforma&gt;Nintendo 64&lt;/plataforma&gt;
+        &lt;anio&gt;2000&lt;/anio&gt;
+        &lt;puntuacion&gt;95&lt;/puntuacion&gt;
+    &lt;/juego&gt;
+    &lt;juego id=&quot;004&quot;&gt;
+        &lt;titulo&gt;The Legend of Zelda: A Link to the Past&lt;/titulo&gt;
+        &lt;desarrolladora&gt;Nintendo EAD&lt;/desarrolladora&gt;
+        &lt;publicadora&gt;Nintendo&lt;/publicadora&gt;
+        &lt;plataforma&gt;Super Nintendo&lt;/plataforma&gt;
+        &lt;anio&gt;1991&lt;/anio&gt;
+        &lt;puntuacion&gt;95&lt;/puntuacion&gt;
+    &lt;/juego&gt;
+    &lt;juego id=&quot;005&quot;&gt;
+        &lt;titulo&gt;The Legend of Zelda: Tears of the Kingdom&lt;/titulo&gt;
+        &lt;desarrolladora&gt;Nintendo EPD&lt;/desarrolladora&gt;
+        &lt;publicadora&gt;Nintendo&lt;/publicadora&gt;
+        &lt;plataforma&gt;Nintendo Switch&lt;/plataforma&gt;
+        &lt;anio&gt;2023&lt;/anio&gt;
+        &lt;puntuacion&gt;96&lt;/puntuacion&gt;
+    &lt;/juego&gt;
+&lt;/saga&gt;
+</code></pre>
+<p>La aplicación debe:</p>
+<ul>
+<li>Leer el XML y convertirlo a JSON usando JavaScript con <code>DOMParser</code>.</li>
+<li>Mostrar el catálogo en la interfaz como una tabla o lista de tarjetas.</li>
+<li>Incluir el atributo <code>id</code> de cada juego en la conversión.</li>
+<li>Convertir <code>anio</code> y <code>puntuacion</code> a números, no dejarlos como strings.</li>
+<li>Permitir exportar el catálogo convertido a un archivo CSV descargable.</li>
+</ul>
+<h3 id="bloque-3-validacion-con-esquemas">Bloque 3 — Validación con esquemas</h3>
+<p>Antes de procesar cualquier dato, la aplicación debe validar que tiene la estructura correcta. Tienes que crear y entregar:</p>
+<p><strong><code>personaje_schema.json</code></strong> — JSON Schema que valide la estructura de un personaje devuelto por la Zelda API. El esquema debe incluir al menos:
+- <code>name</code>: string, obligatorio.
+- <code>description</code>: string, obligatorio.
+- <code>gender</code>: string o null.
+- <code>race</code>: string o null.
+- <code>appearances</code>: array, obligatorio.</p>
+<p>Marca como <code>required</code> los campos que consideres imprescindibles y justifica tu decisión en el README.</p>
+<p><strong><code>juegos.xsd</code></strong> — XSD que valide el archivo <code>juegos.xml</code>. Debe:
+- Definir <code>anio</code> y <code>puntuacion</code> como enteros.
+- Definir el resto de campos como strings.
+- Reflejar la estructura anidada: <code>&lt;saga&gt;</code> contiene uno o más <code>&lt;juego&gt;</code>, y cada <code>&lt;juego&gt;</code> contiene sus campos.
+- Estar enlazado correctamente en el <code>juegos.xml</code>.</p>
+<p>Incluye en el README evidencia de validación de ambos archivos (capturas o descripción del proceso).</p>
+<p>--</p>
+<h2 id="estructura-del-repositorio">Estructura del repositorio</h2>
+<pre><code>/
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── api.js          — fetch a la Zelda API y caché
+│   ├── storage.js      — funciones de localStorage
+│   ├── transform.js    — conversión XML→JSON y JSON→CSV
+│   └── ui.js           — manipulación del DOM y render
+├── data/
+│   ├── juegos.xml
+│   └── juegos.xsd
+├── schemas/
+│   └── personaje_schema.json
+└── README.md
+</code></pre>
+<p>La organización exacta es flexible, pero la separación entre responsabilidades debe ser clara. No pongas toda la lógica en un único archivo.</p>
+<h2 id="el-readme">El README</h2>
+<p>El README es parte evaluable del proyecto. Debe incluir estas secciones:</p>
+<p><strong>Descripción del proyecto</strong> — qué hace la aplicación y para qué sirve.</p>
+<p><strong>Tecnologías y herramientas</strong> — qué has usado y por qué. Menciona las alternativas que consideraste.</p>
+<p><strong>La Zelda API</strong> — explica qué endpoints has utilizado, qué datos devuelven y cómo los has integrado. Incluye un ejemplo real de respuesta de la API y explica qué campos has usado de ella.</p>
+<p><strong>Formatos de datos</strong> — explica con tus propias palabras qué es JSON, XML y CSV, en qué se diferencian y cuándo usarías cada uno. Conéctalo con decisiones concretas del proyecto: <em>"usé XML para... porque... y JSON para... porque..."</em></p>
+<p><strong>Esquemas</strong> — explica qué valida el JSON Schema y qué valida el XSD. Incluye evidencia de validación de ambos.</p>
+<p><strong>Almacenamiento</strong> — sección dedicada a:
+- Cómo usas localStorage en el proyecto y qué limitaciones tiene.
+- Qué alternativas existen (sessionStorage, cookies, base de datos en servidor) y cuándo usarías cada una.
+- Por qué localStorage no sería suficiente para un sistema en producción real.</p>
+<p><strong>Decisiones técnicas</strong> — al menos dos decisiones que tomaste explicando el razonamiento: por qué estructuraste el código así, qué problema encontraste y cómo lo resolviste, por qué elegiste una herramienta sobre otra.</p>
+<p><strong>Instrucciones de uso</strong> — cómo ejecutar el proyecto localmente.</p>
+<h2 id="criterios-de-entrega">Criterios de entrega</h2>
+<ul>
+<li>El repositorio debe tener al menos <strong>20 commits</strong> con mensajes descriptivos que reflejen el avance real. Un único commit con todo el código no es aceptable.</li>
+<li>El proyecto debe funcionar abriendo <code>index.html</code> directamente en un navegador, sin servidor local.</li>
+<li>El código debe usar <code>async/await</code> para todas las operaciones asíncronas.</li>
+<li>No se permite el uso de <code>alert()</code>, <code>confirm()</code> ni <code>prompt()</code> para mostrar información al usuario.</li>
+<li>El manejo de errores debe ser visible en la interfaz — si la búsqueda no encuentra resultados o falla la red, el usuario debe verlo, no la consola.</li>
+</ul>
+<h2 id="rubrica-de-evaluacion">Rúbrica de evaluación</h2>
+<p>La calificación de cada criterio sigue la escala: <strong>10</strong> (Excelente) · <strong>8</strong> (Notable) · <strong>6</strong> (Aprobado) · <strong>4</strong> (Insuficiente) · <strong>2</strong> (Deficiente) · <strong>0</strong> (No realizado).</p>
+<h3 id="ra4-mecanismos-de-validacion">RA4 — Mecanismos de validación</h3>
+<p><strong>4b — Identifica tecnologías relacionadas con la validación (XML, JSON, esquemas)</strong><br />
+Se evalúa mediante el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README explica con precisión qué son XML, JSON, XSD y JSON Schema, diferencia sus propósitos y justifica cuándo usar cada uno con ejemplos concretos del proyecto.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Explica correctamente las tecnologías con alguna imprecisión menor o falta de conexión con el proyecto.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Menciona todas las tecnologías pero las explicaciones son superficiales o copiadas de los apuntes sin reelaboración.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Solo menciona algunas tecnologías o las confunde entre sí.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El README apenas toca este apartado.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay información sobre tecnologías de validación en el README.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4c — Analiza la estructura y sintaxis de los esquemas</strong><br />
+Se evalúa mediante <code>personaje_schema.json</code> y <code>juegos.xsd</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>Ambos esquemas son correctos y usan tipos adecuados. El XSD usa <code>xs:sequence</code>, define <code>anio</code> y <code>puntuacion</code> como <code>xs:integer</code> y refleja la estructura anidada correctamente. El JSON Schema usa <code>required</code>, permite <code>null</code> en los campos opcionales y está bien estructurado.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Ambos esquemas son correctos con alguna carencia menor (un tipo genérico donde podría ser más específico, o falta permitir <code>null</code> explícitamente).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Los esquemas funcionan pero son básicos: tipos correctos pero sin reflejar correctamente la estructura o sin restricciones adicionales.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Uno de los dos esquemas está ausente o tiene errores estructurales que impiden la validación.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Los esquemas existen pero no son funcionales o tienen errores graves de sintaxis.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay esquemas en el repositorio.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4d — Utiliza herramientas específicas para crear esquemas</strong><br />
+Se evalúa mediante los archivos entregados y el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README menciona las herramientas usadas (VS Code, WebStorm, validadores online). Los esquemas evidencian uso correcto: formato correcto, sin errores de sintaxis, tipado cuidado.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Se mencionan herramientas y los esquemas son correctos, aunque la documentación del proceso es escueta.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Los esquemas son funcionales pero no hay documentación sobre el proceso de creación.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Se mencionan herramientas pero los esquemas tienen errores que contradicen su uso efectivo.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>No hay documentación sobre herramientas.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay evidencia de uso de herramientas para crear esquemas.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4e — Asocia esquemas con documentos XML y JSON</strong><br />
+Se evalúa mediante el enlace XSD en <code>juegos.xml</code> y la referencia al JSON Schema en el README o en el código.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td><code>juegos.xml</code> enlaza correctamente el XSD con <code>xsi:noNamespaceSchemaLocation</code>. El README explica cómo se usa el JSON Schema para validar la estructura de los personajes recibidos de la API.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>El enlace XML→XSD es correcto. La asociación del JSON Schema está documentada aunque no se valide en runtime.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Solo uno de los dos está correctamente asociado y documentado.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Las asociaciones existen pero tienen errores que impiden la validación.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Los esquemas están en el repositorio pero no están asociados a ningún documento.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay asociación entre esquemas y documentos.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4f — Utiliza herramientas de validación</strong><br />
+Se evalúa mediante evidencia en el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README incluye evidencia clara de validación de ambos formatos: qué herramienta usó, qué validó y cuál fue el resultado. Capturas o logs de ambas validaciones.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hay evidencia de validación de ambos formatos aunque la descripción del proceso es incompleta.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Solo se evidencia la validación de uno de los dos formatos.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hay mención a validación pero sin evidencia concreta.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La validación no está documentada.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay evidencia ni mención de validación.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ra5-conversion-de-documentos">RA5 — Conversión de documentos</h3>
+<p><strong>5c — Analiza las tecnologías implicadas en la conversión</strong><br />
+Se evalúa mediante el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README explica por qué se usa <code>DOMParser</code> para la conversión XML→JSON, menciona <code>xml2js</code> como alternativa para Node.js y justifica la elección. Explica también el proceso de exportación a CSV y menciona <code>PapaParse</code> como alternativa más robusta.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Explica las tecnologías usadas con alguna omisión en las alternativas o la justificación.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Menciona las tecnologías sin profundizar en la elección.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Solo menciona las tecnologías usadas sin ningún análisis.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El README apenas toca este apartado.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay análisis de tecnologías de conversión.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5e — Realiza conversiones XML→JSON</strong><br />
+Se evalúa mediante el Bloque 2 de la aplicación.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>La conversión funciona correctamente para todos los juegos. El atributo <code>id</code> del elemento <code>&lt;juego&gt;</code> se incluye en el JSON resultante. <code>anio</code> y <code>puntuacion</code> se convierten a número. Los datos se muestran correctamente en la interfaz.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>La conversión funciona con alguna omisión: el <code>id</code> no se incluye, o los tipos numéricos no se convierten.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>La conversión funciona pero todos los valores llegan como strings, o no se muestran en la interfaz.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La conversión tiene errores que impiden mostrar algunos juegos correctamente.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hay código de conversión pero no funciona.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay conversión XML→JSON.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5f — Identifica herramientas de conversión disponibles</strong><br />
+Se evalúa mediante el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README describe al menos tres herramientas de conversión (<code>DOMParser</code>, <code>xml2js</code>, <code>PapaParse</code>, <code>fast-xml-parser</code>) con sus ventajas, limitaciones y cuándo usaría cada una.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Menciona al menos dos herramientas con sus características principales.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Menciona las herramientas usadas en el proyecto pero no compara alternativas.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Solo menciona una herramienta sin contexto.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Apenas hay información sobre herramientas en el README.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay mención a herramientas de conversión.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5g — Realiza conversiones en distintos formatos</strong><br />
+Se evalúa mediante la funcionalidad de exportación a CSV.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>La exportación a CSV funciona: el archivo descargado tiene cabecera con todos los campos, todas las filas del catálogo, y es abriblemente por Excel sin errores. <code>anio</code> y <code>puntuacion</code> aparecen como números.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>La exportación funciona con alguna carencia menor (falta un campo, o los números aparecen como texto).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>La exportación genera un CSV básico pero con errores o campos incompletos.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>El código de exportación existe pero el archivo generado no es válido o no se puede descargar.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hay intento de exportación pero no funciona.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay exportación a CSV.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ra6-gestion-de-informacion-e-intercambio-de-datos">RA6 — Gestión de información e intercambio de datos</h3>
+<p><strong>6a — Identifica ventajas e inconvenientes de almacenar información</strong><br />
+Se evalúa mediante el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README compara localStorage, sessionStorage, cookies y base de datos en servidor. Para cada opción indica cuándo es apropiada, sus limitaciones y un ejemplo de uso real. La reflexión sobre por qué localStorage no es suficiente para producción es precisa y argumentada.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Compara al menos tres opciones con sus ventajas e inconvenientes. La reflexión sobre producción está presente pero es menos elaborada.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Menciona las opciones pero las explicaciones son superficiales.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Solo habla de localStorage sin comparar con alternativas.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hay una mención breve al almacenamiento pero sin análisis.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay sección de almacenamiento en el README.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>6b — Analiza tecnologías de almacenamiento</strong><br />
+Se evalúa mediante la implementación de localStorage en el código.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El código usa localStorage correctamente: caché de búsquedas a la API con clave descriptiva, lista de favoritos persistente, funciones encapsuladas en <code>storage.js</code> para leer/escribir/borrar, y gestión del caso <code>null</code> en <code>getItem</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>El uso de localStorage es correcto para los casos principales con alguna carencia (no se gestiona el <code>null</code>, o no está encapsulado).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>localStorage funciona para favoritos pero no hay caché de la API, o el código es correcto pero no está organizado.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>localStorage se usa pero con errores: <code>JSON.parse(null)</code> sin comprobar, pérdida de datos, etc.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hay intentos de uso de localStorage pero no funciona correctamente.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No se usa localStorage en el proyecto.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>6d — Identifica lenguajes y herramientas para el tratamiento de APIs REST</strong><br />
+Se evalúa mediante el README.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El README explica qué es una API REST, qué endpoints de la Zelda API usa y por qué, describe <code>fetch</code> y menciona Axios como alternativa, explica los parámetros de la API (<code>limit</code>, <code>page</code>, <code>name</code>) y qué son los códigos de estado HTTP con ejemplos del proyecto.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Explica correctamente <code>fetch</code> y la API con alguna omisión (no menciona Axios, o los códigos de estado son muy superficiales).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Hay una explicación básica de la API y de <code>fetch</code> sin profundidad técnica.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Solo menciona que se usa una API sin explicar cómo ni qué herramientas implica.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El README apenas toca este apartado.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay información sobre APIs REST en el README.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>6e — Utiliza lenguajes de consulta y manipulación de APIs REST</strong><br />
+Se evalúa mediante el Bloque 1 de la aplicación.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>El código usa <code>fetch</code> con <code>async/await</code>, comprueba <code>response.ok</code>, gestiona el caso de que <code>data</code> llegue vacío, lanza errores con <code>throw</code> cuando procede y muestra mensajes útiles al usuario en la interfaz. La caché evita peticiones repetidas a la misma búsqueda. Los resultados múltiples se muestran correctamente.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>fetch</code> funciona con <code>async/await</code> y gestión de errores, pero la caché está ausente o no gestiona correctamente los resultados múltiples.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>fetch</code> funciona para el caso normal pero no comprueba <code>response.ok</code> o no gestiona el caso de array vacío.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>fetch</code> funciona pero no gestiona errores o se cuelga cuando la búsqueda no devuelve resultados.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hay código de <code>fetch</code> pero tiene errores que impiden su funcionamiento.</td>
+</tr>
+<tr>
+<td>0</td>
+<td>No hay consumo de API en el proyecto.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nota-sobre-el-git">Nota sobre el Git</h2>
+<p>El historial de commits es parte de la entrega. Se valorará un desarrollo progresivo con commits pequeños y descriptivos:</p>
+<pre><code>✅ feat: búsqueda de personajes con fetch y caché en localStorage
+✅ feat: búsqueda de monstruos y selector de tipo
+✅ feat: sistema de favoritos persistente
+✅ feat: importar juegos.xml y convertir a JSON
+✅ feat: exportar catálogo a CSV descargable
+✅ feat: crear JSON Schema para personajes de la Zelda API
+✅ feat: crear XSD y enlazarlo en juegos.xml
+✅ docs: README completo con sección de almacenamiento y esquemas
+
+❌ first commit
+❌ subida proyecto
+❌ cambios varios
+</code></pre>
+<p>Un historial con mensajes genéricos o todo en un único commit contará negativamente en los criterios que evalúan esas partes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://twitter.com/iesalberticadiz" target="_blank" rel="noopener" title="IES Rafael Alberti en Twitter" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/IES-Rafael-Alberti/digitalizacion-gs" target="_blank" rel="noopener" title="Repositorio del módulo" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
