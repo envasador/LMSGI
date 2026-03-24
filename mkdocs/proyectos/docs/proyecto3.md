@@ -1,45 +1,82 @@
-# Proyecto — Enciclopedia Hyrule: API, esquemas y transformación de datos
+# Proyecto — Enciclopedia Hyrule: API, esquemas y almacenamiento
 
 **Resultados de aprendizaje evaluados:** RA4 (b,c,d,e,f) · RA5 (c,e,f,g) · RA6 (a,b,d,e)  
 **Entrega:** Repositorio Git con README  
-**Plazo:** Un mes. Fecha límite de entrega: se comunicará en el aula.
+**Plazo:** 26 de abril de 2026
 
 ## El encargo
 
-Una startup quiere lanzar una enciclopedia web sobre el universo de The Legend of Zelda. La idea es construir un sitio donde los fans puedan buscar personajes y monstruos de toda la saga, guardar sus favoritos y exportar datos para compartirlos.
+Una startup quiere lanzar una enciclopedia web sobre el universo de The Legend of Zelda. La idea es construir un sitio donde los fans puedan buscar personajes y criaturas de toda la saga, guardar sus favoritos en la nube y exportar datos del catálogo de juegos.
 
-El equipo de contenido ya tiene preparado un archivo XML con información básica de los juegos principales de la saga — datos que migrarán al nuevo sistema. Tu trabajo es construir la aplicación web que integre la API externa, gestione el almacenamiento local y procese ese XML heredado.
+El equipo de contenido ya tiene preparado un archivo XML con información básica de los juegos principales — datos que migrarán al nuevo sistema. Tu trabajo es construir la aplicación web que integre la API externa, gestione el almacenamiento y procese ese XML heredado.
 
-La API que usaréis es la **Zelda API** ([zelda.fanapis.com](https://zelda.fanapis.com)), completamente gratuita y sin necesidad de registro ni API key.
+La aplicación usará **dos capas de almacenamiento** con propósitos distintos:
+
+- **localStorage** — para cachear los resultados de búsqueda y evitar peticiones repetidas a la API.
+- **Firebase Firestore** — para guardar los favoritos del usuario en la nube, persistentes entre dispositivos y sesiones.
+
+Esa distinción no es arbitraria: tiene que quedar explicada y justificada en el README.
 
 ## Punto de partida
 
-La documentación oficial de la Zelda API está en `https://docs.zelda.fanapis.com`. Léela, explora los endpoints disponibles y entiende qué devuelve cada uno antes de escribir código. Usa Postman o Hoppscotch ([hoppscotch.io](https://hoppscotch.io)) para probar las peticiones directamente y ver la estructura real de las respuestas.
+**Zelda API:** `https://zelda.fanapis.com` · Documentación: `https://docs.zelda.fanapis.com`
 
-Esa fase de investigación forma parte del trabajo y se espera que quede reflejada en el README: qué endpoints exploraste, cuáles decidiste usar y por qué.
+Léela, explora los endpoints disponibles y entiende qué devuelve cada uno antes de escribir código. Usa Postman o Hoppscotch ([hoppscotch.io](https://hoppscotch.io)) para probar las peticiones y ver la estructura real de las respuestas.
+
+**Firebase:** `https://firebase.google.com`
+
+Usa una cuenta de Google, accede a la consola de Firebase y crea un proyecto nuevo. Dentro del proyecto, activa **Cloud Firestore** en modo test. Registra una aplicación web y copia la configuración — la necesitarás para conectar tu código.
+
+Ambas fases de investigación forman parte del trabajo y deben quedar reflejadas en el README.
 
 ## Lo que tienes que construir
 
-La aplicación tiene tres bloques funcionales que deben estar integrados en una misma interfaz web.
+La aplicación tiene cuatro bloques funcionales integrados en una misma interfaz web.
 
-### Bloque 1 — Buscador con la Zelda API y almacenamiento local
+### Bloque 1 — Buscador con la Zelda API
 
-La aplicación debe permitir buscar tanto **personajes** como **monstruos** de la saga.
+El buscador permite explorar el universo de Zelda consultando la API en tiempo real:
 
-Funcionalidades requeridas:
+- La búsqueda se lanza automáticamente mientras el usuario escribe, sin botón. Para no saturar la API con cada pulsación, implementa un **debounce**: espera a que el usuario deje de escribir un momento antes de lanzar la petición.
+- Un selector permite elegir el **tipo de entidad** a buscar. Explora la documentación y decide qué endpoints incluyes — como mínimo dos tipos diferentes.
+- Los resultados se muestran en tarjetas con la información relevante. Qué campos mostrar depende del tipo: cada endpoint devuelve una estructura diferente y tendrás que adaptarte.
+- Cada búsqueda se guarda en **localStorage como caché**, usando una clave que combine el tipo y el término buscado. Si el usuario repite la misma búsqueda, se devuelve el dato local sin petición a la API.
+- La interfaz debe gestionar correctamente todos los estados posibles: cargando, sin resultados, error de red.
 
-- Campo de texto para buscar por nombre, con selector para elegir si se busca entre personajes o monstruos.
-- Mostrar los resultados en tarjetas con nombre, descripción y, si está disponible, raza y género (en el caso de personajes).
-- Guardar en localStorage como caché los resultados de cada búsqueda, evitando peticiones repetidas a la misma consulta.
-- Permitir añadir elementos a una lista de favoritos que persista entre recargas.
-- Permitir eliminar elementos de favoritos de forma individual y vaciar la lista completa.
-- Al cargar la página, mostrar los favoritos guardados sin hacer ninguna petición a la API.
+### Bloque 2 — Gestor de favoritos con Firebase
 
-La interfaz debe gestionar correctamente todos los casos posibles que pueda devolver la API.
+Los favoritos se almacenan en **Firebase Firestore**, no en localStorage. Eso significa que si el usuario abre la aplicación desde otro dispositivo, sus favoritos estarán ahí.
 
-### Bloque 2 — Importación del catálogo XML
+- Cualquier resultado del buscador puede añadirse a favoritos con un clic. Si ya está guardado, el mismo botón lo elimina.
+- Al cargar la página, los favoritos se recuperan desde Firestore y se muestran en la interfaz.
+- La lista puede **ordenarse** por nombre (A-Z, Z-A) y por fecha de adición (más reciente, más antiguo).
+- La lista puede **filtrarse** por tipo de entidad sin borrar los demás favoritos.
+- Cada favorito puede eliminarse individualmente. También existe opción de vaciar toda la lista.
+- Las operaciones con Firestore — leer, añadir, eliminar — usan `async/await` y gestionan los errores correctamente.
 
-El equipo de contenido te entrega este XML con los juegos principales de la saga. Debe estar incluido en tu repositorio como `juegos.xml`:
+Para conectar Firebase desde el navegador sin servidor, incluye el SDK desde CDN:
+
+```html
+<script type="module">
+    import { initializeApp }
+        from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc }
+        from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        // Tu configuración aquí — obtenla en la consola de Firebase
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db  = getFirestore(app);
+</script>
+```
+
+> **Sobre las reglas de seguridad:** Firestore en modo test permite lectura y escritura sin autenticación durante 30 días, suficiente para el proyecto. En el README debes explicar qué implica eso y cómo se gestionaría la seguridad en un sistema real.
+
+### Bloque 3 — Importación del catálogo XML
+
+El equipo de contenido te entrega este XML. Inclúyelo en tu repositorio como `juegos.xml`:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -89,34 +126,24 @@ El equipo de contenido te entrega este XML con los juegos principales de la saga
 
 La aplicación debe:
 
-- Leer el XML y convertirlo a JSON usando JavaScript con `DOMParser`.
-- Mostrar el catálogo en la interfaz como una tabla o lista de tarjetas.
-- Incluir el atributo `id` de cada juego en la conversión.
-- Convertir `anio` y `puntuacion` a números, no dejarlos como strings.
-- Permitir exportar el catálogo convertido a un archivo CSV descargable.
+- Leer el XML y convertirlo a JSON usando `DOMParser`.
+- Mostrar el catálogo en la interfaz como tabla o tarjetas.
+- Incluir el atributo `id` de cada `<juego>` en el JSON resultante.
+- Convertir `anio` y `puntuacion` a número, no dejarlos como strings.
+- Permitir exportar el catálogo a un archivo CSV descargable.
 
-### Bloque 3 — Validación con esquemas
+### Bloque 4 — Validación con esquemas
 
-Antes de procesar cualquier dato, la aplicación debe validar que tiene la estructura correcta. Tienes que crear y entregar:
+Tienes que crear y entregar:
 
-**`personaje_schema.json`** — JSON Schema que valide la estructura de un personaje devuelto por la Zelda API. El esquema debe incluir al menos:
-- `name`: string, obligatorio.
-- `description`: string, obligatorio.
-- `gender`: string o null.
-- `race`: string o null.
-- `appearances`: array, obligatorio.
+**`entidad_schema.json`** — JSON Schema que valide la estructura de una entidad devuelta por la Zelda API. Define al menos los campos comunes a los endpoints que uses (`name`, `description`, `id`) con sus tipos, e indica cuáles son obligatorios. Justifica en el README los campos marcados como `required`.
 
-Marca como `required` los campos que consideres imprescindibles y justifica tu decisión en el README.
+**`juegos.xsd`** — XSD que valide `juegos.xml`. Debe:
+- Reflejar la estructura: `<saga>` contiene uno o más `<juego>`, y cada `<juego>` sus campos.
+- Definir `anio` y `puntuacion` como `xs:integer` y el resto como `xs:string`.
+- Estar enlazado en el `juegos.xml` con `xsi:noNamespaceSchemaLocation`.
 
-**`juegos.xsd`** — XSD que valide el archivo `juegos.xml`. Debe:
-- Definir `anio` y `puntuacion` como enteros.
-- Definir el resto de campos como strings.
-- Reflejar la estructura anidada: `<saga>` contiene uno o más `<juego>`, y cada `<juego>` contiene sus campos.
-- Estar enlazado correctamente en el `juegos.xml`.
-
-Incluye en el README evidencia de validación de ambos archivos (capturas o descripción del proceso).
-
---
+Incluye en el README evidencia de validación de ambos: una captura de pantalla o la salida del validador es suficiente.
 
 ## Estructura del repositorio
 
@@ -126,79 +153,82 @@ Incluye en el README evidencia de validación de ambos archivos (capturas o desc
 ├── css/
 │   └── styles.css
 ├── js/
-│   ├── api.js          — fetch a la Zelda API y caché
-│   ├── storage.js      — funciones de localStorage
+│   ├── api.js          — fetch a la Zelda API y caché en localStorage
+│   ├── firebase.js     — configuración e interacción con Firestore
 │   ├── transform.js    — conversión XML→JSON y JSON→CSV
 │   └── ui.js           — manipulación del DOM y render
 ├── data/
 │   ├── juegos.xml
 │   └── juegos.xsd
 ├── schemas/
-│   └── personaje_schema.json
+│   └── entidad_schema.json
 └── README.md
 ```
 
-La organización exacta es flexible, pero la separación entre responsabilidades debe ser clara. No pongas toda la lógica en un único archivo.
+La lógica de Firebase debe estar separada del resto del código. No mezcles las operaciones de Firestore con la manipulación del DOM.
 
 ## El README
 
-El README es parte evaluable del proyecto. Debe incluir estas secciones:
+El README es parte evaluable del proyecto. Debe incluir:
 
 **Descripción del proyecto** — qué hace la aplicación y para qué sirve.
 
-**Tecnologías y herramientas** — qué has usado y por qué. Menciona las alternativas que consideraste.
+**Tecnologías y herramientas** — qué has usado y por qué. Menciona alternativas consideradas.
 
-**La Zelda API** — explica qué endpoints has utilizado, qué datos devuelven y cómo los has integrado. Incluye un ejemplo real de respuesta de la API y explica qué campos has usado de ella.
+**La Zelda API** — qué endpoints usas, qué devuelven y cómo los has integrado. Incluye un ejemplo real de respuesta y explica qué campos usas.
 
-**Formatos de datos** — explica con tus propias palabras qué es JSON, XML y CSV, en qué se diferencian y cuándo usarías cada uno. Conéctalo con decisiones concretas del proyecto: *"usé XML para... porque... y JSON para... porque..."*
+**Formatos de datos** — explica con tus palabras qué es JSON, XML y CSV, en qué se diferencian y cuándo usarías cada uno. Conéctalo con decisiones concretas del proyecto.
 
-**Esquemas** — explica qué valida el JSON Schema y qué valida el XSD. Incluye evidencia de validación de ambos.
+**Esquemas** — qué valida el JSON Schema y qué valida el XSD. Evidencia de validación de ambos.
 
-**Almacenamiento** — sección dedicada a:
-- Cómo usas localStorage en el proyecto y qué limitaciones tiene.
-- Qué alternativas existen (sessionStorage, cookies, base de datos en servidor) y cuándo usarías cada una.
-- Por qué localStorage no sería suficiente para un sistema en producción real.
+**Almacenamiento** — explica:
+- Por qué usas localStorage para la caché y Firestore para los favoritos. Qué ventaja aporta cada uno en su caso de uso concreto.
+- Qué limitaciones tiene localStorage que lo hacen inadecuado para los favoritos.
+- Qué son las reglas de seguridad de Firestore y cómo se gestionarían en producción.
+- Qué otras alternativas de almacenamiento existen y cuándo usarías cada una.
 
-**Decisiones técnicas** — al menos dos decisiones que tomaste explicando el razonamiento: por qué estructuraste el código así, qué problema encontraste y cómo lo resolviste, por qué elegiste una herramienta sobre otra.
+**Decisiones técnicas** — al menos dos decisiones justificadas.
 
-**Instrucciones de uso** — cómo ejecutar el proyecto localmente.
+**Instrucciones de uso** — cómo ejecutar el proyecto, incluyendo cómo configurar Firebase.
 
 ## Criterios de entrega
 
-- El repositorio debe tener al menos **20 commits** con mensajes descriptivos que reflejen el avance real. Un único commit con todo el código no es aceptable.
-- El proyecto debe funcionar abriendo `index.html` directamente en un navegador, sin servidor local.
-- El código debe usar `async/await` para todas las operaciones asíncronas.
-- No se permite el uso de `alert()`, `confirm()` ni `prompt()` para mostrar información al usuario.
-- El manejo de errores debe ser visible en la interfaz — si la búsqueda no encuentra resultados o falla la red, el usuario debe verlo, no la consola.
+- Al menos **15 commits** con mensajes descriptivos que reflejen avance progresivo.
+- El proyecto funciona abriendo `index.html` en el navegador. Las operaciones con Firebase requieren conexión a internet.
+- Todo el código asíncrono usa `async/await`.
+- No se permite `alert()`, `confirm()` ni `prompt()`.
+- Los errores deben ser visibles en la interfaz, no solo en consola.
+- La configuración de Firebase debe estar en el repositorio — es un proyecto educativo con base de datos en modo test.
+
 
 ## Rúbrica de evaluación
 
-La calificación de cada criterio sigue la escala: **10** (Excelente) · **8** (Notable) · **6** (Aprobado) · **4** (Insuficiente) · **2** (Deficiente) · **0** (No realizado).
+La calificación sigue la escala: **10** (Excelente) · **8** (Notable) · **6** (Aprobado) · **4** (Insuficiente) · **2** (Deficiente) · **0** (No realizado).
 
 ### RA4 — Mecanismos de validación
 
-**4b — Identifica tecnologías relacionadas con la validación (XML, JSON, esquemas)**  
+**4b — Identifica tecnologías relacionadas con la validación**  
 Se evalúa mediante el README.
 
 | Nivel | Descripción |
 |-------|-------------|
 | 10 | El README explica con precisión qué son XML, JSON, XSD y JSON Schema, diferencia sus propósitos y justifica cuándo usar cada uno con ejemplos concretos del proyecto. |
 | 8 | Explica correctamente las tecnologías con alguna imprecisión menor o falta de conexión con el proyecto. |
-| 6 | Menciona todas las tecnologías pero las explicaciones son superficiales o copiadas de los apuntes sin reelaboración. |
-| 4 | Solo menciona algunas tecnologías o las confunde entre sí. |
+| 6 | Menciona todas las tecnologías pero las explicaciones son superficiales o copiadas sin reelaboración. |
+| 4 | Solo menciona algunas o las confunde entre sí. |
 | 2 | El README apenas toca este apartado. |
-| 0 | No hay información sobre tecnologías de validación en el README. |
+| 0 | No hay información sobre tecnologías de validación. |
 
 **4c — Analiza la estructura y sintaxis de los esquemas**  
-Se evalúa mediante `personaje_schema.json` y `juegos.xsd`.
+Se evalúa mediante `entidad_schema.json` y `juegos.xsd`.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | Ambos esquemas son correctos y usan tipos adecuados. El XSD usa `xs:sequence`, define `anio` y `puntuacion` como `xs:integer` y refleja la estructura anidada correctamente. El JSON Schema usa `required`, permite `null` en los campos opcionales y está bien estructurado. |
-| 8 | Ambos esquemas son correctos con alguna carencia menor (un tipo genérico donde podría ser más específico, o falta permitir `null` explícitamente). |
-| 6 | Los esquemas funcionan pero son básicos: tipos correctos pero sin reflejar correctamente la estructura o sin restricciones adicionales. |
-| 4 | Uno de los dos esquemas está ausente o tiene errores estructurales que impiden la validación. |
-| 2 | Los esquemas existen pero no son funcionales o tienen errores graves de sintaxis. |
+| 10 | El XSD refleja la estructura anidada correctamente, define `anio` y `puntuacion` como `xs:integer` y está bien formado. El JSON Schema define tipos correctos, usa `required` y está justificado en el README. |
+| 8 | Ambos esquemas son correctos con alguna carencia menor. |
+| 6 | Los esquemas funcionan pero son básicos: estructura correcta sin tipos específicos, o uno de los dos tiene errores menores. |
+| 4 | Uno de los dos está ausente o tiene errores que impiden la validación. |
+| 2 | Los esquemas existen pero no son funcionales. |
 | 0 | No hay esquemas en el repositorio. |
 
 **4d — Utiliza herramientas específicas para crear esquemas**  
@@ -206,23 +236,23 @@ Se evalúa mediante los archivos entregados y el README.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El README menciona las herramientas usadas (VS Code, WebStorm, validadores online). Los esquemas evidencian uso correcto: formato correcto, sin errores de sintaxis, tipado cuidado. |
-| 8 | Se mencionan herramientas y los esquemas son correctos, aunque la documentación del proceso es escueta. |
-| 6 | Los esquemas son funcionales pero no hay documentación sobre el proceso de creación. |
-| 4 | Se mencionan herramientas pero los esquemas tienen errores que contradicen su uso efectivo. |
+| 10 | El README menciona las herramientas usadas. Los archivos lo evidencian: formato correcto, sin errores de sintaxis. |
+| 8 | Se mencionan herramientas y los esquemas son correctos, aunque la documentación es escueta. |
+| 6 | Los esquemas son funcionales pero no hay documentación del proceso. |
+| 4 | Se mencionan herramientas pero los esquemas tienen errores que contradicen su uso. |
 | 2 | No hay documentación sobre herramientas. |
-| 0 | No hay evidencia de uso de herramientas para crear esquemas. |
+| 0 | No hay evidencia de uso de herramientas. |
 
 **4e — Asocia esquemas con documentos XML y JSON**  
-Se evalúa mediante el enlace XSD en `juegos.xml` y la referencia al JSON Schema en el README o en el código.
+Se evalúa mediante el enlace XSD en `juegos.xml` y la documentación del JSON Schema.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | `juegos.xml` enlaza correctamente el XSD con `xsi:noNamespaceSchemaLocation`. El README explica cómo se usa el JSON Schema para validar la estructura de los personajes recibidos de la API. |
-| 8 | El enlace XML→XSD es correcto. La asociación del JSON Schema está documentada aunque no se valide en runtime. |
+| 10 | `juegos.xml` enlaza el XSD con `xsi:noNamespaceSchemaLocation`. El README explica cómo y para qué se usa el JSON Schema. |
+| 8 | El enlace XML→XSD es correcto. El JSON Schema está documentado aunque no se valide en runtime. |
 | 6 | Solo uno de los dos está correctamente asociado y documentado. |
 | 4 | Las asociaciones existen pero tienen errores que impiden la validación. |
-| 2 | Los esquemas están en el repositorio pero no están asociados a ningún documento. |
+| 2 | Los esquemas están pero sin asociar a ningún documento. |
 | 0 | No hay asociación entre esquemas y documentos. |
 
 **4f — Utiliza herramientas de validación**  
@@ -230,12 +260,12 @@ Se evalúa mediante evidencia en el README.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El README incluye evidencia clara de validación de ambos formatos: qué herramienta usó, qué validó y cuál fue el resultado. Capturas o logs de ambas validaciones. |
-| 8 | Hay evidencia de validación de ambos formatos aunque la descripción del proceso es incompleta. |
+| 10 | Evidencia de validación de ambos formatos: herramienta usada, qué se validó y resultado. Capturas o logs de ambas. |
+| 8 | Hay evidencia de ambos formatos aunque la descripción es incompleta. |
 | 6 | Solo se evidencia la validación de uno de los dos formatos. |
-| 4 | Hay mención a validación pero sin evidencia concreta. |
+| 4 | Hay mención a validación pero sin evidencia. |
 | 2 | La validación no está documentada. |
-| 0 | No hay evidencia ni mención de validación. |
+| 0 | No hay evidencia ni mención. |
 
 ### RA5 — Conversión de documentos
 
@@ -244,23 +274,23 @@ Se evalúa mediante el README.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El README explica por qué se usa `DOMParser` para la conversión XML→JSON, menciona `xml2js` como alternativa para Node.js y justifica la elección. Explica también el proceso de exportación a CSV y menciona `PapaParse` como alternativa más robusta. |
-| 8 | Explica las tecnologías usadas con alguna omisión en las alternativas o la justificación. |
+| 10 | Explica por qué usa `DOMParser` para XML→JSON, menciona `xml2js` como alternativa para Node.js y justifica la elección. Explica el proceso JSON→CSV y menciona `PapaParse` como alternativa más robusta. |
+| 8 | Explica las tecnologías con alguna omisión en alternativas o justificación. |
 | 6 | Menciona las tecnologías sin profundizar en la elección. |
-| 4 | Solo menciona las tecnologías usadas sin ningún análisis. |
+| 4 | Solo menciona las tecnologías sin análisis. |
 | 2 | El README apenas toca este apartado. |
 | 0 | No hay análisis de tecnologías de conversión. |
 
 **5e — Realiza conversiones XML→JSON**  
-Se evalúa mediante el Bloque 2 de la aplicación.
+Se evalúa mediante el Bloque 3.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | La conversión funciona correctamente para todos los juegos. El atributo `id` del elemento `<juego>` se incluye en el JSON resultante. `anio` y `puntuacion` se convierten a número. Los datos se muestran correctamente en la interfaz. |
-| 8 | La conversión funciona con alguna omisión: el `id` no se incluye, o los tipos numéricos no se convierten. |
+| 10 | La conversión funciona para todos los juegos. El atributo `id` se incluye. `anio` y `puntuacion` son números. Los datos se muestran en la interfaz. |
+| 8 | La conversión funciona con alguna omisión: el `id` no se incluye, o los tipos no se convierten. |
 | 6 | La conversión funciona pero todos los valores llegan como strings, o no se muestran en la interfaz. |
-| 4 | La conversión tiene errores que impiden mostrar algunos juegos correctamente. |
-| 2 | Hay código de conversión pero no funciona. |
+| 4 | Errores que impiden mostrar algunos juegos. |
+| 2 | Hay código pero no funciona. |
 | 0 | No hay conversión XML→JSON. |
 
 **5f — Identifica herramientas de conversión disponibles**  
@@ -268,23 +298,23 @@ Se evalúa mediante el README.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El README describe al menos tres herramientas de conversión (`DOMParser`, `xml2js`, `PapaParse`, `fast-xml-parser`) con sus ventajas, limitaciones y cuándo usaría cada una. |
-| 8 | Menciona al menos dos herramientas con sus características principales. |
-| 6 | Menciona las herramientas usadas en el proyecto pero no compara alternativas. |
+| 10 | Describe al menos tres herramientas (`DOMParser`, `xml2js`, `PapaParse`, `fast-xml-parser`) con ventajas, limitaciones y cuándo usaría cada una. |
+| 8 | Menciona al menos dos con sus características principales. |
+| 6 | Menciona las herramientas usadas pero no compara alternativas. |
 | 4 | Solo menciona una herramienta sin contexto. |
-| 2 | Apenas hay información sobre herramientas en el README. |
+| 2 | Apenas hay información sobre herramientas. |
 | 0 | No hay mención a herramientas de conversión. |
 
 **5g — Realiza conversiones en distintos formatos**  
-Se evalúa mediante la funcionalidad de exportación a CSV.
+Se evalúa mediante la exportación a CSV.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | La exportación a CSV funciona: el archivo descargado tiene cabecera con todos los campos, todas las filas del catálogo, y es abriblemente por Excel sin errores. `anio` y `puntuacion` aparecen como números. |
-| 8 | La exportación funciona con alguna carencia menor (falta un campo, o los números aparecen como texto). |
-| 6 | La exportación genera un CSV básico pero con errores o campos incompletos. |
-| 4 | El código de exportación existe pero el archivo generado no es válido o no se puede descargar. |
-| 2 | Hay intento de exportación pero no funciona. |
+| 10 | El CSV tiene cabecera con todos los campos, todas las filas del catálogo y es abrible en Excel. `anio` y `puntuacion` son números. |
+| 8 | Funciona con alguna carencia menor. |
+| 6 | Genera un CSV básico con errores o campos incompletos. |
+| 4 | El código existe pero el archivo no es válido o no se puede descargar. |
+| 2 | Hay intento pero no funciona. |
 | 0 | No hay exportación a CSV. |
 
 ### RA6 — Gestión de información e intercambio de datos
@@ -294,68 +324,45 @@ Se evalúa mediante el README.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El README compara localStorage, sessionStorage, cookies y base de datos en servidor. Para cada opción indica cuándo es apropiada, sus limitaciones y un ejemplo de uso real. La reflexión sobre por qué localStorage no es suficiente para producción es precisa y argumentada. |
-| 8 | Compara al menos tres opciones con sus ventajas e inconvenientes. La reflexión sobre producción está presente pero es menos elaborada. |
-| 6 | Menciona las opciones pero las explicaciones son superficiales. |
-| 4 | Solo habla de localStorage sin comparar con alternativas. |
-| 2 | Hay una mención breve al almacenamiento pero sin análisis. |
-| 0 | No hay sección de almacenamiento en el README. |
+| 10 | El README justifica por qué localStorage sirve para caché y Firestore para favoritos, comparando sus características. Analiza sessionStorage, cookies y base de datos en servidor. Explica las implicaciones de las reglas de seguridad de Firestore en modo test frente a producción. |
+| 8 | Justifica correctamente las dos tecnologías y compara al menos dos alternativas más, con alguna omisión en la parte de seguridad. |
+| 6 | Menciona las tecnologías usadas pero la justificación es superficial o no compara alternativas. |
+| 4 | Solo habla de una de las dos sin comparar. |
+| 2 | Mención breve sin análisis. |
+| 0 | No hay sección de almacenamiento. |
 
 **6b — Analiza tecnologías de almacenamiento**  
-Se evalúa mediante la implementación de localStorage en el código.
+Se evalúa mediante la implementación de localStorage y Firebase en el código.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El código usa localStorage correctamente: caché de búsquedas a la API con clave descriptiva, lista de favoritos persistente, funciones encapsuladas en `storage.js` para leer/escribir/borrar, y gestión del caso `null` en `getItem`. |
-| 8 | El uso de localStorage es correcto para los casos principales con alguna carencia (no se gestiona el `null`, o no está encapsulado). |
-| 6 | localStorage funciona para favoritos pero no hay caché de la API, o el código es correcto pero no está organizado. |
-| 4 | localStorage se usa pero con errores: `JSON.parse(null)` sin comprobar, pérdida de datos, etc. |
-| 2 | Hay intentos de uso de localStorage pero no funciona correctamente. |
-| 0 | No se usa localStorage en el proyecto. |
-
+| 10 | localStorage se usa como caché con clave compuesta (tipo + término) y gestión del `null`. Firestore gestiona los favoritos: lectura al cargar, escritura al añadir, eliminación al quitar — todo con `async/await` y gestión de errores. Cada tecnología está encapsulada en su propio archivo. |
+| 8 | Ambas tecnologías funcionan correctamente con alguna carencia: clave de caché simple, o errores de Firestore no reflejados en la interfaz. |
+| 6 | localStorage y Firebase funcionan, pero el código no está organizado o falta gestión de errores. |
+| 4 | Solo una de las dos tecnologías funciona correctamente. |
+| 2 | Hay intentos de uso de ambas pero ninguna funciona bien. |
+| 0 | No se usa ni localStorage ni Firebase. |
 
 **6d — Identifica lenguajes y herramientas para el tratamiento de APIs REST**  
 Se evalúa mediante el README.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El README explica qué es una API REST, qué endpoints de la Zelda API usa y por qué, describe `fetch` y menciona Axios como alternativa, explica los parámetros de la API (`limit`, `page`, `name`) y qué son los códigos de estado HTTP con ejemplos del proyecto. |
-| 8 | Explica correctamente `fetch` y la API con alguna omisión (no menciona Axios, o los códigos de estado son muy superficiales). |
-| 6 | Hay una explicación básica de la API y de `fetch` sin profundidad técnica. |
-| 4 | Solo menciona que se usa una API sin explicar cómo ni qué herramientas implica. |
+| 10 | Explica qué es una API REST, qué endpoints de la Zelda API usa y por qué, describe `fetch` y menciona Axios como alternativa, y explica los códigos de estado HTTP con ejemplos del proyecto. |
+| 8 | Explica correctamente `fetch` y la API con alguna omisión. |
+| 6 | Explicación básica de la API y `fetch` sin profundidad técnica. |
+| 4 | Solo menciona que se usa una API. |
 | 2 | El README apenas toca este apartado. |
-| 0 | No hay información sobre APIs REST en el README. |
+| 0 | No hay información sobre APIs REST. |
 
-**6e — Utiliza lenguajes de consulta y manipulación de APIs REST**  
-Se evalúa mediante el Bloque 1 de la aplicación.
+**6e — Utiliza lenguajes de consulta y manipulación en entornos de intercambio**  
+Se evalúa mediante los Bloques 1 y 2.
 
 | Nivel | Descripción |
 |-------|-------------|
-| 10 | El código usa `fetch` con `async/await`, comprueba `response.ok`, gestiona el caso de que `data` llegue vacío, lanza errores con `throw` cuando procede y muestra mensajes útiles al usuario en la interfaz. La caché evita peticiones repetidas a la misma búsqueda. Los resultados múltiples se muestran correctamente. |
-| 8 | `fetch` funciona con `async/await` y gestión de errores, pero la caché está ausente o no gestiona correctamente los resultados múltiples. |
-| 6 | `fetch` funciona para el caso normal pero no comprueba `response.ok` o no gestiona el caso de array vacío. |
-| 4 | `fetch` funciona pero no gestiona errores o se cuelga cuando la búsqueda no devuelve resultados. |
-| 2 | Hay código de `fetch` pero tiene errores que impiden su funcionamiento. |
-| 0 | No hay consumo de API en el proyecto. |
-
-
-## Nota sobre el Git
-
-El historial de commits es parte de la entrega. Se valorará un desarrollo progresivo con commits pequeños y descriptivos:
-
-```
-✅ feat: búsqueda de personajes con fetch y caché en localStorage
-✅ feat: búsqueda de monstruos y selector de tipo
-✅ feat: sistema de favoritos persistente
-✅ feat: importar juegos.xml y convertir a JSON
-✅ feat: exportar catálogo a CSV descargable
-✅ feat: crear JSON Schema para personajes de la Zelda API
-✅ feat: crear XSD y enlazarlo en juegos.xml
-✅ docs: README completo con sección de almacenamiento y esquemas
-
-❌ first commit
-❌ subida proyecto
-❌ cambios varios
-```
-
-Un historial con mensajes genéricos o todo en un único commit contará negativamente en los criterios que evalúan esas partes.
+| 10 | El buscador funciona en tiempo real con debounce, soporta al menos dos tipos de entidad y cachea en localStorage con clave compuesta. Los favoritos se guardan en Firestore, se ordenan por nombre y fecha, se filtran por tipo y todos los errores están gestionados en la interfaz. |
+| 8 | El buscador con debounce y la caché funcionan. Los favoritos en Firestore también, pero falta el filtro por tipo o la ordenación es parcial. |
+| 6 | El buscador funciona sin debounce o la caché no usa clave compuesta. Los favoritos se guardan en Firestore pero sin ordenación ni filtrado. |
+| 4 | El buscador funciona solo con botón. Los favoritos están en localStorage en lugar de Firestore. |
+| 2 | Hay código de búsqueda y favoritos pero con errores que impiden su funcionamiento. |
+| 0 | No hay consumo de API ni gestión de favoritos. |
