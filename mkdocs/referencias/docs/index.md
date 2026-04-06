@@ -32,7 +32,7 @@ Este curso está diseñado para que adquieras las habilidades necesarias en el m
 * [Unidad 5.1: JSON Schema y Herramientas de Validación](ud5-1.md)
 * [Unidad 5.2: Callbacks y asincronía en JavaScript ](ud5-2.md)
 * [Unidad 5.3: Fetch y APIs](ud5-3.md)
-* [Unidad 5.4: Datos que persisten: localStorage y APIs](ud5-4.md)
+* [Unidad 5.4: Persistencia, caché y almacenamiento en la nube](ud5-4.md)
 * [Unidad 5.5: Transformación de documentos con JavaScript](ud5-5.md)
 
 ## Referencias web generales
