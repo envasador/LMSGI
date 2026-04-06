@@ -1005,7 +1005,7 @@
 <p><strong><code>entidad_schema.json</code></strong> — JSON Schema que valide la estructura de una entidad devuelta por la Zelda API. Define al menos los campos comunes a los endpoints que uses (<code>name</code>, <code>description</code>, <code>id</code>) con sus tipos, e indica cuáles son obligatorios. Justifica en el README los campos marcados como <code>required</code>.</p>
 <p><strong><code>juegos.xsd</code></strong> — XSD que valide <code>juegos.xml</code>. Debe:
 - Reflejar la estructura: <code>&lt;saga&gt;</code> contiene uno o más <code>&lt;juego&gt;</code>, y cada <code>&lt;juego&gt;</code> sus campos.
-- Definir <code>anio</code> y <code>puntuacion</code> como <code>xs:integer</code> y el resto como <code>xs:string</code>.
+- Definir <code>anio</code> y <code>puntuacion</code> como entero y el resto como string.
 - Estar enlazado en el <code>juegos.xml</code> con <code>xsi:noNamespaceSchemaLocation</code>.</p>
 <p>Incluye en el README evidencia de validación de ambos: una captura de pantalla o la salida del validador es suficiente.</p>
 <h2 id="estructura-del-repositorio">Estructura del repositorio</h2>
