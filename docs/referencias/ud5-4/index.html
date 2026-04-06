@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#54-datos-que-persisten-localstorage-y-apis" class="md-skip">
+        <a href="#54-persistencia-cache-y-almacenamiento-en-la-nube" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -713,10 +713,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#el-problema-que-todavia-no-hemos-resuelto" class="md-nav__link">
+  <a href="#el-problema-de-la-memoria-efimera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El problema que todavía no hemos resuelto
+        El problema de la memoria efímera
       
     </span>
   </a>
@@ -724,22 +724,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#localstorage-el-cajon-del-navegador" class="md-nav__link">
+  <a href="#localstorage-persistencia-en-el-navegador" class="md-nav__link">
     <span class="md-ellipsis">
       
-        localStorage: el cajón del navegador
+        localStorage: persistencia en el navegador
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="localStorage: el cajón del navegador">
+    <nav class="md-nav" aria-label="localStorage: persistencia en el navegador">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#las-cuatro-operaciones-basicas" class="md-nav__link">
+  <a href="#sessionstorage-la-variante-temporal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Las cuatro operaciones básicas
+        sessionStorage: la variante temporal
       
     </span>
   </a>
@@ -747,10 +747,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cuando-usar-localstorage-y-cuando-no" class="md-nav__link">
+  <a href="#cookies-almacenamiento-con-caducidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Cuándo usar localStorage y cuándo no?
+        Cookies: almacenamiento con caducidad
       
     </span>
   </a>
@@ -763,10 +763,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cache-no-pidas-dos-veces-lo-mismo" class="md-nav__link">
+  <a href="#el-patron-de-cache" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Caché: no pidas dos veces lo mismo
+        El patrón de caché
       
     </span>
   </a>
@@ -774,10 +774,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-flujo-completo-api-localstorage" class="md-nav__link">
+  <a href="#las-limitaciones-de-localstorage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El flujo completo: API + localStorage
+        Las limitaciones de localStorage
       
     </span>
   </a>
@@ -785,10 +785,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestionar-la-lista-de-favoritos" class="md-nav__link">
+  <a href="#almacenamiento-en-la-nube-bases-de-datos-remotas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gestionar la lista de favoritos
+        Almacenamiento en la nube: bases de datos remotas
       
     </span>
   </a>
@@ -796,33 +796,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pokedex-con-favoritos-y-cache" class="md-nav__link">
+  <a href="#firebase-firestore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pokédex con favoritos y caché
+        Firebase Firestore
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pokédex con favoritos y caché">
+    <nav class="md-nav" aria-label="Firebase Firestore">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#html" class="md-nav__link">
+  <a href="#reglas-de-seguridad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HTML
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JavaScript
+        Reglas de seguridad
       
     </span>
   </a>
@@ -835,21 +824,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-limite-de-localstorage-y-lo-que-viene-despues" class="md-nav__link">
+  <a href="#localstorage-y-firestore-no-son-alternativas-son-capas-distintas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El límite de localStorage — y lo que viene después
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejercicio
+        localStorage y Firestore: no son alternativas, son capas distintas
       
     </span>
   </a>
@@ -920,10 +898,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#el-problema-que-todavia-no-hemos-resuelto" class="md-nav__link">
+  <a href="#el-problema-de-la-memoria-efimera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El problema que todavía no hemos resuelto
+        El problema de la memoria efímera
       
     </span>
   </a>
@@ -931,22 +909,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#localstorage-el-cajon-del-navegador" class="md-nav__link">
+  <a href="#localstorage-persistencia-en-el-navegador" class="md-nav__link">
     <span class="md-ellipsis">
       
-        localStorage: el cajón del navegador
+        localStorage: persistencia en el navegador
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="localStorage: el cajón del navegador">
+    <nav class="md-nav" aria-label="localStorage: persistencia en el navegador">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#las-cuatro-operaciones-basicas" class="md-nav__link">
+  <a href="#sessionstorage-la-variante-temporal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Las cuatro operaciones básicas
+        sessionStorage: la variante temporal
       
     </span>
   </a>
@@ -954,10 +932,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cuando-usar-localstorage-y-cuando-no" class="md-nav__link">
+  <a href="#cookies-almacenamiento-con-caducidad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Cuándo usar localStorage y cuándo no?
+        Cookies: almacenamiento con caducidad
       
     </span>
   </a>
@@ -970,10 +948,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cache-no-pidas-dos-veces-lo-mismo" class="md-nav__link">
+  <a href="#el-patron-de-cache" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Caché: no pidas dos veces lo mismo
+        El patrón de caché
       
     </span>
   </a>
@@ -981,10 +959,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-flujo-completo-api-localstorage" class="md-nav__link">
+  <a href="#las-limitaciones-de-localstorage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El flujo completo: API + localStorage
+        Las limitaciones de localStorage
       
     </span>
   </a>
@@ -992,10 +970,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gestionar-la-lista-de-favoritos" class="md-nav__link">
+  <a href="#almacenamiento-en-la-nube-bases-de-datos-remotas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gestionar la lista de favoritos
+        Almacenamiento en la nube: bases de datos remotas
       
     </span>
   </a>
@@ -1003,33 +981,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pokedex-con-favoritos-y-cache" class="md-nav__link">
+  <a href="#firebase-firestore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pokédex con favoritos y caché
+        Firebase Firestore
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Pokédex con favoritos y caché">
+    <nav class="md-nav" aria-label="Firebase Firestore">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#html" class="md-nav__link">
+  <a href="#reglas-de-seguridad" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HTML
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JavaScript
+        Reglas de seguridad
       
     </span>
   </a>
@@ -1042,21 +1009,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#el-limite-de-localstorage-y-lo-que-viene-despues" class="md-nav__link">
+  <a href="#localstorage-y-firestore-no-son-alternativas-son-capas-distintas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        El límite de localStorage — y lo que viene después
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ejercicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ejercicio
+        localStorage y Firestore: no son alternativas, son capas distintas
       
     </span>
   </a>
@@ -1082,279 +1038,71 @@
 
 
 
-<h1 id="54-datos-que-persisten-localstorage-y-apis">5.4 — Datos que persisten: localStorage y APIs</h1>
-<h2 id="el-problema-que-todavia-no-hemos-resuelto">El problema que todavía no hemos resuelto</h2>
-<p>En la unidad anterior construiste un buscador de Pokémon. Funciona bien, pero tiene un problema silencioso: <strong>cada vez que recargas la página, todo desaparece</strong>.</p>
-<p>Si el usuario había buscado diez Pokémon y marcado sus favoritos, al cerrar el navegador esa información se pierde. Vuelve a cero.</p>
-<p>Las aplicaciones reales no funcionan así. Necesitan recordar cosas: qué tiene el usuario en su lista, qué buscó antes, qué configuración eligió. Para eso existe el almacenamiento. Y antes de llegar a las bases de datos — que veremos en la UT6 — hay una solución más sencilla que tienes disponible directamente en el navegador: <strong>localStorage</strong>.</p>
-<h2 id="localstorage-el-cajon-del-navegador">localStorage: el cajón del navegador</h2>
-<p><code>localStorage</code> es un espacio de almacenamiento que el navegador pone a tu disposición para guardar datos de forma persistente. A diferencia de las variables, sobrevive a recargas de página y al cierre del navegador. Los datos permanecen hasta que el usuario los borra manualmente o tú los eliminas desde el código.</p>
-<p>Tiene una limitación importante: solo almacena <strong>texto</strong>. Nada de objetos, nada de arrays. Solo strings. Eso lo solventamos con <code>JSON.stringify</code> y <code>JSON.parse</code>.</p>
-<h3 id="las-cuatro-operaciones-basicas">Las cuatro operaciones básicas</h3>
-<p><strong>Guardar:</strong></p>
-<pre><code class="language-javascript">localStorage.setItem('clave', 'valor');
+<h1 id="54-persistencia-cache-y-almacenamiento-en-la-nube">5.4— Persistencia, caché y almacenamiento en la nube</h1>
+<h2 id="el-problema-de-la-memoria-efimera">El problema de la memoria efímera</h2>
+<p>Una variable existe mientras el script está en ejecución. En el momento en que el usuario cierra la pestaña o recarga la página, desaparece. Para la mayoría de las operaciones eso no importa, pero hay datos que una aplicación necesita recordar entre sesiones: qué tiene el usuario en su lista, qué buscó ayer, qué configuración eligió la semana pasada.</p>
+<p>Resolver ese problema es lo que se llama <strong>persistencia</strong>: la capacidad de un sistema para conservar datos más allá del tiempo de ejecución del programa que los creó.</p>
+<p>En el desarrollo web, la persistencia puede resolverse en distintas capas. Algunas viven en el navegador del usuario; otras, en un servidor remoto. Entender qué resuelve cada una —y qué no resuelve— es la base para tomar decisiones de diseño fundadas.</p>
+<h2 id="localstorage-persistencia-en-el-navegador">localStorage: persistencia en el navegador</h2>
+<p><code>localStorage</code> es un mecanismo de almacenamiento que los navegadores ponen a disposición de las aplicaciones web. A diferencia de una variable, su contenido no desaparece al cerrar la pestaña ni al apagar el ordenador. Los datos permanecen asociados al dominio que los escribió hasta que se eliminan explícitamente, ya sea desde el código o desde las herramientas del navegador.</p>
+<p>Su modelo de datos es deliberadamente simple: pares clave-valor donde tanto la clave como el valor son siempre texto. No hay tipos, no hay estructuras, no hay relaciones. Para guardar un objeto hay que convertirlo a string antes de escribirlo, y convertirlo de vuelta al leerlo:</p>
+<pre><code class="language-javascript">// Guardar
+localStorage.setItem('usuario', JSON.stringify({ nombre: 'Ana', tema: 'oscuro' }));
 
-// Para guardar un objeto, lo convertimos a string primero
-const pokemon = { nombre: 'pikachu', altura: 4 };
-localStorage.setItem('pokemon', JSON.stringify(pokemon));
+// Leer
+const datos = localStorage.getItem('usuario');
+const usuario = datos ? JSON.parse(datos) : null;
 </code></pre>
-<p><strong>Leer:</strong></p>
-<pre><code class="language-javascript">const valor = localStorage.getItem('clave');
-
-// Para recuperar un objeto, lo parseamos
-const datos = localStorage.getItem('pokemon');
-const pokemon = datos ? JSON.parse(datos) : null;
-</code></pre>
-<p>Un detalle importante: si la clave no existe, <code>getItem</code> devuelve <code>null</code>. Siempre comprueba eso antes de hacer <code>JSON.parse</code>, porque <code>JSON.parse(null)</code> lanza un error.</p>
-<p><strong>Borrar una clave:</strong></p>
-<pre><code class="language-javascript">localStorage.removeItem('pokemon');
-</code></pre>
-<p><strong>Borrar todo:</strong></p>
-<pre><code class="language-javascript">localStorage.clear();
-</code></pre>
-<h3 id="cuando-usar-localstorage-y-cuando-no">¿Cuándo usar localStorage y cuándo no?</h3>
-<p>localStorage es útil para preferencias del usuario, listas pequeñas, caché temporal de datos de una API, o el estado de la aplicación entre sesiones. Pero tiene límites que hay que conocer:</p>
-<ul>
-<li>Tiene un límite de aproximadamente <strong>5MB</strong> por dominio.</li>
-<li>Los datos son accesibles desde cualquier script de la página — no guardes tokens ni datos sensibles.</li>
-<li>Es <strong>local al dispositivo</strong>: si el usuario abre la app en otro ordenador, no verá sus datos.</li>
-</ul>
-<p>Ese último punto es el que hace que localStorage no sea suficiente para una aplicación real en producción. Una base de datos en el servidor resuelve todos esos problemas. Por eso lo que construimos hoy es un puente: funciona, y cuando llegues a UT6 entenderás exactamente qué problema resuelve cambiar esto por una BD.</p>
-<h2 id="cache-no-pidas-dos-veces-lo-mismo">Caché: no pidas dos veces lo mismo</h2>
-<p>Cuando el usuario busca un Pokémon, hacemos una petición a la API. Si lo vuelve a buscar más tarde, tiene sentido devolver el dato guardado en lugar de repetir la petición — es más rápido y no gasta llamadas al servidor.</p>
-<p>Este patrón se llama <strong>caché</strong>:</p>
-<pre><code class="language-javascript">async function obtenerPokemon(nombre) {
-    // 1. ¿Lo tenemos ya guardado?
-    const cacheKey = `pokemon_${nombre}`;
+<p>Esa conversión es siempre necesaria. Y la comprobación de <code>null</code> también: si la clave no existe, <code>getItem</code> devuelve <code>null</code>, y hacer <code>JSON.parse(null)</code> lanza un error.</p>
+<p>La contrapartida de su simplicidad es la velocidad: es instantáneo, síncrono y no requiere conexión a ningún servidor. El límite de almacenamiento es de aproximadamente 5 MB por dominio, lo que lo hace adecuado para datos ligeros pero completamente inadecuado para ficheros, imágenes o volúmenes grandes de información.</p>
+<h3 id="sessionstorage-la-variante-temporal">sessionStorage: la variante temporal</h3>
+<p>Existe una variante llamada <code>sessionStorage</code> con el mismo modelo de datos y la misma API, pero con un alcance temporal más reducido: sus datos desaparecen al cerrar la pestaña. Es útil cuando se necesita mantener estado durante una sesión de navegación —un formulario en varios pasos, por ejemplo— sin que esos datos persistan más allá.</p>
+<h3 id="cookies-almacenamiento-con-caducidad">Cookies: almacenamiento con caducidad</h3>
+<p>Las cookies son otro mecanismo del navegador, más antiguo, con características distintas. Tienen fecha de caducidad configurable, su tamaño es muy reducido (unos 4 KB) y, a diferencia de localStorage, viajan automáticamente con cada petición HTTP al servidor. Eso las hace útiles para gestión de sesiones de autenticación, pero poco prácticas para guardar datos de aplicación de cualquier volumen.</p>
+<h2 id="el-patron-de-cache">El patrón de caché</h2>
+<p>Uno de los usos más comunes de localStorage no es guardar datos del usuario sino guardar <strong>respuestas de una API</strong>. La idea es sencilla: si ya has pedido un dato al servidor una vez y ese dato no va a cambiar, tiene sentido guardarlo localmente para no tener que pedirlo de nuevo.</p>
+<p>Ese patrón se llama <strong>caché</strong>. La lógica siempre sigue la misma estructura:</p>
+<pre><code class="language-javascript">async function obtenerDato(id) {
+    const cacheKey = `dato_${id}`;
     const cached   = localStorage.getItem(cacheKey);
 
-    if (cached) {
-        console.log('Recuperado de caché');
-        return JSON.parse(cached);
-    }
+    if (cached) return JSON.parse(cached);          // devuelvo lo que tengo
 
-    // 2. Si no, lo pedimos a la API
-    try {
-        const response = await fetch(
-            `https://pokeapi.co/api/v2/pokemon/${nombre}`
-        );
+    const data = await fetch(`/api/datos/${id}`)    // si no, lo pido
+                       .then(r =&gt; r.json());
 
-        if (!response.ok) {
-            throw new Error(`Error ${response.status}: &quot;${nombre}&quot; no encontrado`);
-        }
-
-        const data = await response.json();
-
-        // 3. Lo guardamos para la próxima vez
-        localStorage.setItem(cacheKey, JSON.stringify(data));
-        console.log('Obtenido de la API y guardado en caché');
-
-        return data;
-
-    } catch (error) {
-        throw error; // Lo relanzamos para que lo gestione quien llame a esta función
-    }
-}
-</code></pre>
-<h2 id="el-flujo-completo-api-localstorage">El flujo completo: API + localStorage</h2>
-<p>En una aplicación real, cuando guardas algo en el servidor también lo reflejas en local para tener una copia de acceso rápido. Vamos a ver ese flujo con una lista de favoritos.</p>
-<p>Para simular el servidor usaremos <strong>JSONPlaceholder</strong> (<a href="https://jsonplaceholder.typicode.com">jsonplaceholder.typicode.com</a>), una API de prueba que acepta peticiones POST y responde como si las procesara, sin guardar nada realmente.</p>
-<pre><code class="language-javascript">async function guardarFavorito(nombrePokemon) {
-    const favoritos = JSON.parse(localStorage.getItem('favoritos') || '[]');
-
-    if (favoritos.includes(nombrePokemon)) {
-        console.log(`${nombrePokemon} ya está en favoritos`);
-        return;
-    }
-
-    try {
-        // Simulamos guardarlo en el servidor
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ pokemon: nombrePokemon })
-        });
-
-        if (!response.ok) throw new Error('Error al guardar en el servidor');
-
-        // Si el servidor lo acepta, lo guardamos también en local
-        favoritos.push(nombrePokemon);
-        localStorage.setItem('favoritos', JSON.stringify(favoritos));
-
-        console.log(`${nombrePokemon} guardado en favoritos`);
-
-    } catch (error) {
-        console.error('No se pudo guardar:', error.message);
-    }
-}
-</code></pre>
-<p>El servidor es la fuente de verdad. localStorage actúa como copia local para acceso rápido. Cuando la BD llegue en UT6, solo cambiarás la URL del <code>fetch</code> — la lógica es la misma.</p>
-<h2 id="gestionar-la-lista-de-favoritos">Gestionar la lista de favoritos</h2>
-<p>Guardar no sirve de nada sin las funciones para leer, comprobar y borrar:</p>
-<pre><code class="language-javascript">function obtenerFavoritos() {
-    return JSON.parse(localStorage.getItem('favoritos') || '[]');
-}
-
-function esFavorito(nombre) {
-    return obtenerFavoritos().includes(nombre);
-}
-
-function eliminarFavorito(nombre) {
-    const favoritos  = obtenerFavoritos();
-    const actualizados = favoritos.filter(f =&gt; f !== nombre);
-    localStorage.setItem('favoritos', JSON.stringify(actualizados));
-}
-
-function limpiarFavoritos() {
-    localStorage.removeItem('favoritos');
-}
-</code></pre>
-<p>Fíjate en <code>eliminarFavorito</code>: usa <code>filter</code> para crear un nuevo array sin el elemento a borrar y sobreescribe el que había. No hay un método "elimina este elemento del array en localStorage" — siempre lees, modificas y guardas entero.</p>
-<h2 id="pokedex-con-favoritos-y-cache">Pokédex con favoritos y caché</h2>
-<p>Vamos a construir la aplicación completa que integra todo: búsqueda con caché, favoritos, y persistencia entre recargas.</p>
-<h3 id="html">HTML</h3>
-<pre><code class="language-html">&lt;div class=&quot;buscador&quot;&gt;
-    &lt;input type=&quot;text&quot; id=&quot;input-pokemon&quot; placeholder=&quot;Buscar Pokémon...&quot;&gt;
-    &lt;button id=&quot;btn-buscar&quot;&gt;Buscar&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;resultado&quot;&gt;&lt;/div&gt;
-
-&lt;div class=&quot;favoritos&quot;&gt;
-    &lt;h2&gt;Favoritos&lt;/h2&gt;
-    &lt;ul id=&quot;lista-favoritos&quot;&gt;&lt;/ul&gt;
-    &lt;button id=&quot;btn-limpiar&quot;&gt;Limpiar favoritos&lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-<h3 id="javascript">JavaScript</h3>
-<pre><code class="language-javascript">// --- Elementos del DOM ---
-const input          = document.querySelector('#input-pokemon');
-const btnBuscar      = document.querySelector('#btn-buscar');
-const resultado      = document.querySelector('#resultado');
-const listaFavoritos = document.querySelector('#lista-favoritos');
-const btnLimpiar     = document.querySelector('#btn-limpiar');
-
-
-// --- localStorage ---
-function obtenerFavoritos() {
-    return JSON.parse(localStorage.getItem('favoritos') || '[]');
-}
-
-function toggleFavorito(nombre) {
-    const favoritos = obtenerFavoritos();
-    const index     = favoritos.indexOf(nombre);
-
-    if (index === -1) {
-        favoritos.push(nombre);
-    } else {
-        favoritos.splice(index, 1);
-    }
-
-    localStorage.setItem('favoritos', JSON.stringify(favoritos));
-    renderFavoritos();
-}
-
-
-// --- API con caché ---
-async function obtenerPokemon(nombre) {
-    const cacheKey = `pokemon_${nombre}`;
-    const cached   = localStorage.getItem(cacheKey);
-
-    if (cached) return JSON.parse(cached);
-
-    const response = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${nombre}`
-    );
-
-    if (!response.ok) {
-        throw new Error(`Error ${response.status}: &quot;${nombre}&quot; no encontrado`);
-    }
-
-    const data = await response.json();
-    localStorage.setItem(cacheKey, JSON.stringify(data));
+    localStorage.setItem(cacheKey, JSON.stringify(data)); // lo guardo
     return data;
 }
-
-
-// --- Render ---
-function renderPokemon(data) {
-    const esFav = obtenerFavoritos().includes(data.name);
-    const tipos = data.types.map(t =&gt; t.type.name).join(', ');
-
-    resultado.innerHTML = `
-        &lt;div class=&quot;tarjeta-pokemon&quot;&gt;
-            &lt;img src=&quot;${data.sprites.front_default}&quot; alt=&quot;${data.name}&quot;&gt;
-            &lt;h2&gt;${data.name}&lt;/h2&gt;
-            &lt;p&gt;&lt;strong&gt;Altura:&lt;/strong&gt; ${data.height} dm&lt;/p&gt;
-            &lt;p&gt;&lt;strong&gt;Peso:&lt;/strong&gt;   ${data.weight} hg&lt;/p&gt;
-            &lt;p&gt;&lt;strong&gt;Tipos:&lt;/strong&gt;  ${tipos}&lt;/p&gt;
-            &lt;button id=&quot;btn-favorito&quot;&gt;
-                ${esFav ? '★ Quitar de favoritos' : '☆ Añadir a favoritos'}
-            &lt;/button&gt;
-        &lt;/div&gt;
-    `;
-
-    document.querySelector('#btn-favorito')
-        .addEventListener('click', () =&gt; {
-            toggleFavorito(data.name);
-            renderPokemon(data); // Re-renderizamos para actualizar el botón
-        });
-}
-
-function renderFavoritos() {
-    const favoritos = obtenerFavoritos();
-
-    listaFavoritos.innerHTML = favoritos.length === 0
-        ? '&lt;li&gt;No hay favoritos todavía&lt;/li&gt;'
-        : favoritos.map(f =&gt; `&lt;li&gt;${f}&lt;/li&gt;`).join('');
-}
-
-
-// --- Eventos ---
-async function buscar() {
-    const nombre = input.value.trim().toLowerCase();
-    if (!nombre) return;
-
-    resultado.innerHTML = '&lt;p&gt;Buscando...&lt;/p&gt;';
-
-    try {
-        const data = await obtenerPokemon(nombre);
-        renderPokemon(data);
-    } catch (error) {
-        resultado.innerHTML = `&lt;p style=&quot;color:red&quot;&gt;${error.message}&lt;/p&gt;`;
-    }
-}
-
-btnBuscar.addEventListener('click', buscar);
-input.addEventListener('keydown', e =&gt; e.key === 'Enter' &amp;&amp; buscar());
-btnLimpiar.addEventListener('click', () =&gt; {
-    localStorage.removeItem('favoritos');
-    renderFavoritos();
-});
-
-
-// --- Inicialización ---
-renderFavoritos();
 </code></pre>
-<h2 id="el-limite-de-localstorage-y-lo-que-viene-despues">El límite de localStorage — y lo que viene después</h2>
-<p>Recarga la página varias veces. Los favoritos siguen ahí. La caché también. localStorage está funcionando.</p>
-<p>Pero piensa en estos escenarios:</p>
-<ul>
-<li>El usuario abre la app en su móvil. Sus favoritos del ordenador no están.</li>
-<li>Dos usuarios quieren compartir una lista. Imposible — cada uno tiene su localStorage.</li>
-<li>El usuario borra el caché del navegador. Adiós a todo.</li>
-</ul>
-<p>Todos esos problemas tienen la misma solución: mover los datos a un servidor. En lugar de guardar en el navegador del usuario, guardas en una base de datos que cualquier dispositivo puede consultar.</p>
-<p>En la <strong>UT6</strong> veremos exactamente cómo hacer eso. El código que has escrito hoy no cambia mucho — las llamadas a <code>localStorage.setItem</code> y <code>localStorage.getItem</code> se convierten en llamadas a tu propia API con <code>fetch</code>. La lógica es la misma; cambia dónde viven los datos.</p>
-<hr />
-<h2 id="ejercicio">Ejercicio</h2>
-<p>Amplía la Pokédex con estas funcionalidades:</p>
-<ol>
-<li>Al cargar la página, si hay Pokémon en caché muéstralos en una sección "vistos recientemente" sin hacer ninguna petición a la API.</li>
-<li>Añade un botón para borrar la caché de un Pokémon concreto, de forma que la próxima búsqueda lo vuelva a pedir a la API.</li>
-<li>Limita los "vistos recientemente" a los últimos 5. Cuando se añada un sexto, elimina el más antiguo.</li>
-</ol>
-<p>Para el punto 3, piensa qué estructura usarías y cómo la gestionarías. ¿Un array con <code>push</code> y <code>slice</code>? ¿Guardas una marca de tiempo con cada entrada? Hay varias formas válidas — elige una y justifícala en un comentario en el código.</p>
+<p>Cuando el usuario solicita algo, la aplicación comprueba primero si ya tiene la respuesta guardada. Si la tiene, la devuelve directamente sin hacer ninguna petición a la red. Si no la tiene, la pide al servidor, la devuelve al usuario y la guarda para la próxima vez.</p>
+<p>La caché reduce el tiempo de respuesta —leer de localStorage es instantáneo comparado con una petición de red— y reduce el número de llamadas al servidor, lo que puede ser importante cuando la API tiene límites de uso.</p>
+<p>Pero también tiene un riesgo: si los datos de la API cambian, la caché puede servir información desactualizada. Gestionar esa caducidad —decidir cuándo un dato en caché sigue siendo válido y cuándo hay que volver a pedirlo— es uno de los problemas clásicos de la informática. No hay una solución universal: depende de con qué frecuencia cambian los datos y de cuánto importa que estén actualizados.</p>
+<h2 id="las-limitaciones-de-localstorage">Las limitaciones de localStorage</h2>
+<p>localStorage resuelve bien la persistencia local, pero tiene un límite estructural: los datos viven en el dispositivo del usuario y solo en ese dispositivo.</p>
+<p>Si el mismo usuario abre la aplicación desde su móvil, no verá los datos que guardó desde el ordenador. Si dos usuarios quieren acceder a la misma información, es imposible. Si el usuario limpia el caché del navegador o cambia de navegador, los datos desaparecen.</p>
+<p>Esas limitaciones no son fallos de diseño de localStorage —es exactamente lo que promete ser: almacenamiento local. El problema es cuando se intenta usar para casos de uso que necesitan algo más. Cuando los datos tienen que estar disponibles en cualquier dispositivo, en cualquier sesión, para cualquier usuario con acceso, el almacenamiento local ya no es la herramienta adecuada. Se necesita un servidor.</p>
+<h2 id="almacenamiento-en-la-nube-bases-de-datos-remotas">Almacenamiento en la nube: bases de datos remotas</h2>
+<p>Una base de datos remota resuelve todos los problemas que localStorage no puede resolver. Los datos viven en un servidor accesible desde internet: el mismo dato está disponible desde cualquier dispositivo, para cualquier usuario autorizado, en cualquier momento. No depende del navegador ni del historial de caché de nadie.</p>
+<p>La contrapartida es que toda operación —leer, escribir, borrar— implica una comunicación de red. Las operaciones son asíncronas: no se sabe de antemano cuánto tardarán, pueden fallar por problemas de conectividad y hay que gestionarlas de forma diferente al código síncrono.</p>
+<p>Existen muchos tipos de bases de datos remotas. Las <strong>relacionales</strong> organizan los datos en tablas con esquemas fijos y relaciones entre ellas. Las <strong>documentales</strong> organizan los datos en colecciones de documentos con estructura flexible. Las <strong>en tiempo real</strong> sincronizan los cambios automáticamente entre todos los clientes conectados. Cada modelo tiene sus casos de uso; ninguno es universalmente mejor que los demás.</p>
+<h2 id="firebase-firestore">Firebase Firestore</h2>
+<p>Firebase es una plataforma de servicios de backend mantenida por Google, orientada a facilitar el desarrollo de aplicaciones web y móviles sin necesidad de gestionar infraestructura propia. Uno de sus servicios principales es <strong>Firestore</strong>: una base de datos documental en la nube.</p>
+<p>Firestore organiza los datos en <strong>colecciones</strong> de <strong>documentos</strong>. Una colección es un contenedor con nombre; un documento es un objeto con campos y valores, identificado por un ID único. La estructura es flexible: dos documentos de la misma colección pueden tener campos distintos.</p>
+<p>Las operaciones básicas —añadir, leer, eliminar— son asíncronas y se trabajan con <code>async/await</code>. Un ejemplo mínimo de lectura:</p>
+<pre><code class="language-javascript">const snapshot = await getDocs(collection(db, 'favoritos'));
+const favoritos = snapshot.docs.map(doc =&gt; ({ id: doc.id, ...doc.data() }));
+</code></pre>
+<p>Hay un detalle importante en ese código: el <code>id</code> del documento no viene dentro de <code>doc.data()</code>. Firestore los separa, y hay que extraerlo aparte. Ese <code>id</code> es lo que necesitarás después para poder eliminar o actualizar ese documento concreto.</p>
+<p>Las operaciones con Firestore pueden fallar —por problemas de red, por reglas de seguridad, por IDs inexistentes— y todos esos casos deben gestionarse con <code>try/catch</code>. Un error que no se muestra al usuario es como si la operación no tuviera feedback: la persona no sabe si el dato se ha guardado o no, y eso es un fallo de la aplicación.</p>
+<h3 id="reglas-de-seguridad">Reglas de seguridad</h3>
+<p>El acceso a una base de datos remota necesita control. Firestore gestiona eso mediante <strong>reglas de seguridad</strong>: condiciones configurables que determinan quién puede leer o escribir qué datos. Sin reglas, cualquier persona con acceso a la configuración del proyecto podría leer y modificar todos los datos.</p>
+<p>Durante el desarrollo, Firestore ofrece un modo de acceso abierto que permite trabajar sin configurar autenticación. Ese modo es temporal y no es adecuado para una aplicación en producción. En un sistema real, las reglas se definen para que cada usuario solo pueda acceder a sus propios datos, lo que requiere combinar Firestore con un sistema de autenticación.</p>
+<h2 id="localstorage-y-firestore-no-son-alternativas-son-capas-distintas">localStorage y Firestore: no son alternativas, son capas distintas</h2>
+<p>Una confusión habitual es pensar que hay que elegir entre uno u otro. En la mayoría de las aplicaciones reales, ambos tienen su lugar con propósitos distintos.</p>
+<p>localStorage es adecuado para datos que tienen sentido que sean locales: preferencias de interfaz, caché de respuestas de API, estado temporal de una sesión. Son datos donde no importa que no viajen entre dispositivos —de hecho, a veces es deseable que no lo hagan.</p>
+<p>Firestore es adecuado para datos que pertenecen al usuario más allá del dispositivo: listas que quiere consultar desde cualquier sitio, historial que debe persistir, información que podría necesitar compartir. Son datos donde la localidad es un problema, no una ventaja.</p>
+<p>La pregunta que hay que hacerse no es «¿cuál es mejor?» sino «¿qué naturaleza tienen estos datos y dónde tiene sentido que vivan?». Esa pregunta tiene respuestas distintas para cada tipo de dato dentro de la misma aplicación, y saber argumentarla es parte del trabajo de cualquier desarrollador.</p>
 
 
 
